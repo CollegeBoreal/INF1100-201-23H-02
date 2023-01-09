@@ -4,43 +4,29 @@ Administration d'infrastructure informatique 1
 ```
 Brice Robert is inviting you to a scheduled Zoom meeting.
 
- 
-
 Topic: CBCR INF1100/201/2/Administration d'infrastructure informatique I/23H
 
- 
-
 Join Zoom Meeting
-
 https://collegeboreal.zoom.us/j/88113252866?pwd=MEhuT1NvYmZ4SDR1OTY4bTU4MC91dz09
-
- 
 
 Password: 1336445837
 
- 
-
 One tap mobile
-
 +17789072071,,88113252866# Canada
 +17806660144,,88113252866# Canada
 
- 
-
 Dial by your location
-
-+1 778 907 2071 Canada
-+1 780 666 0144 Canada
-+1 204 272 7920 Canada
-+1 438 809 7799 Canada
-+1 587 328 1099 Canada
-+1 647 374 4685 Canada
-+1 647 558 0588 Canada
+        +1 778 907 2071 Canada
+        +1 780 666 0144 Canada
+        +1 204 272 7920 Canada
+        +1 438 809 7799 Canada
+        +1 587 328 1099 Canada
+        +1 647 374 4685 Canada
+        +1 647 558 0588 Canada
 833 955 1088 Canada Toll-free
 855 703 8985 Canada Toll-free
 
 Meeting ID: 88113252866
-
 Find your local number: https://collegeboreal.zoom.us/u/aXdYgZW8F
 ```
 
