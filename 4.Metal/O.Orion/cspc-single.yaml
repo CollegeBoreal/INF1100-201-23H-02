@@ -1,0 +1,31 @@
+ apiVersion: cstor.openebs.io/v1
+ kind: CStorPoolCluster
+ metadata:
+   name: cstor-storage
+   namespace: openebs
+ spec:
+   pools:
+     - nodeSelector:
+         kubernetes.io/hostname: "saiph"
+       dataRaidGroups:
+         - blockDevices:
+             - blockDeviceName: "blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1"
+       poolConfig:
+         dataRaidGroupType: "stripe"
+
+     - nodeSelector:
+         kubernetes.io/hostname: "rigel" 
+       dataRaidGroups:
+         - blockDevices:
+             - blockDeviceName: "blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5"
+       poolConfig:
+         dataRaidGroupType: "stripe"
+   
+     - nodeSelector:
+         kubernetes.io/hostname: "bellatrix"
+       dataRaidGroups:
+         - blockDevices:
+             - blockDeviceName: "blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03"
+       poolConfig:
+         dataRaidGroupType: "stripe"
+---

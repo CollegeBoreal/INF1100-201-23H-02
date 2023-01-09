@@ -1,0 +1,29 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name: blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5
+  labels:
+    kubernetes.io/hostname: rigel
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: lvm
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/dm-uuid-LVM-sriYwjhaKn73lSvWNqHEsraPHdoVkHV9duyiFfJKTqn3yvjskYyMvcqpLlxbgdlJ 
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg-iscsi--lv
+  nodeAttributes:
+    nodeName: rigel
+  path: /dev/dm-1
+---

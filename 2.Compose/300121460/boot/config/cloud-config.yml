@@ -1,0 +1,46 @@
+#cloud-config
+# Add groups to the system
+# Adds the ubuntu group with members 'root' and 'sys'
+# and the empty group hashicorp and docker.
+groups:
+  - ubuntu: [root,sys]
+  - hashicorp
+  - docker
+
+# Add users to the system. Users are added after groups are added.
+users:
+  - default
+  - name: terraform
+    gecos: terraform
+    shell: /bin/bash
+    primary_group: hashicorp
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin, docker
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgY/BiRVo6HprIWMIttmQiCRKzyLSgIQAUr8XWtNnzwzhQWN401e+AeHuI4xVH//cj9jXxa2wDkz2qhWHyxaV6IVmFctT/lLsuF3oCHpz0WuodjFYZW+U3AeleE3cpkeBIZ9unJwIA4OsSfYQVNJXPOjgsioQEijM3jA0bi1Z24uG6ktjYEeaqhqXbv8clAmeeUhNlZdC3Z+JVaXfhiHUKAB5twpIyihGdlAOaAyuosWNoZs/VoL3EIqPs0+i4yKfmmGA+D+L6RHV+ufWfzFUbcizmBAn9mtJOPLEyltFX58oWyYZiXPkQ4H7xN0g/3iYDemNcc9eGUf9nUo2h7o6jcWc3rlvVJ9jTU+H+RuBiZmt/I6ocS5n6Qk98NwbzfMPQC48f8tyv3McpTgDnw2sK+GtF1lmLiT5LnhQcO7qEFF4K9cXDDDOl/NPhd1uuY5E2PCg/fH0gkF0HWMgxrTk83kDmHSPXtMfC4KOZIjLwwzJ87F8lgV+9BjQf/tg09AU= user@DESKTOP-3NLLRHC
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD2pLhMqFGKffSdYvNCMAyM7598oBY+m/3q5AMXmb7IE6vq42+yGzqEUzZu9WrFckFD4Hq52rIU5DeOvi83DCF3uroXjNTEtCKdi+tY7cV18bHmsDsBHMqTnpuvroofgFWA0Pi++b2kGW2I5eyy1Qjv5rOp7y11Xe6XeZFEz7qQO1/xNiBMJEruG9Xldgooe4hkaOF39qnbqD4ui3LxYaTUTEulstw4wN70dSB8Zu9YQP7A7KU2zIEwJ1aw8whfO1CAM/AVvoDyqMtV8VXoaZSHOBgluMtinQfyyt473S2ZZeJlnmhK0F1gdOhO4SVZNRMj96m30ryYkYBFWvvLRP5N b300098957@ramena
+
+apt:
+  sources:
+    docker.list:
+      source: deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable
+      keyid: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  - software-properties-common
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - net-tools
+  - jq
+
+# Enable ipv4 forwarding, required on CIS hardened machines
+write_files:
+  - path: /etc/sysctl.d/enabled_ipv4_forwarding.conf
+    content: |
+      net.ipv4.conf.all.forwarding=1
