@@ -25,18 +25,11 @@ $ touch README.md
 
 ## :b: Laboratoire
 
-:one: Écrire les scripts en suivant le laboratoire ci-dessous dans [Github Leaning Lab](https://lab.github.com/CollegeBoreal):
-
-https://lab.github.com/CollegeBoreal/lab-github-actions:-bonjour-monde
-
-
-:two: Copier votre scripts dans le cours en remplaçant :id: par votre :id: github :octocat: :
+:one: Copier votre scripts dans le cours en remplaçant :id: par votre :id: github :octocat: :
 
 https://github.com/:id:/lab-bonjour-github-actions
 
-- [ ] Copier les scripts:
-
-Par example:
+- [ ] Copier les scripts qui se trouvent dans le répertoire [boot](boot):
 
   - [ ] Copier le fichier `Dockerfile` dans votre :id: `Boréal` 
 
