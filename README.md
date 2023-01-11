@@ -37,7 +37,7 @@ Find your local number: https://collegeboreal.zoom.us/u/aXdYgZW8F
 
 |:hash: | Date   | Cours                      | Intitulé                            |  Pratique                                                     |
 |-------|--------|:---------------------------|:------------------------------------|:--------------------------------------------------------------|
-| :one: |17-01-22| [1.Docker](1.Docker)       | â Noter :x: |
+| :one: |16-01-23| [1.Docker](1.Docker)       | â Noter :x: |
 
 
 ## Resultats d'Apprentissage du Cours
