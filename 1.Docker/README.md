@@ -27,8 +27,6 @@ $ touch README.md
 
 :one: Copier votre scripts dans le cours en remplaçant :id: par votre :id: github :octocat: :
 
-https://github.com/:id:/lab-bonjour-github-actions
-
 - [ ] Copier les scripts qui se trouvent dans le répertoire [boot](boot):
 
   - [ ] Copier le fichier `Dockerfile` dans votre :id: `Boréal` 
