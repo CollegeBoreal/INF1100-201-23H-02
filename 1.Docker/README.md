@@ -39,7 +39,7 @@ $ touch README.md
 
 En un mot, récupérer le travail que vous avez fait à travers [Github Leaning Lab](https://lab.github.com/CollegeBoreal) et le mettre dans cette leçon [1.Docker](../1.Docker)
 
-:three: Amélioration
+:two: Amélioration
 
 En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la commande :
 
