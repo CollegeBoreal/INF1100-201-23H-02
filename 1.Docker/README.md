@@ -53,7 +53,7 @@ En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la co
 
 Décrire les commandes utilisées pour l'amélioration
 
-:four: Docker Image
+:three: Docker Image
 
 Pour visualiser les couches images de l'image créée
 
@@ -70,25 +70,6 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 <missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:594fa35cf803361e6…   63.2MB   
 ```
 
-# :fire: Indices 
-
-Tu auras besoin de:
-
-:round_pushpin: créer et manipuler une branche avec `git`:
-
-https://github.com/CollegeBoreal/Tutoriels/tree/main/0.GIT/.branch
-
-:round_pushpin: Créer une demande d'extraction `pull request` par le biais de l'interface web de github: 
-
-https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#creating-the-pull-request
-
-:round_pushpin: Creér Répertoire Imbriqué
-
-par exemple pour créer `.github/workflows` utilise la commande suivante avec le parametre `-p`:
-
-```
-$ mkdir -p .github/workflows
-```
 
 # References
 
