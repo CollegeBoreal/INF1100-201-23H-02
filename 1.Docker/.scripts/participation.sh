@@ -58,3 +58,4 @@ for id in "${ETUDIANTS[@]}"
 do
    docker context rm ${id} > /dev/null 2>&1
 done
+
