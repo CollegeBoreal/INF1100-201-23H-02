@@ -112,7 +112,7 @@ memedlebleu@localhost.memedlebleu.studio
 hafsa6@localhost.hafsa.tech
 chaks@localhost.chakib.live
 hakimdrai@localhost.hakimdrai.tech
-zico@localhost
+zico@localhost.zacklafhel.live
 sedric_g@localhost.sedricgo.live
 klyd@localhost
 frank_uranus@localhost.frankuranus.tech
