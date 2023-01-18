@@ -62,7 +62,7 @@ ssh-copy-id -i ~/.ssh/b300098957 prof@10.13.237.253
 
 - [ ] Accéder à la machine
 
-:piavec l'identifiant en tapant ssh `-i`
+:parking: avec l'identifiant en tapant ssh `-i`
 
 ```
 ssh -i ~/.ssh/b300098957 prof@10.13.237.253
