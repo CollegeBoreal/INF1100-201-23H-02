@@ -1,4 +1,4 @@
-# 2 Keys
+# :zero: Keys
 
 ## :one: Authoriser l'acces à sa machine au professeur
 
