@@ -1,0 +1,24 @@
+name: Participations
+
+on: [push]
+
+jobs:
+  presence:
+    name: presence de fichiers pour la participation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - shell: bash
+        run: |
+          cd 1.Docker
+          bash .scripts/run.sh
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Vérification de la participation" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
