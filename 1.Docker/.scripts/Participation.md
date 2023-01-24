@@ -1,4 +1,4 @@
-# Participation au 24-01-2023 22:55
+# Participation au 24-01-2023 22:57
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -36,5 +36,5 @@
 | 17 | [300127065](../300127065/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
 | 18 | [300127290](../300127290/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
 | 19 | [300128276](../300128276/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | :x: |
-| 20 | [300128326](../300128326/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | :x: |
+| 20 | [300128326](../300128326/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
 | 21 | [300128694](../300128694/Dockerfile) - <image src='https://avatars0.githubusercontent.com/u/105947276?s=460&v=4' width=20 height=20></image> | :x: |
