@@ -101,10 +101,8 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 
 # References
 
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-
-https://phoenixnap.com/kb/how-to-containerize-applications
-
-https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
-
-https://livebook.manning.com/book/docker-in-action/chapter-8
+- [ ] [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices)
+- [ ] [How to Containerize Legacy Applications](https://phoenixnap.com/kb/how-to-containerize-applications)
+- [ ] [Docker CMD vs. Entrypoint Commands: What's the Difference?](https://phoenixnap.com/kb/docker-cmd-vs-entrypoint)
+- [ ] [Chapter 8. Build automation and advanced image considerations](https://livebook.manning.com/book/docker-in-action/chapter-8)
+- [ ] [/bin/sh: 0: Illegal option](https://github.com/carlossg/docker-maven/issues/114#issuecomment-527748335)
