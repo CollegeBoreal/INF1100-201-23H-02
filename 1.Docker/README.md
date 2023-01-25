@@ -2,7 +2,7 @@
 
 #### [:tada: Participation](.scripts/Participation.md)
 
-[Docker](../D.Docker)
+## :o: [Docker](../D.Docker)
 
 [:tada: Example MySQL](Example.md)
 
@@ -39,6 +39,34 @@ $ touch README.md
 
 En un mot, récupérer le travail que vous avez fait à travers [Github Leaning Lab](https://lab.github.com/CollegeBoreal) et le mettre dans cette leçon [1.Docker](../1.Docker)
 
+
+## :b: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
+
+- [ ] Creer un contexte
+
+```
+docker context create rigel --docker "host=ssh://ubuntu@rigel.orion.gasy.africa"
+```
+
+```
+docker context use rigel
+```
+
+- [ ] Lister les contextes 
+
+* toutes les machines Note: :star:
+
+```
+docker context ls
+```
+> Retour
+```
+NAME        DESCRIPTION                               DOCKER ENDPOINT                        KUBERNETES ENDPOINT                                   ORCHESTRATOR
+default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://betelgeuse.orion.gasy.africa:6443 (default)   swarm
+rigel   *                                             ssh://ubuntu@rigel.orion.gasy.africa             
+saiph                                                 ssh://ubuntu@saiph.orion.gasy.africa                              
+```
+
 :two: Amélioration
 
 En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la commande :
@@ -73,10 +101,8 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 
 # References
 
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-
-https://phoenixnap.com/kb/how-to-containerize-applications
-
-https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
-
-https://livebook.manning.com/book/docker-in-action/chapter-8
+- [ ] [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices)
+- [ ] [How to Containerize Legacy Applications](https://phoenixnap.com/kb/how-to-containerize-applications)
+- [ ] [Docker CMD vs. Entrypoint Commands: What's the Difference?](https://phoenixnap.com/kb/docker-cmd-vs-entrypoint)
+- [ ] [Chapter 8. Build automation and advanced image considerations](https://livebook.manning.com/book/docker-in-action/chapter-8)
+- [ ] [/bin/sh: 0: Illegal option](https://github.com/carlossg/docker-maven/issues/114#issuecomment-527748335)
