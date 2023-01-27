@@ -44,7 +44,7 @@ EXPOSE 80
 
 # DEMARRRAGE DU WEB SERVEUR
 CMD /root/run_apache.sh
-
+```
 ```
 docker image build --tag luxuryking:1.2 .
 ```
