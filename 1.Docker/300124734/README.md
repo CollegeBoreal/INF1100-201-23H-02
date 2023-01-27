@@ -53,6 +53,8 @@ docker image build --tag luxuryking:1.2 .
 ```
 docker container run --tty --name luxuryking --detach --publish 8080:80 luxuryking:1.2
 ```
-
-
+Resultat final 
+```
+<img width="1710" alt="Screenshot 2023-01-26 at 10 35 51 PM" src="https://user-images.githubusercontent.com/94937145/215010236-22bf2a62-207e-4df2-8dad-3eb72f8ccda9.png">
+```
 
