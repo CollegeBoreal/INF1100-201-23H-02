@@ -62,3 +62,4 @@ volumes:
   
   # Vous pouvez continuer et installer WordPress. Une fois installé, vous pouvez l'utiliser pour des choses telles que le développement WordPress local.
   
+  <img width="1710" alt="Screenshot 2023-01-29 at 2 42 53 AM" src="https://user-images.githubusercontent.com/94937145/215315490-4514ddf6-9127-4666-a111-1653ae30001f.png">
