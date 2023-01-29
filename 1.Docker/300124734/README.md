@@ -45,7 +45,7 @@ EXPOSE 80
 # DEMARRRAGE DU WEB SERVEUR
 CMD /root/run_apache.sh
 ```
-### :apple: CoNSTRUCTION DE L'IMAGE
+### :apple: CONSTRUCTION DE L'IMAGE
 ```
 docker image build --tag luxuryking:1.2 .
 ```
