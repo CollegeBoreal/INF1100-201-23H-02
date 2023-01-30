@@ -45,13 +45,13 @@ EXPOSE 80
 # DEMARRRAGE DU WEB SERVEUR
 CMD /root/run_apache.sh
 ```
-### :apple: CONSTRUCTION DE L'IMAGE
+### :bluecar: CONSTRUCTION DE L'IMAGE
 ```
 docker image build --tag luxuryking:1.2 .
 ```
 > luxuryking est le nom de l'image
 
-### :apple: L'EXECUTION DE l'IMAGE
+### :bluecar: L'EXECUTION DE l'IMAGE
 ```
 docker container run --tty --name luxuryking --detach --publish 8080:80 luxuryking:1.2
 ```
