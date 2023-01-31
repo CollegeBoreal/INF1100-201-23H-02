@@ -80,4 +80,15 @@ ssh ubuntu@localhost.gasy.africa
 
 `localhost.gasy.africa`
 
+* ~/.ssh/config
+
+```
+Host server_3032
+  HostName localhost.gasy.africa
+  User ubuntu
+  Port 22
+  IdentityFile ~/.ssh/b300098957
+```
+
+
 ## :one: GIT
