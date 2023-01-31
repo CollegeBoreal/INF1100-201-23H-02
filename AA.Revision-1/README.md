@@ -129,4 +129,18 @@ cd INF1100-201-23H-02
 touch 300098957.md
 ```
 
+```
+git status
+```
+
+```
+git add .
+```
+
+```
+git commit --message :alien:
+```
+
+
+
 
