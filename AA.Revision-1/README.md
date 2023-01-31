@@ -101,3 +101,20 @@ Host 10.13.237.244
 
 
 ## :one: GIT
+
+
+[GIT Tutoriel](https://github.com/CollegeBoreal/Tutoriels/tree/main/0.GIT)
+
+* Chercher le cours
+
+```
+mkdir Developer
+```
+
+* Cloner le cours
+
+```
+git clone git@github.com:CollegeBoreal/INF1100-201-23H-02.git
+```
+
+```
