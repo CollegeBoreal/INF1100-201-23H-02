@@ -83,8 +83,8 @@ ssh ubuntu@localhost.gasy.africa
 * ~/.ssh/config
 
 ```
-Host server_3032
-  HostName localhost.gasy.africa
+Host 10.13.237.244
+  HostName 10.13.237.244
   User ubuntu
   Port 22
   IdentityFile ~/.ssh/b300098957
