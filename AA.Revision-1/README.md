@@ -117,4 +117,16 @@ mkdir Developer
 git clone git@github.com:CollegeBoreal/INF1100-201-23H-02.git
 ```
 
+* Aller dans le cours
+
 ```
+cd INF1100-201-23H-02
+```
+
+* Créer un fichier avec son :id: 
+
+```
+touch 300098957.md
+```
+
+
