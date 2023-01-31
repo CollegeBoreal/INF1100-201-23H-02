@@ -78,6 +78,15 @@ ssh ubuntu@localhost.gasy.africa
 
 - [ ] Aller sur sa machine
 
+
+* ajouter la clé
+
+```
+ssh-add ~/.ssh/b300098957
+```
+
+* utiliser le fichier de configuration
+
 `localhost.gasy.africa`
 
 * ~/.ssh/config
