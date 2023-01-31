@@ -50,7 +50,15 @@ ssh-add ~/.ssh/b300098957
 ```
 
 
+
+
 - [ ] Se connecter au serveur sans mot de passe
+
+* avec l'identité
+
+```
+ssh -i ~/.ssh/b300098957 ubuntu@locahost.gasy.africa
+```
 
 * sans mot de passe
 
