@@ -78,15 +78,6 @@ en respectant les normes standards de l’industrie.
 |14|10-04-23|                                          |                                                                    |
 |15|17-04-23|                                          |                                                                    |
 
-![image](https://user-images.githubusercontent.com/62551735/211917670-8bb8e435-af0a-4086-abf3-b2ffe967dccf.png)
-
-
-
-![image](https://user-images.githubusercontent.com/62551735/211917434-5ccb07ac-0527-49e5-bbfa-6f0640e3b50e.png)
-
-
-
-
 
 # Références
 
