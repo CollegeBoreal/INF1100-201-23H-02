@@ -1,4 +1,5 @@
-name: 300124734 Cherkaoui
+
+name: A workflow for my Hello World file
 on: push
 jobs:
   build:
@@ -6,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./1.Docker/300124734
+      - uses: ./1.Docker/300128694
         with:
-          MY_NAME: "Superzaf"
+          MY_NAME: "Walid"
