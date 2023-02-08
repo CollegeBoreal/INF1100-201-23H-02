@@ -22,6 +22,7 @@ ETUDIANTS=(
 300127290
 300128276
 300128326
+300128566
 300128694
 )
 
@@ -47,6 +48,7 @@ Maminata
 300127
 Soumaila-7830
 Mamadou625
+DIARRAbandiougou
 WalidX06
 )
 
@@ -72,6 +74,7 @@ AVATARS=(
 105463700
 113144317
 105472970
+101542761
 105947276
 )
 
@@ -97,6 +100,7 @@ salimata1@10.13.237.10
 sara@10.13.237.35
 ballo78@10.13.237.41
 mamadou@10.13.237.2
+diarra1@10.13.237.43
 walid@10.13.237.27
 )
 
@@ -122,5 +126,6 @@ salimata1@localhost.salimatap.live
 sara@localhost.altayasara.tech
 ballo78@localhost.nil
 mamadou@localhost.mamadou.tech
+diarra1@localhost.nil
 walid@localhost.walidue.tech
 )
