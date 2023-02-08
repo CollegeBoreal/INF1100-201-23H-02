@@ -1,4 +1,4 @@
-name: A workflow for my Hello World file
+name: Fes regne le monde
 on: push
 jobs:
   build:
