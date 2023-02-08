@@ -2,7 +2,7 @@ name: 300124734 Cherkaoui
 on: push
 jobs:
   build:
-    name: Hello world action
+    name: Cherkus
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
