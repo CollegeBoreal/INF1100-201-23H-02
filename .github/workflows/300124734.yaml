@@ -1,4 +1,4 @@
-name: A workflow for my Hello World file
+name: 300124734 Mohamed
 on: push
 jobs:
   build:
