@@ -45,11 +45,11 @@ En un mot, récupérer le travail que vous avez fait à travers [Github Leaning 
 - [ ] Creer un contexte
 
 ```
-docker context create rigel --docker "host=ssh://ubuntu@rigel.orion.gasy.africa"
+docker context create betelgeuse --docker "host=ssh://ubuntu@betelgeuse.orion.gasy.africa"
 ```
 
 ```
-docker context use rigel
+docker context use betelgeuse
 ```
 
 - [ ] Lister les contextes 
@@ -62,8 +62,8 @@ docker context ls
 > Retour
 ```
 NAME        DESCRIPTION                               DOCKER ENDPOINT                        KUBERNETES ENDPOINT                                   ORCHESTRATOR
-default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://betelgeuse.orion.gasy.africa:6443 (default)   swarm
-rigel   *                                             ssh://ubuntu@rigel.orion.gasy.africa             
+default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://rigel.orion.gasy.africa:6443 (default)   swarm
+betelgeuse   *                                        ssh://ubuntu@betelgeuse.orion.gasy.africa             
 saiph                                                 ssh://ubuntu@saiph.orion.gasy.africa                              
 ```
 
