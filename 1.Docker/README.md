@@ -40,7 +40,7 @@ $ touch README.md
 En un mot, récupérer le travail que vous avez fait à travers [Github Leaning Lab](https://lab.github.com/CollegeBoreal) et le mettre dans cette leçon [1.Docker](../1.Docker)
 
 
-## :b: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
+## :ab: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
 
 - [ ] Creer un contexte
 
@@ -67,7 +67,7 @@ betelgeuse   *                                        ssh://ubuntu@betelgeuse.or
 saiph                                                 ssh://ubuntu@saiph.orion.gasy.africa                              
 ```
 
-:two: Amélioration
+## :two: Amélioration
 
 En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la commande :
 
@@ -98,7 +98,7 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 <missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:594fa35cf803361e6…   63.2MB   
 ```
 
-## :ab: Correction
+## :o: Correction
 
 - [ ] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
 
