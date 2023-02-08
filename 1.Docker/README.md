@@ -104,7 +104,7 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 
 - Aller chercher le fichier `action.yml` dans le referentiel `hello-github-actions`
 - Mettre dans votre propre repertoire :id: et modifier le fichier `action.yml` en fonction de votre environnement
-- Aller chercher le fichier main.yaml dans le repertoire `.github/workflows` du le referentiel `hello-github-actions`
+- Aller chercher le fichier `main.yaml` dans le repertoire `.github/workflows` du le referentiel `hello-github-actions`
 - le rajouter dans le repertoire `.github/workflows` en changeant le nom de fichier en :id:.yaml 
 
 
