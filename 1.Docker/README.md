@@ -102,6 +102,9 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 
 - [ ] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
 
+- Aller chercher le fichier `action.yml`
+- Modifier le fichier action.yml
+- Ajouter le fichier :id:.yaml dans le repertoire `.github/workflows`
 
 
 # References
