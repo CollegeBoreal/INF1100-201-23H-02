@@ -1,9 +1,9 @@
-name: "Hello Salimata"
+name: "Hello salimata"
 description: "Greet someone"
 author: "300127065@monboreal.ca"
 
 inputs:
-  MY_NAME:salimata kanta
+  MY_NAME:
     description: "Who to greet"
     required: true
     default: "World"
