@@ -3,10 +3,10 @@ description: "Greet someone"
 author: "ch9aw9aw@github.com"
 
 inputs:
-  Superzaf:
+  MY_NAME:
     description: "Who to greet"
     required: true
-    default: "World"
+    default: "Cherkus"
 
 runs:
   using: "docker"
