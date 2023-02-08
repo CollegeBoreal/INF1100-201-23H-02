@@ -85,11 +85,7 @@ ssh ubuntu@localhost.gasy.africa
 ssh-add ~/.ssh/b300098957
 ```
 
-* utiliser le fichier de configuration
-
-`localhost.gasy.africa`
-
-* ~/.ssh/config
+* utiliser le fichier de configuration `~/.ssh/config`
 
 ```
 Host 10.13.237.244
