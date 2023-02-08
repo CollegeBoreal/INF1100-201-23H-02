@@ -1,0 +1,17 @@
+name: "Bienvenu sur la page de la Grande Dame"
+description: "Greet someone"
+author: "300127@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
