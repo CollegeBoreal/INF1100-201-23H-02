@@ -100,7 +100,7 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 
 ## :ab: Correction
 
-- [] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
+- [ ] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
 
 
 
