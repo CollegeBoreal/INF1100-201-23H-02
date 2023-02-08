@@ -11,7 +11,7 @@ de sorte que le même état est toujours garanti lorsqu'un conteneur est lancé.
 
 ```
 - Ce Dorkerfile utilise l'image ubuntu 18.04
-
+```
 # ----- Debut -------------
 FROM ubuntu:18.04
 # ------ Fin ----------
