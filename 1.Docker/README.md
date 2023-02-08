@@ -49,7 +49,7 @@ docker context create betelgeuse --docker "host=ssh://ubuntu@betelgeuse.orion.ga
 ```
 
 ```
-docker context use rigel
+docker context use betelgeuse
 ```
 
 - [ ] Lister les contextes 
