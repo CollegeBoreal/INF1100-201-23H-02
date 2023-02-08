@@ -25,7 +25,7 @@ RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh && \
  echo '/usr/sbin/apache2 -D FOREGROUND' >> /root/run_apache.sh && \ 
  chmod 755 /root/run_apache.sh
 # ----------------- Fin --------------------------------
-
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 RUN service apache2 restart
