@@ -1,0 +1,11 @@
+name: 300127290
+on: push
+jobs:
+  build:
+    name: Bienvenu chez la grande dame
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "sara"
