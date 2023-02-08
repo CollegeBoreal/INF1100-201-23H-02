@@ -40,16 +40,16 @@ $ touch README.md
 En un mot, récupérer le travail que vous avez fait à travers [Github Leaning Lab](https://lab.github.com/CollegeBoreal) et le mettre dans cette leçon [1.Docker](../1.Docker)
 
 
-## :b: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
+## :ab: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
 
 - [ ] Creer un contexte
 
 ```
-docker context create rigel --docker "host=ssh://ubuntu@rigel.orion.gasy.africa"
+docker context create betelgeuse --docker "host=ssh://ubuntu@betelgeuse.orion.gasy.africa"
 ```
 
 ```
-docker context use rigel
+docker context use betelgeuse
 ```
 
 - [ ] Lister les contextes 
@@ -62,12 +62,12 @@ docker context ls
 > Retour
 ```
 NAME        DESCRIPTION                               DOCKER ENDPOINT                        KUBERNETES ENDPOINT                                   ORCHESTRATOR
-default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://betelgeuse.orion.gasy.africa:6443 (default)   swarm
-rigel   *                                             ssh://ubuntu@rigel.orion.gasy.africa             
+default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://rigel.orion.gasy.africa:6443 (default)   swarm
+betelgeuse   *                                        ssh://ubuntu@betelgeuse.orion.gasy.africa             
 saiph                                                 ssh://ubuntu@saiph.orion.gasy.africa                              
 ```
 
-:two: Amélioration
+## :two: Amélioration
 
 En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la commande :
 
@@ -97,6 +97,14 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 <missing>           2 weeks ago         /bin/sh -c [ -z "$(apt-get indextargets)" ]     987kB               
 <missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:594fa35cf803361e6…   63.2MB   
 ```
+
+## :o: Correction
+
+- [ ] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
+
+- Aller chercher le fichier `action.yml`
+- Modifier le fichier action.yml
+- Ajouter le fichier :id:.yaml dans le repertoire `.github/workflows`
 
 
 # References
