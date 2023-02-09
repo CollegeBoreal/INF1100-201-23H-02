@@ -6,7 +6,7 @@ inputs:
   MY_NAME:
     description: "Who to greet"
     required: true
-    default: "Cherkus"
+    default: "CherkuS"
 
 runs:
   using: "docker"
