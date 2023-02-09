@@ -1,0 +1,17 @@
+name: "Who you talkin to"
+description: "Don't look at me"
+author: "klyd@github.com"
+
+inputs:
+  MY_NAME:
+    description: "The GOAT"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "banana"
+  color: "pink"
