@@ -1,3 +1,0 @@
-eval $(ssh-agent)
-ssh-add ~/.ssh/b300126450
-ssh-add -l
