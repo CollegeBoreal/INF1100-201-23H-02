@@ -30,18 +30,24 @@ echo "| :x:                | Projet inexistant             |"
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id:                | compose       |"
-echo "|------|----------------------------|---------------|"
+echo "|:hash:| Boréal :id:                | DOckerfile    | Action |"
+echo "|------|----------------------------|---------------|--------|"
 
 i=0
 
 for id in "${ETUDIANTS[@]}"
 do
    FILE=${id}/Dockerfile
-   OK="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | "
-   KO="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | "
+   ACTION=${id}/action.yml
+   OK_ACTION="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |"
+   OK="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |"
+   KO="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | :x: |"
    if [ -f "$FILE" ]; then
-       echo ${OK}
+      if [ -f "$ACTION" ]; then
+          echo ${OK_ACTION}
+      else
+          echo ${OK}
+      fi
    else
        echo ${KO}
    fi
