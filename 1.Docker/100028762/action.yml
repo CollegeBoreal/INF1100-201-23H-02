@@ -3,7 +3,7 @@ description: "Bad boy"
 author: "100028762@monboreal.ca"
 
 inputs:
-  MY_NAME: "MadMax"
+  MY_NAME:
     description: "Happy Valentine day"
     required: true
     default: "World"
