@@ -81,7 +81,7 @@ AVATARS=(
 SERVERS=(
 steeve@10.13.237.42
 madmax@10.13.237.29
-sio_mh@10.13.237.22
+sio_mh@10.13.237.32
 mariodeg@10.13.237.13
 pasmibalayi@10.13.237.17
 hugopo1@10.13.237.30

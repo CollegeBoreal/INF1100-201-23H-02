@@ -1,0 +1,17 @@
+name: "Hello Salimata"
+description: "Greet someone"
+author: "300127065@monboreal.ca"
+
+inputs:
+  MY_NAME:salimata kanta
+    description: "Who to greet"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
