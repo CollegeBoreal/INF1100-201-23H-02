@@ -1,4 +1,4 @@
-name: Un travail pour mon fichier Bonjour le monde
+name: 300126966 Bakayoko
 on: push
 jobs:
   build:
