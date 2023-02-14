@@ -1,0 +1,17 @@
+name: "Hello Is it me you are looking for"
+description: "Bad boy"
+author: "100028762@monboreal.ca"
+
+inputs:
+  MY_NAME: "MadMax"
+    description: "Happy Valentine day"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "bear"
+  color: "brown"
