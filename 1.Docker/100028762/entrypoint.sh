@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
-sh -c "echo Bonjour tout le monde mon nom est $INPUT_My_NAME"
+sh -c "echo Bonjour tout le monde mon nom est $INPUT_MY_NAME"
 
