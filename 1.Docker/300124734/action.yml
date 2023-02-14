@@ -1,0 +1,17 @@
+name: "Hello Actions"
+description: "Greet someone"
+author: "ch9aw9aw@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "CherkuS"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
