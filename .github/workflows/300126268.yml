@@ -1,4 +1,6 @@
-name: Fes regne le monde
+
+
+name: Hello World Sedric
 on: push
 jobs:
   build:
@@ -6,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./1.Docker/300124876
+      - uses: ./1.Docker/300126268
         with:
-          MY_NAME: "Hafsa"
+          MY_NAME: "Sedric"

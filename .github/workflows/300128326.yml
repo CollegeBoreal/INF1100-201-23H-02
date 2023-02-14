@@ -1,4 +1,4 @@
-name: Fes regne le monde
+name: 300128326 Mamadou
 on: push
 jobs:
   build:
@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./1.Docker/300124876
+      - uses: ./1.Docker/300128326
         with:
-          MY_NAME: "Hafsa"
+          MY_NAME: "Mamadou"

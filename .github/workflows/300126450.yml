@@ -1,4 +1,4 @@
-name: Fes regne le monde
+name: A workflow for my Hello World file
 on: push
 jobs:
   build:
@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./1.Docker/300124876
+      - uses: ./action-a
         with:
-          MY_NAME: "Hafsa"
+          MY_NAME: "klyd"
