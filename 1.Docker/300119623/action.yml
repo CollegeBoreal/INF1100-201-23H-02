@@ -3,7 +3,7 @@ description: "Hello guys"
 author: "300119623@monboreal.ca"
 
 inputs:
-  MY_NAME: "Mariode"
+  MY_NAME: 
     description: "Hello"
     required: true
     default: "World"
