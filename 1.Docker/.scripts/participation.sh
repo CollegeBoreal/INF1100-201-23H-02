@@ -44,7 +44,7 @@ do
    OK="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |"
    KO="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | :x: |"
    if [ -f "$FILE" ]; then
-      if [ -f "$ACTION_YML" || -f "$ACTION_YAML" ]; then
+      if [[ -f "$ACTION_YML" || -f "$ACTION_YAML" ]]; then
           echo ${OK_ACTION}
       else
           echo ${OK}
