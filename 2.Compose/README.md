@@ -5,6 +5,8 @@
 
 ## :gear: VM
 
+:warning: Si il vous reste encore du crédit Azure
+
 - [ ] Se connecter à [Azure](https://github.com/CollegeBoreal/Tutoriels/tree/main/2.MicroServices/4.Cloud/2.Public/2.Azure)
 
 - [ ] Créer les scripts 'terraform' en utilisant [boot](boot)
