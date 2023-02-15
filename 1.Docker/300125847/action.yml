@@ -3,7 +3,7 @@ description: "Greet someone"
 author: "chakibmahi@github.com"
 
 inputs:
-  MY_NAME:
+  MY_NAME: Chakib Mahi
     description: "Who to greet"
     required: true
     default: "Chaks"
