@@ -1,0 +1,11 @@
+name: 300125847 Chaks
+on: push
+jobs:
+  build:
+    name: Chaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./1.Docker/300125847
+        with:
+          MY_NAME: "Mona"
