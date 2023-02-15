@@ -67,7 +67,61 @@ docker context create machine-CB-AZ-<ton ID> --docker "host=ssh://terraform@<ton
 docker context use machine-CB-AZ-<ton ID>
 ```
 
-## :b: docker-compose
+## :b: En utilisant la méthode imperative (via le CLI)
+
+- [ ] :one: Créer le réseau
+
+```
+docker network create wordpress-network
+```
+
+- [ ] :two: Créer le volume (disque) pour la persistence de MariaDB et créer le container MariaDB
+
+* Créer le volume
+
+```
+docker volume create --name mariadb_data
+```
+
+* Lancer le conteneur
+
+```
+docker container run \
+  --name mariadb \
+  --env ALLOW_EMPTY_PASSWORD=yes \
+  --env MARIADB_USER=bn_wordpress \
+  --env MARIADB_PASSWORD=bitnami \
+  --env MARIADB_DATABASE=bitnami_wordpress \
+  --volume mariadb_data:/bitnami/mariadb \
+  --network wordpress-network \
+  --detach \
+  bitnami/mariadb:latest
+```
+
+- [ ] :three: Creer les volumes pour la persistence de WordPress et lancer le conteneur
+
+```
+docker volume create --name wordpress_data
+```
+
+```
+docker container run --name wordpress \
+  --publish 8080:8080 -p 8443:8443 \
+  --env ALLOW_EMPTY_PASSWORD=yes \
+  --env WORDPRESS_DATABASE_USER=bn_wordpress \
+  --env WORDPRESS_DATABASE_PASSWORD=bitnami \
+  --env WORDPRESS_DATABASE_NAME=bitnami_wordpress \
+  --volume wordpress_data:/bitnami/wordpress \
+  --network wordpress-network \
+  --detach \
+  bitnami/wordpress:latest
+  
+- [ ] Accéder à votre application WordPress
+
+http://localhost.<mon-nom-de-domaine>
+
+
+## :ab: docker-compose
 
 https://livebook.manning.com/book/docker-in-action-second-edition/chapter-11/81
 
