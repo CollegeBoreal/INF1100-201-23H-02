@@ -1,12 +1,12 @@
-name: "Hello Salimata"
+name: "Hello Actions"
 description: "Greet someone"
-author: "300127065@monboreal.ca"
+author: "Sedric-g@github.com"
 
 inputs:
-  MY_NAME:"salimata kanta"
+  MY_NAME:
     description: "Who to greet"
     required: true
-    default: "World"
+    default: "EL 3ALAMIA"
 
 runs:
   using: "docker"

@@ -1,9 +1,9 @@
-name: "Hello Salimata"
+name: "Hello Actions"
 description: "Greet someone"
-author: "300127065@monboreal.ca"
+author: "Qadash-243@github.com"
 
 inputs:
-  MY_NAME:"salimata kanta"
+  MY_NAME:
     description: "Who to greet"
     required: true
     default: "World"
@@ -13,5 +13,5 @@ runs:
   image: "Dockerfile"
 
 branding:
-  icon: "mic"
-  color: "purple"
+  icon: "lamb"
+  color: "blue"

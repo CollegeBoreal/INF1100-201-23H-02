@@ -1,12 +1,12 @@
-name: "Hello Salimata"
+name: "300125847 Chakib"
 description: "Greet someone"
-author: "300127065@monboreal.ca"
+author: "chakibmahi@github.com"
 
 inputs:
-  MY_NAME:"salimata kanta"
+  MY_NAME:  
     description: "Who to greet"
     required: true
-    default: "World"
+    default: "Chaks"
 
 runs:
   using: "docker"
