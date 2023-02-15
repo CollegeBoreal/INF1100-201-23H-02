@@ -128,7 +128,7 @@ http://localhost.<mon-nom-de-domaine>
 
 ## :ab: En utilisant la méthode d/clarative (via docker-compose)
 
-https://livebook.manning.com/book/docker-in-action-second-edition/chapter-11/81
+:bulb: [Run the application using Docker Compose](https://github.com/bitnami/containers/tree/main/bitnami/wordpress#run-the-application-using-docker-compose)
 
 - [ ] Dans votre repertoire :id:
 
