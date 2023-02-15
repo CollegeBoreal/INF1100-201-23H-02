@@ -119,13 +119,14 @@ docker container run --name wordpress \
   --network wordpress-network \
   --detach \
   bitnami/wordpress:latest
-  
+```
+
 :four: Accéder à votre application WordPress
 
 http://localhost.<mon-nom-de-domaine>
 
 
-## :ab: docker-compose
+## :ab: En utilisant la méthode d/clarative (via docker-compose)
 
 https://livebook.manning.com/book/docker-in-action-second-edition/chapter-11/81
 
