@@ -123,7 +123,7 @@ docker container run --name wordpress \
 
 :four: Accéder à votre application WordPress
 
-http://localhost.<mon-nom-de-domaine>
+http://localhost.{mon-nom-de-domaine}
 
 
 ## :ab: En utilisant la méthode déclarative (via docker-compose)
