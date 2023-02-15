@@ -39,7 +39,35 @@ $ touch README.md
 
 En un mot, récupérer le travail que vous avez fait à travers [Github Leaning Lab](https://lab.github.com/CollegeBoreal) et le mettre dans cette leçon [1.Docker](../1.Docker)
 
-:two: Amélioration
+
+## :ab: Sur la machine client (ton PC - git bash ou ton Mac - Terminal)
+
+- [ ] Creer un contexte
+
+```
+docker context create betelgeuse --docker "host=ssh://ubuntu@betelgeuse.orion.gasy.africa"
+```
+
+```
+docker context use betelgeuse
+```
+
+- [ ] Lister les contextes 
+
+* toutes les machines Note: :star:
+
+```
+docker context ls
+```
+> Retour
+```
+NAME        DESCRIPTION                               DOCKER ENDPOINT                        KUBERNETES ENDPOINT                                   ORCHESTRATOR
+default     Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine         https://rigel.orion.gasy.africa:6443 (default)   swarm
+betelgeuse   *                                        ssh://ubuntu@betelgeuse.orion.gasy.africa             
+saiph                                                 ssh://ubuntu@saiph.orion.gasy.africa                              
+```
+
+## :two: Amélioration
 
 En rappel, pour éxécuter localement son fichier `Dockerfile`, on execute la commande :
 
@@ -70,13 +98,20 @@ c010b45de5b3        40 seconds ago      /bin/sh -c #(nop) ADD file:44be7c7e599db
 <missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:594fa35cf803361e6…   63.2MB   
 ```
 
+## :o: Correction
+
+- [ ] [hello-github-actions](https://github.com/b300098957/hello-github-actions)
+
+- Aller chercher le fichier `action.yml` dans le referentiel `hello-github-actions`
+- Mettre dans votre propre repertoire :id: et modifier le fichier `action.yml` en fonction de votre environnement
+- Aller chercher le fichier `main.yaml` dans le repertoire `.github/workflows` du le referentiel `hello-github-actions`
+- le rajouter dans le repertoire `.github/workflows` en changeant le nom de fichier en :id:.yaml 
+
 
 # References
 
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-
-https://phoenixnap.com/kb/how-to-containerize-applications
-
-https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
-
-https://livebook.manning.com/book/docker-in-action/chapter-8
+- [ ] [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices)
+- [ ] [How to Containerize Legacy Applications](https://phoenixnap.com/kb/how-to-containerize-applications)
+- [ ] [Docker CMD vs. Entrypoint Commands: What's the Difference?](https://phoenixnap.com/kb/docker-cmd-vs-entrypoint)
+- [ ] [Chapter 8. Build automation and advanced image considerations](https://livebook.manning.com/book/docker-in-action/chapter-8)
+- [ ] [/bin/sh: 0: Illegal option](https://github.com/carlossg/docker-maven/issues/114#issuecomment-527748335)
