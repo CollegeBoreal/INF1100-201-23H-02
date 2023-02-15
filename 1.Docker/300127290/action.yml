@@ -1,6 +1,6 @@
 name: "Bienvenu sur la page de la Grande Dame"
 description: "Greet someone"
-author: "300127@github.com"
+author: "300127290@monboreal.ca"
 
 inputs:
   MY_NAME:
