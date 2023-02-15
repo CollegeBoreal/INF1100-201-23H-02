@@ -126,7 +126,7 @@ docker container run --name wordpress \
 http://localhost.<mon-nom-de-domaine>
 
 
-## :ab: En utilisant la méthode d/clarative (via docker-compose)
+## :ab: En utilisant la méthode déclarative (via docker-compose)
 
 :bulb: [Run the application using Docker Compose](https://github.com/bitnami/containers/tree/main/bitnami/wordpress#run-the-application-using-docker-compose)
 
