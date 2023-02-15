@@ -69,21 +69,21 @@ docker context use machine-CB-AZ-<ton ID>
 
 ## :b: En utilisant la méthode imperative (via le CLI)
 
-- [ ] :one: Créer le réseau
+:one: Créer le réseau
 
 ```
 docker network create wordpress-network
 ```
 
-- [ ] :two: Créer le volume (disque) pour la persistence de MariaDB et créer le container MariaDB
+:two: Créer le volume (disque) pour la persistence de MariaDB et créer le container MariaDB
 
-* Créer le volume
+- [ ]  Créer le volume
 
 ```
 docker volume create --name mariadb_data
 ```
 
-* Lancer le conteneur
+- [ ]  Lancer le conteneur
 
 ```
 docker container run \
@@ -98,11 +98,15 @@ docker container run \
   bitnami/mariadb:latest
 ```
 
-- [ ] :three: Creer les volumes pour la persistence de WordPress et lancer le conteneur
+:three: Creer les volumes pour la persistence de WordPress et lancer le conteneur
+
+- [ ]  Créer le volume
 
 ```
 docker volume create --name wordpress_data
 ```
+
+- [ ]  Lancer le conteneur
 
 ```
 docker container run --name wordpress \
@@ -116,7 +120,7 @@ docker container run --name wordpress \
   --detach \
   bitnami/wordpress:latest
   
-- [ ] Accéder à votre application WordPress
+:four: Accéder à votre application WordPress
 
 http://localhost.<mon-nom-de-domaine>
 
