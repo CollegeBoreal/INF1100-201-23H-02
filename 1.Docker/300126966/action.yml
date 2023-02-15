@@ -1,0 +1,17 @@
+name: "Bonjour Actions"
+description: "Greet someone"
+author: "bakmomo@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Qui Saluer ?"
+    required: true
+    default: "Monde"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "orange"
