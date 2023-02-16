@@ -1,0 +1,11 @@
+name: "Franklin"
+on: push
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./1.Docker/300126634
+        with:
+          MY_NAME: "Franklin"
