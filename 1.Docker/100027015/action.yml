@@ -1,0 +1,17 @@
+name: "what's your name"
+description: "nice to know you"
+author: "jess@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Where to go"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mango"
+  color: "black"
