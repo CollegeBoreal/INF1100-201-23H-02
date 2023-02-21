@@ -1,12 +1,12 @@
-name: "Hello Actions"
+name: "300125847 Chakib"
 description: "Greet someone"
-author: "ch9aw9aw@github.com"
+author: "chakibmahi@github.com"
 
 inputs:
-  MY_NAME:
+  MY_NAME:  
     description: "Who to greet"
     required: true
-    default: "CherkuS"
+    default: "Chaks"
 
 runs:
   using: "docker"

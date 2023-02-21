@@ -1,0 +1,11 @@
+name: "300128566 Bandiougou"
+on: push
+jobs:
+  build:
+    name: "300128566 Bandiougou"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./1.Docker/300128566
+        with:
+          MY_NAME: "Bandiougou"
