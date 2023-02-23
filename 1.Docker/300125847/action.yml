@@ -1,0 +1,17 @@
+name: "300125847 Chakib"
+description: "Greet someone"
+author: "chakibmahi@github.com"
+
+inputs:
+  MY_NAME:  
+    description: "Who to greet"
+    required: true
+    default: "Chaks"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
