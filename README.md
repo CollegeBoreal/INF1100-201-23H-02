@@ -97,4 +97,4 @@ en respectant les normes standards de l’industrie.
 
 https://kube.academy/
 
-- [ ] [CKA](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)
+- [ ] [Certified Kubernetes Administrator (CKA)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)
