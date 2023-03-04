@@ -67,3 +67,4 @@ https://design.jboss.org/redhatdeveloper/marketing/docker_cheatsheet/cheatsheet/
 # References
 
 - [ ] [Docker basic to advance](https://blog.devops.dev/docker-basic-to-advance-a4eef39e05d4)
+- [ ] [docker-compose](https://faun.pub/docker-compose-d0d8a2cae298)
