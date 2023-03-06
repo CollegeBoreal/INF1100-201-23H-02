@@ -8,7 +8,7 @@
 | :two:   | [image](image.md) |
 | :three: | [container](container.md) |
 | :four:  | [network](network.md) | 
-| :five:  | [volume](volume.md) |
+| :five:  | [:paper_roll: volume](volume.md) |
 
 
 ---
