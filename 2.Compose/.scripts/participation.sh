@@ -38,9 +38,10 @@ i=0
 for id in "${ETUDIANTS[@]}"
 do
    FILE=${id}/docker-compose.yml
-   OK="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | "
-   KO="| ${i} | [${id}](../${FILE}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | "
-   if [ -f "$FILE" ]; then
+   FILE_A=${id}/docker-compose.yaml
+   OK="| ${i} | [${id}](../) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | "
+   KO="| ${i} | [${id}](../) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | "
+   if [ -f "$FILE" ] || [ -f "$FILE_A" ]; then
        echo ${OK}
    else
        echo ${KO}
