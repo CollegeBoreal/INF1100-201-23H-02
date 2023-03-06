@@ -1,13 +1,13 @@
 # D.Docker :whale:
 
 
-:
+
 
 | :hash:  | description |
 |---------|-------------|
-| :one:   | [context](context.md) |
+| :one:   | [:control_knob: context](context.md) |
 | :two:   | [image](image.md) |
-| :three: | [container](container.md) |
+| :three: | [:ship: container](container.md) |
 | :four:  | [:globe_with_meridians: network](network.md) | 
 | :five:  | [:roll_of_paper: volume](volume.md) |
 
