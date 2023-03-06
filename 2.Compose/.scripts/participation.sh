@@ -39,8 +39,8 @@ for id in "${ETUDIANTS[@]}"
 do
    FILE=${id}/docker-compose.yml
    FILE_A=${id}/docker-compose.yaml
-   OK="| ${i} | [${id}](../) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | "
-   KO="| ${i} | [${id}](../) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | "
+   OK="| ${i} | [${id}](../${id}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | "
+   KO="| ${i} | [${id}](../${id}) - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: | "
    if [ -f "$FILE" ] || [ -f "$FILE_A" ]; then
        echo ${OK}
    else
