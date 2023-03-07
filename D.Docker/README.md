@@ -6,6 +6,9 @@
 | :hash:  | Composants                                   | Description |
 |---------|----------------------------------------------|-----------------------|
 | :zero:  | [:tractor: engine](engine.md)                | Service Linux permettant d'éxécuter les conteneurs Docker dans le moteur `docker -d`|
+| | |
+| :bulb: | [:keyboard: client](client.md) ]|
+| | |
 | :one:   | [:control_knobs: context](context.md)        | Commande `Docker` permettant la connection au moteur à distance |
 | :two:   | [:minidisc: image](image.md)                 | Commande `Docker` permettant la gestion des images ISO | 
 | :three: | [:package: container](container.md)          | Commande `Docker` permettant la manipulation des conteneurs |
