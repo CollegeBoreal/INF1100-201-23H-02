@@ -74,6 +74,6 @@ docker container ls
 ```
 > Outputs :
 <pre>
-CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                       NAMES
-da5364a3e356   ubuntu                 "/bin/bash"              4 minutes ago   Up 4 minutes                               jolly_brattain
+CONTAINER ID   IMAGE   COMMAND      CREATED         STATUS         PORTS   NAMES
+da5364a3e356   ubuntu  "/bin/bash"  4 minutes ago   Up 4 minutes           jolly_brattain
 </pre>
