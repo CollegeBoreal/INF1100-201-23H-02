@@ -7,7 +7,7 @@
 |---------|----------------------------------------------|-----------------------|
 | :zero:  | [:tractor: engine](engine.md)                | Service Linux permettant d'éxécuter les conteneurs Docker dans le moteur `docker -d`|
 | | |
-| :bulb: | [:toolbox: client](client.md)                | 
+| :bulb: | [:toolbox: client](client.md)                 | Utilitaire permettant d'utiliser la ligne de commande `CLI` |
 | | |
 | :one:   | [:control_knobs: context](context.md)        | Commande `Docker` permettant la connection au moteur à distance |
 | :two:   | [:minidisc: image](image.md)                 | Commande `Docker` permettant la gestion des images ISO | 
