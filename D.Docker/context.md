@@ -19,7 +19,7 @@ docker context ls
 
 - [ ] Selectionner un contexte 
 
-`docker context use context-:id:`
+`docker context use context-`:id:
 
 - [ ] Vérifier que le contexte est sélectionné (repérer l':star:)
 
