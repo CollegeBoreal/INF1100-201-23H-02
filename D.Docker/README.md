@@ -5,6 +5,7 @@
 
 | :hash:  | description |
 |---------|-------------|
+| :zero:   | [:infinity: Daemon](daemon.md) |
 | :one:   | [:control_knobs: context](context.md) |
 | :two:   | [:package: image](image.md) |
 | :three: | [:ship: container](container.md) |
