@@ -1,5 +1,9 @@
 # Docker Compose
 
+## :a: Declarative mode
+
+Using a `docker-compose.yaml` file
+
 ```yaml
 services:
   db:
@@ -33,10 +37,22 @@ volumes:
   db_data:
 ```
 
+## :b: Manage the containers
+
+- [ ] UP
+
 ```
 docker-compose up --detach
 ```
 
+- [ ] DOWN
+
 ```
 docker-compose down
+```
+
+- [ ] List
+
+```
+docker-compose ps
 ```
