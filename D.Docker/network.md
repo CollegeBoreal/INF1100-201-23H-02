@@ -81,6 +81,10 @@ docker network inspect ubuntu-network
 ]
 ```
 
+## :three: Check the IP Address
+
+- [ ] find the `container_id`
+
 ```
 docker container ls
 ```
@@ -90,9 +94,19 @@ CONTAINER ID   IMAGE   COMMAND      CREATED         STATUS         PORTS   NAMES
 da5364a3e356   ubuntu  "/bin/bash"  4 minutes ago   Up 4 minutes           jolly_brattain
 </pre>
 
+- [ ] get onto the container
+
+```
+docker container exec --interactive --tty da5364a3e356 bash
+```
+
+- [ ] Install the `iproute2` package from `APT`
+
 ```
 apt update; apt install iproute2 --yes
 ```
+
+- [ ] Check the IP address match the `docker network inspect` command
 
 ```
 ip addr
