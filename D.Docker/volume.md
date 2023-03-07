@@ -20,14 +20,14 @@ There are 2 ways:
 
 ```
 docker container run --interactive --tty --detach --publish 85:80 \
-   --volumes /Users/dev/test/data:/usr/local/apache2/htdocs httpd
+   --volume /Users/dev/test/data:/usr/local/apache2/htdocs httpd
 ```
 
 2. Docker volumes
 
 ```
 docker container run --interactive --tty --detach --publish 85:80 \
-   --volumes data:/usr/local/apache2/htdocs httpd
+   --volume data:/usr/local/apache2/htdocs httpd
 ```
 
 ## :ab: Some Commands:
