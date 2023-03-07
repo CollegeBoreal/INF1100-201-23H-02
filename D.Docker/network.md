@@ -123,6 +123,8 @@ ip addr
        valid_lft forever preferred_lft forever
 </pre>
 
+## :four: Remove the network bridge
+
 ```
 docker network rm ubuntu-network   
 ```
