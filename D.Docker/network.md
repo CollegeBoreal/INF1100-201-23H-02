@@ -1,10 +1,15 @@
 # Docker Network
 
+## :one: Create a network bridge
+
+- [ ] Create the network
 
 ```
 docker network create ubuntu-network   
 ```
 > 93b6e64b9819912b67bae4531925af66eaa9a5a42b28bb6dbaf278732991ea27
+
+- [ ] Check the network creation
 
 ```
 docker network ls
@@ -14,15 +19,22 @@ docker network ls
 NETWORK ID     NAME             DRIVER    SCOPE
 fa06f156af39   bridge           bridge    local
 c18cb2c9cc16   host             host      local
-ebe55c889a1f   kind             bridge    local
 162f8bf7915b   none             null      local
 93b6e64b9819   ubuntu-network   bridge    local
 </pre>
+
+## :two: Use the network bridge
+
+- [ ] Create a container using the network bridge
 
 ```
 docker container run --network ubuntu-network --interactive --tty --detach ubuntu
 ```
 > da5364a3e3561e9377bceaa3cc2e4aa8aad809c5b268c1823b536fb157366695
+
+- [ ] Inspect the network bridge
+
+* [IPAM](
 
 ```
 docker network inspect ubuntu-network
@@ -104,3 +116,7 @@ docker network rm ubuntu-network
 <pre>
 Error response from daemon: error while removing network: network ubuntu-network id 93b6e64b9... has active endpoints
 </pre>
+
+# References
+
+- [ ] [How Docker Networking Works and the Importance of IPAM Functionality](https://blogs.infoblox.com/community/how-docker-networking-works-and-the-importance-of-ipam)
