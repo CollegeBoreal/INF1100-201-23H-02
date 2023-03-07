@@ -23,4 +23,21 @@ choco install docker-cli
 brew install docker
 ```
 
+## :exclamation: Installation de docker-compose CLI 
+
+:computer: Windows (PowerShell) avec [choco](https://chocolatey.org/)
+
+:bulb:  avec [HomeBrew](https://formulae.brew.sh)
+
+```
+choco install docker-compose
+```
+
+:apple: MacOS :m::one: (HomeBrew)
+
+```
+brew install docker-compose
+```
+
 [ :back: ](README.md#ddocker-whale)
+
