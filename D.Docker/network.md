@@ -34,7 +34,7 @@ docker container run --network ubuntu-network --interactive --tty --detach ubunt
 
 - [ ] Inspect the network bridge
 
-* [IPAM](
+* [IPAM: IP Address Management](https://www.docker.com/blog/docker-networking-design-philosophy)
 
 ```
 docker network inspect ubuntu-network
