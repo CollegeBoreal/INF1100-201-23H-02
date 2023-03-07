@@ -35,6 +35,16 @@ ENTRYPOINT ["/entrypoint.sh"]
 - [ ] Afficher l'historique des couches
 
 `docker image history b`🆔`:1.0`
+> Outputs :
+<pre>
+IMAGE          CREATED      CREATED BY                                      SIZE      COMMENT
+74f2314a03de   6 days ago   /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B        
+<missing>      6 days ago   /bin/sh -c #(nop) ADD file:fb4c8244f4468cdd3…   77.8MB    
+<missing>      6 days ago   /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      6 days ago   /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      6 days ago   /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B        
+<missing>      6 days ago   /bin/sh -c #(nop)  ARG RELEASE                  0B        
+</pre>
 
 ## :a: Images
 
