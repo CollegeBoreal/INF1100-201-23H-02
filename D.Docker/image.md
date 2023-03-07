@@ -60,7 +60,7 @@ docker image ls
 docker image pull ubuntu
 ```
 
-- [ ] Push 
+- [ ] Connecting to Docker Hub
 
 ```
 docker login
@@ -69,4 +69,24 @@ docker login
 <pre>
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: 
+</pre>
+
+- [ ] Push image to docker hub or ghcr.io 
+
+```
+docker image push ghcr.io/collegeboreal/aide:1.0.8   
+```
+> Outputs :
+<pre>
+The push refers to repository [ghcr.io/uontario/aide]
+bf679b93d651: Layer already exists 
+c6f829b9471d: Layer already exists 
+1d886466c455: Layer already exists 
+2348e9726bab: Layer already exists 
+a565521a6b61: Layer already exists 
+fc9a7040ee93: Layer already exists 
+c700d3f5f15b: Layer already exists 
+e75b8fc6a0d5: Layer already exists 
+8e012198eea1: Layer already exists 
+1.0.8: digest: sha256:03a528b0fa454d159afa2ddea2ce7e6b3fae4f8af61cbda6c29ada350d2aa7e5 size: 2200
 </pre>
