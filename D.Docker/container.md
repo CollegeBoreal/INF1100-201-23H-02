@@ -64,12 +64,4 @@ docker container rm container_id
 docker container rm --force container_id
 ```
 
-## :b: Images
-
-- [ ] :one::zero: List all images present in the system
-
-```
-docker image ls
-```
-
 
