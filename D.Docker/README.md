@@ -9,7 +9,7 @@
 | :one:   | [:control_knobs: context](context.md)        | Commande `Docker` permettant la connection au moteur à distance |
 | :two:   | [:minidisc: image](image.md)                 | Commande `Docker` permettant la gestion des images ISO | 
 | :three: | [:package: container](container.md)          | Commande `Docker` permettant la manipulation des conteneurs |
-| :four:  | [:globe_with_meridians: network](network.md) | Commande `Docker` permettant la gestion d'un réseau local virtuel par lequel communique les conteneurs | 
+| :four:  | [:globe_with_meridians: network](network.md) | Commande `Docker` permettant la gestion d'un réseau local virtuel par lequel communiquent les conteneurs | 
 | :five:  | [:roll_of_paper: volume](volume.md)          | Commande `Docker` permettant la gestion de disques locaux ou éphémères |
 
 
