@@ -32,3 +32,19 @@ Quels sont les instructions pour créer sa propre image?
 docker image ls
 ```
 
+- [ ] Pull an image from [Docker Hub](https://hub.docker.com/_/ubuntu/)
+
+```
+docker image pull ubuntu
+```
+
+- [ ] Push 
+
+```
+docker login
+```
+> Outputs :
+<pre>
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: 
+</pre>
