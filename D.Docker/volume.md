@@ -25,9 +25,17 @@ docker container run --interactive --tty --detach --publish 85:80 \
 
 2. Docker volumes
 
+- [ ] Create the volume 
+
+```
+docker volume create --name wordpress_data
+```
+
+- [ ] Use the volume
+
 ```
 docker container run --interactive --tty --detach --publish 85:80 \
-   --volume data:/usr/local/apache2/htdocs httpd
+   --volume wordpress_data:/usr/local/apache2/htdocs httpd
 ```
 
 ## :ab: Some Commands:
