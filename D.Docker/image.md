@@ -71,22 +71,22 @@ Login with your Docker ID to push and pull images from Docker Hub. If you don't 
 Username: 
 </pre>
 
-- [ ] Push image to docker hub or ghcr.io 
+- [ ] Push image to `docker hub` 
 
 ```
-docker image push ghcr.io/collegeboreal/aide:1.0.8   
+docker image push collegeboreal/kuron
 ```
 > Outputs :
 <pre>
-The push refers to repository [ghcr.io/uontario/aide]
-bf679b93d651: Layer already exists 
-c6f829b9471d: Layer already exists 
-1d886466c455: Layer already exists 
-2348e9726bab: Layer already exists 
-a565521a6b61: Layer already exists 
-fc9a7040ee93: Layer already exists 
-c700d3f5f15b: Layer already exists 
-e75b8fc6a0d5: Layer already exists 
-8e012198eea1: Layer already exists 
-1.0.8: digest: sha256:03a528b0fa454d159afa2ddea2ce7e6b3fae4f8af61cbda6c29ada350d2aa7e5 size: 2200
+The push refers to repository [docker.io/collegeboreal/kuron]
+e349017e9786: Pushed 
+ab90d83fa34a: Mounted from library/node 
+8ee318e54723: Mounted from library/node 
+e6695624484e: Mounted from library/node 
+da59b99bbd3b: Mounted from library/node 
+5616a6292c16: Mounted from library/node 
+f3ed6cb59ab0: Mounted from library/node 
+654f45ecb7e3: Mounted from library/node 
+2c40c66f7667: Mounted from library/node 
+latest: digest: sha256:0b4b251265d6dae45e070b9467e22796c38a98b16f88a3c642f860a6cc355b11 size: 2213
 </pre>
