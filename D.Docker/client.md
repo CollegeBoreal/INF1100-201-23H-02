@@ -23,4 +23,4 @@ choco install docker-cli
 brew install docker
 ```
 
-[ :back: ](../README.md#ddocker-whale)
+[ :back: ](README.md#ddocker-whale)
