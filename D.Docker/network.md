@@ -77,3 +77,22 @@ docker container ls
 CONTAINER ID   IMAGE   COMMAND      CREATED         STATUS         PORTS   NAMES
 da5364a3e356   ubuntu  "/bin/bash"  4 minutes ago   Up 4 minutes           jolly_brattain
 </pre>
+
+```
+apt update; apt install iproute2 --yes
+```
+
+```
+ip addr
+```
+> Outputs :
+<pre>
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+44: eth0@if45: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:13:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.19.0.2/16 brd 172.19.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+</pre>
