@@ -96,3 +96,11 @@ ip addr
     inet 172.19.0.2/16 brd 172.19.255.255 scope global eth0
        valid_lft forever preferred_lft forever
 </pre>
+
+```
+docker network rm ubuntu-network   
+```
+> Outputs :
+<pre>
+Error response from daemon: error while removing network: network ubuntu-network id 93b6e64b9819912b67bae4531925af66eaa9a5a42b28bb6dbaf278732991ea27 has active endpoints
+</pre>
