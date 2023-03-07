@@ -19,6 +19,11 @@ Quels sont les instructions pour créer sa propre image?
 | `CMD`        | Permet de rajouter des parametres à la commande `ENTRYPOINT` - de type tableaux [ "param1", "parma2"]        |
 
 
+`docker image build --tag b`🆔`:1.0 .`
+
+`docker image history b`🆔`:1.0`
+
+
 ## :a: Images
 
 - [ ] :one::zero: List all images present in the system
