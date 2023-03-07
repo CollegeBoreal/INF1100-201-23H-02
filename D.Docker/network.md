@@ -6,7 +6,18 @@ docker network create ubuntu-network
 ```
 > 93b6e64b9819912b67bae4531925af66eaa9a5a42b28bb6dbaf278732991ea27
 
-
+```
+docker network ls
+```
+> Outputs :
+<pre>
+NETWORK ID     NAME             DRIVER    SCOPE
+fa06f156af39   bridge           bridge    local
+c18cb2c9cc16   host             host      local
+ebe55c889a1f   kind             bridge    local
+162f8bf7915b   none             null      local
+93b6e64b9819   ubuntu-network   bridge    local
+</pre>
 
 ```
 docker container run --network ubuntu-network --interactive --tty --detach ubuntu
