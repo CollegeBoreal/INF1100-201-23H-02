@@ -3,14 +3,14 @@
 
 
 
-| :hash:  | description |
-|---------|-------------|
-| :zero:   | [:tractor: engine](engine.md) |
-| :one:   | [:control_knobs: context](context.md) |
-| :two:   | [:package: image](image.md) |
-| :three: | [:ship: container](container.md) |
+| :hash:  | Composants                                   |
+|---------|----------------------------------------------|
+| :zero:  | [:tractor: engine](engine.md)                |
+| :one:   | [:control_knobs: context](context.md)        |
+| :two:   | [:minidisc: image](image.md)                 |
+| :three: | [:package: container](container.md)          |
 | :four:  | [:globe_with_meridians: network](network.md) | 
-| :five:  | [:roll_of_paper: volume](volume.md) |
+| :five:  | [:roll_of_paper: volume](volume.md)          |
 
 
 ---
