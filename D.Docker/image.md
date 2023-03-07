@@ -3,7 +3,7 @@
 
 ## :bulb: Dockerfile
 
-Quels sont les instructions pour créer sa propre image?
+- [ ] Quels sont les instructions pour créer sa propre image?
 
 | Instructions |  Commentaires                                                                                                |
 |--------------|--------------------------------------------------------------------------------------------------------------|
@@ -18,6 +18,7 @@ Quels sont les instructions pour créer sa propre image?
 | `ENTRYPOINT` | Par défaut éxécute à la fin de l'installation `["/bin/sh"]`. On peut l'`override` (outrepasser ou remplacer) |
 | `CMD`        | Permet de rajouter des parametres à la commande `ENTRYPOINT` - de type tableaux [ "param1", "parma2"]        |
 
+- [ ] Un example de `Dockerfile`
 
 ```Dockerfile
 FROM debian:9.5-slim
@@ -27,11 +28,13 @@ RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ```
 
+- [ ] Construire l'image
 
 `docker image build --tag b`🆔`:1.0 .`
 
-`docker image history b`🆔`:1.0`
+- [ ] Afficher l'historique des couches
 
+`docker image history b`🆔`:1.0`
 
 ## :a: Images
 
