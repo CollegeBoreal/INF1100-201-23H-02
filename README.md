@@ -95,6 +95,5 @@ en respectant les normes standards de l’industrie.
 | [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
 
 
-https://kube.academy/
-
-- [ ] [CKA](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)
+- [ ] [kube.academy: Learn Kubernetes. From Experts. For Free.](https://kube.academy)
+- [ ] [Certified Kubernetes Administrator (CKA)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)
