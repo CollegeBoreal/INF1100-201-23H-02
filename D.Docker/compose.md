@@ -37,7 +37,17 @@ volumes:
   db_data:
 ```
 
-## :b: Manage the containers
+## :b: Build the images
+
+- [ ] BUILD
+
+Creates a docker image if the Dockerfile is provided
+
+```
+docker-compose build .
+```
+
+## :ab: Manage the containers
 
 - [ ] UP
 
