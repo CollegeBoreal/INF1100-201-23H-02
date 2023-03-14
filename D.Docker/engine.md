@@ -68,4 +68,4 @@ groups
 # References
 
 - [ ] [Engine](https://github.com/CollegeBoreal/Tutoriels/tree/main/2.MicroServices/1.Containers/2.Docker/1.Engine/2.Linux)
-
+- [ ] [How to solve docker: Got permission denied while trying to connect to the Docker daemon socket?](https://medium.com/nerd-for-tech/how-to-solve-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket-82e81ab012b7)
