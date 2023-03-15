@@ -115,8 +115,6 @@ CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
 *         kind-k8s-ha   kind-k8s-ha   kind-k8s-ha
 ```
 
-<img src="images/kind-k8s-dashboard.png" width="1602" heigth="1378"></img>
-
 ```
 % docker container ls
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                       NAMES
