@@ -11,7 +11,7 @@
 
 ## :o: Install 
 
-- [ ] KIND
+:round_pushpin: KIND
 
 :desktop_computer: Windows
 
