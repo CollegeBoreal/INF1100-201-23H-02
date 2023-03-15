@@ -11,7 +11,7 @@
 
 ## :o: Install 
 
-- [ ] KIND
+#### :round_pushpin: KIND
 
 :desktop_computer: Windows
 
@@ -33,7 +33,7 @@ chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 ```
 
-- [ ] kubectl (kube control)
+#### :round_pushpin: kubectl (kube control)
 
 :desktop_computer: Windows
 
@@ -54,7 +54,7 @@ snap install kubectl
 ```
 
 
-## :one: Run single node
+## :a: Run single node
 
 
 
@@ -81,9 +81,11 @@ CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
 $ kubectl config use-context kind-k8s
 ```
 
-## :two: Run multiple nodes
+## :b: Run multiple nodes
 
-:pushpin: Edit file `HA-config.yaml`
+- [ ] Create a folder with your :id:
+
+:pushpin: in youo :id: folder, edit file `HA-config.yaml`
 
 ```yaml
 # HA-config.yaml
@@ -112,8 +114,6 @@ CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
           kind-k8s      kind-k8s      kind-k8s      
 *         kind-k8s-ha   kind-k8s-ha   kind-k8s-ha
 ```
-
-<img src="images/kind-k8s-dashboard.png" width="1602" heigth="1378"></img>
 
 ```
 % docker container ls
