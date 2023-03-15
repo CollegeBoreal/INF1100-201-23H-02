@@ -54,7 +54,7 @@ snap install kubectl
 ```
 
 
-## :one: Run single node
+## :a: Run single node
 
 
 
@@ -81,9 +81,11 @@ CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
 $ kubectl config use-context kind-k8s
 ```
 
-## :two: Run multiple nodes
+## :b: Run multiple nodes
 
-:pushpin: Edit file `HA-config.yaml`
+- [ ] Create a folder with your :id:
+
+:pushpin: in youo :id: folder, edit file `HA-config.yaml`
 
 ```yaml
 # HA-config.yaml
