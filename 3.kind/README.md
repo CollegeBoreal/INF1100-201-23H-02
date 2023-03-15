@@ -11,7 +11,7 @@
 
 ## :o: Install 
 
-:round_pushpin: KIND
+#### :round_pushpin: KIND
 
 :desktop_computer: Windows
 
@@ -33,7 +33,7 @@ chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 ```
 
-- [ ] kubectl (kube control)
+#### :round_pushpin: kubectl (kube control)
 
 :desktop_computer: Windows
 
