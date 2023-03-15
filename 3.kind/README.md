@@ -121,15 +121,18 @@ CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
 <img src="images/kind-k8s-ha-container.png" width="2686" heigth="278"></img>
 
 ```
-% kubectl get nodes                     
-NAME                    STATUS   ROLES    AGE   VERSION
-k8s-ha-control-plane    Ready    master   17m   v1.17.0
-k8s-ha-control-plane2   Ready    master   17m   v1.17.0
-k8s-ha-control-plane3   Ready    master   16m   v1.17.0
-k8s-ha-worker           Ready    <none>   15m   v1.17.0
-k8s-ha-worker2          Ready    <none>   15m   v1.17.0
-k8s-ha-worker3          Ready    <none>   15m   v1.17.0
+kubectl get nodes                     
 ```
+> Outputs :
+<pre>
+NAME                    STATUS   ROLES           AGE   VERSION
+k8s-ha-control-plane    Ready    control-plane   35m   v1.25.3
+k8s-ha-control-plane2   Ready    control-plane   34m   v1.25.3
+k8s-ha-control-plane3   Ready    control-plane   34m   v1.25.3
+k8s-ha-worker           Ready    <none>          33m   v1.25.3
+k8s-ha-worker2          Ready    <none>          33m   v1.25.3
+k8s-ha-worker3          Ready    <none>          33m   v1.25.3
+</pre>
 
 ## :x: Remove Cluster
 
