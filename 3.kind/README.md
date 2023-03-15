@@ -137,15 +137,18 @@ k8s-ha-worker3          Ready    <none>          33m   v1.25.3
 ## :x: Remove Cluster
 
 ```
-% kind delete cluster --name k8s
+kind delete cluster --name k8s
 ```
 
 ```
-% kubectl config get-contexts                              
+kubectl config get-contexts                              
+```
+> Outputs :
+<pre>
 CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
 *         kind-k8s-HA   kind-k8s-HA   kind-k8s-HA   
           minikube      minikube      minikube   
-```
+</pre>
 
 ## :x: Force removing if issues
 
