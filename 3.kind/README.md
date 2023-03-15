@@ -109,11 +109,14 @@ kind create cluster --name k8s-ha --config HA-config.yaml
 <img src="images/kind-k8s-ha.png" width="2440" heigth="856"></img>
 
 ```
-% kubectl config get-contexts                              
+kubectl config get-contexts                              
+```
+> Outputs :
+<pre>
 CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
           kind-k8s      kind-k8s      kind-k8s      
 *         kind-k8s-ha   kind-k8s-ha   kind-k8s-ha
-```
+</pre>
 
 <img src="images/kind-k8s-ha-container.png" width="2686" heigth="278"></img>
 
