@@ -50,7 +50,7 @@ brew install kubectl
 :penguin: Ubuntu
 
 ```
-snap install kubectl
+snap install kubectl --install
 ```
 
 
