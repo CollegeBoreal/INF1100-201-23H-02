@@ -111,6 +111,17 @@ kind create cluster --name k8s-ha --config HA-config.yaml
 <img src="images/kind-k8s-ha.png" width="2440" heigth="856"></img>
 
 ```
+kubectl cluster-info --context kind-k8s-ha
+```
+> Outputs :
+<pre>
+Kubernetes control plane is running at https://127.0.0.1:37641
+CoreDNS is running at https://127.0.0.1:37641/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+<pre>
+
+```
 kubectl config get-contexts                              
 ```
 > Outputs :
