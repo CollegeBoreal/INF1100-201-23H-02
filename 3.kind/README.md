@@ -49,8 +49,10 @@ brew install kubectl
 
 :penguin: Ubuntu
 
+* add `--classic` if requested
+
 ```
-snap install kubectl --install
+snap install kubectl
 ```
 
 
