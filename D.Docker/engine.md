@@ -15,19 +15,19 @@
 * Installer `Docker` avec le [`convenient script`](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) dans un environnement de  développement
 
 ```
-$ sudo curl -sSL https://get.docker.com | sh
+sudo curl -sSL https://get.docker.com | sh
 ```
 
 * Verifier que le service fonctionne
 
 ```
-$ systemctl status docker # doit être actif - Active (running)
+systemctl status docker # doit être actif - Active (running)
 ```
 
 * Permettre l'accès au service au démarrage de la machine
 
 ```
-$ sudo systemctl enable docker
+sudo systemctl enable docker
 ```
 
 
