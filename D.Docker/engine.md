@@ -113,7 +113,11 @@ Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.228586993Z
 ```
 sudo systemctl enable docker
 ```
-
+> Outputs :
+```
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+```
 
 ### :two: Permissions
 
