@@ -78,7 +78,7 @@ WARNING: Access to the remote API on a privileged Docker daemon is equivalent
 ================================================================================
 </pre>
 
-* Verifier que le service fonctionne
+* Verifier que le service fonctionne (appuyer sur `q` pour quitter)
 
 ```
 systemctl status docker # doit être actif - Active: active (running) since ...
