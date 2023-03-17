@@ -87,7 +87,7 @@ kubectl config use-context kind-k8s
 
 - [ ] Create a folder with your :id:
 
-:pushpin: in youo :id: folder, edit file `HA-config.yaml`
+:pushpin: in your :id: folder, edit file `HA-config.yaml`
 
 ```yaml
 # HA-config.yaml
