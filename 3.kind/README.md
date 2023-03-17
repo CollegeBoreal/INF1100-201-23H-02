@@ -80,7 +80,7 @@ CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
 - [ ] Use contexts
 
 ```
-$ kubectl config use-context kind-k8s
+kubectl config use-context kind-k8s
 ```
 
 ## :b: Run multiple nodes
