@@ -110,6 +110,8 @@ kind create cluster --name k8s-ha --config HA-config.yaml
 
 <img src="images/kind-k8s-ha.png" width="2440" heigth="856"></img>
 
+- [ ] Get Info
+
 ```
 kubectl cluster-info --context kind-k8s-ha
 ```
@@ -120,6 +122,8 @@ CoreDNS is running at https://127.0.0.1:37641/api/v1/namespaces/kube-system/serv
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 <pre>
+
+- [ ] Get Contexts
 
 ```
 kubectl config get-contexts                              
@@ -132,6 +136,8 @@ CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
 </pre>
 
 <img src="images/kind-k8s-ha-container.png" width="2686" heigth="278"></img>
+
+- [ ] Get Nodes
 
 ```
 kubectl get nodes                     
