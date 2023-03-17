@@ -83,6 +83,30 @@ WARNING: Access to the remote API on a privileged Docker daemon is equivalent
 ```
 systemctl status docker # doit être actif - Active (running)
 ```
+> Outputs :
+<pre>
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2023-03-17 14:17:20 UTC; 1min 31s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 114945 (dockerd)
+      Tasks: 14
+     Memory: 29.8M
+     CGroup: /system.slice/docker.service
+             └─114945 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Mar 17 14:17:19 betelgeuse dockerd[114945]: time="2023-03-17T14:17:19.439773584Z" level=info msg="[core] [Cha>
+Mar 17 14:17:19 betelgeuse dockerd[114945]: time="2023-03-17T14:17:19.533008944Z" level=info msg="Loading con>
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.111369570Z" level=info msg="Default bri>
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.189804541Z" level=info msg="Loading con>
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.202002319Z" level=warning msg="WARNING:>
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.202047580Z" level=info msg="Docker daem>
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.202150926Z" level=info msg="Daemon has >
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.220793310Z" level=info msg="[core] [Ser>
+Mar 17 14:17:20 betelgeuse systemd[1]: Started Docker Application Container Engine.
+Mar 17 14:17:20 betelgeuse dockerd[114945]: time="2023-03-17T14:17:20.228586993Z" level=info msg="API listen 
+</pre>
 
 * Permettre l'accès au service au démarrage de la machine
 
