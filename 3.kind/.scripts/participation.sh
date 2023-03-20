@@ -30,8 +30,8 @@ echo "| :x:                | Projet inexistant             |"
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id:                | Interne            | ssh | Version | K8S |"
-echo "|------|----------------------------|--------------------|-----|---------|-------------|"
+echo "|:hash:| Boréal :id:                | Interne            | Version | K8S         |"
+echo "|------|----------------------------|--------------------|---------|-------------|"
 
 i=0
 
@@ -46,9 +46,9 @@ do
         -o PasswordAuthentication=no \
         -o ConnectTimeout=5 ${SERVERS[${i}]} kind get clusters 2>/dev/null`
     # echo $VERSION
-   OK_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | :wheel_of_dharma: |"
-   KO_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | :bug: |"
-   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | :x: |"
+   OK_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | ${VERSION} | :wheel_of_dharma: |"
+   KO_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | ${VERSION} | :bug: |"
+   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: |"
    if [[ $VERSION == *"v0.17.0"* ]]; then
       if [[ $K8S == *"k8s"* ]]; then
           echo ${OK_K8S}
