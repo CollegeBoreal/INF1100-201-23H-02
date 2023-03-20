@@ -153,6 +153,38 @@ k8s-ha-worker2          Ready    <none>          33m   v1.25.3
 k8s-ha-worker3          Ready    <none>          33m   v1.25.3
 </pre>
 
+## :ab: Run a pod
+
+- [ ] Démarrer un `pod` 
+
+```
+kubectl run my-shell --stdin --tty --image ubuntu:22.04 -- bash 
+```
+> Outputs :
+<pre>
+If you don't see a command prompt, try pressing enter.
+root@my-shell:/# 
+</pre>
+
+- [ ] Rattacher un `pod` après être sorti du conteneur
+
+> Session ended, resume using 'kubectl attach my-shell -c my-shell -i -t' command when the pod is running
+
+```
+kubectl attach my-shell --stdin --tty --container my-shell 
+```
+
+- [ ] Lister les `pod`s
+
+```
+kubectl get pods
+```
+> Output :
+<pre>
+NAME                      READY   STATUS    RESTARTS     AGE
+my-shell                  2/2     Running   1 (9s ago)   16s
+</pre>
+
 ## :x: Remove Cluster
 
 ```
