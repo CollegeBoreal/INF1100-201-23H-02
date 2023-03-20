@@ -191,6 +191,15 @@ my-shell                  2/2     Running   1 (9s ago)   16s
 kubectl delete pod my-shell
 ```
 
+## :o: Run a pod (declarative mode)
+
+- [ ] Creer le fichier `manifest`
+
+```
+touch my-pod-manifest.yaml
+```
+
+- [ ] L'éditer avec un éditeur (nano ou vi)
 
 ```yaml
 apiVersion: v1
@@ -206,6 +215,18 @@ spec:
     command:
       - "sleep"
       - "604800"
+```
+
+- [ ] Créer le `pod`
+
+```
+kubectl create -f my-pod-manifest.yaml
+```
+
+- [ ] Accéder au `pod` (avec `exec`)
+
+```
+kubectl exec my-shell --stdin --tty --container my-shell -- bash
 ```
 
 ## :x: Remove Cluster
