@@ -191,6 +191,23 @@ my-shell                  2/2     Running   1 (9s ago)   16s
 kubectl delete pod my-shell
 ```
 
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-shell
+  labels:
+    app: my-shell
+spec:
+  containers:
+  - name: my-shell
+    image: ubuntu:22.04
+    command:
+      - "sleep"
+      - "604800"
+```
+
 ## :x: Remove Cluster
 
 ```
