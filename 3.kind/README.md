@@ -185,6 +185,12 @@ NAME                      READY   STATUS    RESTARTS     AGE
 my-shell                  2/2     Running   1 (9s ago)   16s
 </pre>
 
+- [ ] Detruire un `pod`
+
+```
+kubectl delete pod my-shell
+```
+
 ## :x: Remove Cluster
 
 ```
