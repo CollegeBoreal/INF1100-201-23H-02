@@ -1,5 +1,7 @@
-# KIND - Kubernetes In Docker
+# :three: KIND - Kubernetes In Docker
 
+
+#### [:tada: Participation](.scripts/Participation.md)
 
 # :warning: Tries to install Docker-Desktop (on Windows Server)
 
