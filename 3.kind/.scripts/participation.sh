@@ -47,7 +47,7 @@ do
         -o ConnectTimeout=5 ${SERVERS[${i}]} kind get clusters 2>/dev/null`
     # echo $VERSION
    OK_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | :wheel_of_dharma: |"
-   KO_K8s="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | :x: |"
+   KO_K8S="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | ${K8S} |"
    KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | :x: |"
    if [[ $VERSION == *"v0.17.0"* ]]; then
       if [[ $K8S == *"k8s"* ]]; then
