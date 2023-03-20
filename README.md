@@ -90,6 +90,7 @@ en respectant les normes standards de l’industrie.
 | [Kubernetes In Action](https://www.manning.com/books/kubernetes-in-action-second-edition)  |                                    |
 | [Microsoft Containers](https://azure.microsoft.com/en-us/product-categories/containers)    | Livre Pakt                         |
 | [VMWare](https://k8s.vmware.com/kubernetes-up-and-running)                                 | O'reilly                           |
+| [Acing the Certified Kubernetes Administrator Exam](https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam) | Manning CKA|
 
 
 | Titre | Description |
