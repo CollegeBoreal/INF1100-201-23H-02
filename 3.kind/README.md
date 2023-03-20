@@ -221,3 +221,4 @@ CURRENT   NAME          CLUSTER       AUTHINFO      NAMESPACE
 
 - [ ] [Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [ ] [Launching Remote KIND (Kubernetes in Docker) Clusters](https://www.mendrugory.com/post/remote-kind)
+- [ ] [Fire up an interactive bash Pod within a Kubernetes cluster](https://gc-taylor.com/blog/2016/10/31/fire-up-an-interactive-bash-pod-within-a-kubernetes-cluster)
