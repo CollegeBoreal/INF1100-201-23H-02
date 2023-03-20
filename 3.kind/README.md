@@ -190,6 +190,7 @@ my-shell                  2/2     Running   1 (9s ago)   16s
 ```
 kubectl delete pod my-shell
 ```
+> pod "my-shell" deleted
 
 ## :o: Run a pod (declarative mode)
 
@@ -228,6 +229,14 @@ kubectl create --filename my-pod-manifest.yaml
 ```
 kubectl exec my-shell --stdin --tty --container my-shell -- bash
 ```
+
+- [ ] Detruire un `pod`
+
+```
+kubectl delete --filename my-pod-manifest.yaml
+```
+> pod "my-shell" deleted
+
 
 ## :x: Remove Cluster
 
