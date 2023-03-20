@@ -153,7 +153,7 @@ k8s-ha-worker2          Ready    <none>          33m   v1.25.3
 k8s-ha-worker3          Ready    <none>          33m   v1.25.3
 </pre>
 
-## :ab: Run a pod
+## :ab: Run a pod (imperative mode)
 
 - [ ] Démarrer un `pod` 
 
