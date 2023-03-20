@@ -220,7 +220,7 @@ spec:
 - [ ] Créer le `pod`
 
 ```
-kubectl create -f my-pod-manifest.yaml
+kubectl create --filename my-pod-manifest.yaml
 ```
 
 - [ ] Accéder au `pod` (avec `exec`)
