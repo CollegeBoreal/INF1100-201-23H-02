@@ -21,5 +21,6 @@ k scale deploy apache -–replicas 5
 ```
 k get deploy 
 ```
-> NAME READY UP-TO-DATE AVAILABLE AGE apache 3/3 3 3 14s
+> NAME READY UP-TO-DATE AVAILABLE AGE 
+> apache 3/3 3 3 14s
 
