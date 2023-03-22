@@ -101,6 +101,12 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 </pre>
 
+```
+sudo sysctl net.bridge.bridge-nf-call-iptables=0; \
+sudo sysctl net.bridge.bridge-nf-call-arptables=0; \
+sysctl net.bridge.bridge-nf-call-ip6tables=0
+```
+
 - [ ] Create a folder with your :id:
 
 :pushpin: in your :id: folder, edit file `HA-config.yaml`
