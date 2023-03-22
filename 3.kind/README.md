@@ -87,7 +87,9 @@ kubectl config use-context kind-k8s
 
 ## :b: Run multiple nodes
 
-- [ ] 
+:x: [Kind create cluster fails with 3 worker nodes #2886](https://github.com/kubernetes-sigs/kind/issues/2886#issuecomment-1219158523)
+
+- [ ] [Bridge Net Filter](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
 
 ```
 sudo sysctl -a | grep bridge-nf-call
