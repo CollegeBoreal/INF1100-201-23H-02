@@ -251,6 +251,13 @@ kubectl delete --filename my-pod-manifest.yaml
 ```
 > pod "my-shell" deleted
 
+## :o: Accès au noeud plan de contrôle
+
+:bangbang: Intéressant
+
+```
+docker container exec --interactive --tty kind-control-plane bash
+```
 
 ## :x: Remove Cluster
 
