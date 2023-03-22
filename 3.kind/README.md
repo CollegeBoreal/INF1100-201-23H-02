@@ -87,7 +87,7 @@ kubectl config use-context kind-k8s
 
 ## :b: Run multiple nodes
 
-:x: [Why multinode Kind cluster creation failed?](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
+:x: [Why multinode Kind cluster creation failed?](https://stackoverflow.com/questions/73136117/why-multinode-kind-cluster-creation-failed)
 
 - [ ] Rajouter les 2 lignes suivantes dans le fichier `sysctl.conf` en éxécutant
 
