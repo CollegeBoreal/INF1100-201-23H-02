@@ -62,3 +62,7 @@ k set image deploy apache httpd=httpd:alpine
 ```
 k create deploy nginx --image nginx --dry-run=client -o yaml > deploy.yaml
 ```
+
+```
+k create --filename deploy.yaml
+```
