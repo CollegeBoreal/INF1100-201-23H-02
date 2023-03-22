@@ -10,10 +10,14 @@ Créer un déploiement appellé `apache` qui utilise l'image `httpd:2.4.54` et c
 
 :bulb: `alias k=kubectl` à mettre dans votre fichier `~/.bash_aliases` ou `~/.zshrc` dépendemment de votre `shell`
 
+- [ ] Créer un déploiement
+
 ```
 k create deploy apache --image httpd:2.4.54 –-replicas 3
 ```
 > deployment.apps/apache created
+
+- [ ] Vérifier le déploiement
 
 ```
 k get deploy 
@@ -24,9 +28,13 @@ NAME   READY UP-TO-DATE AVAILABLE AGE
 apache 3/3   3          3         14s
 </pre>
 
+- [ ] Augmenter les répliques
+
 ```
 k scale deploy apache -–replicas 5
 ```
+
+- [ ] Vérifier le nombre de `pods`
 
 ```
 k get po
@@ -40,3 +48,10 @@ apache-74f79bcc68-v6drf 1/1   Running 0        33s
 apache-74f79bcc68-x7bfw 1/1   Running 0        33s 
 apache-74f79bcc68-xdx4b 1/1   Running 0        7s
 </pre>
+
+- [ ] Changer l'image d'origine
+
+```
+k set image deploy apache httpd=httpd:alpine
+```
+
