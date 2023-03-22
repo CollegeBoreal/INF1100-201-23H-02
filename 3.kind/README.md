@@ -89,10 +89,12 @@ kubectl config use-context kind-k8s
 
 :x: [Kind create cluster fails with 3 worker nodes #2886](https://github.com/kubernetes-sigs/kind/issues/2886#issuecomment-1219158523)
 
-- [ ] List [Bridge Net Filter](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
+- [ ] [Why multinode Kind cluster creation failed?](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
 
 ```
-sudo sysctl -a | grep bridge-nf-call
+echo fs.inotify.max_user_watches=655360 | sudo tee -a /etc/sysctl.conf ;\
+echo fs.inotify.max_user_instances=1280 | sudo tee -a /etc/sysctl.conf ;\
+sudo sysctl -p
 ```
 > Outputs :
 <pre>
@@ -101,7 +103,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 </pre>
 
-- [ ] Disable [Bridge Net Filter](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
+- [ ] Disable [Bridge Net Filter](https://stackoverflow.com/questions/73136117/why-multinode-kind-cluster-creation-failed)
 
 ```
 sudo sysctl net.bridge.bridge-nf-call-iptables=0; \
