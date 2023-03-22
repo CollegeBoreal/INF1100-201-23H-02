@@ -89,7 +89,7 @@ kubectl config use-context kind-k8s
 
 :x: [Why multinode Kind cluster creation failed?](https://unix.stackexchange.com/questions/720105/what-is-the-net-bridge-bridge-nf-call-iptables-kernel-parameter)
 
-- [ ] Rajouter les 2 lignes suivanttes dans le fichier `sysctl.conf`
+- [ ] Rajouter les 2 lignes suivantes dans le fichier `sysctl.conf` en éxécutant
 
 ```
 echo fs.inotify.max_user_watches=655360 | sudo tee -a /etc/sysctl.conf ;\
