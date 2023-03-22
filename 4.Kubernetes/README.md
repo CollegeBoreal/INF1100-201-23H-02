@@ -31,7 +31,7 @@ apache 3/3   3          3         14s
 - [ ] Augmenter les répliques
 
 ```
-k scale deploy apache -–replicas 5
+k scale deploy apache --replicas=5
 ```
 
 - [ ] Vérifier le nombre de `pods`
