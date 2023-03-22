@@ -18,3 +18,8 @@ k create deploy apache --image httpd:2.4.54 –-replicas 3
 k scale deploy apache -–replicas 5
 ```
 
+```
+k get deploy 
+```
+> NAME READY UP-TO-DATE AVAILABLE AGE apache 3/3 3 3 14s
+
