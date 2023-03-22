@@ -13,6 +13,7 @@ Créer un déploiement appellé `apache` qui utilise l'image `httpd:2.4.54` et c
 ```
 k create deploy apache --image httpd:2.4.54 –-replicas 3
 ```
+> deployment.apps/apache created
 
 ```
 k get deploy 
