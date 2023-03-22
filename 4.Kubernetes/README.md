@@ -2,7 +2,7 @@
 
 `ORCHESTRER DES APPLICATIONS`
 
-## :a: Déploiement
+## :a: Déploiements
 
 :round_pushpin: En mode impératif
 
