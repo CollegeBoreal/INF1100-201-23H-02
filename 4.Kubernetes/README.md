@@ -13,7 +13,7 @@ Créer un déploiement appellé `apache` qui utilise l'image `httpd:2.4.54` et c
 - [ ] Créer un déploiement
 
 ```
-k create deploy apache --image httpd:2.4.54 –-replicas 3
+k create deploy apache --image=apache:2.4.54 --replicas=3
 ```
 > deployment.apps/apache created
 
@@ -31,7 +31,7 @@ apache 3/3   3          3         14s
 - [ ] Augmenter les répliques
 
 ```
-k scale deploy apache -–replicas 5
+k scale deploy apache --replicas=5
 ```
 
 - [ ] Vérifier le nombre de `pods`
