@@ -55,3 +55,10 @@ apache-74f79bcc68-xdx4b 1/1   Running 0        7s
 k set image deploy apache httpd=httpd:alpine
 ```
 
+:round_pushpin: En mode déclaratif
+
+:bulb: Cloner le cours sur votre serveur, dans le répertoire `4.Kubernetes` créer un répertoire avec votre :id:
+
+```
+k create deploy nginx --image nginx --dry-run=client -o yaml > deploy.yaml
+```
