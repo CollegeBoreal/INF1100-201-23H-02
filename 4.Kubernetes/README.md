@@ -52,7 +52,7 @@ apache-74f79bcc68-xdx4b 1/1   Running 0        7s
 - [ ] Changer l'image d'origine
 
 ```
-k set image deploy apache httpd=httpd:alpine
+k set image deploy apache apache=httpd:alpine
 ```
 
 :round_pushpin: En mode déclaratif
