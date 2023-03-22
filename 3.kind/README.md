@@ -89,6 +89,8 @@ kubectl config use-context kind-k8s
 
 :x: [Why multinode Kind cluster creation failed?](https://stackoverflow.com/questions/73136117/why-multinode-kind-cluster-creation-failed)
 
+Causée par `ulimit` augmenter `max_user_watches` et `max_user_instances` à leu plus grande valeur
+
 - [ ] Rajouter les 2 lignes suivantes dans le fichier `sysctl.conf` en éxécutant
 
 ```
