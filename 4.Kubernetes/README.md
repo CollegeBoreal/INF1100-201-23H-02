@@ -15,10 +15,6 @@ k create deploy apache --image httpd:2.4.54 –-replicas 3
 ```
 
 ```
-k scale deploy apache -–replicas 5
-```
-
-```
 k get deploy 
 ```
 > Outputs :
@@ -27,3 +23,19 @@ NAME   READY UP-TO-DATE AVAILABLE AGE
 apache 3/3   3          3         14s
 </pre>
 
+```
+k scale deploy apache -–replicas 5
+```
+
+```
+k get po
+```
+> Outputs
+<pre>
+NAME                    READY STATUS  RESTARTS AGE 
+apache-74f79bcc68-7lzqz 1/1   Running 0        7s 
+apache-74f79bcc68-89zwg 1/1   Running 0        33s 
+apache-74f79bcc68-v6drf 1/1   Running 0        33s 
+apache-74f79bcc68-x7bfw 1/1   Running 0        33s 
+apache-74f79bcc68-xdx4b 1/1   Running 0        7s
+</pre>
