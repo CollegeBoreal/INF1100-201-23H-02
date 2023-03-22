@@ -104,7 +104,7 @@ net.bridge.bridge-nf-call-iptables = 1
 ```
 sudo sysctl net.bridge.bridge-nf-call-iptables=0; \
 sudo sysctl net.bridge.bridge-nf-call-arptables=0; \
-sysctl net.bridge.bridge-nf-call-ip6tables=0
+sudo sysctl net.bridge.bridge-nf-call-ip6tables=0
 ```
 
 - [ ] Create a folder with your :id:
