@@ -87,6 +87,18 @@ kubectl config use-context kind-k8s
 
 ## :b: Run multiple nodes
 
+- [ ] 
+
+```
+sudo sysctl -a | grep bridge-nf-call
+```
+> Outputs :
+<pre>
+net.bridge.bridge-nf-call-arptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+</pre>
+
 - [ ] Create a folder with your :id:
 
 :pushpin: in your :id: folder, edit file `HA-config.yaml`
