@@ -38,6 +38,8 @@ Find your local number: https://collegeboreal.zoom.us/u/aXdYgZW8F
 |:hash: | Date   | Cours                      | Intitulé                            |  Pratique                                                     |
 |-------|--------|:---------------------------|:------------------------------------|:--------------------------------------------------------------|
 | :one: |16-01-23| [1.Docker](1.Docker)       | â Noter :x: |
+| :two: |16-02-23| [2.Compose](2.Compose)       | â Noter :x: |
+| :three: |30-03-23| [3.kind](3.kind)       | â Noter :x: |
 
 
 ## Resultats d'Apprentissage du Cours
@@ -88,6 +90,7 @@ en respectant les normes standards de l’industrie.
 | [Kubernetes In Action](https://www.manning.com/books/kubernetes-in-action-second-edition)  |                                    |
 | [Microsoft Containers](https://azure.microsoft.com/en-us/product-categories/containers)    | Livre Pakt                         |
 | [VMWare](https://k8s.vmware.com/kubernetes-up-and-running)                                 | O'reilly                           |
+| [Acing the Certified Kubernetes Administrator Exam](https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam) | Manning CKA|
 
 
 | Titre | Description |
@@ -95,6 +98,5 @@ en respectant les normes standards de l’industrie.
 | [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
 
 
-https://kube.academy/
-
-- [ ] [CKA](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)
+- [ ] [kube.academy: Learn Kubernetes. From Experts. For Free.](https://kube.academy)
+- [ ] [Certified Kubernetes Administrator (CKA)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka)

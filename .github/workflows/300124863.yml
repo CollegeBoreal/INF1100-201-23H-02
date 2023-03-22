@@ -1,0 +1,11 @@
+name: 300124863 memedlebleu
+on: push
+jobs:
+  build:
+    name: memed action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./1.Docker/300124863
+        with:
+          MY_NAME: Ahmedlazrek"

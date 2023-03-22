@@ -1,0 +1,11 @@
+name: J'ai fais une action !
+on: push
+jobs:
+  build:
+    name: action1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./1.Docker/300126800
+        with:
+          MY_NAME: "RafikKoumad"
