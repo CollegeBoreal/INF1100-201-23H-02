@@ -9,10 +9,10 @@
 | 5 | :two: |[300123679](../300123679) - <image src='https://avatars0.githubusercontent.com/u/105458655?s=460&v=4' width=20 height=20></image> | :x: |
 | 6 | :two: |[300124074](../300124074) - <image src='https://avatars0.githubusercontent.com/u/97147101?s=460&v=4' width=20 height=20></image> | :x: |
 | 7 | :two: |[300124734](../300124734) - <image src='https://avatars0.githubusercontent.com/u/94937145?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 8 | :two: |[300124863](../300124863) - <image src='https://avatars0.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | :x: |
-| 9 | [300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: |
-| 10 | [300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: |
-| 11 | [300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :x: |
+| 8 | :three: |[300124863](../300124863) - <image src='https://avatars0.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | :x: |
+| 9 | :three: |[300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: |
+| 10 | :three: |[300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: |
+| 11 | :three: |[300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :x: |
 | 12 | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: |
 | 13 | [300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: |
 | 14 | [300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :x: |
