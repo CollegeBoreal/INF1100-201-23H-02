@@ -1,6 +1,6 @@
 
-|:hash:| Groupes | Boréal :id:                | Acceptation       |
-|------|---------|-------------------|---------------|
+|:hash:| Groupes | Boréal :id:                | CP       | DNS |
+|------|---------|-------------------|---------------|-------|
 | 0 | :one: |  [100027015](../100027015) - <image src='https://avatars0.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | :x: |
 | 1 | :one: |[100028762](../100028762) - <image src='https://avatars0.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | :x: |
 | 2 | :one: |[300117811](../300117811) - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | :x: |
