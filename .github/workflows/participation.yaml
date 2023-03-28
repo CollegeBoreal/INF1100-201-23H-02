@@ -25,6 +25,13 @@ jobs:
           cd ../2.Compose
           bash .scripts/run.sh
 
+          ##
+          ## Evaluating chapter 5.Kubernetes Student Participation
+          ## 
+          echo "Evaluating chapter 5.Kubernetes Student Participation"
+          cd ../5.Kubernetes
+          bash .scripts/run.sh
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
