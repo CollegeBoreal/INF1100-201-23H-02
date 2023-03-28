@@ -1,4 +1,4 @@
-# Participation au 22-03-2023 08:01
+# Participation au 28-03-2023 13:51
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -20,7 +20,7 @@
 | 1 | 100028762 - <image src='https://avatars.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | `ssh madmax@10.13.237.29` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 sio_mh@10.13.237.21: Permission denied (publickey,password).
 | 2 | 300117811 - <image src='https://avatars.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh sio_mh@10.13.237.21` | :x: | :x: | :x: |
-| 3 | 300119623 - <image src='https://avatars.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | `ssh mariodeg@10.13.237.13` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
+| 3 | 300119623 - <image src='https://avatars.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | `ssh mariodeg@10.13.237.13` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 4 | 300120726 - <image src='https://avatars.githubusercontent.com/u/105461057?s=460&v=4' width=20 height=20></image> | `ssh pasmibalayi@10.13.237.17` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:seven: |
 | 5 | 300123679 - <image src='https://avatars.githubusercontent.com/u/105458655?s=460&v=4' width=20 height=20></image> | `ssh hugopo1@10.13.237.30` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 6 | 300124074 - <image src='https://avatars.githubusercontent.com/u/97147101?s=460&v=4' width=20 height=20></image> | `ssh koinaag@10.13.237.32` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
@@ -40,4 +40,5 @@ sio_mh@10.13.237.21: Permission denied (publickey,password).
 | 20 | 300128276 - <image src='https://avatars.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | `ssh ballo78@10.13.237.41` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 21 | 300128326 - <image src='https://avatars.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | `ssh mamadou@10.13.237.2` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 22 | 300128566 - <image src='https://avatars.githubusercontent.com/u/101542761?s=460&v=4' width=20 height=20></image> | `ssh diarra1@10.13.237.43` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
-| 23 | 300128694 - <image src='https://avatars.githubusercontent.com/u/105947276?s=460&v=4' width=20 height=20></image> | `ssh walid@10.13.237.27` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
+ssh: connect to host 10.13.237.27 port 22: Operation timed out
+| 23 | 300128694 - <image src='https://avatars.githubusercontent.com/u/105947276?s=460&v=4' width=20 height=20></image> | `ssh walid@10.13.237.27` | :x: | :x: | :x: |
