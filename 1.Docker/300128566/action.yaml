@@ -1,0 +1,17 @@
+name: "Bienvenu action"
+description: "Great action"
+author: "DIARRAbandiougou@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Qui est la?"
+    required: true
+    default: "Monde"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "black"

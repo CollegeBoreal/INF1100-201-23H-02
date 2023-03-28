@@ -1,21 +1,21 @@
 # D.Docker :whale:
 
-## :bulb: Dockerfile
 
-Quels sont les instructions pour créer sa propre image?
 
-| Instructions |  Commentaires                                                                                                |
-|--------------|--------------------------------------------------------------------------------------------------------------|
-| `#`          | faire un commentaire                                                                                         |
-| `FROM`       | Donner une image                                                                                             |
-| `LABEL`      | Donner de l'information (i.e. `maintener=`)                                                                  |
-| `ENV`        | permet de passer des variables d'environnements. Note: utiliser le paramêtre `--env` à la ligne de commande  |
-| `WORKDIR`    | Comme `pwd` en Unix, indique le répertoire de travail ou courant                                             |
-| `ADD`        | Ajoute des fichiers (compréssés) ou des répertoires à l'image                                                |
-| `COPY`       | Ajoute des fichiers à l'image                                                                                |
-| `RUN`        | Éxécute les scripts ou installe des librairies ( `apt-get` ou `pip` ) dans l'image                           |
-| `ENTRYPOINT` | Par défaut éxécute à la fin de l'installation `["/bin/sh"]`. On peut l'`override` (outrepasser ou remplacer) |
-| `CMD`        | Permet de rajouter des parametres à la commande `ENTRYPOINT` - de type tableaux [ "param1", "parma2"]        |
+
+| :hash:  | Composants                                   | Description |
+|---------|----------------------------------------------|-----------------------|
+| :zero:  | [:tractor: engine](engine.md)                | Service Linux permettant d'éxécuter les conteneurs Docker dans le moteur `docker -d`|
+| | |
+| :bulb: | [:toolbox: client](client.md)                 | Utilitaire permettant d'utiliser la ligne de commande `CLI` |
+| | |
+| :one:   | [:control_knobs: context](context.md)        | Commande `Docker` permettant la connection au moteur à distance |
+| :two:   | [:minidisc: image](image.md)                 | Commande `Docker` permettant la gestion des images ISO | 
+| :three: | [:package: container](container.md)          | Commande `Docker` permettant la manipulation des conteneurs |
+| :four:  | [:globe_with_meridians: network](network.md) | Commande `Docker` permettant la gestion d'un réseau local virtuel par lequel communiquent les conteneurs | 
+| :five:  | [:roll_of_paper: volume](volume.md)          | Commande `Docker` permettant la gestion de disques locaux ou éphémères |
+| | |
+| :six:  | [:link: compose](compose.md)                  | Commande `Docker` permettant la gestion de multiples conteneurs |
 
 
 ---
@@ -64,5 +64,7 @@ https://design.jboss.org/redhatdeveloper/marketing/docker_cheatsheet/cheatsheet/
 
 <img src="images/Docker-Hystory.png" width=521 height=293 ></img>
 
+# References
 
-[sergey.kirgizov🐱u-bourgogne.fr](https://kirgizov.link/teaching/esirem/advanced-information-systems-2019/CM-7-clouds-containers.pdf)
+- [ ] [Docker basic to advance](https://blog.devops.dev/docker-basic-to-advance-a4eef39e05d4)
+- [ ] [docker-compose](https://faun.pub/docker-compose-d0d8a2cae298)

@@ -1,4 +1,4 @@
-name: Calisse de Tabarnak !
+name: J'ai fais une action !
 on: push
 jobs:
   build:

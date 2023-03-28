@@ -1,11 +1,11 @@
-name: A workflow for my Hello World file
+name: 300125847 Chaks
 on: push
 jobs:
   build:
-    name: Hello world action
+    name: Chakib
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./action-a
+      - uses: ./1.Docker/300125847
         with:
           MY_NAME: "Mona"
