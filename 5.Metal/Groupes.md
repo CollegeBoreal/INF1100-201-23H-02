@@ -13,10 +13,10 @@
 | 9 | :three: |[300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: |
 | 10 | :three: |[300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: |
 | 11 | :three: |[300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :x: |
-| 12 | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: |
-| 13 | [300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: |
-| 14 | [300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :x: |
-| 15 | [300126634](../300126634) - <image src='https://avatars0.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | :x: |
+| 12 | :four: | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: |
+| 13 | :four: |[300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: |
+| 14 | :four: |[300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :x: |
+| 15 | :four: |[300126634](../300126634) - <image src='https://avatars0.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | :x: |
 | 16 | [300126800](../300126800) - <image src='https://avatars0.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | :x: |
 | 17 | [300126966](../300126966) - <image src='https://avatars0.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | :x: |
 | 18 | [300127065](../300127065) - <image src='https://avatars0.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | :x: |
