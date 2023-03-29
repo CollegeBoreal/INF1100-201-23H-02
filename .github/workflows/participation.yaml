@@ -11,8 +11,27 @@ jobs:
       - uses: actions/checkout@v1
       - shell: bash
         run: |
+          ##
+          ## Evaluating chapter 1.Docker Student Participation
+          ## 
+          echo "Evaluating chapter 1.Docker Student Participation"
           cd 1.Docker
           bash .scripts/run.sh
+
+          ##
+          ## Evaluating chapter 2.Compose Student Participation
+          ## 
+          echo "Evaluating chapter 2.Compose Student Participation"
+          cd ../2.Compose
+          bash .scripts/run.sh
+
+          ##
+          ## Evaluating chapter 5.Kubernetes Student Participation
+          ## 
+          echo "Evaluating chapter 5.Kubernetes Student Participation"
+          cd ../5.Kubernetes
+          bash .scripts/run.sh
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
