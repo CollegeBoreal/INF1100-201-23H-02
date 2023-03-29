@@ -7,6 +7,7 @@ ETUDIANTS=(
 300119623
 300120726
 300123679
+300124074
 300124734
 300124863
 300124876
@@ -33,6 +34,7 @@ sio-mh
 Mario15student
 Qadash-243
 hponnan
+koinaag
 ch9aw9aw
 memedlebleu
 hafsa08
@@ -59,6 +61,7 @@ AVATARS=(
 97314467
 105461057
 105458655
+97147101
 94937145
 97644305
 98238582
@@ -85,6 +88,7 @@ sio_mh@10.13.237.21
 mariodeg@10.13.237.13
 pasmibalayi@10.13.237.17
 hugopo1@10.13.237.30
+koinaag@10.13.237.32
 superzaf@10.13.237.45
 memedlebleu@10.13.237.26
 hafsa6@10.13.237.28
@@ -111,6 +115,7 @@ sio_mh@localhost.siomh.tech
 mariodeg@localhost.mariode.tech
 pasmibalayi@localhost.pasmibalayi.tech
 hugopo1@localhost.hugopo1.tech
+koinaag@localhost.ahmadoukoina.tech
 superzaf@localhost.cherkaoui.tech
 memedlebleu@localhost.memedlebleu.studio
 hafsa6@localhost.hafsa.tech
