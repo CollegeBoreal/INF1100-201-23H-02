@@ -13,10 +13,10 @@
 | 9 | :three: |[300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: | maroc.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
 | 10 | :three: |[300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: | algeria.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
 | 11 | :three: |[300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | blida.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
-| 12 | :four: | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: |
-| 13 | :four: |[300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: |
-| 14 | :four: |[300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :x: |
-| 15 | :four: |[300126634](../300126634) - <image src='https://avatars0.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | :x: |
+| 12 | :four: | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: | mi.piano.klyddom.tech | [CL.Piano](CL.Piano):musical_keyboard: |
+| 13 | :four: |[300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: | fa.piano.klyddom.tech | [CL.Piano](CL.Piano):musical_keyboard: |
+| 14 | :four: |[300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |  do.piano.klyddom.tech |  [CL.Piano](CL.Piano):musical_keyboard: |
+| 15 | :four: |[300126634](../300126634) - <image src='https://avatars0.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | :x: | re.piano.klyddom.tech | [CL.Piano](CL.Piano):musical_keyboard: |
 | 16 | :six: | [300126800](../300126800) - <image src='https://avatars0.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | :x: |  mississauga.six.mbtechno.tech  | [A.Six](A.Six) :six: |
 | 17 | :six: |[300126966](../300126966) - <image src='https://avatars0.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | toronto.six.mbtechno.tech  | [A.Six](A.Six) :six: |
 | 18 | :six: |[300127065](../300127065) - <image src='https://avatars0.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | :x: | brampton.six.mbtechno.tech  | [A.Six](A.Six) :six: |
