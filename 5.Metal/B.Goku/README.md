@@ -1,4 +1,4 @@
-# :b: Goku :kimono:
+B# :b: Goku :kimono:
 
 | Server           | Hostname                             |  IP               | Specs                 |
 |------------------|--------------------------------------|-------------------|-----------------------|
@@ -9,5 +9,6 @@
 
 
 <img src=images/apt-key.png width='' height='' > </img>
-
-
+<img src=images/ERROR-KubeletVersion.png width='' height='' > </img>
+<img src=images/connection-to-the-server-was-refused.png width='' 
+height='' > </img>
