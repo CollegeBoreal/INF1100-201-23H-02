@@ -20,7 +20,7 @@
 | 16 | :six: | [300126800](../300126800) - <image src='https://avatars0.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | :x: |  mississauga.six.mbtechno.tech  |
 | 17 | :six: |[300126966](../300126966) - <image src='https://avatars0.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | toronto.six.mbtechno.tech  |
 | 18 | :six: |[300127065](../300127065) - <image src='https://avatars0.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | :x: | brampton.six.mbtechno.tech  |
-| 19 | :six: |[300127290](../300127290) - <image src='https://avatars0.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | :x: |
+| 19 | :six: |[300127290](../300127290) - <image src='https://avatars0.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | :x: | aurora.six.mbtechno.tech  |
 | 20 | :seven: |[300128276](../300128276) - <image src='https://avatars0.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | :x: |
 | 21 | :seven: |[300128326](../300128326) - <image src='https://avatars0.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | :x: |
 | 22 | :seven: |[300128566](../300128566) - <image src='https://avatars0.githubusercontent.com/u/101542761?s=460&v=4' width=20 height=20></image> | :x: |
