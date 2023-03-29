@@ -1,7 +1,7 @@
 
 |:hash:| Groupes | Boréal :id:                | CP       | DNS | Groupe |
 |------|---------|-------------------|---------------|-------|----------|
-| 0 | :one: |  [100027015](../100027015) - <image src='https://avatars0.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | :x: | jupiter.planete.studiopolaris.games |
+| 0 | :one: |  [100027015](../100027015) - <image src='https://avatars0.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | :x: | jupiter.planete.studiopolaris.games | [O2.Polaris](O2.Polaris) :racing_car: |
 | 1 | :one: |[100028762](../100028762) - <image src='https://avatars0.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | mercury.planete.studiopolaris.games |
 | 2 | :one: |[300117811](../300117811) - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | :x: | pluto.planete.studiopolaris.games |
 | 3 | :one: |[300119623](../300119623) - <image src='https://avatars0.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | :x: | venus.planete.studiopolaris.games |
