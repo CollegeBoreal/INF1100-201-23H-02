@@ -3,16 +3,16 @@
 |------|---------|-------------------|---------------|-------|----------|
 | 0 | :one: |  [100027015](../100027015) - <image src='https://avatars0.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | :x: | jupiter.planete.studiopolaris.games | [O2.Planete](O2.Planete) :ringed_planet: |
 | 1 | :one: |[100028762](../100028762) - <image src='https://avatars0.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | mercury.planete.studiopolaris.games | [O2.Planete](O2.Planete) :ringed_planet: |
-| 2 | :one: |[300117811](../300117811) - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | :x: | pluto.planete.studiopolaris.games | [O2.Planete](O2.Planete) :ringed_planet: |
+| 2 | :one: |[300117811](../300117811) - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | :x: | terre.planete.studiopolaris.games | [O2.Planete](O2.Planete) :ringed_planet: |
 | 3 | :one: |[300119623](../300119623) - <image src='https://avatars0.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | :x: | venus.planete.studiopolaris.games | [O2.Planete](O2.Planete) :ringed_planet: |
 | 4 | :two: |[300120726](../300120726) - <image src='https://avatars0.githubusercontent.com/u/105461057?s=460&v=4' width=20 height=20></image> | :x: |lotus.goku.cherkaoui.tech | [B.Goku](B.Goku) :kimono: |
 | 5 | :two: |[300123679](../300123679) - <image src='https://avatars0.githubusercontent.com/u/105458655?s=460&v=4' width=20 height=20></image> | :x: |vegeta.goku.cherkaoui.tech | [B.Goku](B.Goku) :kimono: |
 | 6 | :two: |[300124074](../300124074) - <image src='https://avatars0.githubusercontent.com/u/97147101?s=460&v=4' width=20 height=20></image> | :x: |krilin.goku.cherkaoui.tech | [B.Goku](B.Goku) :kimono: |
 | 7 | :two: |[300124734](../300124734) - <image src='https://avatars0.githubusercontent.com/u/94937145?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |  son.goku.cherkaoui.tech | [B.Goku](B.Goku) :kimono: |
-| 8 | :three: |[300124863](../300124863) - <image src='https://avatars0.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | :x: |
-| 9 | :three: |[300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: |
-| 10 | :three: |[300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: |
-| 11 | :three: |[300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :x: |
+| 8 | :three: |[300124863](../300124863) - <image src='https://avatars0.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | :x: | rak.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
+| 9 | :three: |[300124876](../300124876) - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | :x: | maroc.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
+| 10 | :three: |[300125847](../300125847) - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | :x: | algeria.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
+| 11 | :three: |[300126020](../300126020) - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | blida.maghreb.hakimdrai.tech | [AB.Maghreb](AB.Maghreb) :brain: |
 | 12 | :four: | [300126215](../300126215) - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | :x: |
 | 13 | :four: |[300126268](../300126268) - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | :x: |
 | 14 | :four: |[300126450](../300126450) - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | :x: |
