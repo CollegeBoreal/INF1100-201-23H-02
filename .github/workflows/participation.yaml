@@ -26,9 +26,9 @@ jobs:
           bash .scripts/run.sh
 
           ##
-          ## Evaluating chapter 5.Kubernetes Student Participation
+          ## Evaluating chapter 4.Kubernetes Student Participation
           ## 
-          echo "Evaluating chapter 5.Kubernetes Student Participation"
+          echo "Evaluating chapter 4.Kubernetes Student Participation"
           cd ../4.Kubernetes
           bash .scripts/run.sh
 
