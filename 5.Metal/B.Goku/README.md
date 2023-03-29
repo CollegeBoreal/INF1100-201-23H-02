@@ -7,8 +7,12 @@ B# :b: Goku :kimono:
 | data plane       |hugopo1@vegeta.goku.cherkaoui.tech     | `10.13.237.32/24` | 64GB Ram,       8cpus |
 | data plane       |pasmibalayi@lotus.goku.cherkaoui.tech      | `10.13.237.17/24` | 64GB Ram,      16cpus |
 
-
+```
 <img src=images/apt-key.png width='' height='' > </img>
+```
+```
 <img src=images/ERROR-KubeletVersion.png width='' height='' > </img>
+```
 <img src=images/connection-to-the-server-was-refused.png width='' 
 height='' > </img>
+```
