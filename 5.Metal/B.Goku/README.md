@@ -1,5 +1,5 @@
-B# :b: Goku :kimono:
-
+B# :b: Goku :kimono:     ![ebc79dce98f936102358c546946d203a](https://user-images.githubusercontent.com/94937145/228716172-59192808-aa7c-4250-98c6-f2c7c0a91dd3.jpg)
+ 
 | Server           | Hostname                             |  IP               | Specs                 |
 |------------------|--------------------------------------|-------------------|-----------------------|
 | control plane    |superzaf@son.goku.cherkaoui.tech        | `10.13.237.45/24` | 64GB Ram,      16cpus |
