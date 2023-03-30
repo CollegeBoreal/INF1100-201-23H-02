@@ -1,6 +1,6 @@
 # :cl: Piano :musical_keyboard:
 
-https://fr.wikipedia.org/wiki/Piano
+ https://fr.wikipedia.org/wiki/Piano
 
 | Server           | Hostname                             |  IP               | Specs                 |
 |------------------|--------------------------------------|-------------------|-----------------------|
