@@ -20,28 +20,24 @@ You can install Docker Engine in different ways, depending on your needs:
 
 ## :a: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
-:round_pushpin: Adding the `Docker` package repository to the package manager registry  
-
-- [ ] Add the Docker official `pgp` key :key: that will go to the `/etc/apt/trusted.gpg` binary file
-
-* add the PGP key
+:round_pushpin: Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-get update; \
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg
 ```
 
-* Verify that you now have the key with the fingerprint `9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88`, by searching for the last 8 characters of the fingerprint.
+:round_pushpin: Add Docker’s official GPG key:
 
 ```
-sudo apt-key fingerprint 0EBFCD88
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
-> Return
-```
-pub   rsa4096 2017-02-22 [SCEA]
-      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
-uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
-sub   rsa4096 2017-02-22 [S]
-```
+
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+
 
 - [ ] Create the docker debian repository file
 
