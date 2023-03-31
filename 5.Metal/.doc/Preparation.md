@@ -45,6 +45,7 @@ Swap:             0B          0B          0B
 
 ```
 cat /etc/fstab 
+```
 > Outputs :
 <pre>
 # /etc/fstab: static file system information.
