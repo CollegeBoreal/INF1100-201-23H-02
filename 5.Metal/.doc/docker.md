@@ -1,7 +1,7 @@
 # Docker :whale:
 
 
-:round_pushpin: Uninstall old versions
+:x: Uninstall old versions
 
 Older versions of Docker went by the names of `docker`, `docker.io`, or `docker-engine`, you might also have installations of `containerd` or `runc`. Uninstall any such older versions before attempting to install a new version:
 
