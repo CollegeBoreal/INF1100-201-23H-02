@@ -661,7 +661,7 @@ sudo do-release-upgrade -d
 ```
 > Outputs :
 
-* Step 1
+:pushpin: Step 1 (Press y)
 
 <pre>
 
@@ -682,7 +682,7 @@ Do you want to continue?
 Continue [yN]
 </pre>
 
-* Step 2
+:pushpin: Step 2 (Press ENTER)
 
 <pre>
 
@@ -700,7 +700,7 @@ To continue please press [ENTER]
 
 </pre>
 
-* Step 3
+:pushpin: Step 3 (Press y)
 
 <pre>
 Checking for a new Ubuntu release
@@ -732,16 +732,16 @@ download has finished, the process cannot be canceled.
  Continue [yN]  Details [d]
  </pre>
  
- * Step 4
+:pushpin: Step 4 (Select <YES>)
  
 <img src=images/libc6.png width='' height='' > </img>
 
-* Step 5 (Type <ok>)
+:pushpin: Step 5 (Type <ok>)
 
 <img src=images/openssh-server.png width='' height='' > </img>
 
 
-* Step 6 (Press y)
+:pushpin: Step 6 (Press y)
 
 <pre>
 Warning: os-prober will not be executed to detect other bootable partitions.
@@ -767,7 +767,7 @@ Remove obsolete packages?
  Continue [yN]  Details [d]
 </pre>
 
-* Step 7 (Press y)
+:pushpin: Step 7 (Press y)
 
 <pre>
 ...
