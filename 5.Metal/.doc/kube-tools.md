@@ -109,6 +109,3 @@ OUT="--output=json"; kubeadm version ${OUT} && kubectl version --client ${OUT}
 # References
 
 - [ ] [Installing kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl)
-
-sudo apt-get update
-sudo apt-get install -y apt-transport-https ca-certificates curl
