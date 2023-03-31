@@ -1,5 +1,11 @@
 # :up: Upgrade
 
+## :one: 
+
+- [ ] Prerequisites
+
+1. Check Version
+
 ```
 lsb_release  -a
 ```
@@ -11,6 +17,39 @@ Description:	Ubuntu 20.04.4 LTS
 Release:	20.04
 Codename:	focal
 </pre>
+
+
+2. At least 20 GB of free disk space.
+
+```
+df -Th
+```
+> Outputs :
+<pre>
+Filesystem                        Type      Size  Used Avail Use% Mounted on
+udev                              devtmpfs   32G     0   32G   0% /dev
+tmpfs                             tmpfs     6.3G  2.3M  6.3G   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4       98G   20G   74G  21% /
+tmpfs                             tmpfs      32G     0   32G   0% /dev/shm
+tmpfs                             tmpfs     5.0M     0  5.0M   0% /run/lock
+tmpfs                             tmpfs      32G     0   32G   0% /sys/fs/cgroup
+/dev/loop3                        squashfs   92M   92M     0 100% /snap/lxd/24061
+/dev/loop2                        squashfs   92M   92M     0 100% /snap/lxd/23991
+/dev/sda2                         ext4      1.5G  307M  1.1G  23% /boot
+/dev/loop0                        squashfs   50M   50M     0 100% /snap/snapd/18357
+/dev/loop4                        squashfs   64M   64M     0 100% /snap/core20/1828
+/dev/loop7                        squashfs   56M   56M     0 100% /snap/core18/2714
+/dev/loop8                        squashfs   12M   12M     0 100% /snap/kubectl/2890
+/dev/loop9                        squashfs   12M   12M     0 100% /snap/kubectl/2914
+/dev/loop10                       squashfs   64M   64M     0 100% /snap/core20/1852
+/dev/loop6                        squashfs   50M   50M     0 100% /snap/snapd/18596
+/dev/loop11                       squashfs   56M   56M     0 100% /snap/core18/2721
+tmpfs                             tmpfs     6.3G     0  6.3G   0% /run/user/1000
+</pre>
+
+
+## :two: Upgrade all the system packages
+
 
 ```
 apt list --upgradable
