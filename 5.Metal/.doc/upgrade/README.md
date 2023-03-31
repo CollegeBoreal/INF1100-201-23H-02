@@ -732,11 +732,11 @@ download has finished, the process cannot be canceled.
  Continue [yN]  Details [d]
  </pre>
  
-:pushpin: Step 4 (Select <YES>)
+:pushpin: Step 4 (Select [YES])
  
 <img src=images/libc6.png width='' height='' > </img>
 
-:pushpin: Step 5 (Type <ok>)
+:pushpin: Step 5 (Type [ok])
 
 <img src=images/openssh-server.png width='' height='' > </img>
 
