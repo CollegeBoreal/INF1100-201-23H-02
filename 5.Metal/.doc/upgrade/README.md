@@ -730,6 +730,10 @@ download has finished, the process cannot be canceled.
 
  Continue [yN]  Details [d]
  </pre>
+ 
+ * Step 4
+ 
+![images](images/libc6.png)
 
 
 # References
