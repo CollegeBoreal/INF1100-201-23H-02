@@ -103,7 +103,7 @@ Desired=Unknown/Install/Remove/Purge/Hold
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name           Version      Architecture Description
 +++-==============-============-============-=================================
-hi  kubelet        1.23.5-00    amd64        Kubernetes Node Agent
+ii  kubelet        1.26.3-00    amd64        Kubernetes Node Agent
 ```
 
 - [ ] Si ce n'est pas la bonne version, 
