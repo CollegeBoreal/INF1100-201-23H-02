@@ -604,6 +604,34 @@ sudo ufw reload
 ```
 > Firewall not enabled (skipping reload)
 
+
+```
+sudo ufw enable
+```
+> Outputs :
+<pre>
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+</pre>
+
+```
+sudo ufw status
+```
+> Outputs :
+<pre>
+Status: active
+
+To                         Action      From
+--                         ------      ----
+1022/tcp                   ALLOW       Anywhere                  
+1022/tcp (v6)              ALLOW       Anywhere (v6)
+</pre>
+
+```
+sudo ufw disable
+```
+> Firewall stopped and disabled on system startup
+
 # References
 
 - [ ] [How to Upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS](https://jumpcloud.com/blog/how-to-upgrade-ubuntu-20-04-to-ubuntu-22-04)
