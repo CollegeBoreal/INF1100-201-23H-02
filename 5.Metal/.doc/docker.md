@@ -9,6 +9,16 @@ Older versions of Docker went by the names of `docker`, `docker.io`, or `docker-
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
+## :gear: Installation methods
+
+You can install Docker Engine in different ways, depending on your needs:
+
+
+* Set up and install Docker Engine from [Docker’s `apt` repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
+
+* Use a [convenience scripts](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script). Only recommended for testing and development environments.
+
+
 
 :round_pushpin: Adding the `Docker` package repository to the package manager registry  
 
