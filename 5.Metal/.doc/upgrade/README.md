@@ -785,7 +785,19 @@ If you select 'y' the system will be restarted.
 Continue [yN]
 </pre>
 
+:accept: Check the upgrade
 
+```
+lsb_release -a
+```
+> Outputs :
+<pre>
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.2 LTS
+Release:	22.04
+Codename:	jammy
+</pre>
 # References
 
 - [ ] [How to Upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS](https://jumpcloud.com/blog/how-to-upgrade-ubuntu-20-04-to-ubuntu-22-04)
