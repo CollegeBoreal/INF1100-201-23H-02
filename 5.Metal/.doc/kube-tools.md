@@ -78,12 +78,12 @@ OUT="--output=json"; kubeadm version ${OUT} && kubectl version --client ${OUT}
 {
   "clientVersion": {
     "major": "1",
-    "minor": "18",
-    "gitVersion": "v1.18.6",
-    "gitCommit": "dff82dc0de47299ab66c83c626e08b245ab19037",
+    "minor": "26",
+    "gitVersion": "v1.26.3",
+    "gitCommit": "9e644106593f3f4aa98f8a84b23db5fa378900bd",
     "gitTreeState": "clean",
-    "buildDate": "2020-07-15T16:56:34Z",
-    "goVersion": "go1.13.9",
+    "buildDate": "2023-03-15T13:38:47Z",
+    "goVersion": "go1.19.7",
     "compiler": "gc",
     "platform": "linux/amd64"
   }
@@ -91,15 +91,16 @@ OUT="--output=json"; kubeadm version ${OUT} && kubectl version --client ${OUT}
 {
   "clientVersion": {
     "major": "1",
-    "minor": "18",
-    "gitVersion": "v1.18.6",
-    "gitCommit": "dff82dc0de47299ab66c83c626e08b245ab19037",
+    "minor": "26",
+    "gitVersion": "v1.26.3",
+    "gitCommit": "9e644106593f3f4aa98f8a84b23db5fa378900bd",
     "gitTreeState": "clean",
-    "buildDate": "2020-07-15T16:58:53Z",
-    "goVersion": "go1.13.9",
+    "buildDate": "2023-03-15T13:40:17Z",
+    "goVersion": "go1.19.7",
     "compiler": "gc",
     "platform": "linux/amd64"
-  }
+  },
+  "kustomizeVersion": "v4.5.7"
 }
 ```
 
