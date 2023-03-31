@@ -19,37 +19,24 @@ sudo apt update && sudo apt -y upgrade && sudo systemctl reboot
 :bulb: Certains référentiels ont des `URL` utilisant `HTTPS`. La librairie `apt-transport-https` doit être installée pour acceder le lien `HTTPS`:
 
 ```
-sudo apt -y install curl \
-            apt-transport-https \
-            ca-certificates \
-            gnupg-agent \
-            software-properties-common
+sudo apt-get install -y apt-transport-https ca-certificates curl
 ```
 
 :round_pushpin: Ajout du référentiel de librairies `kubernetes` au référentiel de gestionnaire de libraries  
 
-- [ ] Ajout de la clé officielle `pgp` :key: de `google cloud` qui sera placé dan le fichier binaire `/etc/apt/trusted.gpg`
+- [ ] Ajout de la clé officielle `gpg` :key: de `google cloud` qui sera placé dan le fichier binaire `/etc/apt/keyrings/kubernetes-archive-keyring.gpg`
 
-* Ajouter la clé `PGP`
-
-```
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-```
-
-* Vérifier que l'empreinte de la clé `59FE 0256 8272 69DC 8157  8F92 8B57 C5C2 836F 4BEB` est bien capturée en la cherchant avec les 8 derniers caractères de l'empreinte.
+* Ajouter la clé `GPG` (GNU Privacy Guard)
 
 ```
-$ sudo apt-key fingerprint 836F4BEB
-pub   rsa2048 2020-12-04 [SC] [expires: 2022-12-04]
-      59FE 0256 8272 69DC 8157  8F92 8B57 C5C2 836F 4BEB
-uid           [ unknown] gLinux Rapture Automatic Signing Key (//depot/google3/production/borg/cloud-rapture/keys/cloud-rapture-pubkeys/cloud-rapture-signing-key-2020-12-03-16_08_05.pub) <glinux-team@google.com>
-sub   rsa2048 2020-12-04 [E]
+sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 
 - [ ] Ajouter le fichier `kubernetes debian` au référentiel
 
 ```
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" \
+         | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 ## :two: Installer **kubeadm** and **kubectl**
