@@ -733,7 +733,11 @@ download has finished, the process cannot be canceled.
  
  * Step 4
  
-![images](images/libc6.png)
+<img src=images/libc6.png width='' height='' > </img>
+
+* Step 5
+
+<img src=images/openssh-server.png width='' height='' > </img>
 
 
 # References
