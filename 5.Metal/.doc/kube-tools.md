@@ -24,7 +24,8 @@ sudo apt-get install -y apt-transport-https ca-certificates curl
 
 :round_pushpin: Ajout du référentiel de librairies `kubernetes` au référentiel de gestionnaire de libraries  
 
-- [ ] Ajout de la clé officielle `gpg` :key: de `google cloud` qui sera placé dan le fichier binaire `/etc/apt/keyrings/kubernetes-archive-keyring.gpg`
+- [ ] Ajout de la clé officielle `gpg` :key: de `google cloud` 
+      * placée dans le fichier binaire `/etc/apt/keyrings/kubernetes-archive-keyring.gpg`
 
 * Ajouter la clé `GPG` (GNU Privacy Guard)
 
