@@ -32,11 +32,14 @@ sudo swapoff --all && sudo sed --regexp-extended --in-place '/\sswap\s/s/^#?/#/'
 - [ ] After
 
 ```
-$ free --human
-              total        used        free      shared  buff/cache   available
-Mem:           62Gi       440Mi        61Gi       1.0Mi       1.4Gi        61Gi
-Swap:            0B          0B          0B
+free --human
 ```
+> Outputs :
+<pre>
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       523Mi        61Gi       1.0Mi       501Mi        61Gi
+Swap:             0B          0B          0B
+</pre>
 
 - [ ] Check `swap` in `/etc/fstab` is commented
 
