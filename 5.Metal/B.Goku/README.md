@@ -9,12 +9,17 @@
 
 
 <img src=images/apt-key.png width='' height='' > </img>
+
 ```
 ```
+![images](https://user-images.githubusercontent.com/94937145/229004420-0bf7eb6a-9924-47d2-b3f4-1f98699a5a97.jpeg)
 <img src=images/ERROR-KubeletVersion.png width='' height='' > </img>
 ```
 ```
+![goku_a2](https://user-images.githubusercontent.com/94937145/229003932-4cd1f9a2-75f3-4908-bb21-c0af2dd1845c.png)
 <img src=images/connection-to-the-server-was-refused.png width='' 
 height='' > </img>
 ```
 ```
+
+![images (1)](https://user-images.githubusercontent.com/94937145/229004664-6bc2014d-f775-416a-bc8c-b71d07aab985.jpeg)
