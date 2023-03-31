@@ -735,9 +735,36 @@ download has finished, the process cannot be canceled.
  
 <img src=images/libc6.png width='' height='' > </img>
 
-* Step 5
+* Step 5 (Type <ok>)
 
 <img src=images/openssh-server.png width='' height='' > </img>
+
+
+* Step 6 (Press y)
+
+<pre>
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+
+Processing snap replacements
+
+refreshing snap lxd
+
+Searching for obsolete software
+Reading state information... Done
+
+Remove obsolete packages?
+
+
+87 packages are going to be removed.
+
+ Continue [yN]  Details [d]
+</pre>
 
 
 # References
