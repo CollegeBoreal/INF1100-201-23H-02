@@ -1,8 +1,6 @@
 # :up: Upgrade
 
-## :one: 
-
-- [ ] Prerequisites
+## :one: Prerequisites
 
 1. Check Version
 
@@ -572,6 +570,39 @@ Description:	Ubuntu 20.04.6 LTS
 Release:	20.04
 Codename:	focal
 </pre>
+
+## :three: Open TCP port 1022
+
+If you are connected to your Ubuntu instance via SSH, the upgrade tool will open another SSH port (1022) as a fallback port in case the SSH connection drops on port 22. 
+
+```
+sudo ufw status
+```
+> Status: inactive
+
+
+```
+sudo ufw app list
+```
+> Outputs :
+<pre>
+Available applications:
+  OpenSSH
+</pre>
+
+```
+sudo ufw allow 1022/tcp
+```
+> Outputs :
+<pre>
+Rules updated
+Rules updated (v6)
+</pre>
+
+```
+sudo ufw reload
+```
+> Firewall not enabled (skipping reload)
 
 # References
 
