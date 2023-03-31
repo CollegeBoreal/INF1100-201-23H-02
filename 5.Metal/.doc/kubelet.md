@@ -13,7 +13,7 @@
 - [ ] Choisir une version spécifique de Kubernetes
 
 ```
-export KUBEVERSION=1.18.6
+export KUBEVERSION=1.26.3
 ``` 
 
 - [ ] Commencer l'installation
