@@ -1,5 +1,15 @@
 # Docker :whale:
 
+
+:round_pushpin: Uninstall old versions
+
+Older versions of Docker went by the names of `docker`, `docker.io`, or `docker-engine`, you might also have installations of `containerd` or `runc`. Uninstall any such older versions before attempting to install a new version:
+
+```
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+
 :round_pushpin: Adding the `Docker` package repository to the package manager registry  
 
 - [ ] Add the Docker official `pgp` key :key: that will go to the `/etc/apt/trusted.gpg` binary file
