@@ -559,6 +559,20 @@ update-initramfs: Generating /boot/initrd.img-5.4.0-146-generic
 sudo reboot
 ```
 
+- [ ] Check Version
+
+```
+lsb_release  -a
+```
+> Outputs :
+<pre>
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.4 LTS
+Release:	20.04
+Codename:	focal
+</pre>
+
 # References
 
 - [ ] [How to Upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS](https://jumpcloud.com/blog/how-to-upgrade-ubuntu-20-04-to-ubuntu-22-04)
