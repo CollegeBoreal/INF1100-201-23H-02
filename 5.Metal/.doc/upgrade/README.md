@@ -632,6 +632,52 @@ sudo ufw disable
 ```
 > Firewall stopped and disabled on system startup
 
+## :four: Upgrade to Ubuntu 22.04 Jammy Jellyfish 
+
+
+- [ ] use the do-release-upgrade tool. If it is not installed, you can install it by running the command:
+
+```
+sudo apt install update-manager-core
+```
+> Outputs :
+<pre>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+update-manager-core is already the newest version (1:20.04.10.11).
+update-manager-core set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libfwupdplugin1 libxmlb1 linux-headers-5.4.0-137 linux-headers-5.4.0-137-generic linux-image-5.4.0-137-generic linux-modules-5.4.0-137-generic
+  linux-modules-extra-5.4.0-137-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+</pre>
+
+
+```
+sudo do-release-upgrade -d
+```
+> Outputs :
+<pre>
+
+Reading cache
+
+Checking package manager
+
+Continue running under SSH? 
+
+This session appears to be running under ssh. It is not recommended 
+to perform a upgrade over ssh currently because in case of failure it 
+is harder to recover. 
+
+If you continue, an additional ssh daemon will be started at port 
+'1022'. 
+Do you want to continue? 
+
+Continue [yN]
+</pre>
+
 # References
 
 - [ ] [How to Upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS](https://jumpcloud.com/blog/how-to-upgrade-ubuntu-20-04-to-ubuntu-22-04)
