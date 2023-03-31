@@ -18,7 +18,7 @@ You can install Docker Engine in different ways, depending on your needs:
 
 * Use a [convenience scripts](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script). Only recommended for testing and development environments.
 
-
+## :a: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 :round_pushpin: Adding the `Docker` package repository to the package manager registry  
 
