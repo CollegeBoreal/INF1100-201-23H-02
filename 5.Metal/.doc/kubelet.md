@@ -41,15 +41,20 @@ sudo cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 
 ```
 $ systemctl status kubelet
+```
+> Retourne
+<pre>
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
     Drop-In: /etc/systemd/system/kubelet.service.d
              └─10-kubeadm.conf
-     Active: activating (auto-restart) (Result: exit-code) since Sun 2021-02-14 11:30:15 UTC; 2s ago
+     Active: activating (auto-restart) (Result: exit-code) since Fri 2023-03-31 20:46:50 UTC; 6s ago
        Docs: https://kubernetes.io/docs/home/
-    Process: 315103 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EX>
-   Main PID: 315103 (code=exited, status=255/EXCEPTION)
-```
+    Process: 12069 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code=exited, >
+   Main PID: 12069 (code=exited, status=1/FAILURE)
+        CPU: 138ms
+lines 1-9/9 (END)
+</pre>
 
 ## :two: Démarrer le :droplet: service `kubelet`
 
