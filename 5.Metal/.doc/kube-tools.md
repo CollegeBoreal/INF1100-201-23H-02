@@ -14,7 +14,7 @@ sudo apt update && sudo apt -y upgrade && sudo systemctl reboot
 
 ## :one: Installer le [référentiel](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) `google cloud`
 
-:round_pushpin: Installe `curl`, `apt-transport-https` et autres outils utilisé pour télécharger les librairies (Package Manager)
+:round_pushpin: Installer `curl`, `apt-transport-https` et autres outils utilisés pour télécharger les librairies (Package Manager)
 
 :bulb: Certains référentiels ont des `URL` utilisant `HTTPS`. La librairie `apt-transport-https` doit être installée pour acceder le lien `HTTPS`:
 
