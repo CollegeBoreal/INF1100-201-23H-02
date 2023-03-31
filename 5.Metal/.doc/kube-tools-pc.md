@@ -30,19 +30,23 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - [x] La version
 
 ```
-% kubectl version --client --output=json
+kubectl version --client --output=json
+```
+> Retourne :
+```json
 {
   "clientVersion": {
     "major": "1",
-    "minor": "15",
-    "gitVersion": "v1.15.5",
-    "gitCommit": "20c265fef0741dd71a66480e35bd69f18351daea",
+    "minor": "26",
+    "gitVersion": "v1.26.3",
+    "gitCommit": "9e644106593f3f4aa98f8a84b23db5fa378900bd",
     "gitTreeState": "clean",
-    "buildDate": "2019-10-15T19:16:51Z",
-    "goVersion": "go1.12.10",
+    "buildDate": "2023-03-15T13:33:11Z",
+    "goVersion": "go1.19.7",
     "compiler": "gc",
     "platform": "darwin/amd64"
-  }
+  },
+  "kustomizeVersion": "v4.5.7"
 }
 ```
 
