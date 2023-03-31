@@ -70,6 +70,8 @@ $ systemctl status kubelet
 lines 1-9/9 (END)
 </pre>
 
+:bulb: Appuyer sur `q` pour quitter
+
 ## :two: Démarrer le :droplet: service `kubelet`
 
 ``` 
