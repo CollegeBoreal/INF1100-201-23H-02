@@ -766,6 +766,24 @@ Remove obsolete packages?
  Continue [yN]  Details [d]
 </pre>
 
+* Step 7 (Press y)
+
+<pre>
+...
+Purging configuration files for crda (3.18-1build1) ...
+Purging configuration files for accountsservice (22.07.5-2ubuntu1.3) ...
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+
+System upgrade is complete.
+
+Restart required 
+
+To finish the upgrade, a restart is required. 
+If you select 'y' the system will be restarted. 
+
+Continue [yN]
+</pre>
+
 
 # References
 
