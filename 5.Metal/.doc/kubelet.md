@@ -126,10 +126,8 @@ ii  kubelet        1.26.3-00    amd64        Kubernetes Node Agent
 
      - [ ] Choisir une version spécifique de Kubernetes
 
-     par exemple une ancienne version comme 
-
      ```
-     export KUBEVERSION=1.24.2
+     export KUBEVERSION=1.26.3
      ``` 
 
      - [ ] reCommencer l'installation (incluant kubeadm)
