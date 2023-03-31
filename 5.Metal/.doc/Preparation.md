@@ -14,11 +14,14 @@ $ hostnamectl --static set-hostname betelgeuse
 - [ ] Before
 
 ```
-$ free --human
-              total        used        free      shared  buff/cache   available
-Mem:           62Gi       440Mi        61Gi       1.0Mi       1.4Gi        61Gi
-Swap:           8Gi           0         8Gi
+free --human
 ```
+> Outputs :
+<pre>
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       541Mi        61Gi       1.0Mi       500Mi        61Gi
+Swap:          8.0Gi          0B       8.0Gi
+</pre>
 
 - [ ] swap off and disabled at boot in `/etc/fstab` file
 
