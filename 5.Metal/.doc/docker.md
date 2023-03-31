@@ -81,13 +81,7 @@ W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/a
 W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
 </pre>
 
-:round_pushpin: Install the :whale: `Docker` engine
-
-```
-sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-```
-
-:round_pushpin: Installer Docker
+:round_pushpin: Installer le :whale: moteur `Docker`
 
 * Choisir une version spécifique
 
@@ -102,7 +96,7 @@ sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING con
 ```
 
 
-:round_pushpin: Check [Docker Networking](https://stackoverflow.com/a/60897412)
+## :b: Bridges
 
 Docker uses `iptables` and a kernel module called `br_netfilter` to manage inter-container networking. When the Docker daemon starts, it creates a variety of IPTables rules it required to operate.
 
