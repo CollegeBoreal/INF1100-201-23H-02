@@ -659,6 +659,9 @@ Use 'sudo apt autoremove' to remove them.
 sudo do-release-upgrade -d
 ```
 > Outputs :
+
+* Step 1
+
 <pre>
 
 Reading cache
@@ -676,6 +679,11 @@ If you continue, an additional ssh daemon will be started at port
 Do you want to continue? 
 
 Continue [yN]
+</pre>
+
+* Step 2
+
+<pre>
 
 Starting additional sshd 
 
@@ -690,6 +698,38 @@ open the port with e.g.:
 To continue please press [ENTER]
 
 </pre>
+
+* Step 3
+
+<pre>
+Checking for a new Ubuntu release
+Get:1 Upgrade tool signature [819 B]                                                                                                              
+Get:2 Upgrade tool [1,266 kB]                                                                                                                     
+Fetched 1,267 kB in 0s (0 B/s)                                                                                                                    
+authenticate 'jammy.tar.gz' against 'jammy.tar.gz.gpg' 
+extracting 'jammy.tar.gz'
+
+No candidate ver:  linux-modules-extra-5.4.0-128-generic
+No candidate ver:  linux-modules-extra-5.4.0-131-generic
+No candidate ver:  linux-modules-extra-5.4.0-135-generic
+No candidate ver:  linux-modules-extra-5.4.0-136-generic
+No candidate ver:  linux-modules-extra-5.4.0-139-generic
+
+Do you want to start the upgrade? 
+
+
+4 packages are going to be removed. 92 new packages are going to be 
+installed. 580 packages are going to be upgraded. 
+
+You have to download a total of 571 M. This download will take about 
+1 minute with a 40Mbit connection and about 15 minutes with a 5Mbit 
+connection. 
+
+Fetching and installing the upgrade can take several hours. Once the 
+download has finished, the process cannot be canceled. 
+
+ Continue [yN]  Details [d]
+ </pre>
 
 
 # References
