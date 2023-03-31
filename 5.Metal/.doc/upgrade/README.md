@@ -1,5 +1,16 @@
 # :up: Upgrade
 
+```
+lsb_release  -a
+```
+> Outputs :
+<pre>
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.4 LTS
+Release:	20.04
+Codename:	focal
+</pre>
 
 ```
 apt list --upgradable
