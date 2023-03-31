@@ -93,3 +93,7 @@ unattended-upgrades/focal-updates 2.3ubuntu0.3 all [upgradable from: 2.3ubuntu0.
 update-manager-core/focal-updates 1:20.04.10.11 all [upgradable from: 1:20.04.10.10]
 update-notifier-common/focal-updates 3.192.30.17 all [upgradable from: 3.192.30.10]
 </pre>
+
+# References
+
+- [ ] [How to Upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS](https://jumpcloud.com/blog/how-to-upgrade-ubuntu-20-04-to-ubuntu-22-04)
