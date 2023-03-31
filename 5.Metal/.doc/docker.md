@@ -23,11 +23,7 @@ You can install Docker Engine in different ways, depending on your needs:
 :round_pushpin: Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 
 ```
-sudo apt-get update; \
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg
+sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
 ```
 
 :round_pushpin: Add Docker’s official GPG key:
@@ -36,7 +32,7 @@ sudo apt-get install \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-sudo mkdir -m 0755 -p /etc/apt/keyrings
+:bulb: if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
 
 
 - [ ] Create the docker debian repository file
