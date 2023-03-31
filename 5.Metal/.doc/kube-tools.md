@@ -26,8 +26,8 @@ sudo apt-get install -y apt-transport-https ca-certificates curl
 
 - [ ] Ajout de la clé officielle `gpg` :key: de `google cloud` 
       
-      * placée dans le fichier binaire `/etc/apt/keyrings/kubernetes-archive-keyring.gpg`
-      * Ajouter la clé `GPG` (GNU Privacy Guard)
+* placée dans le fichier binaire `/etc/apt/keyrings/kubernetes-archive-keyring.gpg`
+* Ajouter la clé `GPG` (GNU Privacy Guard)
 
 ```
 sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
