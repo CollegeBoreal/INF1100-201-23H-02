@@ -14,13 +14,13 @@ Kubernetes (communément appelé « K8s2 ») est un système open source qui vis
 :computer: Sous Windows avec choco
 
 ```
-PS > choco install kubernetes-cli
+choco install kubernetes-cli
 ```
 
 :apple: Sous MacOS avec HomeBrew
 
 ```
-$ brew install kubernetes-cli
+brew install kubernetes-cli
 ```
 
 
@@ -77,13 +77,13 @@ https://helm.sh/docs/intro/install/#from-script
 :apple: Mac OS
 
 ```
-$ brew install helm
+brew install helm
 ```
 
 :computer: Windows
 
 ```
-PS > choco install kubernetes-helm
+choco install kubernetes-helm
 ```
 
 ## :ab: IDE LENS :level_slider:
@@ -93,13 +93,13 @@ https://k8slens.dev/
 :apple: Mac OS
 
 ```
-$ brew install --cask lens
+brew install lens
 ```
 
 :computer: Windows
 
 ```
-PS > choco install lens
+choco install lens
 ```
 
 ## :o2: Le context
@@ -107,19 +107,22 @@ PS > choco install lens
 :star: Switching Kubernetes Context
 
 ```
-PS > kubectl config get-contexts
+kubectl config get-contexts
+```
+> Retourne :
+<pre>
 CURRENT   NAME                                 CLUSTER                              AUTHINFO                          NAMESPACE
           docker-desktop                       docker-desktop                       docker-desktop
           docker-for-desktop                   docker-desktop                       docker-desktop
           minikube                             minikube                             minikube
           gke_b300098957_us-central1-a_kubia   gke_b300098957_us-central1-a_kubia   gke_b300098957_us-central1-a_kubia   
 *         kubia                                kubia                                clusterUser_college-boreal_kubia    
-```
+</pre>
 
 :star: Set the context to use as docker-for-desktop:
 
 ```
-PS > kubectl config use-context docker-for-desktop
+kubectl config use-context docker-for-desktop
 ```
 
 https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
