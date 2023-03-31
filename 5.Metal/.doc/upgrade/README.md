@@ -654,6 +654,7 @@ Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 </pre>
 
+- [ ] [:construction: Start the upgrade]
 
 ```
 sudo do-release-upgrade -d
