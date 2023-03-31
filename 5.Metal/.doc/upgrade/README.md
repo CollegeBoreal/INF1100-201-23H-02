@@ -568,7 +568,7 @@ lsb_release  -a
 <pre>
 No LSB modules are available.
 Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04.4 LTS
+Description:	Ubuntu 20.04.6 LTS
 Release:	20.04
 Codename:	focal
 </pre>
