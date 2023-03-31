@@ -44,11 +44,13 @@ Swap:             0B          0B          0B
 - [ ] Check `swap` in `/etc/fstab` is commented
 
 ```
-$ cat /etc/fstab 
+cat /etc/fstab 
+> Outputs :
+<pre>
 # /etc/fstab: static file system information.
 ...
 #/swap.img	none	swap	sw	0	0
-```
+</pre>
 
 ## :two: [Letting iptables see bridged traffic](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#letting-iptables-see-bridged-traffic)
 
