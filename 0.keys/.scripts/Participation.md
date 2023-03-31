@@ -1,4 +1,4 @@
-# Participation au 29-03-2023 15:05
+# Participation au 30-03-2023 18:59
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -35,7 +35,7 @@ memedlebleu@10.13.237.26: Permission denied (publickey,password).
 | 14 | 300126450 - <image src='https://avatars.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | `ssh klyd@10.13.237.16` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy | 🇬:seven: |
 | 15 | 300126634 - <image src='https://avatars.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | `ssh frank_uranus@10.13.237.34` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:seven: |
 | 16 | 300126800 - <image src='https://avatars.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | `ssh rafik952@10.13.237.40` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
-| 17 | 300126966 - <image src='https://avatars.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | `ssh bakmomo@10.13.237.31` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
+| 17 | 300126966 - <image src='https://avatars.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | `ssh bakmomo@10.13.237.31` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 18 | 300127065 - <image src='https://avatars.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | `ssh salimata1@10.13.237.10` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 19 | 300127290 - <image src='https://avatars.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | `ssh sara@10.13.237.35` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
 | 20 | 300128276 - <image src='https://avatars.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | `ssh ballo78@10.13.237.41` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.1 LTS Release: 22.04 Codename: jammy | 🇬:six: |
