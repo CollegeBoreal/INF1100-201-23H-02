@@ -553,6 +553,11 @@ Processing triggers for initramfs-tools (0.136ubuntu6.7) ...
 update-initramfs: Generating /boot/initrd.img-5.4.0-146-generic
 </pre>
 
+- [ ] Restart the system 
+
+```
+sudo reboot
+```
 
 # References
 
