@@ -51,6 +51,7 @@ cat /etc/apt/sources.list.d/docker.list
 ```
 > deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   jammy stable
 
+* Mettre à jour 
 
 ```
 sudo apt-get update
@@ -85,6 +86,21 @@ W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt
 ```
 sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
+
+:round_pushpin: Installer Docker
+
+* Choisir une version spécifique
+
+```
+VERSION_STRING=5:23.0.2-1~ubuntu.22.04~jammy
+```
+
+* Procéder à l'installation
+
+```
+sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
 
 :round_pushpin: Check [Docker Networking](https://stackoverflow.com/a/60897412)
 
