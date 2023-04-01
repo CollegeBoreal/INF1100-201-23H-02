@@ -1,8 +1,8 @@
 # OpenELB
 
-https://openelb.io/docs/getting-started/installation/install-openelb-on-kubernetes/
 
-## :o2: [Installer Porter](https://porterlb.io/docs/getting-started/installation/install-porter-on-kubernetes/#install-porter-using-kubectl)
+
+## :o2: [Installer OpenELB](https://openelb.io/docs/getting-started/installation/install-openelb-on-kubernetes/)
 
 - [ ] Exécuter l'installation du manifeste ci-dessous
 
