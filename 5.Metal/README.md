@@ -192,7 +192,7 @@ standard (default)          openebs.io/provisioner-iscsi                        
 
 ##### :control_knobs: Le plan de contrôle (control plane)
 
-- [ ]  [Installer](.doc/porterlb.md):pinching_hand: [porterlb](https://porterlb.io). 
+- [ ]  [Installer](.doc/openelb.md):pinching_hand: [openelb](https://openelb.io/). 
 
 ## :clapper: Les Applications
 
