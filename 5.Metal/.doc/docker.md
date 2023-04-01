@@ -83,17 +83,49 @@ W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt
 
 :round_pushpin: Installer le :whale: moteur `Docker`
 
-* Choisir une version spécifique
+- [ ] Choisir une version spécifique
 
 ```
 VERSION_STRING=5:23.0.2-1~ubuntu.22.04~jammy
 ```
 
-* Procéder à l'installation
+- [ ] Procéder à l'installation
 
 ```
 sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
+- [ ] Vérifier que le service est actif
+
+```
+systemctl status docker
+```
+> Retourne :
+<pre>
+systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
+     Active: active (running) since Fri 2023-03-31 23:23:53 UTC; 3h 18min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 32812 (dockerd)
+      Tasks: 20
+     Memory: 26.4M
+        CPU: 2.491s
+     CGroup: /system.slice/docker.service
+             └─32812 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/con>
+
+Mar 31 23:23:50 bellatrix dockerd[32812]: time="2023-03-31T23:23:50.539633917Z">
+Mar 31 23:23:50 bellatrix dockerd[32812]: time="2023-03-31T23:23:50.539742727Z">
+Mar 31 23:23:51 bellatrix dockerd[32812]: time="2023-03-31T23:23:51.529743011Z">
+Mar 31 23:23:52 bellatrix dockerd[32812]: time="2023-03-31T23:23:52.129959077Z">
+Mar 31 23:23:52 bellatrix dockerd[32812]: time="2023-03-31T23:23:52.365460269Z">
+Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019203250Z">
+Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019319023Z">
+Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.174963248Z">
+Mar 31 23:23:53 bellatrix systemd[1]: Started Docker Application Container Engi>
+Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.183494828Z">
+</pre>
 
 
 ## :b: Bridges
@@ -141,37 +173,6 @@ docker.service                         enabled         enabled
 docker.socket                          enabled         enabled  
 ```
 
-- [ ] Check that the service is active
-
-```
-systemctl status docker
-```
-> Retourne :
-<pre>
-systemctl status docker
-● docker.service - Docker Application Container Engine
-     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
-     Active: active (running) since Fri 2023-03-31 23:23:53 UTC; 3h 18min ago
-TriggeredBy: ● docker.socket
-       Docs: https://docs.docker.com
-   Main PID: 32812 (dockerd)
-      Tasks: 20
-     Memory: 26.4M
-        CPU: 2.491s
-     CGroup: /system.slice/docker.service
-             └─32812 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/con>
-
-Mar 31 23:23:50 bellatrix dockerd[32812]: time="2023-03-31T23:23:50.539633917Z">
-Mar 31 23:23:50 bellatrix dockerd[32812]: time="2023-03-31T23:23:50.539742727Z">
-Mar 31 23:23:51 bellatrix dockerd[32812]: time="2023-03-31T23:23:51.529743011Z">
-Mar 31 23:23:52 bellatrix dockerd[32812]: time="2023-03-31T23:23:52.129959077Z">
-Mar 31 23:23:52 bellatrix dockerd[32812]: time="2023-03-31T23:23:52.365460269Z">
-Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019203250Z">
-Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019319023Z">
-Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.174963248Z">
-Mar 31 23:23:53 bellatrix systemd[1]: Started Docker Application Container Engi>
-Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.183494828Z">
-</pre>
 
 [:back:](../#round_pushpin-installation-des-services)
 
