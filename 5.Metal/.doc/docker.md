@@ -111,6 +111,8 @@ br_netfilter           28672  0
 bridge                176128  1 br_netfilter
 ```
 
+- [ ] [Forwarding IPv4 and letting iptables see bridged traffic](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#forwarding-ipv4-and-letting-iptables-see-bridged-traffic)
+
 - [ ] iptables
 
 ```
