@@ -1,8 +1,8 @@
-# Porter
+# OpenELB
 
-https://porterlb.io/docs/getting-started/usage/use-porter-in-layer-2-mode/
 
-## :o2: [Installer Porter](https://porterlb.io/docs/getting-started/installation/install-porter-on-kubernetes/#install-porter-using-kubectl)
+
+## :o2: [Installer OpenELB](https://openelb.io/docs/getting-started/installation/install-openelb-on-kubernetes/)
 
 - [ ] Exécuter l'installation du manifeste ci-dessous
 
@@ -100,3 +100,7 @@ EOF
 ```
 
 [:back:](../#rocket-les-services)
+
+# References
+
+- [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
