@@ -10,16 +10,18 @@
 
 <img src=images/apt-key.png width='' height='' > </img>
 
-```
-```
-![images](https://user-images.githubusercontent.com/94937145/229004420-0bf7eb6a-9924-47d2-b3f4-1f98699a5a97.jpeg)
-<img src=images/ERROR-KubeletVersion.png width='' height='' > </img>
-```
-```
-![goku_a2](https://user-images.githubusercontent.com/94937145/229003932-4cd1f9a2-75f3-4908-bb21-c0af2dd1845c.png)
-<img src=images/connection-to-the-server-was-refused.png width='' 
-height='' > </img>
+superzaf@son:~$ sudo kubeadm init   --pod-network-cidr=172.16.0.0/16   --control-plane-endpoint=son.goku.cherkaoui.tech
+[init] Using Kubernetes version: v1.26.3
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR CRI]: container runtime is not running: output: time="2023-04-04T21:34:30Z" level=fatal msg="validate service connection: CRI v1 runtime API is not implemented for endpoint \"unix:///var/run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+, error: exit status 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+
 ```
 ```
 
-![images (1)](https://user-images.githubusercontent.com/94937145/229004664-6bc2014d-f775-416a-bc8c-b71d07aab985.jpeg)
+```
+```
+
