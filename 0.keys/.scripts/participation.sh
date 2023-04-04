@@ -30,8 +30,8 @@ echo "| :x:                | Projet inexistant             |"
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id:                | Interne            | ssh | Version | Proliant GL |"
-echo "|------|----------------------------|--------------------|-----|---------|-------------|"
+echo "|:hash:| Boréal :id:                | Interne            | ssh | Version | Proliant GL | :x: Erreur |"
+echo "|------|----------------------------|--------------------|-----|---------|-------------|------------|"
 
 i=0
 
@@ -40,11 +40,11 @@ do
    VERSION=`ssh -i ~/.ssh/b300098957@ramena.pk \
         -o StrictHostKeyChecking=no \
         -o PasswordAuthentication=no \
-        -o ConnectTimeout=5 ${SERVERS[${i}]} lsb_release -a 2>/dev/null`
+        -o ConnectTimeout=5 ${SERVERS[${i}]} lsb_release -a 2>&1`
    CHASSIS=`ssh -i ~/.ssh/b300098957@ramena.pk \
         -o StrictHostKeyChecking=no \
         -o PasswordAuthentication=no \
-        -o ConnectTimeout=5 ${SERVERS[${i}]} ip link | grep enp | wc -l 2>/dev/null`
+        -o ConnectTimeout=5 ${SERVERS[${i}]} ip link | grep enp | wc -l 2>&1`
     # echo "ssh -i ~/.ssh/b300098957@ramena.pk \
     #    -o StrictHostKeyChecking=no \
     #    -o PasswordAuthentication=no \
@@ -52,7 +52,7 @@ do
     # echo $VERSION
    OK_G7="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | 🇬:seven: |"
    OK_G6="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | 🇬:six: |"
-   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | :x: |"
+   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | :x: | ${VERSION} |"
    if [[ $VERSION == *"Ubuntu"* ]]; then
       if [[ $CHASSIS == *"4"* ]]; then
           echo ${OK_G7}
