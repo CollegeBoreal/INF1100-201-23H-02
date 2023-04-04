@@ -30,8 +30,8 @@ echo "| :x:                | Projet inexistant             |"
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id:                | Interne            | ssh | Version | Proliant GL | :x: Erreur |"
-echo "|------|----------------------------|--------------------|-----|---------|-------------|------------|"
+echo "|:hash:| Boréal :id:                | Interne            | ssh | Version | Proliant GL |"
+echo "|------|----------------------------|--------------------|-----|---------|-------------|"
 
 i=0
 
@@ -52,7 +52,7 @@ do
     # echo $VERSION
    OK_G7="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | 🇬:seven: |"
    OK_G6="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :heavy_check_mark: | ${VERSION} | 🇬:six: |"
-   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | :x: | ${VERSION} |"
+   KO="| ${i} | ${id} - <image src='https://avatars.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVERS[$i]}\` | :x: | :x: | ${VERSION} |"
    if [[ $VERSION == *"Ubuntu"* ]]; then
       if [[ $CHASSIS == *"4"* ]]; then
           echo ${OK_G7}
