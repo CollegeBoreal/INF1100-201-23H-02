@@ -8,7 +8,6 @@
 | data plane       |pasmibalayi@lotus.goku.cherkaoui.tech      | `10.13.237.17/24` | 64GB Ram,      16cpus |
 
 
-<img src=images/apt-key.png width='' height='' > </img>
 
 superzaf@son:~$ sudo kubeadm init   --pod-network-cidr=172.16.0.0/16   --control-plane-endpoint=son.goku.cherkaoui.tech
 [init] Using Kubernetes version: v1.26.3
