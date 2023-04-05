@@ -1,4 +1,4 @@
-# Participation au 05-04-2023 15:19
+# Participation au 05-04-2023 15:26
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -18,7 +18,7 @@
 |------|----------------------------|--------------------|-----|---------|-------------|
 | 0 | 100027015 - <image src='https://avatars.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | `ssh steeve@10.13.237.42` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy No LSB modules are available. | 🇬:seven: |
 | 1 | 100028762 - <image src='https://avatars.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | `ssh madmax@10.13.237.29` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy No LSB modules are available. | 🇬:six: |
-| 2 | 300117811 - <image src='https://avatars.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh sio_mh@10.13.237.21` | :x: | :x: | sio_mh@10.13.237.21: Permission denied (publickey,password).|
+| 2 | 300117811 - <image src='https://avatars.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh sio_mh@10.13.237.21` | :x: | :x: | sio_mh@10.13.237.21: Permission denied (publickey,password). |
 | 3 | 300119623 - <image src='https://avatars.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | `ssh mariodeg@10.13.237.13` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy No LSB modules are available. | 🇬:six: |
 | 4 | 300120726 - <image src='https://avatars.githubusercontent.com/u/105461057?s=460&v=4' width=20 height=20></image> | `ssh pasmibalayi@10.13.237.17` | :heavy_check_mark: | Distributor ID: Ubuntu Description: Ubuntu 22.04.2 LTS Release: 22.04 Codename: jammy No LSB modules are available. | 🇬:seven: |
 | 5 | 300123679 - <image src='https://avatars.githubusercontent.com/u/105458655?s=460&v=4' width=20 height=20></image> | `ssh hugopo1@10.13.237.30` | :x: | :x: | ssh: connect to host 10.13.237.30 port 22: Operation timed out |

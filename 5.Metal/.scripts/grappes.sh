@@ -1,10 +1,12 @@
 #!/bin/bash
 
 GRAPPES=(
-Ontario
-IvoryCoast
-Haiti
-Cameroun
+Six
+Maghreb
+Goku
+Piano
+Africa
+Planete
 )
 
 DIR=(
@@ -12,52 +14,78 @@ A
 AB
 B
 CL
+O
+O2
 )
 
-## Ontario
+## Six
 
-OntarioDTA=(
-dave22@sudbury.ontario.hdavid21.live
-dave21@hamilton.ontario.hdavid21.live
-dave25@niagara.ontario.hdavid21.live
+SixDTA=(
+rafik952@mississauga.six.mbtechno.tech
+salimata1@brampton.six.mbtechno.tech
+sara@aurora.six.mbtechno.tech
 )
 
-OntarioCTL=(
-dave24@toronto.ontario.hdavid21.live
+SixCTL=(
+bakmomo@toronto.six.mbtechno.tech
 )
 
-## IvoryCoast
+## Maghreb
 
-IvoryCoastDTA=(
-ubuntu@yamoussoukro.ivorycoast.siomh.tech
-ubuntu@gagnoa.ivorycoast.siomh.tech
-ubuntu@blolekin.ivorycoast.siomh.tech
+MaghrebDTA=(
+chaks@algeria.maghreb.hafsa.tech
+memedlebleu@rak.maghreb.hafsa.tech
+hafsa@maroc.maghreb.hafsa.tech
 )
 
-IvoryCoastCTL=(
-ubuntu@abidjan.ivorycoast.siomh.tech
+MaghrebCTL=(
+hakimdrai@blida.maghreb.hafsa.tech
 )
 
-## Haiti
+## Goku
 
-HaitiDTA=(
-ubuntu@cayes.haiti.leonaldo.tech
-ubuntu@gonaive.haiti.leonaldo.tech
-ubuntu@port-de-paix.haiti.leonaldo.tech
+GokuDTA=(
+ubuntu@krilin.goku.cherkaoui.tech
+hugopo1@vegeta.goku.cherkaoui.tech
+pasmibalayi@lotus.goku.cherkaoui.tech
 )
 
-HaitiCTL=(
-leonaldolinux@port-au-prince.haiti.leonaldo.tech
+GokuCTL=(
+superzaf@son.goku.cherkaoui.tech
 )
 
-## Cameroun
+## Piano
 
-CamerounDTA=(
-ubuntu@douala.cameroun.sylvainbitja.software
-ubuntu@yaounde.cameroun.sylvainbitja.software
-ubuntu@garoua.cameroun.sylvainbitja.software
+PianoDTA=(
+frank_uranus@re.piano.klyddom.tech
+ziko@mi.piano.klyddom.tech
+sedric_g@fa.piano.klyddom.tech
 )
 
-CamerounCTL=(
-sylvainmakak@tokyo.cameroun.sylvainbitja.software
+PianoCTL=(
+klyd@do.piano.klyddom.tech
+)
+
+## Africa
+
+AfricaDTA=(
+walid@maroc.africa.mamadou.tech
+bandiougou@mali.africa.mamadou.tech
+soumaila@bamako.africa.mamadou.tech
+)
+
+AfricaCTL=(
+mamadou@guinee.africa.mamadou.tech
+)
+
+## Planete
+
+PlaneteDTA=(
+mariodeg@venus.planete.getstudio.tech
+mahanc@jupiter.planete.getstudio.tech
+steeve@pluton.planete.getstudio.tech
+)
+
+PlaneteCTL=(
+madmax@mercury.planete.getstudio.tech
 )

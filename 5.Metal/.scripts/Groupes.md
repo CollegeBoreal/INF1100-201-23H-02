@@ -1,4 +1,4 @@
-# Participation du groupe au 18-04-2022 21:20
+# Participation du groupe au 05-04-2023 15:45
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -16,7 +16,9 @@
 
 |:hash:| Grappe :wheel_of_dharma: | :gear: Config | :abacus: Plan de données | :three: BlockDevices :roll_of_paper: | :potable_water: Reservoir | :floppy_disk: Stockage | :rocket: Service |
 |-|-|-|-|-|-|-|-|
-| :one: | [A.Ontario](../A.Ontario) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :two: | [AB.IvoryCoast](../AB.IvoryCoast) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :three: | [B.Haiti](../B.Haiti) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :four: | [CL.Cameroun](../CL.Cameroun) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :one: | [A.Six](../A.Six) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :two: | [AB.Maghreb](../AB.Maghreb) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :three: | [B.Goku](../B.Goku) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :four: | [CL.Piano](../CL.Piano) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| | [O.Africa](../O.Africa) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| | [O2.Planete](../O2.Planete) | :x: | :zero: | :zero: | :x: | :x: | :x: |
