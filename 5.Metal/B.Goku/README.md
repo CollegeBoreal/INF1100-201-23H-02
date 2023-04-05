@@ -18,9 +18,29 @@ error execution phase preflight: [preflight] Some fatal errors occurred:
 [preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
 To see the stack trace of this error execute with --v=5 or higher
 
-```
-```
+❎ TROUBLESHOOT ⏫
+
+1️⃣  Instruction for containerd fix 
 
 ```
+sudo rm /etc/containerd/config.toml
+sudo systemctl restart containerd
 ```
 
+2️⃣ Run Kubeadm init
+
+```
+sudo kubeadm init
+```
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/config.toml-fix.png'>
+
+3️⃣ Kubeadm reset 
+
+```
+sudo kubeadm reset 
+```
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/Kubeadm-reset.png'>
+
+✔️ VOILA !
+
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/VOILA!.png'>
