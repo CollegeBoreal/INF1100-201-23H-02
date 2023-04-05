@@ -22,22 +22,25 @@ https://openebs.io/docs/#admin-operations
 kubectl get blockdevices --namespace openebs   
 ```
 > Retourne
-```
+<pre>
 NAME                                               NODENAME    SIZE           CLAIMSTATE   STATUS   AGE
 blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   bellatrix   107374182400   Unclaimed    Active   4m2s
 blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   3m41s
 blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       107374182400   Unclaimed    Active   3m26s
-```
+</pre>
 
 > blockdeviceclaims or bdc
 
 ```
-$ kubectl get blockdeviceclaims.openebs.io --namespace openebs
+kubectl get blockdeviceclaims.openebs.io --namespace openebs
+```
+> Retourne
+<pre>
 NAME                                       BLOCKDEVICENAME                                    PHASE   AGE
 bdc-0fcbd750-d9bc-484c-bc4b-d3b800bf5425   blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   Bound   17h
 bdc-562edaf1-6aef-485b-b83f-a7ddd73efcd3   blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   Bound   17h
 bdc-a68503ba-9882-459d-9e36-da24c54e1977   blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   Bound   17h
-```
+</pre>
 
 ## :b: Le réservoir de stockage - Storage Pool
 
@@ -72,6 +75,39 @@ spec:
     - blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5 # ME CHANGER VITE
 ---
 EOF
+```
+
+```yaml
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
+metadata:
+ name: cstor-disk-pool
+ namespace: openebs
+spec:
+ pools:
+   - nodeSelector:
+       kubernetes.io/hostname: "worker-node-1"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-10ad9f484c299597ed1e126d7b857967"
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "worker-node-2"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-3ec130dc1aa932eb4c5af1db4d73ea1b"
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "worker-node-3"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-01afcdbe3a9c9e3b281c7133b2af1b68"
+     poolConfig:
+       dataRaidGroupType: "stripe"
 ```
 
 :round_pushpin: Sauveguarder le fichier `StoragePoolClaim.md`
