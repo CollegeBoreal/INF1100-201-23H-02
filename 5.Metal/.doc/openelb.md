@@ -76,6 +76,8 @@ status:
 
 - [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
 
+:warning Référence uniquement **ne pas éxécuter**
+
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
 En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que toutes les cartes réseaux de la grappe Kubernetes cessent de répondre aux requêtes `ARP` des autres cartes réseaux et que Porter gère les requêtes `ARP` à leur place.
