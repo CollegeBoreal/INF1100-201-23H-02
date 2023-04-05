@@ -49,11 +49,10 @@ bdc-a68503ba-9882-459d-9e36-da24c54e1977   blockdevice-7e848c90-cca2-4ef4-9fdc-9
 - [ ] modifier le fichier de configuration ci-dessous en changeant les périphériques `block device`
 
 ```yaml
-$ kubectl apply -f - <<EOF
 apiVersion: cstor.openebs.io/v1
 kind: CStorPoolCluster
 metadata:
- name: cstor-disk-pool
+ name: cstor-storage
  namespace: openebs
 spec:
  pools:
@@ -81,14 +80,17 @@ spec:
      poolConfig:
        dataRaidGroupType: "stripe"
 ---
-EOF
 ```
 
-:round_pushpin: Sauveguarder le fichier `StoragePoolClaim.md`
+:round_pushpin: Sauveguarder le fichier `cspc-single.yaml`
 
-- [ ] après avoir modifier les périphériques sauvegarder sous le nom `StoragePoolClaim.md` dans le répertoire de votre grappe
+- [ ] après avoir modifier les périphériques sauvegarder sous le nom `cspc-single.yaml` dans le répertoire de votre grappe
 
 - [ ] Exécuter la commande `kubectl` à partir du fichier.
+
+```
+kubectl apply --filename cspc-single.yaml
+```
 
 :round_pushpin: Vérifier que les périphériques passent à l'état `claimed` - Contesté
 
@@ -102,48 +104,50 @@ blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       102687672   Claim
 
 ## :ab: [Classe de Stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/)
 
-:round_pushpin: Créer la **Class de Stockage** `cstor-csi-disk` 
+:round_pushpin: Créer la **Class de Stockage** `standard` 
 
 - [ ] après avoir modifié la valeur du champ `ReplicaCount` au nombre de noeuds sur la grappe (idéalement :three:)
 
 ```yaml
-kubectl apply -f - <<EOF
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: cstor-csi-disk
+  name: standard
 provisioner: cstor.csi.openebs.io
 allowVolumeExpansion: true
 parameters:
   cas-type: cstor
   # cstorPoolCluster should have the name of the CSPC
-  cstorPoolCluster: cstor-disk-pool
-  # replicaCount should be <= no. of CSPI created in the selected CSPC
+  cstorPoolCluster: cstor-storage
+  # replicaCount should be <= no. of CSPI
   replicaCount: "3"
-EOF
+---
 ```
 
-- [ ] sauvegarder sous le nom `StorageClass.md` dans le répertoire de votre grappe
+- [ ] sauvegarder sous le nom `csi-cstor-sc.yaml` dans le répertoire de votre grappe
 - [ ] Exécuter la commande `kubectl` à partir du fichier.
 
+```
+kubectl apply --filename csi-cstor-sc.yaml
+```
 
 :round_pushpin: La classe par défaut de stockage `standard`
 
-- [ ] Vérifier la classe de stockage `cstor-csi-disk`
+- [ ] Vérifier la classe de stockage `standard`
 
 ```
-kubectl get storageclass cstor-csi-disk
+kubectl get storageclass standard
 ```
 > Retourne :
 <pre>
 NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-cstor-csi-disk              cstor.csi.openebs.io                                       Delete          Immediate              true                   4s
+standard                    cstor.csi.openebs.io                                       Delete          Immediate              true                   4s
 </pre>
 
-- [ ] Appliquer le stockage par défaut à **cstor-csi-disk**
+- [ ] Appliquer le stockage par défaut à **standard**
 
 ```
-kubectl patch storageclass cstor-csi-disk -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
 [:back:](../#floppy_disk-le-stockage)
