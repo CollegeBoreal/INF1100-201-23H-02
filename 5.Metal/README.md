@@ -166,7 +166,7 @@ Dans notre environnement, nous allons choisir [openEBS](https://openebs.io) et s
 - [ ] Créer d'un réservoir de stockage `pool` avec les :three: périphériques
 - [ ] Créer la **classe de stockage (sc)** `standard` avec le réservoir de stockage `pool`
 
-Utiliser les [operations d'administration](.doc/openebs-adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
+Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
 
 :round_pushpin:  Vous pouvez maintenant utiliser la **classe de stockage (sc)** `standard` définie par `défaut`
 
