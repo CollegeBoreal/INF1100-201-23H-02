@@ -26,7 +26,7 @@ openelb-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
 
 ## :round_pushpin: Créer l'objet EIP (External IP) 
 
-L'objet `Eip` functionne comme un réservoir d'adresse IP pour Porter.
+L'objet [`Eip`](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip/) functionne comme un réservoir d'adresse IP pour Porter.
 
 Exécutez la commande suivante pour créer un fichier YAML pour l '«objet Eip»:
 
