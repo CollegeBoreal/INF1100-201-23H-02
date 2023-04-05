@@ -133,19 +133,19 @@ blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       102687672   Claim
 - [ ] après avoir modifié la valeur du champ `ReplicaCount` au nombre de noeuds sur la grappe (idéalement :three:)
 
 ```yaml
-$ kubectl apply -f - <<EOF
-apiVersion: storage.k8s.io/v1
+kubectl apply -f - <<EOF
 kind: StorageClass
+apiVersion: storage.k8s.io/v1
 metadata:
-  name: standard
-  annotations:
-    openebs.io/cas-type: cstor
-    cas.openebs.io/config: |
-      - name: StoragePoolClaim
-        value: "cstor-disk-pool"
-      - name: ReplicaCount
-        value: "3"
-provisioner: openebs.io/provisioner-iscsi
+  name: cstor-csi-disk
+provisioner: cstor.csi.openebs.io
+allowVolumeExpansion: true
+parameters:
+  cas-type: cstor
+  # cstorPoolCluster should have the name of the CSPC
+  cstorPoolCluster: cstor-disk-pool
+  # replicaCount should be <= no. of CSPI created in the selected CSPC
+  replicaCount: "3"
 EOF
 ```
 
