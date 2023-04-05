@@ -46,6 +46,6 @@ sudo kubeadm reset
 ```
 <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/Kubeadm-reset.png'>
 
-✔️ VOILA !
+✔️ VOILA ! :tada: Félicitations !
 
 <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/VOILA!.png'>
