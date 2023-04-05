@@ -200,6 +200,6 @@ standard (default)          openebs.io/provisioner-iscsi                        
 
 Chaque étudiant aura à installer son application dans la grappe
 
-- [ ]  Installer les applications avec LENS
+- [ ]  Installer les applications avec [LENS](https://k8slens.dev/)
 - [ ] Activer :rocket: le service en appliquant les annotations reliés à l'équilibreur de charge `LoadBalancer` Porter en fonction des examples de [Configuration](https://github.com/CollegeBoreal/Tutoriels/tree/main/2.MicroServices/3.Orchestration/1.Kubernetes/C.Cluster/0.Local/6.K8s/apps) d'applications suivantes
 - [ ] Attacher l'application à votre nom de domaine
