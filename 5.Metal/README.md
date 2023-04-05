@@ -119,10 +119,10 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 ```
 $ kubectl get nodes
 NAME         STATUS   ROLES    AGE     VERSION
-bellatrix    Ready    <none>   3m15s   v1.18.6
-betelgeuse   Ready    master   25m     v1.18.6
-rigel        Ready    <none>   68s     v1.18.6
-saiph        Ready    <none>   22s     v1.18.6
+bellatrix    Ready    <none>   3m15s   v1.26.3
+betelgeuse   Ready    master   25m     v1.26.3
+rigel        Ready    <none>   68s     v1.26.3
+saiph        Ready    <none>   22s     v1.26.3
 ```
 
 - [ ] Visualiser la grappe dans :level_slider: `Lens`
