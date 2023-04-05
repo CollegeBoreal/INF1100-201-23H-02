@@ -37,7 +37,7 @@ $ ip addr | grep 10.13.237
     inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
 ```
 
-:round_pushpin: Sauveguarder le fichier `porterlb.md`
+:round_pushpin: Sauveguarder le fichier `openelb.yaml`
 
 - [ ] modifiez les informations du réservoir d'IP dans le champ `{spec.address}` (i.e. `10.13.237.8-10.13.237.11`) séparé par un `-`
 > le réservoir d'IP représente le premier serveur, soit le plan de contrôle :control_knobs: aux derniers serveurs :1st_place_medal:, :2nd_place_medal:, :3rd_place_medal: noeuds de la grappe  
@@ -68,6 +68,12 @@ status:
     lastIP: 10.13.237.11 # CHANGEZ MOI VITE
     ready: true
     v4: true
+```
+
+- [ ] Executer
+
+```
+kubectl apply --filename openelb.yaml
 ```
 
 [:back:](../#rocket-les-services)
