@@ -1,0 +1,21 @@
+apiVersion: network.kubesphere.io/v1alpha2
+kind: Eip
+metadata:
+    name: openelb-layer2-eip
+    annotations:
+      eip.openelb.kubesphere.io/is-default-eip: "true"
+spec:
+    address: 10.13.237.8-10.13.237.11 
+    protocol: layer2
+    interface: enp3s0f0 
+    disable: false
+status:
+    occupied: false
+    usage: 1
+    poolSize: 10
+    used: 
+      "10.13.237.8": "default/test-svc" 
+    firstIP: 10.13.237.8 
+    lastIP: 10.13.237.11
+    ready: true
+    v4: true
