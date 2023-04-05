@@ -9,7 +9,11 @@
 
 
 
+```
 superzaf@son:~$ sudo kubeadm init   --pod-network-cidr=172.16.0.0/16   --control-plane-endpoint=son.goku.cherkaoui.tech
+```
+> Retourne :
+<pre>
 [init] Using Kubernetes version: v1.26.3
 [preflight] Running pre-flight checks
 error execution phase preflight: [preflight] Some fatal errors occurred:
@@ -17,6 +21,7 @@ error execution phase preflight: [preflight] Some fatal errors occurred:
 , error: exit status 1
 [preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
 To see the stack trace of this error execute with --v=5 or higher
+</pre>
 
 ❎ TROUBLESHOOT ⏫
 
