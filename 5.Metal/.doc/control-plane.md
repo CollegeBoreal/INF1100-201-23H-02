@@ -19,18 +19,15 @@ sudo kubeadm config images pull
 sudo kubeadm config images list
 ```
 > Return
-```
-[sudo] password for ubuntu: 
-I0314 03:49:12.111805   33645 version.go:252] remote version is much newer: v1.20.4; falling back to: stable-1.18
-W0314 03:49:12.338372   33645 configset.go:202] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]
-k8s.gcr.io/kube-apiserver:v1.18.16
-k8s.gcr.io/kube-controller-manager:v1.18.16
-k8s.gcr.io/kube-scheduler:v1.18.16
-k8s.gcr.io/kube-proxy:v1.18.16
-k8s.gcr.io/pause:3.2
-k8s.gcr.io/etcd:3.4.3-0
-k8s.gcr.io/coredns:1.6.7
-```
+<pre>
+registry.k8s.io/kube-apiserver:v1.26.3
+registry.k8s.io/kube-controller-manager:v1.26.3
+registry.k8s.io/kube-scheduler:v1.26.3
+registry.k8s.io/kube-proxy:v1.26.3
+registry.k8s.io/pause:3.9
+registry.k8s.io/etcd:3.5.6-0
+registry.k8s.io/coredns/coredns:v1.9.3
+</pre>
 
 :round_pushpin: Initialiser la grappe
 

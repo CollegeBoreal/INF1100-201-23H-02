@@ -54,7 +54,7 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://a
 - [ ] Choisir une version spécifique de Kubernetes
 
 ```
-export KUBEVERSION=1.23.6
+export KUBEVERSION=1.26.3
 ``` 
 
 - [ ] Installer la version spécifique de Kubernetes

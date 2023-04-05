@@ -119,10 +119,10 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 ```
 $ kubectl get nodes
 NAME         STATUS   ROLES    AGE     VERSION
-bellatrix    Ready    <none>   3m15s   v1.18.6
-betelgeuse   Ready    master   25m     v1.18.6
-rigel        Ready    <none>   68s     v1.18.6
-saiph        Ready    <none>   22s     v1.18.6
+bellatrix    Ready    <none>   3m15s   v1.26.3
+betelgeuse   Ready    master   25m     v1.26.3
+rigel        Ready    <none>   68s     v1.26.3
+saiph        Ready    <none>   22s     v1.26.3
 ```
 
 - [ ] Visualiser la grappe dans :level_slider: `Lens`
@@ -166,7 +166,7 @@ Dans notre environnement, nous allons choisir [openEBS](https://openebs.io) et s
 - [ ] Créer d'un réservoir de stockage `pool` avec les :three: périphériques
 - [ ] Créer la **classe de stockage (sc)** `standard` avec le réservoir de stockage `pool`
 
-Utiliser les [operations d'administration](.doc/openebs-adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
+Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
 
 :round_pushpin:  Vous pouvez maintenant utiliser la **classe de stockage (sc)** `standard` définie par `défaut`
 
@@ -200,6 +200,6 @@ standard (default)          openebs.io/provisioner-iscsi                        
 
 Chaque étudiant aura à installer son application dans la grappe
 
-- [ ]  Installer les applications avec LENS
+- [ ]  Installer les applications avec [LENS](https://k8slens.dev/)
 - [ ] Activer :rocket: le service en appliquant les annotations reliés à l'équilibreur de charge `LoadBalancer` Porter en fonction des examples de [Configuration](https://github.com/CollegeBoreal/Tutoriels/tree/main/2.MicroServices/3.Orchestration/1.Kubernetes/C.Cluster/0.Local/6.K8s/apps) d'applications suivantes
 - [ ] Attacher l'application à votre nom de domaine

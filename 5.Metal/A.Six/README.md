@@ -1,3 +1,5 @@
+
+
 # :a: Six (the :six:)
 
 https://www.urbandictionary.com/define.php?term=The%20Six
@@ -8,3 +10,10 @@ https://www.urbandictionary.com/define.php?term=The%20Six
 | data plane       |rafik952@mississauga.six.mbtechno.tech  | `10.13.237.40/24` | 64GB Ram,      16cpus |
 | data plane       |salimata1@brampton.six.mbtechno.tech     | `10.13.237.10/24` | 64GB Ram,       8cpus |
 | data plane       |sara@aurora.six.mbtechno.tech       | `10.13.237.35/24` | 64GB Ram,      16cpus |
+
+
+
+
+
+
+

@@ -7,3 +7,8 @@
 | data plane       |steeve@pluton.planete.getstudio.tech    | `10.13.237.42/24` | 64GB Ram,       8cpus |
 | control plane       |madmax@mercury.planete.getstudio.tech      | `10.13.237.29/24` | 64GB Ram,      16cpus |
 
+# Troubleshooting
+
+:x: Erreur
+
+remplacer VERSION=1.23.6 par VERSION=1.26.3
