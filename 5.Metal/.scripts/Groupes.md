@@ -16,9 +16,9 @@
 
 |:hash:| Grappe :wheel_of_dharma: | :gear: Config | :abacus: Plan de données | :three: BlockDevices :roll_of_paper: | :potable_water: Reservoir | :floppy_disk: Stockage | :rocket: Service |
 |-|-|-|-|-|-|-|-|
-| :one: | [A.Six](../A.Six) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :two: | [AB.Maghreb](../AB.Maghreb) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :three: | [B.Goku](../B.Goku) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :four: | [CL.Piano](../CL.Piano) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| | [O.Africa](../O.Africa) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| | [O2.Planete](../O2.Planete) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :a: | [A.Six](../A.Six) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :ab: | [AB.Maghreb](../AB.Maghreb) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :b: | [B.Goku](../B.Goku) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :cl: | [CL.Piano](../CL.Piano) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :o: | [O.Africa](../O.Africa) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :o2: | [O2.Planete](../O2.Planete) | :x: | :zero: | :zero: | :x: | :x: | :x: |
