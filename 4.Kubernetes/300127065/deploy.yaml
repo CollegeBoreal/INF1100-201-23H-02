@@ -1,4 +1,3 @@
-  GNU nano 6.2                              deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,5 +22,3 @@ spec:
         name: nginx
         resources: {}
 status: {}
-
-
