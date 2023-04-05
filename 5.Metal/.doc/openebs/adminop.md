@@ -102,7 +102,7 @@ blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       102687672   Claim
 
 ## :ab: [Classe de Stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/)
 
-:round_pushpin: Créer la **Class de Stockage** `standard` 
+:round_pushpin: Créer la **Class de Stockage** `cstor-csi-disk` 
 
 - [ ] après avoir modifié la valeur du champ `ReplicaCount` au nombre de noeuds sur la grappe (idéalement :three:)
 
@@ -129,18 +129,21 @@ EOF
 
 :round_pushpin: La classe par défaut de stockage `standard`
 
-- [ ] Vérifier la classe de stockage `standard`
+- [ ] Vérifier la classe de stockage `cstor-csi-disk`
 
 ```
-$ kubectl get storageclass standard
-NAME       PROVISIONER                    RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-standard   openebs.io/provisioner-iscsi   Delete          Immediate           false                  74s
+kubectl get storageclass cstor-csi-disk
 ```
+> Retourne :
+<pre>
+NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+cstor-csi-disk              cstor.csi.openebs.io                                       Delete          Immediate              true                   4s
+</pre>
 
-- [ ] Appliquer le stockage par défaut à **standard**
+- [ ] Appliquer le stockage par défaut à **cstor-csi-disk**
 
 ```
-$ kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+kubectl patch storageclass cstor-csi-disk -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
 [:back:](../#floppy_disk-le-stockage)
