@@ -150,7 +150,7 @@ standard                    cstor.csi.openebs.io                                
 kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
-[:back:](../#floppy_disk-le-stockage)
+[:back:](../../#floppy_disk-le-stockage)
 
 # References
 
