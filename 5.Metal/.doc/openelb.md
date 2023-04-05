@@ -7,18 +7,21 @@
 - [ ] Exécuter l'installation du manifeste ci-dessous
 
 ```
-$ kubectl apply --filename https://raw.githubusercontent.com/kubesphere/porter/master/deploy/porter.yaml
+kubectl apply -f https://raw.githubusercontent.com/openelb/openelb/master/deploy/openelb.yaml
 ```
 
 - [ ] Vérifier que porter est installé
 
 ```
-$ kubectl get pods --namespace porter-system  
-NAME                             READY   STATUS      RESTARTS   AGE
-porter-admission-create-2tdnp    0/1     Completed   0          8m7s
-porter-admission-patch-vlnjg     0/1     Completed   2          8m7s
-porter-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
+kubectl get po -n openelb-system
 ```
+> Retourne :
+<pre> 
+NAME                             READY   STATUS      RESTARTS   AGE
+openelb-admission-create-2tdnp    0/1     Completed   0          8m7s
+openelb-admission-patch-vlnjg     0/1     Completed   2          8m7s
+openelb-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
+</pre>
 
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
