@@ -14,9 +14,10 @@
 
 |:hash:   | Type        | Description                                           |:infinity:| Statut           |
 |---------|---------------|-----------------------------------------------------|---------|------------------|
-| :one:   | Questionnaire | GitOPS                                              | 10      |:heavy_check_mark:|
-| :two:   | Questionnaire | Docker                                              | 15      |:x:|
-| :three: | Laboratoire   | Compose                                             | 15      |:x:|
-| :four:  | Laboratoire   | AKS (Cloud)                                         | 25      |:x:|
-| :five:  | Projet        | Metal                                               | 35      |:x:| 
+| :one:   | Questionnaire | GitOPS                                              | 15      |:heavy_check_mark:|
+| :two:   | Laboratoires  | Participation Docker, Compose                       | 10      |:x:|
+| :three: | Questionnaire | Docker                                              | 25      |:heavy_check_mark:|
+| :four:  | Laboratoires  | Participation Kubernetes, kind                      | 10      |:x:|
+| :five:  | Questionnaire | Kubernetes (kind)                                   | 25      |:x:|
+| :six:   | Projet        | Metal                                               | 15      |:x:| 
 |         |               |                                                     |100/:100:|                 |

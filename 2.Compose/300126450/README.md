@@ -1,1 +1,1 @@
-localhost.klyddom.tech
+wordpress.localhost.klyddom.tech
