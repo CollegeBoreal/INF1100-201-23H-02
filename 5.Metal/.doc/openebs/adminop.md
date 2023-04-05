@@ -50,34 +50,6 @@ bdc-a68503ba-9882-459d-9e36-da24c54e1977   blockdevice-7e848c90-cca2-4ef4-9fdc-9
 
 ```yaml
 $ kubectl apply -f - <<EOF
-#Use the following YAMLs to create a cStor Storage Pool.
-apiVersion: openebs.io/v1alpha1
-kind: StoragePoolClaim
-metadata:
-  name: cstor-disk-pool
-  annotations:
-    cas.openebs.io/config: |
-      - name: PoolResourceRequests
-        value: |-
-            memory: 2Gi
-      - name: PoolResourceLimits
-        value: |-
-            memory: 4Gi
-spec:
-  name: cstor-disk-pool
-  type: disk
-  poolSpec:
-    poolType: striped
-  blockDevices:
-    blockDeviceList:
-    - blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03 # ME CHANGER VITE
-    - blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1 # ME CHANGER VITE
-    - blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5 # ME CHANGER VITE
----
-EOF
-```
-
-```yaml
 apiVersion: cstor.openebs.io/v1
 kind: CStorPoolCluster
 metadata:
@@ -86,28 +58,30 @@ metadata:
 spec:
  pools:
    - nodeSelector:
-       kubernetes.io/hostname: "worker-node-1"
+       kubernetes.io/hostname: "bellatrix" # ME CHANGER VITE
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-10ad9f484c299597ed1e126d7b857967"
+           - blockDeviceName: "blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03" # ME CHANGER VITE
      poolConfig:
        dataRaidGroupType: "stripe"
 
    - nodeSelector:
-       kubernetes.io/hostname: "worker-node-2"
+       kubernetes.io/hostname: "saiph" # ME CHANGER VITE
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-3ec130dc1aa932eb4c5af1db4d73ea1b"
+           - blockDeviceName: "blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1" # ME CHANGER VITE
      poolConfig:
        dataRaidGroupType: "stripe"
 
    - nodeSelector:
-       kubernetes.io/hostname: "worker-node-3"
+       kubernetes.io/hostname: "rigel" # ME CHANGER VITE
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-01afcdbe3a9c9e3b281c7133b2af1b68"
+           - blockDeviceName: "blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5" # ME CHANGER VITE
      poolConfig:
        dataRaidGroupType: "stripe"
+---
+EOF
 ```
 
 :round_pushpin: Sauveguarder le fichier `StoragePoolClaim.md`
