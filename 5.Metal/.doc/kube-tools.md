@@ -40,6 +40,13 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://a
          | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
+- [ ] Vérifier le contenu du fichier
+
+```
+cat /etc/apt/sources.list.d/kubernetes.list
+```
+> deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+
 ## :two: Installer **kubeadm** and **kubectl**
 
 :bulb: Quels outils :ice_cube: kube doit on installer? 
