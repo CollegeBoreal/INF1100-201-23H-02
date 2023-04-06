@@ -121,6 +121,16 @@ betelgeuse   NotReady   master   4m23s   v1.18.6
 
 
 ```
+sudo kubeadm config images pull
+```
+> Retourne :
+<pre> 
+failed to pull image "registry.k8s.io/kube-apiserver:v1.26.3": output: time="2023-04-06T21:11:34Z" level=fatal msg="validate service connection: CRI v1 image API is not implemented for endpoint \"unix:///var/run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.ImageService"
+, error: exit status 1
+To see the stack trace of this error execute with --v=5 or higher
+</pre>
+
+```
 apt info containerd.io
 ```
 > Retourne :
