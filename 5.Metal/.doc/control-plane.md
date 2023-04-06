@@ -206,6 +206,19 @@ NAME         STATUS     ROLES    AGE     VERSION
 betelgeuse   NotReady   master   4m23s   v1.18.6
 ```
 
+:round_pushpin: Vérifier l'information sur la grappe
+
+```
+kubectl cluster-info
+```
+> Retourne :
+```yaml 
+Kubernetes control plane is running at https://betelgeuse.orion.gasy.africa:6443
+CoreDNS is running at https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+```
+
 :warning: Not yet ready 
 
 
