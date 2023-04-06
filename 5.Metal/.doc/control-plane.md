@@ -337,7 +337,7 @@ sudo systemctl restart containerd
 systemctl status containerd
 ```
 > Retourne :
-<pre>
+```yaml
 ● containerd.service - containerd container runtime
      Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
      Active: active (running) since Thu 2023-04-06 21:47:37 UTC; 27s ago
@@ -359,7 +359,7 @@ Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.40753337
 Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407825344Z" level=info msg="StopPodSandb>
 Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407927724Z" level=info msg="TearDown net>
 lines 1-20
-</pre>
+```
 
 * taper sur `q` pour quitter
 
