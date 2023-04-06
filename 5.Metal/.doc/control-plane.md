@@ -155,3 +155,54 @@ Description: An open and reliable container runtime
 
 N: There are 29 additional records. Please use the '-a' switch to see them.
 </pre>
+
+
+sudo apt remove containerd
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package 'containerd' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+ubuntu@betelgeuse:~$ sudo apt update, apt install containerd.io
+E: Invalid operation update,
+ubuntu@betelgeuse:~$ sudo apt update && sudo apt install containerd.io
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy InRelease                                 
+Hit:4 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://ca.archive.ubuntu.com/ubuntu jammy-backports InRelease              
+Hit:6 http://ca.archive.ubuntu.com/ubuntu jammy-security InRelease               
+Hit:2 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages will be upgraded:
+  containerd.io
+1 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Need to get 28.3 MB of archives.
+After this operation, 287 kB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.6.20-1 [28.3 MB]
+Fetched 28.3 MB in 2s (14.9 MB/s)         
+(Reading database ... 76063 files and directories currently installed.)
+Preparing to unpack .../containerd.io_1.6.20-1_amd64.deb ...
+Unpacking containerd.io (1.6.20-1) over (1.6.19-1) ...
+Setting up containerd.io (1.6.20-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...                                                                                            
+Scanning processor microcode...                                                                                  
+Scanning linux images...                                                                                         
+
+Running kernel seems to be up-to-date.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
