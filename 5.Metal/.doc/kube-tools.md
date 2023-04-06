@@ -170,6 +170,11 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ```
 sudo apt-mark hold kubeadm kubectl
 ```
+> Retourne :
+<pre>
+kubeadm set on hold.
+kubectl set on hold.
+</pre>
 
 :+1: Tester que les outils :ice_cube: `kube` sont installés
 
