@@ -115,3 +115,30 @@ betelgeuse   NotReady   master   4m23s   v1.18.6
 
 
 [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
+
+
+## :x: TroubleShooting
+
+
+```
+apt info containerd.io
+```
+> Retourne :
+<pre> 
+Package: containerd.io
+Version: 1.6.20-1
+Priority: optional
+Section: devel
+Maintainer: Containerd team <help@containerd.io>
+Installed-Size: 116 MB
+Provides: containerd, runc
+Depends: libc6 (>= 2.14), libseccomp2 (>= 2.5.0)
+Conflicts: containerd, runc
+Replaces: containerd, runc
+Homepage: https://containerd.io
+Download-Size: 28.3 MB
+APT-Sources: https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+Description: An open and reliable container runtime
+
+N: There are 29 additional records. Please use the '-a' switch to see them.
+</pre>
