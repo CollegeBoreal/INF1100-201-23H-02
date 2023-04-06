@@ -362,3 +362,15 @@ lines 1-20
 </pre>
 
 * taper sur `q` pour quitter
+
+```
+kubectl cluster-info
+```
+> Retourne :
+<pre>yaml 
+E0406 22:18:44.965424   30582 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0406 22:18:44.965727   30582 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0406 22:18:44.967079   30582 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0406 22:18:44.968782   30582 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0406 22:18:44.970568   30582 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+</pre>yaml
