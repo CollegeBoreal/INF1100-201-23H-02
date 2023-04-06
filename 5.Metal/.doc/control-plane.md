@@ -140,7 +140,7 @@ L'initialisation de la grappe va donner un long texte où se trouve un :tickets:
 
 Un example se trouve ci-dessous, sauvegarder l'information quelque part pour une future utilisation
 
-```
+<pre>
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
@@ -149,6 +149,10 @@ To start using your cluster, you need to run the following as a regular user:
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
@@ -156,15 +160,15 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of control-plane nodes by copying certificate authorities
 and service account keys on each node and then running the following as root:
 
-  kubeadm join betelgeuse.boreal.codes:6443 --token 2pje0m.xl8voke0wisjymvp \
-    --discovery-token-ca-cert-hash sha256:27c4b80df3d468bfe13517750a265bb3a3c560871e1bf177cafb323070b7b4a6 \
-    --control-plane 
+  kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
+	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f \
+	--control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join betelgeuse.boreal.codes:6443 --token 2pje0m.xl8voke0wisjymvp \
-    --discovery-token-ca-cert-hash sha256:27c4b80df3d468bfe13517750a265bb3a3c560871e1bf177cafb323070b7b4a6
-```
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
+	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f
+</pre>
 
 ## :b: Utiliser sa grappe (sur le serveur - plan de contrôle)
 
