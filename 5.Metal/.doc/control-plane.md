@@ -206,3 +206,31 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
+</pre>
+
+```
+systemctl status containerd
+```
+> Retourne :
+<pre>
+● containerd.service - containerd container runtime
+     Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2023-04-06 21:19:48 UTC; 2min 34s ago
+       Docs: https://containerd.io
+    Process: 13840 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 13841 (containerd)
+      Tasks: 18
+     Memory: 14.3M
+        CPU: 659ms
+     CGroup: /system.slice/containerd.service
+             └─13841 /usr/bin/containerd
+
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809404784Z" level=info msg="loading plug>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809426261Z" level=info msg="loading plug>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809454446Z" level=info msg="loading plug>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809477620Z" level=info msg="skip loading>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809496256Z" level=info msg="loading plug>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809526187Z" level=error msg="failed to i>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.810307648Z" level=info msg=serving... ad>
+Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.810759661Z" level=info msg=serving... ad>
+</pre>
