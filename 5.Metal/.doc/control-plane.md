@@ -156,14 +156,22 @@ Description: An open and reliable container runtime
 N: There are 29 additional records. Please use the '-a' switch to see them.
 </pre>
 
-
+```
 sudo apt remove containerd
+```
+> Retourne :
+<pre>
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 Package 'containerd' is not installed, so not removed
 0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
-ubuntu@betelgeuse:~$ sudo apt update, apt install containerd.io
+</pre>
+```
+sudo apt update, apt install containerd.io
+```
+> Retourne :
+<pre>
 E: Invalid operation update,
 ubuntu@betelgeuse:~$ sudo apt update && sudo apt install containerd.io
 Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
