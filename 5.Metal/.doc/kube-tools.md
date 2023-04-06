@@ -45,7 +45,10 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://a
 ```
 cat /etc/apt/sources.list.d/kubernetes.list
 ```
-> deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+> Retourne :
+<pre> 
+deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+</pre>
 
 ## :two: Installer **kubeadm** and **kubectl**
 
