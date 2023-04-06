@@ -12,6 +12,16 @@
 ```
 sudo kubeadm config images pull
 ```
+> Return
+<pre>
+[config/images] Pulled registry.k8s.io/kube-apiserver:v1.26.3
+[config/images] Pulled registry.k8s.io/kube-controller-manager:v1.26.3
+[config/images] Pulled registry.k8s.io/kube-scheduler:v1.26.3
+[config/images] Pulled registry.k8s.io/kube-proxy:v1.26.3
+[config/images] Pulled registry.k8s.io/pause:3.9
+[config/images] Pulled registry.k8s.io/etcd:3.5.6-0
+[config/images] Pulled registry.k8s.io/coredns/coredns:v1.9.3
+</pre>
 
 * Véfifier l'installation des images
 
