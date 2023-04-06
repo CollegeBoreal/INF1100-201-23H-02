@@ -273,9 +273,7 @@ Package 'containerd' is not installed, so not removed
 sudo apt update, apt install containerd.io
 ```
 > Retourne :
-<pre>
-E: Invalid operation update,
-ubuntu@betelgeuse:~$ sudo apt update && sudo apt install containerd.io
+```yaml
 Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
 Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy InRelease                                 
 Hit:4 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease
@@ -316,7 +314,7 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-</pre>
+```
 
 - [ ] Vérifier que le service `containerd` est disponible au démarrage
 
