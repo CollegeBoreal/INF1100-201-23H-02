@@ -22,22 +22,25 @@ https://openebs.io/docs/#admin-operations
 kubectl get blockdevices --namespace openebs   
 ```
 > Retourne
-```
+<pre>
 NAME                                               NODENAME    SIZE           CLAIMSTATE   STATUS   AGE
 blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   bellatrix   107374182400   Unclaimed    Active   4m2s
 blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   3m41s
 blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       107374182400   Unclaimed    Active   3m26s
-```
+</pre>
 
 > blockdeviceclaims or bdc
 
 ```
-$ kubectl get blockdeviceclaims.openebs.io --namespace openebs
+kubectl get blockdeviceclaims.openebs.io --namespace openebs
+```
+> Retourne
+<pre>
 NAME                                       BLOCKDEVICENAME                                    PHASE   AGE
 bdc-0fcbd750-d9bc-484c-bc4b-d3b800bf5425   blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   Bound   17h
 bdc-562edaf1-6aef-485b-b83f-a7ddd73efcd3   blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   Bound   17h
 bdc-a68503ba-9882-459d-9e36-da24c54e1977   blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   Bound   17h
-```
+</pre>
 
 ## :b: Le réservoir de stockage - Storage Pool
 
@@ -46,39 +49,48 @@ bdc-a68503ba-9882-459d-9e36-da24c54e1977   blockdevice-7e848c90-cca2-4ef4-9fdc-9
 - [ ] modifier le fichier de configuration ci-dessous en changeant les périphériques `block device`
 
 ```yaml
-$ kubectl apply -f - <<EOF
-#Use the following YAMLs to create a cStor Storage Pool.
-apiVersion: openebs.io/v1alpha1
-kind: StoragePoolClaim
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
 metadata:
-  name: cstor-disk-pool
-  annotations:
-    cas.openebs.io/config: |
-      - name: PoolResourceRequests
-        value: |-
-            memory: 2Gi
-      - name: PoolResourceLimits
-        value: |-
-            memory: 4Gi
+ name: cstor-storage
+ namespace: openebs
 spec:
-  name: cstor-disk-pool
-  type: disk
-  poolSpec:
-    poolType: striped
-  blockDevices:
-    blockDeviceList:
-    - blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03 # ME CHANGER VITE
-    - blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1 # ME CHANGER VITE
-    - blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5 # ME CHANGER VITE
+ pools:
+   - nodeSelector:
+       kubernetes.io/hostname: "bellatrix" # ME CHANGER VITE
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "saiph" # ME CHANGER VITE
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "rigel" # ME CHANGER VITE
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
 ---
-EOF
 ```
 
-:round_pushpin: Sauveguarder le fichier `StoragePoolClaim.md`
+:round_pushpin: Sauveguarder le fichier `cspc-single.yaml`
 
-- [ ] après avoir modifier les périphériques sauvegarder sous le nom `StoragePoolClaim.md` dans le répertoire de votre grappe
+- [ ] après avoir modifier les périphériques sauvegarder sous le nom `cspc-single.yaml` dans le répertoire de votre grappe
 
 - [ ] Exécuter la commande `kubectl` à partir du fichier.
+
+```
+kubectl apply --filename cspc-single.yaml
+```
 
 :round_pushpin: Vérifier que les périphériques passent à l'état `claimed` - Contesté
 
@@ -97,43 +109,48 @@ blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       102687672   Claim
 - [ ] après avoir modifié la valeur du champ `ReplicaCount` au nombre de noeuds sur la grappe (idéalement :three:)
 
 ```yaml
-$ kubectl apply -f - <<EOF
-apiVersion: storage.k8s.io/v1
 kind: StorageClass
+apiVersion: storage.k8s.io/v1
 metadata:
   name: standard
-  annotations:
-    openebs.io/cas-type: cstor
-    cas.openebs.io/config: |
-      - name: StoragePoolClaim
-        value: "cstor-disk-pool"
-      - name: ReplicaCount
-        value: "3"
-provisioner: openebs.io/provisioner-iscsi
-EOF
+provisioner: cstor.csi.openebs.io
+allowVolumeExpansion: true
+parameters:
+  cas-type: cstor
+  # cstorPoolCluster should have the name of the CSPC
+  cstorPoolCluster: cstor-storage
+  # replicaCount should be <= no. of CSPI
+  replicaCount: "3"
+---
 ```
 
-- [ ] sauvegarder sous le nom `StorageClass.md` dans le répertoire de votre grappe
+- [ ] sauvegarder sous le nom `csi-cstor-sc.yaml` dans le répertoire de votre grappe
 - [ ] Exécuter la commande `kubectl` à partir du fichier.
 
+```
+kubectl apply --filename csi-cstor-sc.yaml
+```
 
 :round_pushpin: La classe par défaut de stockage `standard`
 
 - [ ] Vérifier la classe de stockage `standard`
 
 ```
-$ kubectl get storageclass standard
-NAME       PROVISIONER                    RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-standard   openebs.io/provisioner-iscsi   Delete          Immediate           false                  74s
+kubectl get storageclass standard
 ```
+> Retourne :
+<pre>
+NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+standard                    cstor.csi.openebs.io                                       Delete          Immediate              true                   4s
+</pre>
 
 - [ ] Appliquer le stockage par défaut à **standard**
 
 ```
-$ kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
-[:back:](../#floppy_disk-le-stockage)
+[:back:](../../#floppy_disk-le-stockage)
 
 # References
 

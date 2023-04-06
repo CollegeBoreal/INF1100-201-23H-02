@@ -14,7 +14,10 @@ Installer the CNI Plugin pour gérer le réseau de gousses [Cluster Networking](
 Sur le serveur du plan de contrôle:
 
 ```
-$ kubectl apply --filename=https://docs.projectcalico.org/manifests/calico.yaml
+kubectl apply --filename=https://docs.projectcalico.org/manifests/calico.yaml
+```
+> Retourne :
+<pre> 
 configmap/calico-config created
 customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
@@ -40,14 +43,17 @@ serviceaccount/calico-node created
 deployment.apps/calico-kube-controllers created
 serviceaccount/calico-kube-controllers created
 poddisruptionbudget.policy/calico-kube-controllers created
-```
+</pre> 
 
 - [ ] Vérifier le service :droplet: `Kubelet` après l'installation du plugin CNI
 
 La trace de `calico` doit apparaître
 
 ```
-$ sudo systemctl status kubelet
+sudo systemctl status kubelet
+```
+> Retourne :
+<pre> 
 [sudo] password for ubuntu: 
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
@@ -72,7 +78,7 @@ Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.434 [INFO][1182250] 
 Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.472 [INFO][1182250] k8s.go 400: Added Mac, interface name, and active containe>
 Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.483 [INFO][1182250] k8s.go 474: Wrote updated endpoint to datastore ContainerI>
 lines 1-22/22 (END)
-```
+</pre> 
 
 [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 

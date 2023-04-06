@@ -7,19 +7,82 @@
 - [ ] Exécuter l'installation du manifeste ci-dessous
 
 ```
-$ kubectl apply --filename https://raw.githubusercontent.com/kubesphere/porter/master/deploy/porter.yaml
+kubectl apply -f https://raw.githubusercontent.com/openelb/openelb/master/deploy/openelb.yaml
 ```
 
 - [ ] Vérifier que porter est installé
 
 ```
-$ kubectl get pods --namespace porter-system  
+kubectl get po -n openelb-system
+```
+> Retourne :
+<pre> 
 NAME                             READY   STATUS      RESTARTS   AGE
-porter-admission-create-2tdnp    0/1     Completed   0          8m7s
-porter-admission-patch-vlnjg     0/1     Completed   2          8m7s
-porter-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
+openelb-admission-create-2tdnp    0/1     Completed   0          8m7s
+openelb-admission-patch-vlnjg     0/1     Completed   2          8m7s
+openelb-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
+</pre>
+
+
+## :round_pushpin: Créer l'objet EIP (External IP) 
+
+L'objet [`Eip`](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip/) functionne comme un réservoir d'adresse IP pour Porter.
+
+Exécutez la commande suivante pour créer un fichier YAML pour l '«objet Eip»:
+
+- [ ] Récupérer le nom de l'interface "NIC" (i.e. `enp3s0f0`)
+
+```
+$ ip addr | grep 10.13.237
+    inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
 ```
 
+:round_pushpin: Sauveguarder le fichier `openelb.yaml`
+
+- [ ] modifiez les informations du réservoir d'IP dans le champ `{spec.address}` (i.e. `10.13.237.8-10.13.237.11`) séparé par un `-`
+> le réservoir d'IP représente le premier serveur, soit le plan de contrôle :control_knobs: aux derniers serveurs :1st_place_medal:, :2nd_place_medal:, :3rd_place_medal: noeuds de la grappe  
+- [ ] modifiez l'informations de l'interface "NIC" dans le champ `{spec.interface}` (i.e. `enp3s0f0`)
+- [ ] après avoir modifier les informations sauvegarder sous le nom `porterlb.md` dans le répertoire de votre grappe
+- [ ] Exécuter la commande `kubectl` à partir du fichier.
+
+
+```yaml
+apiVersion: network.kubesphere.io/v1alpha2
+kind: Eip
+metadata:
+    name: openelb-layer2-eip
+    annotations:
+      eip.openelb.kubesphere.io/is-default-eip: "true"
+spec:
+    address: 10.13.237.8-10.13.237.11  # CHANGEZ MOI VITE
+    protocol: layer2
+    interface: enp3s0f0.  # CHANGEZ MOI VITE
+    disable: false
+status:
+    occupied: false
+    usage: 1
+    poolSize: 10
+    used: 
+      "10.13.237.8": "default/test-svc" # CHANGEZ MOI VITE
+    firstIP: 10.13.237.8 # CHANGEZ MOI VITE
+    lastIP: 10.13.237.11 # CHANGEZ MOI VITE
+    ready: true
+    v4: true
+```
+
+- [ ] Executer
+
+```
+kubectl apply --filename openelb.yaml
+```
+
+[:back:](../#rocket-les-services)
+
+# References
+
+- [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
+
+:warning Référence uniquement **ne pas éxécuter**
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
@@ -65,42 +128,4 @@ $ kubectl annotate nodes betelgeuse \
 ```
 
 
-## :round_pushpin: Créer l'objet EIP (External IP) 
 
-L'objet `Eip` functionne comme un réservoir d'adresse IP pour Porter.
-
-Exécutez la commande suivante pour créer un fichier YAML pour l '«objet Eip»:
-
-- [ ] Récupérer le nom de l'interface "NIC" (i.e. `enp3s0f0`)
-
-```
-$ ip addr | grep 10.13.237
-    inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
-```
-
-:round_pushpin: Sauveguarder le fichier `porterlb.md`
-
-- [ ] modifiez les informations du réservoir d'IP dans le champ `{spec.address}` (i.e. `10.13.237.8-10.13.237.11`) séparé par un `-`
-> le réservoir d'IP représente le premier serveur, soit le plan de contrôle :control_knobs: aux derniers serveurs :1st_place_medal:, :2nd_place_medal:, :3rd_place_medal: noeuds de la grappe  
-- [ ] modifiez l'informations de l'interface "NIC" dans le champ `{spec.interface}` (i.e. `enp3s0f0`)
-- [ ] après avoir modifier les informations sauvegarder sous le nom `porterlb.md` dans le répertoire de votre grappe
-- [ ] Exécuter la commande `kubectl` à partir du fichier.
-
-```yaml
-$ kubectl apply --filename - <<EOF
-apiVersion: network.kubesphere.io/v1alpha2
-kind: Eip
-metadata:
-  name: porter-layer2-eip
-spec:
-  address: 10.13.237.8-10.13.237.11
-  interface: enp3s0f0
-  protocol: layer2
-EOF
-```
-
-[:back:](../#rocket-les-services)
-
-# References
-
-- [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
