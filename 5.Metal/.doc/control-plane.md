@@ -208,11 +208,13 @@ betelgeuse   NotReady   master   4m23s   v1.18.6
 [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 
 
-## :x: TroubleShooting
+## :x: TroubleShooting: CRI v1 runtime API is not implemented
 
 - [ ] [kubeadm init error: CRI v1 runtime API is not implemented](https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented)
 
 * `validate service connection: CRI v1 image API is not implemented for endpoint "unix:///var/run/containerd/containerd.sock"`
+
+:round_pushpin: Si vous rencontrez cette erreur, c'est que le [CRI](https://kubernetes.io/docs/concepts/architecture/cri/) ne vient pas avec Docker Engine par défaut 
 
 ```
 sudo kubeadm config images pull
@@ -224,28 +226,7 @@ failed to pull image "registry.k8s.io/kube-apiserver:v1.26.3": output: time="202
 To see the stack trace of this error execute with --v=5 or higher
 </pre>
 
-```
-apt info containerd.io
-```
-> Retourne :
-<pre> 
-Package: containerd.io
-Version: 1.6.20-1
-Priority: optional
-Section: devel
-Maintainer: Containerd team <help@containerd.io>
-Installed-Size: 116 MB
-Provides: containerd, runc
-Depends: libc6 (>= 2.14), libseccomp2 (>= 2.5.0)
-Conflicts: containerd, runc
-Replaces: containerd, runc
-Homepage: https://containerd.io
-Download-Size: 28.3 MB
-APT-Sources: https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
-Description: An open and reliable container runtime
-
-N: There are 29 additional records. Please use the '-a' switch to see them.
-</pre>
+:round_pushpin: Installer le `CRI`  
 
 ```
 sudo apt remove containerd
