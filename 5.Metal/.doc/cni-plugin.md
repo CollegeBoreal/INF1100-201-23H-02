@@ -9,19 +9,31 @@ Installer the CNI Plugin pour gérer le réseau de gousses [Cluster Networking](
 ## :a: Installer le plugin CNI
 
 
-- [ ] Le plugin CNI a utiliser est [Calico](https://projectcalico.org)
+- [ ] Le plugin CNI a utiliser est [Calico]([https://projectcalico.org](https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises#install-calico-with-kubernetes-api-datastore-50-nodes-or-less))
 
 Sur le serveur du plan de contrôle:
 
+* Télécharger le fichier `manifest` appellé `calico.yaml`
+
 ```
-kubectl apply --filename=https://docs.projectcalico.org/manifests/calico.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
+```
+
+* Charger le fichier `calico.yaml`
+
+```
+kubectl apply --filename=calico.yaml
 ```
 > Retourne :
-<pre> 
+```yaml
+poddisruptionbudget.policy/calico-kube-controllers created
+serviceaccount/calico-kube-controllers created
+serviceaccount/calico-node created
 configmap/calico-config created
 customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/blockaffinities.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/caliconodestatuses.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
@@ -31,19 +43,17 @@ customresourcedefinition.apiextensions.k8s.io/ipamblocks.crd.projectcalico.org c
 customresourcedefinition.apiextensions.k8s.io/ipamconfigs.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/ipamhandles.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipreservations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/kubecontrollersconfigurations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/networksets.crd.projectcalico.org created
 clusterrole.rbac.authorization.k8s.io/calico-kube-controllers created
-clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
 clusterrole.rbac.authorization.k8s.io/calico-node created
+clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
 clusterrolebinding.rbac.authorization.k8s.io/calico-node created
 daemonset.apps/calico-node created
-serviceaccount/calico-node created
 deployment.apps/calico-kube-controllers created
-serviceaccount/calico-kube-controllers created
-poddisruptionbudget.policy/calico-kube-controllers created
-</pre> 
+```
 
 - [ ] Vérifier le service :droplet: `Kubelet` après l'installation du plugin CNI
 
