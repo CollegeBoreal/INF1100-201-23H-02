@@ -119,6 +119,9 @@ betelgeuse   NotReady   master   4m23s   v1.18.6
 
 ## :x: TroubleShooting
 
+- [ ] [kubeadm init error: CRI v1 runtime API is not implemented](https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented)
+
+* `validate service connection: CRI v1 image API is not implemented for endpoint "unix:///var/run/containerd/containerd.sock"`
 
 ```
 sudo kubeadm config images pull
