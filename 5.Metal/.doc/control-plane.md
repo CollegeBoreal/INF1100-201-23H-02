@@ -228,6 +228,16 @@ To see the stack trace of this error execute with --v=5 or higher
 
 :round_pushpin: Installer le `CRI`  
 
+- [ ] Enlever le vieux paquet `containerd` au cas oû il est installé
+
+* Supprimer le fichier de configuration 
+
+```
+sudo mv /etc/containerd/config.toml
+```
+
+* Supprimer le paquet
+
 ```
 sudo apt remove containerd
 ```
@@ -239,6 +249,9 @@ Reading state information... Done
 Package 'containerd' is not installed, so not removed
 0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
 </pre>
+
+- [ ] Installer le paquet `containerd`
+
 ```
 sudo apt update, apt install containerd.io
 ```
@@ -288,6 +301,21 @@ No user sessions are running outdated binaries.
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 </pre>
 
+- [ ] Vérifier que le service `containerd` est disponible au démarrage
+
+```
+systemctl is-enabled containerd
+```
+> enabled
+
+- [ ] Par précaution redémarrer le service `containerd`
+
+```
+sudo systemctl restart containerd
+```
+
+- [ ] Vérifier le service `containerd`
+
 ```
 systemctl status containerd
 ```
@@ -295,22 +323,25 @@ systemctl status containerd
 <pre>
 ● containerd.service - containerd container runtime
      Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
-     Active: active (running) since Thu 2023-04-06 21:19:48 UTC; 2min 34s ago
+     Active: active (running) since Thu 2023-04-06 21:47:37 UTC; 27s ago
        Docs: https://containerd.io
-    Process: 13840 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
-   Main PID: 13841 (containerd)
-      Tasks: 18
-     Memory: 14.3M
-        CPU: 659ms
+    Process: 21239 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 21240 (containerd)
+      Tasks: 79
+     Memory: 989.9M
+        CPU: 552ms
      CGroup: /system.slice/containerd.service
-             └─13841 /usr/bin/containerd
+             ├─20551 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id e61797e6a29a2c792dedf0335a50edd7c885>
+             ├─20695 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 38ad2171522ac19d75609efad8c3f8de2068>
+             ├─21038 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 7e49fdad2c5fae362342f15ea887ad8ebed9>
+             ├─21146 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 7e93f53ddea0c4fbb6c32b0adbf5a082b713>
+             ├─21240 /usr/bin/containerd
+             └─21336 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 9bac2b13accab20c16accaa16d536d6eb5b9>
 
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809404784Z" level=info msg="loading plug>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809426261Z" level=info msg="loading plug>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809454446Z" level=info msg="loading plug>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809477620Z" level=info msg="skip loading>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809496256Z" level=info msg="loading plug>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.809526187Z" level=error msg="failed to i>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.810307648Z" level=info msg=serving... ad>
-Apr 06 21:19:48 betelgeuse containerd[13841]: time="2023-04-06T21:19:48.810759661Z" level=info msg=serving... ad>
+Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407533370Z" level=info msg="StopPodSandb>
+Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407825344Z" level=info msg="StopPodSandb>
+Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407927724Z" level=info msg="TearDown net>
+lines 1-20
 </pre>
+
+* taper sur `q` pour quitter
