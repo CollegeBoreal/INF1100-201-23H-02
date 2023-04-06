@@ -54,7 +54,7 @@ ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELE
 :+1: Tester que le service `kubelet` est chargé **(loaded)**
 
 ```
-$ systemctl status kubelet
+systemctl status kubelet
 ```
 > Retourne
 <pre>
