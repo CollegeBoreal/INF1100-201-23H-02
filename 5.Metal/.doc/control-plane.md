@@ -5,6 +5,8 @@
 
 :warning: Les commandes ci-dessous doivent se faire sur le serveur que vous avez choisi pour `plan de contrôle`
 
+La version par défaut de `Docker` ne vient pas avec le CRI (`containerd`) il faut l'installer
+
 ## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
 
 
