@@ -185,6 +185,14 @@ The reset process does not clean your kubeconfig files and you must remove them 
 Please, check the contents of the $HOME/.kube/config file.
 ```
 
+#### :round_pushpin: https://stackoverflow.com/questions/51169728/failed-create-pod-sandbox-rpc-error-code-unknown-desc-networkplugin-cni-fa
+
+| repertoire   | fonction |
+|--------------|----------|
+| /etc/cni     | net.d    |
+| /opt/cni     | bin      |
+| /var/lib/cni |          |
+
 
 # References:
 
