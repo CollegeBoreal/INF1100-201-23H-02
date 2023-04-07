@@ -7,6 +7,9 @@
 
 ## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
 
+
+#### :warning: [Installer le CRI](.doc/control-plane.md#x-troubleshooting-cri-v1-runtime-api-is-not-implemented)
+
 :round_pushpin: Télécharger les images (pour accélérer le processus)
 
 ```
