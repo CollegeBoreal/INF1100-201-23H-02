@@ -5,7 +5,7 @@
 
 :warning: Les commandes ci-dessous doivent se faire sur le serveur que vous avez choisi pour `plan de contrôle`
 
-## :a: Installer le plan de contrôle
+## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
 
 :round_pushpin: Télécharger les images (pour accélérer le processus)
 
