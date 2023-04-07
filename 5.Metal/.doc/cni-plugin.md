@@ -125,6 +125,16 @@ k delete -f calico.yaml
 kubectl drain betelgeuse --delete-emptydir-data --ignore-daemonsets --force
 ```
 
+```
+k get no
+```
+> Retourne :
+<pre> 
+NAME         STATUS                     ROLES           AGE     VERSION
+betelgeuse   Ready,SchedulingDisabled   control-plane   4h17m   v1.26.3
+</pre> 
+
+
 # References:
 
 https://stackoverflow.com/questions/52390481/kubernetes-calico-node-xxxxxxxxxxx-already-using-ipv4-address-xxxxxxxxx-crash
