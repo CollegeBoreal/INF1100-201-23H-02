@@ -10,7 +10,7 @@ La version par défaut de `Docker` ne vient pas avec le CRI (`containerd`) il fa
 ## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
 
 
-#### :construction: [Installer le CRI](.doc/control-plane.md#x-troubleshooting-cri-v1-runtime-api-is-not-implemented) :construction:
+#### :construction: [Installer le CRI](#x-troubleshooting-cri-v1-runtime-api-is-not-implemented) :construction:
 
 :round_pushpin: Télécharger les images (pour accélérer le processus)
 
