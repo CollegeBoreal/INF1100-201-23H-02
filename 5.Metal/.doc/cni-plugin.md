@@ -95,13 +95,27 @@ lines 1-22/22 (END)
 
 ## :x: Troubleshooting
 
+#### :round_pushpin: [Restart kube-apiserver when provisioned with kubeadm](https://stackoverflow.com/questions/42674726/restart-kube-apiserver-when-provisioned-with-kubeadm)
+
+:construction: Si on perd le `kube-apiserver` à cause d'une commande (i.e. CNI)
+
+- [ ] :one: initialiser l'heure du fichier de configuration `kube-apiserver.yaml` avec `touch`
+
 ```
-$ kubectl apply --filename=https://raw.githubusercontent.com/CollegeBoreal/INF1087-200-21H-02/main/5.Metal/manifests/calico.yaml
+sudo touch /etc/kubernetes/manifests/kube-apiserver.yaml
+
 ```
 
+- [ ] :two: Redémarrer le service `kubelet`
 
 ```
-$ kubectl delete --filename=https://raw.githubusercontent.com/CollegeBoreal/INF1087-200-21H-02/main/5.Metal/manifests/calico.yaml
+sudo systemctl restart kubelet
+```
+
+- [ ] :two: Enlever la commande fautive (i.e. CNI)
+
+```
+k delete -f calico.yaml
 ```
 
 # References:
