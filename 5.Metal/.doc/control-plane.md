@@ -49,7 +49,7 @@ sudo kubeadm init \
   --control-plane-endpoint=<LE PLAN DE CONTROLE DE VOTRE GRAPPE>
 ```
 > Retourne :
-<pre>
+```yaml
 [init] Using Kubernetes version: v1.26.3
 [preflight] Running pre-flight checks
 [preflight] Pulling images required for setting up a Kubernetes cluster
@@ -128,7 +128,7 @@ Then you can join any number of worker nodes by running the following on each as
 
 kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
 	--discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
-</pre>
+```
 
 #### :tada: Your Kubernetes control-plane has initialized successfully!
 
