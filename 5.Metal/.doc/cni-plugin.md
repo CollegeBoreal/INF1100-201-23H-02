@@ -118,6 +118,13 @@ sudo systemctl restart kubelet
 k delete -f calico.yaml
 ```
 
+
+#### :round_pushpin: Nettoyer la grappe
+
+```
+kubectl drain betelgeuse --delete-emptydir-data --ignore-daemonsets --force
+```
+
 # References:
 
 https://stackoverflow.com/questions/52390481/kubernetes-calico-node-xxxxxxxxxxx-already-using-ipv4-address-xxxxxxxxx-crash
