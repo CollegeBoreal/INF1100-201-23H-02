@@ -121,13 +121,13 @@ You can now join any number of control-plane nodes by copying certificate author
 and service account keys on each node and then running the following as root:
 
   kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
-	--discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0 \
-	--control-plane 
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0 \
+        --control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
 kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
-	--discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
 ```
 
 #### :tada: Your Kubernetes control-plane has initialized successfully!
