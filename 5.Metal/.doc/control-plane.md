@@ -409,3 +409,47 @@ Apr  9 22:00:29 betelgeuse kubelet[1003697]: I0409 22:00:29.457432 1003697 statu
 Apr  9 22:00:34 betelgeuse kubelet[1003697]: E0409 22:00:34.547180 1003697 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-apiserver-betelgeuse.175426958d9badd4", GenerateName:"", Namespace:"kube-system", SelfLink:"", UID:"", ResourceVersion:"19198", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"kube-system", Name:"kube-apiserver-betelgeuse", UID:"4008dce9245d5ce36f28ab2ace9bec53", APIVersion:"v1", ResourceVersion:"", FieldPath:"spec.containers{kube-apiserver}"}, Reason:"BackOff", Message:"Back-off restarting failed container kube-apiserver in pod kube-apiserver-betelgeuse_kube-system(4008dce9245d5ce36f28ab2ace9bec53)", Source:v1.EventSource{Component:"kubelet", Host:"betelgeuse"}, FirstTimestamp:time.Date(2023, time.April, 9, 3, 29, 44, 0, time.Local), LastTimestamp:time.Date(2023, time.April, 9, 21, 16, 59, 497376398, time.Local), Count:2445, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Patch "https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/events/kube-apiserver-betelgeuse.175426958d9badd4": dial tcp 10.13.15.200:6443: connect: connection refused'(may retry after sleeping)
 Apr  9 22:00:37 betelgeuse kubelet[1003697]: E0409 22:00:37.193812 1003697 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-apiserver-betelgeuse.175426958d9badd4", GenerateName:"", Namespace:"kube-system", SelfLink:"", UID:"", ResourceVersion:"19198", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"kube-system", Name:"kube-apiserver-betelgeuse", UID:"4008dce9245d5ce36f28ab2ace9bec53", APIVersion:"v1", ResourceVersion:"", FieldPath:"spec.containers{kube-apiserver}"}, Reason:"BackOff", Message:"Back-off restarting failed container kube-apiserver in pod kube-apiserver-betelgeuse_kube-system(4008dce9245d5ce36f28ab2ace9bec53)", Source:v1.EventSource{Component:"kubelet", Host:"betelgeuse"}, FirstTimestamp:time.Date(2023, time.April, 9, 3, 29, 44, 0, time.Local), LastTimestamp:time.Date(2023, time.April, 9, 21, 16, 59, 497376398, time.Local), Count:2445, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Patch "https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/events/kube-apiserver-betelgeuse.175426958d9badd4": dial tcp 10.13.15.200:6443: connect: connection refused'(may retry after sleeping)
 ```
+
+```
+sudo iptables -L -t nat | grep KUBE
+```
+```yaml
+KUBE-SERVICES  all  --  anywhere             anywhere             /* kubernetes service portals */
+KUBE-SERVICES  all  --  anywhere             anywhere             /* kubernetes service portals */
+KUBE-POSTROUTING  all  --  anywhere             anywhere             /* kubernetes postrouting rules */
+Chain KUBE-KUBELET-CANARY (0 references)
+Chain KUBE-MARK-DROP (0 references)
+Chain KUBE-MARK-MASQ (2 references)
+Chain KUBE-NODEPORTS (1 references)
+Chain KUBE-POSTROUTING (1 references)
+Chain KUBE-PROXY-CANARY (0 references)
+Chain KUBE-SEP-SZZALUCJCNWECXUR (1 references)
+KUBE-MARK-MASQ  all  --  betelgeuse           anywhere             /* default/kubernetes:https */
+Chain KUBE-SERVICES (2 references)
+KUBE-SVC-NPX46M4PTMTKRN6Y  tcp  --  anywhere             10.96.0.1            /* default/kubernetes:https cluster IP */ tcp dpt:https
+KUBE-NODEPORTS  all  --  anywhere             anywhere             /* kubernetes service nodeports; NOTE: this must be the last rule in this chain */ ADDRTYPE match dst-type LOCAL
+Chain KUBE-SVC-NPX46M4PTMTKRN6Y (1 references)
+KUBE-MARK-MASQ  tcp  -- !172.16.0.0/16        10.96.0.1            /* default/kubernetes:https cluster IP */ tcp dpt:https
+KUBE-SEP-SZZALUCJCNWECXUR  all  --  anywhere             anywhere             /* default/kubernetes:https -> 10.13.15.200:6443 */
+```
+
+```
+sudo iptables -L -t nat | grep cali
+```
+```yaml
+cali-PREROUTING  all  --  anywhere             anywhere             /* cali:6gwbT8clXdHdC1b1 */
+cali-OUTPUT  all  --  anywhere             anywhere             /* cali:tVnHkvAo15HuiPy0 */
+cali-POSTROUTING  all  --  anywhere             anywhere             /* cali:O3lYWMrLQYEMJtB5 */
+Chain cali-OUTPUT (1 references)
+cali-fip-dnat  all  --  anywhere             anywhere             /* cali:GBTAv2p5CwevEyJm */
+Chain cali-POSTROUTING (1 references)
+cali-fip-snat  all  --  anywhere             anywhere             /* cali:Z-c7XtVd2Bq7s_hA */
+cali-nat-outgoing  all  --  anywhere             anywhere             /* cali:nYKhEzDlr11Jccal */
+MASQUERADE  all  --  anywhere             anywhere             /* cali:SXWvdsbh4Mw7wOln */ ADDRTYPE match src-type !LOCAL limit-out ADDRTYPE match src-type LOCAL random-fully
+Chain cali-PREROUTING (1 references)
+cali-fip-dnat  all  --  anywhere             anywhere             /* cali:r6XmIziWUJsdOK6Z */
+Chain cali-fip-dnat (2 references)
+Chain cali-fip-snat (1 references)
+Chain cali-nat-outgoing (1 references)
+MASQUERADE  all  --  anywhere             anywhere             /* cali:flqWnvo8yq4ULQLa */ match-set cali40masq-ipam-pools src ! match-set cali40all-ipam-pools dst random-fully
+```
