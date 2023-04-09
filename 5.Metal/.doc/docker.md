@@ -180,3 +180,32 @@ docker.socket                          enabled         enabled
 
 - [ ] [Container Runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
 - [ ] [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+```
+systemctl status docker
+```
+```yaml
+
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-04-09 22:30:10 UTC; 1min 44s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1168503 (dockerd)
+      Tasks: 22
+     Memory: 24.6M
+        CPU: 423ms
+     CGroup: /system.slice/docker.service
+             └─1168503 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.536171132Z" level=info msg="[core] [Channel #4] Channel Connectivity cha>
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.545919465Z" level=info msg="[graphdriver] using prior storage driver: ov>
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.548645469Z" level=info msg="Loading containers: start."
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.081820871Z" level=info msg="Default bridge (docker0) is assigned with an>
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.214736288Z" level=info msg="Loading containers: done."
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227044928Z" level=info msg="Docker daemon" commit=219f21b graphdriver=ov>
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227108594Z" level=info msg="Daemon has completed initialization"
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.244777223Z" level=info msg="[core] [Server #7] Server created" module=gr>
+Apr 09 22:30:10 betelgeuse systemd[1]: Started Docker Application Container Engine.
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.253118704Z" level=info msg="API listen on /run/docker.sock"
+```
