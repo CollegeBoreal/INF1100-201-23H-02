@@ -181,6 +181,8 @@ docker.socket                          enabled         enabled
 - [ ] [Container Runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
 - [ ] [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
+- [ ] Default bridge (docker0) is assigned with an IP address 172.17.0.0/16.
+
 ```
 systemctl status docker
 ```
