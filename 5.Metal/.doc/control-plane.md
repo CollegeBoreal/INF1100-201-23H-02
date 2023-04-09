@@ -367,3 +367,32 @@ lines 1-20
 * taper sur `q` pour quitter
 
 - [ ] [Updated: Dockershim Removal FAQ](https://kubernetes.io/blog/2022/02/17/dockershim-faq/)
+
+
+## [if not add "version = 2" to the /etc/containerd/config.toml, some configuration will be ingored](https://github.com/containerd/containerd/issues/5237)
+
+```
+containerd --version
+```
+> containerd containerd.io 1.6.20 2806fc1057397dbaeefbea0e4e17bddfbd388f38
+
+
+```
+runc --version
+```
+```yaml
+runc version 1.1.5
+commit: v1.1.5-0-gf19387a
+spec: 1.0.2-dev
+go: go1.19.7
+libseccomp: 2.5.3
+```
+
+```
+crictl info
+```
+```yaml
+WARN[0000] runtime connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock unix:///var/run/cri-dockerd.sock]. As the default settings are now deprecated, you should set the endpoint instead. 
+E0409 21:53:28.499719   14181 remote_runtime.go:616] "Status from runtime service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/dockershim.sock: connect: no such file or directory\""
+FATA[0000] getting status of runtime: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial unix /var/run/dockershim.sock: connect: no such file or directory" 
+```
