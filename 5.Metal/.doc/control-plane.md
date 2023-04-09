@@ -255,7 +255,7 @@ To see the stack trace of this error execute with --v=5 or higher
 * Supprimer le fichier de configuration 
 
 ```
-sudo mv /etc/containerd/config.toml
+sudo rm /etc/containerd/config.toml
 ```
 
 * Supprimer le paquet
