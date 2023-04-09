@@ -5,7 +5,12 @@
 
 :warning: Les commandes ci-dessous doivent se faire sur le serveur que vous avez choisi pour `plan de contrôle`
 
-## :a: Installer le plan de contrôle
+La version par défaut de `Docker` ne vient pas avec le CRI (`containerd`) il faut l'installer
+
+## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
+
+
+#### :construction: [Installer le CRI](#x-troubleshooting-cri-v1-runtime-api-is-not-implemented) :construction:
 
 :round_pushpin: Télécharger les images (pour accélérer le processus)
 
@@ -49,7 +54,7 @@ sudo kubeadm init \
   --control-plane-endpoint=<LE PLAN DE CONTROLE DE VOTRE GRAPPE>
 ```
 > Retourne :
-<pre>
+```yaml
 [init] Using Kubernetes version: v1.26.3
 [preflight] Running pre-flight checks
 [preflight] Pulling images required for setting up a Kubernetes cluster
@@ -84,13 +89,13 @@ sudo kubeadm init \
 [control-plane] Creating static Pod manifest for "kube-scheduler"
 [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
 [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
-[apiclient] All control plane components are healthy after 7.711352 seconds
+[apiclient] All control plane components are healthy after 6.020423 seconds
 [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
 [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
 [upload-certs] Skipping phase. Please see --upload-certs
 [mark-control-plane] Marking the node betelgeuse as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
 [mark-control-plane] Marking the node betelgeuse as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
-[bootstrap-token] Using token: g3ecq8.ayv92u08gaf6e2jw
+[bootstrap-token] Using token: n9l9m5.rybwerit049a7nne
 [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
@@ -120,15 +125,15 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of control-plane nodes by copying certificate authorities
 and service account keys on each node and then running the following as root:
 
-  kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
-	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f \
-	--control-plane 
+  kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0 \
+        --control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
-	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f
-</pre>
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
+```
 
 #### :tada: Your Kubernetes control-plane has initialized successfully!
 
@@ -140,7 +145,7 @@ L'initialisation de la grappe va donner un long texte où se trouve un :tickets:
 
 Un example se trouve ci-dessous, sauvegarder l'information quelque part pour une future utilisation
 
-<pre>
+```yaml
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
@@ -160,15 +165,15 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of control-plane nodes by copying certificate authorities
 and service account keys on each node and then running the following as root:
 
-  kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
-	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f \
-	--control-plane 
+  kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0 \
+        --control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join betelgeuse.orion.gasy.africa:6443 --token g3ecq8.ayv92u08gaf6e2jw \
-	--discovery-token-ca-cert-hash sha256:9428ad40e6a8a4cb559e679e00171ab59df756738300782e0e7e854a22a74b5f
-</pre>
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
+        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
+```
 
 ## :b: Utiliser sa grappe (sur le serveur - plan de contrôle)
 
@@ -204,6 +209,19 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 $ kubectl get nodes
 NAME         STATUS     ROLES    AGE     VERSION
 betelgeuse   NotReady   master   4m23s   v1.18.6
+```
+
+:round_pushpin: Vérifier l'information sur la grappe
+
+```
+kubectl cluster-info
+```
+> Retourne :
+```yaml 
+Kubernetes control plane is running at https://betelgeuse.orion.gasy.africa:6443
+CoreDNS is running at https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
 :warning: Not yet ready 
@@ -260,9 +278,7 @@ Package 'containerd' is not installed, so not removed
 sudo apt update, apt install containerd.io
 ```
 > Retourne :
-<pre>
-E: Invalid operation update,
-ubuntu@betelgeuse:~$ sudo apt update && sudo apt install containerd.io
+```yaml
 Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
 Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy InRelease                                 
 Hit:4 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease
@@ -303,7 +319,7 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-</pre>
+```
 
 - [ ] Vérifier que le service `containerd` est disponible au démarrage
 
@@ -324,7 +340,7 @@ sudo systemctl restart containerd
 systemctl status containerd
 ```
 > Retourne :
-<pre>
+```yaml
 ● containerd.service - containerd container runtime
      Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
      Active: active (running) since Thu 2023-04-06 21:47:37 UTC; 27s ago
@@ -346,6 +362,6 @@ Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.40753337
 Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407825344Z" level=info msg="StopPodSandb>
 Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407927724Z" level=info msg="TearDown net>
 lines 1-20
-</pre>
+```
 
 * taper sur `q` pour quitter

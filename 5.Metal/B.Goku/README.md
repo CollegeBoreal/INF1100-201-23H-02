@@ -49,3 +49,36 @@ sudo kubeadm reset
 ✔️ VOILA ! :tada: Félicitations !
 
 <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/VOILA!.png'>
+
+
+ ## :b: get nodes/config get-contexts 
+ 
+ ```
+ k config get-contexts
+ ```
+ ```
+ k get nodes
+ ```
+ > Retourne :
+ <pre>
+ <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_get_podes:contexts.png'>
+ </pre>
+ 
+ # Cluster-info
+ ```
+ k cluster-info
+ ```
+ > Retourne :
+ <pre>
+ <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_cluster_info.png'>
+ </pre>
+ 
+ 
+## :x:  CNI Plugin Calico
+
+<pre>
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/Calico_ERROR.png'>
+
+<pre>
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_apply_filename.png'>
+ 
