@@ -198,14 +198,14 @@ TriggeredBy: ● docker.socket
      CGroup: /system.slice/docker.service
              └─1168503 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 
-Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.536171132Z" level=info msg="[core] [Channel #4] Channel Connectivity cha>
-Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.545919465Z" level=info msg="[graphdriver] using prior storage driver: ov>
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.536171132Z" level=info msg="[core] [Channel #4] Channel Connectivity change to READY" module=grpc
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.545919465Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
 Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.548645469Z" level=info msg="Loading containers: start."
-Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.081820871Z" level=info msg="Default bridge (docker0) is assigned with an>
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.081820871Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
 Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.214736288Z" level=info msg="Loading containers: done."
-Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227044928Z" level=info msg="Docker daemon" commit=219f21b graphdriver=ov>
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227044928Z" level=info msg="Docker daemon" commit=219f21b graphdriver=overlay2 version=23.0.2
 Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227108594Z" level=info msg="Daemon has completed initialization"
-Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.244777223Z" level=info msg="[core] [Server #7] Server created" module=gr>
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.244777223Z" level=info msg="[core] [Server #7] Server created" module=grpc
 Apr 09 22:30:10 betelgeuse systemd[1]: Started Docker Application Container Engine.
 Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.253118704Z" level=info msg="API listen on /run/docker.sock"
 ```
