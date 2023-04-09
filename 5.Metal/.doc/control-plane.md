@@ -365,3 +365,5 @@ lines 1-20
 ```
 
 * taper sur `q` pour quitter
+
+- [ ] [Updated: Dockershim Removal FAQ](https://kubernetes.io/blog/2022/02/17/dockershim-faq/)
