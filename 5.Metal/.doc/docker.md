@@ -32,7 +32,14 @@ sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-:bulb: if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+:bulb: check
+
+* if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+
+```
+file /etc/apt/keyrings/docker.gpg
+```
+> /etc/apt/keyrings/docker.gpg: OpenPGP Public Key Version 4, Created Wed Feb 22 18:36:26 2017, RSA (Encrypt or Sign, 4096 bits); User ID; Signature; OpenPGP Certificate
 
 
 - [ ] Create the docker debian repository file
