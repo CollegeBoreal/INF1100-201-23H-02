@@ -135,7 +135,15 @@ Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.183494828Z">
 </pre>
 
 
-## :b: Bridges
+## :b: Ajouter votre utilisateur au groupe `docker`
+
+```
+sudo usermod -aG docker $USER
+```
+
+* Sortez de la session et revenez pour l'activer
+
+## :ab: Bridges
 
 Docker uses `iptables` and a kernel module called `br_netfilter` to manage inter-container networking. When the Docker daemon starts, it creates a variety of IPTables rules it required to operate.
 
