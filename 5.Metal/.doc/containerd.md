@@ -334,3 +334,169 @@ pull-image-on-create: false
 disable-pull-on-run: false
 ```
 
+```
+sudo crictl info
+```
+```json
+{
+  "status": {
+    "conditions": [
+      {
+        "type": "RuntimeReady",
+        "status": true,
+        "reason": "",
+        "message": ""
+      },
+      {
+        "type": "NetworkReady",
+        "status": false,
+        "reason": "NetworkPluginNotReady",
+        "message": "Network plugin returns error: cni plugin not initialized"
+      }
+    ]
+  },
+  "cniconfig": {
+    "PluginDirs": [
+      "/opt/cni/bin"
+    ],
+    "PluginConfDir": "/etc/cni/net.d",
+    "PluginMaxConfNum": 1,
+    "Prefix": "eth",
+    "Networks": [
+      {
+        "Config": {
+          "Name": "cni-loopback",
+          "CNIVersion": "0.3.1",
+          "Plugins": [
+            {
+              "Network": {
+                "type": "loopback",
+                "ipam": {},
+                "dns": {}
+              },
+              "Source": "{\"type\":\"loopback\"}"
+            }
+          ],
+          "Source": "{\n\"cniVersion\": \"0.3.1\",\n\"name\": \"cni-loopback\",\n\"plugins\": [{\n  \"type\": \"loopback\"\n}]\n}"
+        },
+        "IFName": "lo"
+      }
+    ]
+  },
+  "config": {
+    "containerd": {
+      "snapshotter": "overlayfs",
+      "defaultRuntimeName": "runc",
+      "defaultRuntime": {
+        "runtimeType": "",
+        "runtimePath": "",
+        "runtimeEngine": "",
+        "PodAnnotations": [],
+        "ContainerAnnotations": [],
+        "runtimeRoot": "",
+        "options": {},
+        "privileged_without_host_devices": false,
+        "baseRuntimeSpec": "",
+        "cniConfDir": "",
+        "cniMaxConfNum": 0
+      },
+      "untrustedWorkloadRuntime": {
+        "runtimeType": "",
+        "runtimePath": "",
+        "runtimeEngine": "",
+        "PodAnnotations": [],
+        "ContainerAnnotations": [],
+        "runtimeRoot": "",
+        "options": {},
+        "privileged_without_host_devices": false,
+        "baseRuntimeSpec": "",
+        "cniConfDir": "",
+        "cniMaxConfNum": 0
+      },
+      "runtimes": {
+        "runc": {
+          "runtimeType": "io.containerd.runc.v2",
+          "runtimePath": "",
+          "runtimeEngine": "",
+          "PodAnnotations": [],
+          "ContainerAnnotations": [],
+          "runtimeRoot": "",
+          "options": {
+            "BinaryName": "",
+            "CriuImagePath": "",
+            "CriuPath": "",
+            "CriuWorkPath": "",
+            "IoGid": 0,
+            "IoUid": 0,
+            "NoNewKeyring": false,
+            "NoPivotRoot": false,
+            "Root": "",
+            "ShimCgroup": "",
+            "SystemdCgroup": true
+          },
+          "privileged_without_host_devices": false,
+          "baseRuntimeSpec": "",
+          "cniConfDir": "",
+          "cniMaxConfNum": 0
+        }
+      },
+      "noPivot": false,
+      "disableSnapshotAnnotations": true,
+      "discardUnpackedLayers": false,
+      "ignoreRdtNotEnabledErrors": false
+    },
+    "cni": {
+      "binDir": "/opt/cni/bin",
+      "confDir": "/etc/cni/net.d",
+      "maxConfNum": 1,
+      "confTemplate": "",
+      "ipPref": ""
+    },
+    "registry": {
+      "configPath": "",
+      "mirrors": {},
+      "configs": {},
+      "auths": {},
+      "headers": {}
+    },
+    "imageDecryption": {
+      "keyModel": "node"
+    },
+    "disableTCPService": true,
+    "streamServerAddress": "127.0.0.1",
+    "streamServerPort": "0",
+    "streamIdleTimeout": "4h0m0s",
+    "enableSelinux": false,
+    "selinuxCategoryRange": 1024,
+    "sandboxImage": "registry.k8s.io/pause:3.6",
+    "statsCollectPeriod": 10,
+    "systemdCgroup": false,
+    "enableTLSStreaming": false,
+    "x509KeyPairStreaming": {
+      "tlsCertFile": "",
+      "tlsKeyFile": ""
+    },
+    "maxContainerLogSize": 16384,
+    "disableCgroup": false,
+    "disableApparmor": false,
+    "restrictOOMScoreAdj": false,
+    "maxConcurrentDownloads": 3,
+    "disableProcMount": false,
+    "unsetSeccompProfile": "",
+    "tolerateMissingHugetlbController": true,
+    "disableHugetlbController": true,
+    "device_ownership_from_security_context": false,
+    "ignoreImageDefinedVolumes": false,
+    "netnsMountsUnderStateDir": false,
+    "enableUnprivilegedPorts": false,
+    "enableUnprivilegedICMP": false,
+    "containerdRootDir": "/var/lib/containerd",
+    "containerdEndpoint": "/run/containerd/containerd.sock",
+    "rootDir": "/var/lib/containerd/io.containerd.grpc.v1.cri",
+    "stateDir": "/run/containerd/io.containerd.grpc.v1.cri"
+  },
+  "golang": "go1.19.7",
+  "lastCNILoadStatus": "cni config load failed: no network config found in /etc/cni/net.d: cni plugin not initialized: failed to load cni config",
+  "lastCNILoadStatus.default": "cni config load failed: no network config found in /etc/cni/net.d: cni plugin not initialized: failed to load cni config"
+}
+```
