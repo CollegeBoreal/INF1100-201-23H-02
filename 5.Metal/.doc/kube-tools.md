@@ -80,7 +80,7 @@ export KUBEVERSION=1.26.3
 sudo apt update && sudo apt install -y kubeadm=${KUBEVERSION}-00 kubectl=${KUBEVERSION}-00
 ```
 > Retourne :
-<pre>
+```yaml
 Hit:1 http://ca.archive.ubuntu.com/ubuntu jammy InRelease
 Get:2 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]  
 Get:3 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]     
@@ -170,7 +170,7 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-</pre>
+```
 
 :round_pushpin: Prévenir l'altération (mise à jour) des outils :ice_cube: `kube`
 
@@ -178,10 +178,10 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 sudo apt-mark hold kubeadm kubectl
 ```
 > Retourne :
-<pre>
+```yaml
 kubeadm set on hold.
 kubectl set on hold.
-</pre>
+```
 
 :+1: Tester que les outils :ice_cube: `kube` sont installés
 
