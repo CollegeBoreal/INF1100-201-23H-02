@@ -26,8 +26,8 @@ k get deploy
 ```
 > Outputs :
 <pre>
-NAME   READY UP-TO-DATE AVAILABLE AGE 
-apache 3/3   3          3         14s
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+apache   0/3     3            0           25s
 </pre>
 
 - [ ] Augmenter les répliques
