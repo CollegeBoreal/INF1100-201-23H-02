@@ -108,7 +108,7 @@ sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING con
 systemctl status docker
 ```
 > Retourne :
-<pre>
+```yaml
 systemctl status docker
 ● docker.service - Docker Application Container Engine
      Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
@@ -132,7 +132,7 @@ Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019319023Z">
 Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.174963248Z">
 Mar 31 23:23:53 bellatrix systemd[1]: Started Docker Application Container Engi>
 Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.183494828Z">
-</pre>
+```
 
 
 ## :b: Ajouter votre utilisateur au groupe `docker`
@@ -189,7 +189,7 @@ docker.socket                          enabled         enabled
 ```
 
 
-[:back:](../#round_pushpin-installation-des-services)
+## [:back:](../#round_pushpin-installation-des-services)
 
 # References
 
