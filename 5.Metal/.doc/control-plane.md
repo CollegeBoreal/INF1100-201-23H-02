@@ -10,7 +10,7 @@ La version par défaut de `Docker` ne vient pas avec le CRI (`containerd`) il fa
 ## :a: Installer le [plan de contrôle](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
 
 
-#### :construction: [Installer le CRI](#x-troubleshooting-cri-v1-runtime-api-is-not-implemented) :construction:
+#### :construction: Attention assurer vous d'avoir installé le [CRI](#x-troubleshooting-cri-v1-runtime-api-is-not-implemented) :construction:
 
 :round_pushpin: Télécharger les images (pour accélérer le processus)
 
@@ -236,7 +236,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 * `validate service connection: CRI v1 image API is not implemented for endpoint "unix:///var/run/containerd/containerd.sock"`
 
-:round_pushpin: Si vous rencontrez cette erreur, c'est que le [CRI](https://kubernetes.io/docs/concepts/architecture/cri/) ne vient pas avec Docker Engine par défaut 
+:round_pushpin: Si vous rencontrez cette erreur, c'est que le [CRI](https://kubernetes.io/docs/concepts/architecture/cri/) (i.e. containerd) n'est pas installé. Depuis la version de kubenetes 1.19 le CRI ne vient pas avec Docker Engine par défaut 
 
 ```
 sudo kubeadm config images pull
