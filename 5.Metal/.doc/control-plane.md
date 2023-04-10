@@ -453,7 +453,7 @@ sudo crictl config --set runtime-endpoint=unix:///run/containerd/containerd.sock
 ```
 sudo cat /etc/crictl.yaml
 ```
-```toml
+```yaml
 runtime-endpoint: "unix:///run/containerd/containerd.sock"
 image-endpoint: "unix:///run/containerd/containerd.sock"
 timeout: 0
