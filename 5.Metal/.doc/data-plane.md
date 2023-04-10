@@ -10,10 +10,26 @@ Elle devrait ressembler à la suivante:
 $ kubeadm join betelgeuse.orion.gasy.africa:6443 --token 4gp39y.898okq2rcj3j8wgl \
     --discovery-token-ca-cert-hash sha256:348cf90011e40088944a5f5cfe3279c04a0dfb24f56ba21209e61fdc15af3645
 ```
+```yaml
+[preflight] Running pre-flight checks
+[preflight] Reading configuration from the cluster...
+[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Starting the kubelet
+[kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+
+This node has joined the cluster:
+* Certificate signing request was sent to apiserver and a response was received.
+* The Kubelet was informed of the new secure connection details.
+
+Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
+
+```
 
 :bulb: N'oubliez de rajouter `sudo` 
 
-[:back:](../#abacus-les-plan-de-données-data-plane)
+## [:back:](../#abacus-les-plan-de-données-data-plane)
 
 
 ## :cl: Gestion des Jetons :tickets: 
