@@ -57,11 +57,12 @@ rrmied.zty2u72rw09jm8da   23h         2023-04-11T21:25:21Z   authentication,sign
 - [ ] Le hashage :hash: du certificat `SHA256`
 
 ```
-$ openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt \
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt \
     | openssl rsa -pubin -outform der 2>/dev/null \
     | openssl dgst -sha256 -hex \
     | sed 's/^.* //'
 ```
+> 2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0
 
 - [ ] Le jeton :tickets: non expiré
 
@@ -74,15 +75,15 @@ $ kubeadm token list
 - [ ] Donner les valeurs récupérées aux variables d'environnements suivantes: (par example)
 
 ```
-$ CTL_PLANE="betelgeuse.orion.gasy.africa"
-$ TOKEN="tod4ok.xbzkz5h9zg2q7c1j"
-$ CA_CERT_HASH="c41ff0c3608120eaf7599bc77f6bc72b1e75c46caa073bb28cba21ea1f86f5ef"
+CTL_PLANE="betelgeuse.orion.gasy.africa" ; \
+TOKEN="rrmied.zty2u72rw09jm8da" ; \
+CA_CERT_HASH="2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0"
 ```
 
 - [ ] Exécuter la commande permettant de joindre la grappe
 
 ```
-$ sudo kubeadm join ${CTL_PLANE}:6443 --token ${TOKEN} --discovery-token-ca-cert-hash sha256:${CA_CERT_HASH}
+sudo kubeadm join ${CTL_PLANE}:6443 --token ${TOKEN} --discovery-token-ca-cert-hash sha256:${CA_CERT_HASH}
 ```
 
 :round_pushpin: Si les jetons ont tous expirés, regénérer un jeton avec les commandes ci-dessous
