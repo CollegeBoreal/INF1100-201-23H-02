@@ -1,5 +1,97 @@
 # :whale2: Installer le `CRI`  `containerd.io`
 
+
+## :cl: Nettoyer
+
+* Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
+
+```
+sudo apt remove containerd runc
+```
+> Retourne :
+```yaml
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package 'containerd' is not installed, so not removed
+Package 'runc' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  docker-ce-rootless-extras libltdl7 libslirp0 pigz slirp4netns
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+```
+
+
+## :a: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+:round_pushpin: Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+
+```
+sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
+```
+
+:round_pushpin: Add Docker’s official GPG key:
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+:bulb: check
+
+* if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+
+```
+file /etc/apt/keyrings/docker.gpg
+```
+> /etc/apt/keyrings/docker.gpg: OpenPGP Public Key Version 4, Created Wed Feb 22 18:36:26 2017, RSA (Encrypt or Sign, 4096 bits); User ID; Signature; OpenPGP Certificate
+
+
+- [ ] Create the docker debian repository file
+
+```
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+* Vérifier
+
+```
+cat /etc/apt/sources.list.d/docker.list
+```
+> deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   jammy stable
+
+* Mettre à jour 
+
+```
+sudo apt-get update
+```
+> Retourne 
+<pre>
+Hit:1 http://ca.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 https://download.docker.com/linux/ubuntu jammy InRelease [48.9 kB]   
+Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease                                            
+Get:4 http://ca.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:6 http://ca.archive.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:7 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [14.7 kB]        
+Hit:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease                      
+Fetched 282 kB in 1s (371 kB/s)
+Reading package lists... Done
+W: Target Packages (stable/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Packages (stable/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
+</pre>
+
 - [ ] Installer le paquet `containerd.io` 
 - [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
 
@@ -22,20 +114,6 @@ sudo cat /etc/containerd/config.toml | grep SystemdCgroup
 ```
 >            SystemdCgroup = true
 
-* Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
-
-```
-sudo apt remove containerd
-```
-> Retourne :
-<pre>
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Package 'containerd' is not installed, so not removed
-0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
-</pre>
-
 - [ ] Installer le nouveau paquet `containerd.io`
 
 * mettre à jour
@@ -49,9 +127,6 @@ sudo apt update
 ```
 sudo apt install containerd.io
 ```
-
-
-
 > Retourne :
 ```yaml
 Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
