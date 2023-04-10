@@ -56,7 +56,6 @@ KO=":x:"
 for grappe in "${GRAPPES[@]}"
 do
 
-   let "y++"
    FOLDER=${DIR[${i}]}.${grappe}
 
    VALUE="| ${CHIFFRES[${y}]} | [${FOLDER}](../${FOLDER}) |"
@@ -108,5 +107,7 @@ do
 
    echo ${VALUE}
    let "i++"
+   let "y++"
+
 
 done
