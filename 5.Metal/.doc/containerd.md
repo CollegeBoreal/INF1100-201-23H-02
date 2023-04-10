@@ -142,6 +142,8 @@ Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.915907602Z" l
 
 * taper sur `q` pour quitter
 
+# References
+
 - [ ] [Updated: Dockershim Removal FAQ](https://kubernetes.io/blog/2022/02/17/dockershim-faq/)
 
 
