@@ -248,49 +248,27 @@ failed to pull image "registry.k8s.io/kube-apiserver:v1.26.3": output: time="202
 To see the stack trace of this error execute with --v=5 or higher
 </pre>
 
-:round_pushpin: Installer le `CRI`  
+:round_pushpin: Installer le `CRI`  `containerd.io`
 
-- [ ] Mettre à jour le vieux paquet `containerd` à la version 2.0
-- [ ] [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
+- [ ] Installer le paquet `containerd.io` 
+- [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
 
-* Changer le fichier de configuration `/etc/containerd/config.toml`
+* Ajouter Changer le fichier de configuration `/etc/containerd/config.toml`
 
-```toml
-#   Copyright 2018-2022 Docker Inc.
-
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
-
-#       http://www.apache.org/licenses/LICENSE-2.0
-
-#   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
-
-enabled_plugins = ["cri"]
-[plugins."io.containerd.grpc.v1.cri".containerd]
-  endpoint = "unix:///var/run/containerd/containerd.sock"
-
-
-#root = "/var/lib/containerd"
-#state = "/run/containerd"
-#subreaper = true
-#oom_score = 0
-
-#[grpc]
-#  address = "/run/containerd/containerd.sock"
-#  uid = 0
-#  gid = 0
-
-#[debug]
-#  address = "/run/containerd/debug.sock"
-#  uid = 0
-#  gid = 0
-#  level = "info"
 ```
+containerd config default | sudo tee /etc/containerd/config.toml
+```
+
+* Modifier le `CGroup` à VRAI
+
+```
+sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+```
+
+* Vérifier le `CGroup` à VRAI
+
+sudo cat /etc/containerd/config.toml | grep SystemdCgroup
+>            SystemdCgroup = true
 
 * Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
 
