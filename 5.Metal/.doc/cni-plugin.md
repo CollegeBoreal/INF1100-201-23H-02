@@ -13,16 +13,10 @@ Installer the CNI Plugin pour gérer le réseau de gousses [Cluster Networking](
 
 Sur le serveur du plan de contrôle:
 
-* Télécharger le fichier `manifest` appellé `calico.yaml`
+* Télécharger le fichier `manifest` `calico.yaml` et le charger dans la grappe
 
 ```
-curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
-```
-
-* Charger le fichier `calico.yaml`
-
-```
-kubectl apply --filename=calico.yaml
+kubectl apply --filename=kubectl apply --filename=https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml
 ```
 > Retourne :
 ```yaml
