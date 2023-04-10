@@ -16,7 +16,7 @@ Sur le serveur du plan de contrôle:
 * Télécharger le fichier `manifest` `calico.yaml` et le charger dans la grappe
 
 ```
-kubectl apply --filename=kubectl apply --filename=https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml
+kubectl apply --filename=https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml
 ```
 > Retourne :
 ```yaml
