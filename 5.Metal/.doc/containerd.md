@@ -85,7 +85,7 @@ cat /etc/apt/sources.list.d/docker.list
 sudo apt update
 ```
 > Retourne 
-<pre>
+```yaml
 Hit:1 http://ca.archive.ubuntu.com/ubuntu jammy InRelease
 Get:2 https://download.docker.com/linux/ubuntu jammy InRelease [48.9 kB]   
 Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease                                            
@@ -107,7 +107,7 @@ W: Target Translations (stable/i18n/Translation-en_US) is configured multiple ti
 W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
 W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
 W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
-</pre>
+```
 
 ## :b: Installer le paquet `containerd.io` 
 
