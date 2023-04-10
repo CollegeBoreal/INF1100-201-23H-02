@@ -154,9 +154,9 @@ systemctl is-enabled containerd
 > enabled
 
 
-## :ab: Paramétrer le `CGROUP` pour `SystemD`
+## :ab: Paramétrer le `CGROUP` pour `Systemd`
 
-- [ ] Objectif: Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
+- [ ] Objectif: Régler le `cgroup` lié à `Systemd` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
 
 :round_pushpin: Afficher le ficher de configuration `config.toml` à modifier
 
