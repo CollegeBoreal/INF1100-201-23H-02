@@ -73,7 +73,7 @@ Votre grappe comprend 4 noeuds (serveurs) que vous devrez d'abord nommer
 | Services  | Descriptions |
 |---|---------------------------------------------------------------------------|
 | [:whale: Docker](.doc/docker.md) :writing_hand:  | ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ ) |
-| [:whale2: Containerd](.doc/containerd.md) :writing_hand:	|  |
+| [:whale2: Containerd](.doc/containerd.md) :writing_hand:	| ( :bangbang: __Installation Obligatoire__ ) |
 
 ## :ab: Les plans
 
