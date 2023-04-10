@@ -155,9 +155,17 @@ systemctl is-enabled containerd
 > enabled
 
 
-## :ab: Paramétrer le `CGROUP` pour `Systemd`
+## :ab: Paramétrer le `CGROUPv2` pour `Systemd`
 
 - [ ] Objectif: Régler le `cgroup` lié à `Systemd` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
+
+:round_pushpin: Est-ce que le système utilise [`cgroup2`](https://kubernetes.io/docs/concepts/architecture/cgroups/#check-cgroup-version) ? (si non, `tmpfs` est affiché)
+
+```
+stat -fc %T /sys/fs/cgroup/
+```
+> cgroup2fs
+
 
 :round_pushpin: Afficher le ficher de configuration `config.toml` à modifier
 
