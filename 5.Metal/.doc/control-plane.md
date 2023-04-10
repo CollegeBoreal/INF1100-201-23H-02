@@ -251,6 +251,7 @@ To see the stack trace of this error execute with --v=5 or higher
 :round_pushpin: Installer le `CRI`  
 
 - [ ] Mettre à jour le vieux paquet `containerd` à la version 2.0
+- [ ] [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
 
 * Changer le fichier de configuration `/etc/containerd/config.toml`
 
