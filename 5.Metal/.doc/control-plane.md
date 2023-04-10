@@ -376,25 +376,26 @@ systemctl status containerd
 ```yaml
 ● containerd.service - containerd container runtime
      Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
-     Active: active (running) since Thu 2023-04-06 21:47:37 UTC; 27s ago
+     Active: active (running) since Mon 2023-04-10 00:07:29 UTC; 3s ago
        Docs: https://containerd.io
-    Process: 21239 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
-   Main PID: 21240 (containerd)
-      Tasks: 79
-     Memory: 989.9M
-        CPU: 552ms
+    Process: 5920 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 5921 (containerd)
+      Tasks: 10
+     Memory: 12.8M
+        CPU: 434ms
      CGroup: /system.slice/containerd.service
-             ├─20551 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id e61797e6a29a2c792dedf0335a50edd7c885>
-             ├─20695 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 38ad2171522ac19d75609efad8c3f8de2068>
-             ├─21038 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 7e49fdad2c5fae362342f15ea887ad8ebed9>
-             ├─21146 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 7e93f53ddea0c4fbb6c32b0adbf5a082b713>
-             ├─21240 /usr/bin/containerd
-             └─21336 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id 9bac2b13accab20c16accaa16d536d6eb5b9>
+             └─5921 /usr/bin/containerd
 
-Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407533370Z" level=info msg="StopPodSandb>
-Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407825344Z" level=info msg="StopPodSandb>
-Apr 06 21:47:55 betelgeuse containerd[21240]: time="2023-04-06T21:47:55.407927724Z" level=info msg="TearDown net>
-lines 1-20
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910108934Z" level=info msg="Start subscribing containerd event"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910294341Z" level=info msg="Start recovering state"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910714616Z" level=info msg="Start event monitor"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910838060Z" level=info msg="Start snapshots syncer"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910897170Z" level=info msg="Start cni network conf syncer for default"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.910942133Z" level=info msg="Start streaming server"
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.911321816Z" level=info msg=serving... address=/run/containerd/containerd.soc>
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.911702962Z" level=info msg=serving... address=/run/containerd/containerd.sock
+Apr 10 00:07:29 rukbat systemd[1]: Started containerd container runtime.
+Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.915907602Z" level=info msg="containerd successfully booted in 0.186967s"
 ```
 
 * taper sur `q` pour quitter
