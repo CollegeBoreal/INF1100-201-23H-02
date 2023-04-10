@@ -80,28 +80,28 @@ do
    VALUE="${VALUE} ${CHIFFRES[${DEVICE_COUNT}]} |"
 
    # --- reservoir de peripheriques ---
-   POOL=${FOLDER}/StoragePoolClaim.md
+   POOL=${FOLDER}/cspc-single.yaml
    # echo $POOL
    if [ -f "$POOL" ]; then
-      VALUE="${VALUE} [${OK}](../${FOLDER}/StoragePoolClaim.md) |"
+      VALUE="${VALUE} [${OK}](../${FOLDER}/cspc-single.yaml) |"
    else
       VALUE="${VALUE} ${KO} |"
    fi
 
    # --- classe de peripheriques ---
-   CLASS=${FOLDER}/StorageClass.md
+   CLASS=${FOLDER}/csi-cstor-sc.yaml
    # echo $CLASS
    if [ -f "$CLASS" ]; then
-      VALUE="${VALUE} [${OK}](../${FOLDER}/StorageClass.md) |"
+      VALUE="${VALUE} [${OK}](../${FOLDER}/csi-cstor-sc.yaml) |"
    else
       VALUE="${VALUE} ${KO} |"
    fi
 
    # --- service ---
-   PORTER=${FOLDER}/porterlb.md
+   PORTER=${FOLDER}/openelb.yaml
    # echo $PORTER
    if [ -f "$PORTER" ]; then
-      VALUE="${VALUE} [${OK}](../${FOLDER}/porterlb.md) |"
+      VALUE="${VALUE} [${OK}](../${FOLDER}/openelb.yaml) |"
    else
       VALUE="${VALUE} ${KO} |"
    fi
