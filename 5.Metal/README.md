@@ -71,9 +71,9 @@ Votre grappe comprend 4 noeuds (serveurs) que vous devrez d'abord nommer
 - [ ] Installer le [CRI](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) (Container Runtime Interface)  défini par l'[OCI](https://opencontainers.org) et géré par les Services:
   - [ ] [:whale: Docker](.doc/docker.md) :writing_hand: ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ )
   - [ ] [:whale2: Containerd](.doc/containerd.md) :writing_hand:	
-
+|   | |
 |---|---------------------------------------------------------------------------|
-[:whale: Docker](.doc/docker.md) :writing_hand: ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ ) | <img src='images/ContainerEcosystem.png' width=292 height=506 > </img> |
+| [:whale: Docker](.doc/docker.md) :writing_hand: ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ ) | <img src='images/ContainerEcosystem.png' width=292 height=506 > </img> |
 | [:whale2: Containerd](.doc/containerd.md) :writing_hand:	| |
 
 ## :ab: Les plans
