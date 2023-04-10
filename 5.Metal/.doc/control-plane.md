@@ -227,7 +227,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 :warning: Not yet ready 
 
 
-[:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
+## [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 
 
 ## :x: TroubleShooting: 
