@@ -22,7 +22,7 @@ Use 'sudo apt autoremove' to remove them.
 ```
 
 
-## :a: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+## :a: [Install using the Docker apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 :round_pushpin: Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 
@@ -65,7 +65,7 @@ cat /etc/apt/sources.list.d/docker.list
 * Mettre à jour 
 
 ```
-sudo apt-get update
+sudo apt update
 ```
 > Retourne 
 <pre>
@@ -92,8 +92,11 @@ W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/a
 W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 and /etc/apt/sources.list.d/docker.list:1
 </pre>
 
-- [ ] Installer le paquet `containerd.io` 
+## :b: Installer le paquet `containerd.io` 
+
 - [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
+
+:round_pushpin: Configurer `containerd`
 
 * Ajouter Changer le fichier de configuration `/etc/containerd/config.toml`
 
@@ -114,15 +117,9 @@ sudo cat /etc/containerd/config.toml | grep SystemdCgroup
 ```
 >            SystemdCgroup = true
 
-- [ ] Installer le nouveau paquet `containerd.io`
+:round_pushpin: Installer le nouveau paquet `containerd.io`
 
-* mettre à jour
-
-```
-sudo apt update
-```
-
-* Installer
+- [ ] Installer
 
 ```
 sudo apt install containerd.io
