@@ -1,4 +1,4 @@
-# :scroll: [Manifeste](https://kubernetes.io/docs/reference/glossary/?all=true#term-manifest) Document de Transport
+# :scroll: Un [Manifeste](https://kubernetes.io/docs/reference/glossary/?all=true#term-manifest) est un Document de Transport
 
 Spécification d'un objet API Kubernetes au format JSON ou YAML.
 
