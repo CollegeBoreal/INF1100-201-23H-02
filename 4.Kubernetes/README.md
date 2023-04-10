@@ -56,7 +56,7 @@ k set image deploy apache apache=httpd:alpine
 
 * Vérifier le déploiement
 
-:x: Les conteneurs `READY(0/3)` ne sont pas créés
+:heavy_check_mark: Les conteneurs `READY(3/3)` sont créés
 
 ```
 k get deploy 
