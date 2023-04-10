@@ -108,6 +108,16 @@ $ sudo kubeadm join betelgeuse.orion.gasy.africa:6443 --token fu6544.o36km11eg95
 
 ## :x: Troubleshooting
 
+:abacus: Sur le plan de données
+
+- [ ] [Container runtime network not ready: cni config uninitialized](https://stackoverflow.com/questions/49112336/container-runtime-network-not-ready-cni-config-uninitialized)
+
+* Enlever le service de sécurité [`apparmor`](https://www.apparmor.net/)
+
+```
+systemctl stop apparmor ; systemctl disable apparmor ; systemctl restart containerd.service
+```
+
 :control_knobs: Sur le plan de controle
 
 Lister les noeuds and obtenir le <nom-du-neoud> vous voulez drainer (enlever de la grappe)
@@ -135,7 +145,7 @@ $ kubectl drain <node-name> --ignore-daemonsets --delete-local-data
 $ kubectl delete node <node-name>
 ```
   
-## :x: Réinitialiser le noeud
+#### :x: Réinitialiser le noeud
 
 - [ ] Pre-fligth `/etc/kubernetes/kubelet.conf already exists`
     
