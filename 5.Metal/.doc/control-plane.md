@@ -294,7 +294,7 @@ enabled_plugins = ["cri"]
 * Supprimer le paquet
 
 ```
-sudo apt remove containerd
+sudo apt remove containerd.io
 ```
 > Retourne :
 <pre>
@@ -307,9 +307,20 @@ Package 'containerd' is not installed, so not removed
 
 - [ ] Installer le paquet `containerd`
 
+* mettre à jour
+
 ```
-sudo apt update, apt install containerd.io
+sudo apt update
 ```
+
+* Installer
+
+```
+sudo apt install containerd.io
+```
+
+
+
 > Retourne :
 ```yaml
 Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
