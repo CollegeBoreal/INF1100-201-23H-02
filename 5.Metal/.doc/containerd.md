@@ -173,7 +173,7 @@ stat -fc %T /sys/fs/cgroup/
 sudo cat /etc/containerd/config.toml
 ```
 > Retourne :
-```yaml
+```toml
 #   Copyright 2018-2022 Docker Inc.
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
