@@ -78,7 +78,7 @@ ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELE
 systemctl status kubelet
 ```
 > Retourne
-<pre>
+```yaml
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
     Drop-In: /etc/systemd/system/kubelet.service.d
@@ -89,7 +89,7 @@ systemctl status kubelet
    Main PID: 12069 (code=exited, status=1/FAILURE)
         CPU: 138ms
 lines 1-9/9 (END)
-</pre>
+```
 
 :bulb: Appuyer sur `q` pour quitter
 
