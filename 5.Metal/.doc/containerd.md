@@ -15,9 +15,6 @@ Building dependency tree... Done
 Reading state information... Done
 Package 'containerd' is not installed, so not removed
 Package 'runc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  docker-ce-rootless-extras libltdl7 libslirp0 pigz slirp4netns
-Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
 
