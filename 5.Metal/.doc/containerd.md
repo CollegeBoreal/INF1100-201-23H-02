@@ -111,31 +111,6 @@ W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt
 
 ## :b: Installer le paquet `containerd.io` 
 
-- [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
-
-:round_pushpin: Configurer `containerd`
-
-* Ajouter Changer le fichier de configuration `/etc/containerd/config.toml`
-
-```
-containerd config default | sudo tee /etc/containerd/config.toml
-```
-
-* Modifier le `CGroup` à VRAI
-
-```
-sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
-```
-
-* Vérifier le `CGroup` à VRAI
-
-```
-sudo cat /etc/containerd/config.toml | grep SystemdCgroup
-```
->            SystemdCgroup = true
-
-:round_pushpin: Installer le nouveau paquet `containerd.io`
-
 - [ ] Installer
 
 ```
@@ -192,6 +167,33 @@ systemctl is-enabled containerd
 ```
 > enabled
 
+
+## :ab: Paramétrer le `CGROUP` pour `SystemD`
+
+- [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
+
+:round_pushpin: Configurer `containerd`
+
+* Ajouter Changer le fichier de configuration `/etc/containerd/config.toml`
+
+```
+containerd config default | sudo tee /etc/containerd/config.toml
+```
+
+* Modifier le `CGroup` à VRAI
+
+```
+sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+```
+
+* Vérifier le `CGroup` à VRAI
+
+```
+sudo cat /etc/containerd/config.toml | grep SystemdCgroup
+```
+>            SystemdCgroup = true
+
+
 - [ ] Par précaution redémarrer le service `containerd`
 
 ```
@@ -237,7 +239,7 @@ Apr 10 00:07:29 rukbat containerd[5921]: time="2023-04-10T00:07:29.915907602Z" l
 sudo reboot -n now
 ```
 
-# [:back:](../#round_pushpin-installation-des-services)
+## [:back:](../#round_pushpin-installation-des-services)
 
 # References
 
