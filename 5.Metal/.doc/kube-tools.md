@@ -33,6 +33,13 @@ sudo apt-get install -y apt-transport-https ca-certificates curl
 sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 
+* Vérification de la clé :key: `GPG`
+
+```
+file /etc/apt/keyrings/kubernetes-archive-keyring.gpg
+```
+> /etc/apt/keyrings/kubernetes-archive-keyring.gpg: OpenPGP Public Key Version 4, Created Sat May 21 09:50:12 2022, RSA (Encrypt or Sign, 2048 bits); User ID; Signature; OpenPGP Certificate
+
 - [ ] Ajouter le fichier `kubernetes debian` au référentiel `apt`
 
 ```
