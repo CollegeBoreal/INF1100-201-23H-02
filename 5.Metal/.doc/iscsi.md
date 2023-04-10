@@ -7,6 +7,7 @@
 ```
 sudo cat /etc/iscsi/initiatorname.iscsi
 ```
+> GenerateName=yes
 
 :bulb: si le fichier `ìnitiator` n'est pas présent, installer `open-iscsi`:
 
