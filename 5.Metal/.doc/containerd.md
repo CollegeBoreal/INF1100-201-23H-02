@@ -1,4 +1,4 @@
-# Installer le `CRI`  `containerd.io`
+# :whale2: Installer le `CRI`  `containerd.io`
 
 - [ ] Installer le paquet `containerd.io` 
 - [ ] Régler le `cgroup` lié à `SystemD` [:bangbang: Issues with "stability" with Kubernetes cluster before adding networking](https://stackoverflow.com/questions/72567945/issues-with-stability-with-kubernetes-cluster-before-adding-networking/73743910#73743910)
