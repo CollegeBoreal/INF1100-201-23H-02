@@ -3,7 +3,7 @@
 
 ## :cl: Nettoyer
 
-* Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
+* Supprimer les anciens paquets (note: il n'y a pas de `.io`)
 
 ```
 sudo apt remove containerd runc
@@ -28,6 +28,22 @@ Use 'sudo apt autoremove' to remove them.
 
 ```
 sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
+```
+```yaml
+Hit:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease               
+Hit:2 https://packages.cloud.google.com/apt kubernetes-xenial InRelease           
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ca-certificates is already the newest version (20211016ubuntu0.22.04.1).
+curl is already the newest version (7.81.0-1ubuntu1.10).
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+gnupg set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
 
 :round_pushpin: Add Docker’s official GPG key:
