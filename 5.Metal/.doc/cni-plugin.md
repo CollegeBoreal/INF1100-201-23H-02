@@ -112,7 +112,7 @@ NAME        STATUS   ROLES           AGE     VERSION
 betelgeuse  Ready    control-plane   4m19s   v1.26.3
 ```
 
-[:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
+## [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 
 
 ## :x: Troubleshooting
