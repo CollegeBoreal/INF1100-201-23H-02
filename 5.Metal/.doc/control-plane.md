@@ -291,10 +291,10 @@ enabled_plugins = ["cri"]
 #  level = "info"
 ```
 
-* Supprimer le paquet
+* Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
 
 ```
-sudo apt remove containerd.io
+sudo apt remove containerd
 ```
 > Retourne :
 <pre>
@@ -305,7 +305,7 @@ Package 'containerd' is not installed, so not removed
 0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
 </pre>
 
-- [ ] Installer le paquet `containerd`
+- [ ] Installer le nouveau paquet `containerd.io`
 
 * mettre à jour
 
