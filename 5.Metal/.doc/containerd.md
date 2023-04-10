@@ -214,19 +214,19 @@ disabled_plugins = ["cri"]
 
 :round_pushpin: Configurer `containerd`
 
-* Ajouter Changer le fichier de configuration `/etc/containerd/config.toml`
+* Changer le fichier de configuration `/etc/containerd/config.toml` pour l'utilisation des `CGROUP`s avec `SystemD`
 
 ```
 containerd config default | sudo tee /etc/containerd/config.toml
 ```
 
-* Modifier le `CGroup` à VRAI
+* Modifier le `CGroup` à `VRAI`
 
 ```
 sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
 ```
 
-* Vérifier le `CGroup` à VRAI
+* Vérifier le `CGroup` à `VRAI`
 
 ```
 sudo cat /etc/containerd/config.toml | grep SystemdCgroup
