@@ -63,7 +63,7 @@ La trace de `calico` doit apparaître
 sudo systemctl status kubelet
 ```
 > Retourne :
-<pre> 
+```yaml
 [sudo] password for ubuntu: 
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
@@ -88,7 +88,29 @@ Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.434 [INFO][1182250] 
 Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.472 [INFO][1182250] k8s.go 400: Added Mac, interface name, and active containe>
 Feb 18 02:36:35 orion kubelet[1130554]: 2021-02-18 02:36:35.483 [INFO][1182250] k8s.go 474: Wrote updated endpoint to datastore ContainerI>
 lines 1-22/22 (END)
-</pre> 
+```
+
+:round_pushpin: Tester que le CNI :droplet: plugin est bien installé, 
+
+```
+k get no
+```
+> Retourne :
+```yaml
+NAME        STATUS     ROLES           AGE     VERSION
+betelgeuse  NotReady   control-plane   3m31s   v1.26.3
+```
+
+`Ready` doit s'afficher pour le `control-plane` après quelques minutes
+
+```
+k get no
+```
+> Retourne :
+```yaml
+NAME        STATUS   ROLES           AGE     VERSION
+betelgeuse  Ready    control-plane   4m19s   v1.26.3
+```
 
 [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 
