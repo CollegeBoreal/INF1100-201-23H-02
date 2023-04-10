@@ -433,6 +433,8 @@ go: go1.19.7
 libseccomp: 2.5.3
 ```
 
+:round_pushpin: FIX `crictl` [Container List Issue](https://forum.linuxfoundation.org/discussion/861469/containerd-list-of-containers)
+
 ```
 crictl info
 ```
@@ -441,6 +443,26 @@ WARN[0000] runtime connect using default endpoints: [unix:///var/run/dockershim.
 E0409 21:53:28.499719   14181 remote_runtime.go:616] "Status from runtime service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/dockershim.sock: connect: no such file or directory\""
 FATA[0000] getting status of runtime: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial unix /var/run/dockershim.sock: connect: no such file or directory" 
 ```
+
+
+
+```
+sudo crictl config --set runtime-endpoint=unix:///run/containerd/containerd.sock --set image-endpoint=unix:///run/containerd/containerd.sock
+```
+
+```
+sudo cat /etc/crictl.yaml
+```
+```toml
+runtime-endpoint: "unix:///run/containerd/containerd.sock"
+image-endpoint: "unix:///run/containerd/containerd.sock"
+timeout: 0
+debug: false
+pull-image-on-create: false
+disable-pull-on-run: false
+```
+
+:round_pushpin: Debug with logs
 
 ```
 tail -f /var/log/syslog |grep kube-apiserver
