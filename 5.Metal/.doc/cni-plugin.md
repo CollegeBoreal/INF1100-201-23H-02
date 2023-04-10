@@ -117,6 +117,25 @@ betelgeuse  Ready    control-plane   4m19s   v1.26.3
 
 ## :x: Troubleshooting
 
+## Afficher les pods systèmes
+
+```
+sudo crictl ps
+```
+> Retourne :
+```yaml
+CONTAINER           IMAGE               CREATED             STATE               NAME                      ATTEMPT             POD ID              POD
+5cd9550f49b44       ae21975ff5d93       3 minutes ago       Running             calico-kube-controllers   0                   8c5ccf6d51eac       calico-kube-controllers-5857bf8d58-kkg4h
+021335cfe68f9       b19406328e70d       3 minutes ago       Running             coredns                   0                   eb76308d7e416       coredns-787d4945fb-zqqhr
+f0a25ad0646c1       b19406328e70d       3 minutes ago       Running             coredns                   0                   b1728bf4e88a9       coredns-787d4945fb-lgqm6
+d588a5ae73bc5       273313a9d5b2b       3 minutes ago       Running             calico-node               0                   ccfd975290d7e       calico-node-fchpt
+a34b5437ca216       3b6ac91ff8d39       5 minutes ago       Running             kube-controller-manager   1                   c039e3892d3f2       kube-controller-manager-rukbat
+cd09d3a194614       fa167119f9a55       5 minutes ago       Running             kube-scheduler            1                   df0cdd2d32b9e       kube-scheduler-rukbat
+50ce4ed955d49       c859f97be11ac       8 minutes ago       Running             kube-proxy                0                   4f249140a0a35       kube-proxy-8r4k7
+b1450d3a30672       ef24580282403       8 minutes ago       Running             etcd                      0                   47e2afef1554b       etcd-rukbat
+684eaf0b80510       3f1ae10c5c85d       8 minutes ago       Running             kube-apiserver            0                   aa9cc7316339f       kube-apiserver-rukbat
+```
+
 #### :round_pushpin: [Restart kube-apiserver when provisioned with kubeadm](https://stackoverflow.com/questions/42674726/restart-kube-apiserver-when-provisioned-with-kubeadm)
 
 :construction: Si on perd le `kube-apiserver` à cause d'une commande (i.e. CNI)
