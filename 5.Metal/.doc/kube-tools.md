@@ -12,7 +12,7 @@ Mettre le serveur à jour et le redémarrer.
 sudo apt update && sudo apt -y upgrade && sudo systemctl reboot
 ```
 
-## :one: Installer le [référentiel](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) `google cloud`
+## :one: Installer le [référentiel](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) `google cloud`
 
 :round_pushpin: Installer `curl`, `apt-transport-https` et autres outils utilisés pour télécharger les librairies (Package Manager)
 
