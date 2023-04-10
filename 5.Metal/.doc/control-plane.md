@@ -230,7 +230,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 [:back:](../#control_knobs-le-plan-de-contrôle-control-plane)
 
 
-## :x: TroubleShooting: CRI v1 runtime API is not implemented
+## :x: TroubleShooting: 
 
 - [ ] [kubeadm init error: CRI v1 runtime API is not implemented](https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented)
 
@@ -248,6 +248,24 @@ failed to pull image "registry.k8s.io/kube-apiserver:v1.26.3": output: time="202
 To see the stack trace of this error execute with --v=5 or higher
 </pre>
 
+:round_pushpin: preflight] Running pre-flight checks
+
+```
+sudo kubeadm init \
+  --pod-network-cidr=172.16.0.0/16 \
+  --control-plane-endpoint=rukbat.sagittarius.valiha.com
+```
+```yaml
+[init] Using Kubernetes version: v1.26.3
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+```
+
+
 :round_pushpin: Debug with logs
 
 ```
@@ -262,6 +280,8 @@ Apr  9 22:00:29 betelgeuse kubelet[1003697]: I0409 22:00:29.457432 1003697 statu
 Apr  9 22:00:34 betelgeuse kubelet[1003697]: E0409 22:00:34.547180 1003697 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-apiserver-betelgeuse.175426958d9badd4", GenerateName:"", Namespace:"kube-system", SelfLink:"", UID:"", ResourceVersion:"19198", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"kube-system", Name:"kube-apiserver-betelgeuse", UID:"4008dce9245d5ce36f28ab2ace9bec53", APIVersion:"v1", ResourceVersion:"", FieldPath:"spec.containers{kube-apiserver}"}, Reason:"BackOff", Message:"Back-off restarting failed container kube-apiserver in pod kube-apiserver-betelgeuse_kube-system(4008dce9245d5ce36f28ab2ace9bec53)", Source:v1.EventSource{Component:"kubelet", Host:"betelgeuse"}, FirstTimestamp:time.Date(2023, time.April, 9, 3, 29, 44, 0, time.Local), LastTimestamp:time.Date(2023, time.April, 9, 21, 16, 59, 497376398, time.Local), Count:2445, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Patch "https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/events/kube-apiserver-betelgeuse.175426958d9badd4": dial tcp 10.13.15.200:6443: connect: connection refused'(may retry after sleeping)
 Apr  9 22:00:37 betelgeuse kubelet[1003697]: E0409 22:00:37.193812 1003697 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-apiserver-betelgeuse.175426958d9badd4", GenerateName:"", Namespace:"kube-system", SelfLink:"", UID:"", ResourceVersion:"19198", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"kube-system", Name:"kube-apiserver-betelgeuse", UID:"4008dce9245d5ce36f28ab2ace9bec53", APIVersion:"v1", ResourceVersion:"", FieldPath:"spec.containers{kube-apiserver}"}, Reason:"BackOff", Message:"Back-off restarting failed container kube-apiserver in pod kube-apiserver-betelgeuse_kube-system(4008dce9245d5ce36f28ab2ace9bec53)", Source:v1.EventSource{Component:"kubelet", Host:"betelgeuse"}, FirstTimestamp:time.Date(2023, time.April, 9, 3, 29, 44, 0, time.Local), LastTimestamp:time.Date(2023, time.April, 9, 21, 16, 59, 497376398, time.Local), Count:2445, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Patch "https://betelgeuse.orion.gasy.africa:6443/api/v1/namespaces/kube-system/events/kube-apiserver-betelgeuse.175426958d9badd4": dial tcp 10.13.15.200:6443: connect: connection refused'(may retry after sleeping)
 ```
+
+
 
 ```
 sudo iptables -L -t nat | grep KUBE
