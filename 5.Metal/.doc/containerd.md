@@ -17,7 +17,9 @@ sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/c
 
 * Vérifier le `CGroup` à VRAI
 
+```
 sudo cat /etc/containerd/config.toml | grep SystemdCgroup
+```
 >            SystemdCgroup = true
 
 * Supprimer l'ancien paquet (note: il n'y a pas de `.io`)
