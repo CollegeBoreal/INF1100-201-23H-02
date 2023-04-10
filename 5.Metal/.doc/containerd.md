@@ -29,6 +29,7 @@ Use 'sudo apt autoremove' to remove them.
 ```
 sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
 ```
+> Retourne :
 ```yaml
 Hit:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
 Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
