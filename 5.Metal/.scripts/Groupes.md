@@ -1,4 +1,4 @@
-# Participation du groupe au 10-04-2023 19:39
+# Participation du groupe au 10-04-2023 19:44
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -18,7 +18,7 @@
 |-|-|-|-|-|-|-|-|
 | :a: | [A.Six](../A.Six) | :x: | :a: | :a: | :x: | :x: | :x: |
 | :ab: | [AB.Maghreb](../AB.Maghreb) | :x: | :a: | :a: | :x: | :x: | :x: |
-| :b: | [B.Goku](../B.Goku) | :x: | :a: | :a: | :x: | :x: | :x: |
+| :b: | [B.Goku](../B.Goku) | [:white_check_mark:](../B.Goku/.kube/config) | :a: | :a: | :x: | :x: | :x: |
 | :cl: | [CL.Piano](../CL.Piano) | :x: | :a: | :a: | :x: | :x: | :x: |
 | :o: | [O.Africa](../O.Africa) | :x: | :a: | :a: | :x: | :x: | :x: |
 | :o2: | [O2.Planete](../O2.Planete) | :x: | :a: | :a: | :x: | :x: | :x: |
