@@ -89,13 +89,13 @@ sudo kubeadm init \
 [control-plane] Creating static Pod manifest for "kube-scheduler"
 [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
 [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
-[apiclient] All control plane components are healthy after 7.518603 seconds
+[apiclient] All control plane components are healthy after 10.535045 seconds
 [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
 [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
 [upload-certs] Skipping phase. Please see --upload-certs
 [mark-control-plane] Marking the node betelgeuse as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
 [mark-control-plane] Marking the node betelgeuse as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
-[bootstrap-token] Using token: lj75gj.bqlmhxx602fhbdm2
+[bootstrap-token] Using token: rrmied.zty2u72rw09jm8da
 [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
@@ -125,14 +125,14 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of control-plane nodes by copying certificate authorities
 and service account keys on each node and then running the following as root:
 
-  kubeadm join betelgeuse.orion.gasy.africa:6443 --token lj75gj.bqlmhxx602fhbdm2 \
-	--discovery-token-ca-cert-hash sha256:6a69a424ba80d08a99e612f3f2848cc7255a15aa4172d66bb561d1a04a47561c \
-	--control-plane 
+  kubeadm join betelgeuse.orion.gasy.africa:6443 --token rrmied.zty2u72rw09jm8da \
+        --discovery-token-ca-cert-hash sha256:2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0 \
+        --control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join betelgeuse.orion.gasy.africa:6443 --token lj75gj.bqlmhxx602fhbdm2 \
-	--discovery-token-ca-cert-hash sha256:6a69a424ba80d08a99e612f3f2848cc7255a15aa4172d66bb561d1a04a47561c 
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token rrmied.zty2u72rw09jm8da \
+        --discovery-token-ca-cert-hash sha256:2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0
 ```
 
 #### :tada: Your Kubernetes control-plane has initialized successfully!
@@ -165,14 +165,14 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of control-plane nodes by copying certificate authorities
 and service account keys on each node and then running the following as root:
 
-  kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
-        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0 \
+  kubeadm join betelgeuse.orion.gasy.africa:6443 --token rrmied.zty2u72rw09jm8da \
+        --discovery-token-ca-cert-hash sha256:2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0 \
         --control-plane 
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join betelgeuse.orion.gasy.africa:6443 --token n9l9m5.rybwerit049a7nne \
-        --discovery-token-ca-cert-hash sha256:0f7f4ef13e42f17f2036032cf1aedd110374349c478a26e347c99766afdc53c0
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token rrmied.zty2u72rw09jm8da \
+        --discovery-token-ca-cert-hash sha256:2ac9eca4748cb94db31f3f271bf49d3149287bb664050a82bf8dc97bf673daa0
 ```
 
 ## :b: Utiliser sa grappe (sur le serveur - plan de contrôle)
