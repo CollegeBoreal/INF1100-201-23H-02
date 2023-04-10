@@ -1,6 +1,6 @@
 # :whale2: Installer le `CRI`  `containerd.io`
 
-<img src='../images/ContainerEcosystem.png' width='' height='' > </img>
+<img src='../images/ContainerEcosystem.png' width=584 height=1012 > </img>
 
 ## :cl: Nettoyer
 
