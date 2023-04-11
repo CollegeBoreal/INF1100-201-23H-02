@@ -60,9 +60,10 @@ Exécutez la commande suivante pour créer un fichier YAML pour l '«objet Eip»
 ```
 $ ip addr | grep 10.13.237
 ```
-```yaml
+> Retourne :
+<pre>
     inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
-```
+</pre>
 
 :round_pushpin: Sauveguarder le fichier `openelb.yaml`
 
