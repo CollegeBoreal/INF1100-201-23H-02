@@ -180,6 +180,7 @@ Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_han
 ```
 kubectl get storageclasses        
 ```
+> Retourne :
 ```yaml
 NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
 openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
