@@ -58,26 +58,26 @@ Created symlink /etc/systemd/system/sysinit.target.wants/iscsid.service → /lib
 systemctl status iscsid 
 ```
 > Retourne
-```
+```yaml
 ● iscsid.service - iSCSI initiator daemon (iscsid)
      Loaded: loaded (/lib/systemd/system/iscsid.service; enabled; vendor preset: enabled)
-     Active: active (running) since Sun 2021-02-28 18:13:56 UTC; 8s ago
+     Active: active (running) since Tue 2023-04-11 01:33:16 UTC; 4s ago
 TriggeredBy: ● iscsid.socket
        Docs: man:iscsid(8)
-    Process: 727335 ExecStartPre=/lib/open-iscsi/startup-checks.sh (code=exited, status=0/SUCCESS)
-    Process: 727344 ExecStart=/sbin/iscsid (code=exited, status=0/SUCCESS)
-   Main PID: 727346 (iscsid)
-      Tasks: 2 (limit: 77183)
-     Memory: 3.6M
+    Process: 100206 ExecStartPre=/lib/open-iscsi/startup-checks.sh (code=exited, status=0/SUCCESS)
+    Process: 100209 ExecStart=/sbin/iscsid (code=exited, status=0/SUCCESS)
+   Main PID: 100211 (iscsid)
+      Tasks: 2 (limit: 77134)
+     Memory: 3.5M
+        CPU: 14ms
      CGroup: /system.slice/iscsid.service
-             ├─727345 /sbin/iscsid
-             └─727346 /sbin/iscsid
+             ├─100210 /sbin/iscsid
+             └─100211 /sbin/iscsid
 
-Feb 28 18:13:56 brooks systemd[1]: Starting iSCSI initiator daemon (iscsid)...
-Feb 28 18:13:56 brooks iscsid[727344]: iSCSI logger with pid=727345 started!
-Feb 28 18:13:56 brooks systemd[1]: iscsid.service: Failed to parse PID from file /run/iscsid.pid: Invalid argument
-Feb 28 18:13:56 brooks systemd[1]: Started iSCSI initiator daemon (iscsid).
-Feb 28 18:13:57 brooks iscsid[727345]: iSCSI daemon with pid=727346 started!
+Apr 11 01:33:16 bellatrix systemd[1]: Starting iSCSI initiator daemon (iscsid)...
+Apr 11 01:33:16 bellatrix iscsid[100209]: iSCSI logger with pid=100210 started!
+Apr 11 01:33:16 bellatrix iscsid[100210]: iSCSI daemon with pid=100211 started!
+Apr 11 01:33:16 bellatrix systemd[1]: Started iSCSI initiator daemon (iscsid).
 ```
 
 [:back:](../#roll_of_paper-le-périphérique-block-device)
