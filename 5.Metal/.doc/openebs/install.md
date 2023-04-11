@@ -9,6 +9,7 @@
 ```
 helm repo add openebs https://openebs.github.io/charts
 ```
+> "openebs" has been added to your repositories
 
 - [ ] Mettre à jour les référentiels
 
