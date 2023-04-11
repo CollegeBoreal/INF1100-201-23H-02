@@ -39,8 +39,8 @@ kubectl get blockdevices --namespace openebs
 > Retourne
 <pre>
 NAME                                               NODENAME    SIZE           CLAIMSTATE   STATUS   AGE
-blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   bellatrix   107374182400   Unclaimed    Active   4m2s
-blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   3m41s
+blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7   bellatrix   107374182400   Unclaimed    Active   3m41s
+blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   4m2s
 blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       107374182400   Unclaimed    Active   3m26s
 </pre>
 
