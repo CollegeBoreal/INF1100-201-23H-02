@@ -51,9 +51,9 @@ and Jiva (non-csi) volumes, you will have to run the following command to includ
 the older provisioners:
 
 helm upgrade openebs openebs/openebs \
-	--namespace openebs \
-	--set legacy.enabled=true \
-	--reuse-values
+        --namespace openebs \
+        --set legacy.enabled=true \
+        --reuse-values
 
 For other engines, you will need to perform a few more additional steps to
 enable the engine, configure the engines (e.g. creating pools) and create 
@@ -62,9 +62,9 @@ StorageClasses.
 For example, cStor can be enabled using commands like:
 
 helm upgrade openebs openebs/openebs \
-	--namespace openebs \
-	--set cstor.enabled=true \
-	--reuse-values
+        --namespace openebs \
+        --set cstor.enabled=true \
+        --reuse-values
 
 For more information, 
 - view the online documentation at https://openebs.io/docs or
