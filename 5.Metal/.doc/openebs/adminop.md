@@ -167,7 +167,8 @@ kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storagecla
 ```
 > storageclass.storage.k8s.io/standard patched
 
-[:back:](../../#floppy_disk-le-stockage)
+
+## [:back:](../../#floppy_disk-le-stockage)
 
 # References
 
