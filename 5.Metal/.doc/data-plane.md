@@ -112,7 +112,7 @@ $ sudo kubeadm join betelgeuse.orion.gasy.africa:6443 --token fu6544.o36km11eg95
 
 - [ ] [Container runtime network not ready: cni config uninitialized](https://stackoverflow.com/questions/49112336/container-runtime-network-not-ready-cni-config-uninitialized)
 
-* Enlever le service de sécurité [`apparmor`](https://www.apparmor.net/)
+* Enlever le service de sécurité [`apparmor`]([https://www.apparmor.net/](https://kubernetes.io/docs/tutorials/security/apparmor/))
 
 ```
 systemctl stop apparmor ; systemctl disable apparmor ; systemctl restart containerd.service
