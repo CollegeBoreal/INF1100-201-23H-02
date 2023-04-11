@@ -75,7 +75,7 @@ spec:
        kubernetes.io/hostname: "bellatrix" # ME CHANGER VITE
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03" # ME CHANGER VITE
+           - blockDeviceName: "blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7" # ME CHANGER VITE
      poolConfig:
        dataRaidGroupType: "stripe"
 
