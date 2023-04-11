@@ -7,7 +7,15 @@
 ```
 sudo cat /etc/iscsi/initiatorname.iscsi
 ```
-> GenerateName=yes
+```yaml
+[sudo] password for ubuntu: 
+## DO NOT EDIT OR REMOVE THIS FILE!
+## If you remove this file, the iSCSI daemon will not start.
+## If you change the InitiatorName, existing access control lists
+## may reject this initiator.  The InitiatorName must be unique
+## for each iSCSI initiator.  Do NOT duplicate iSCSI InitiatorNames.
+InitiatorName=iqn.1993-08.org.debian:01:a4b5157f8afe
+```
 
 :bulb: si le fichier `ìnitiator` n'est pas présent, installer `open-iscsi`:
 
