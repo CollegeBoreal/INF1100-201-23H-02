@@ -68,7 +68,12 @@ Votre grappe comprend 4 noeuds (serveurs) que vous devrez d'abord nommer
 
 - [ ] Installer le [CNI](https://kubernetes.io/docs/concepts/cluster-administration/networking/) (Container Network Interface) géré par le Service [:droplet: Kubelet](.doc/kubelet.md) :writing_hand:	 
 
-- [ ] Installer le [CRI](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) (Container Runtime Interface) géré par le Service [:whale: Docker](.doc/docker.md) :writing_hand:	 défini par l'[OCI](https://opencontainers.org) ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ )
+- [ ] Installer le [CRI](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) (Container Runtime Interface)  défini par l'[OCI](https://opencontainers.org) et géré par les Services:
+
+| Services  | Descriptions |
+|---|---------------------------------------------------------------------------|
+| [:whale: Docker](.doc/docker.md) :writing_hand:  | ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ ) |
+| [:whale2: Containerd](.doc/containerd.md) :writing_hand:	| ( :bangbang: __Installation Obligatoire__ ) |
 
 ## :ab: Les plans
 
@@ -119,10 +124,10 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 ```
 $ kubectl get nodes
 NAME         STATUS   ROLES    AGE     VERSION
-bellatrix    Ready    <none>   3m15s   v1.18.6
-betelgeuse   Ready    master   25m     v1.18.6
-rigel        Ready    <none>   68s     v1.18.6
-saiph        Ready    <none>   22s     v1.18.6
+bellatrix    Ready    <none>   3m15s   v1.26.3
+betelgeuse   Ready    master   25m     v1.26.3
+rigel        Ready    <none>   68s     v1.26.3
+saiph        Ready    <none>   22s     v1.26.3
 ```
 
 - [ ] Visualiser la grappe dans :level_slider: `Lens`
@@ -158,7 +163,7 @@ Dans notre environnement, nous allons choisir [openEBS](https://openebs.io) et s
 
 <img src="images/1-config-sequence.svg" width="657" height="145"> </img>
 
-:round_pushpin:  [Installer](.doc/openebs-install.md):pinching_hand: le `CSI Plugin` [openEBS](https://openebs.io)
+:round_pushpin:  [Installer](.doc/openebs/install.md):pinching_hand: le `CSI Plugin` [openEBS](https://openebs.io)
 
 :round_pushpin:  Créer la **classe de stockage (sc)** `standard` 
 
@@ -166,20 +171,21 @@ Dans notre environnement, nous allons choisir [openEBS](https://openebs.io) et s
 - [ ] Créer d'un réservoir de stockage `pool` avec les :three: périphériques
 - [ ] Créer la **classe de stockage (sc)** `standard` avec le réservoir de stockage `pool`
 
-Utiliser les [operations d'administration](.doc/openebs-adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
+Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_hand:. suivante pour la création de la  **classe de stockage (sc)** `standard`
 
 :round_pushpin:  Vous pouvez maintenant utiliser la **classe de stockage (sc)** `standard` définie par `défaut`
 
 :bulb: Vérifier que la classe de stockage par **défaut** est bien **standard**
 
 ```
-$ kubectl get storageclasses        
-NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-openebs-device              openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-hostpath            openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-jiva-default        openebs.io/provisioner-iscsi                               Delete          Immediate              false                  20h
-openebs-snapshot-promoter   volumesnapshot.external-storage.k8s.io/snapshot-promoter   Delete          Immediate              false                  20h
-standard (default)          openebs.io/provisioner-iscsi                               Delete          Immediate              false                  48s
+kubectl get storageclasses        
+```
+> Retourne :
+```yaml
+NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   2m35s
 ```
 
 
@@ -192,7 +198,7 @@ standard (default)          openebs.io/provisioner-iscsi                        
 
 ##### :control_knobs: Le plan de contrôle (control plane)
 
-- [ ]  [Installer](.doc/porterlb.md):pinching_hand: [porterlb](https://porterlb.io). 
+- [ ]  [Installer](.doc/openelb.md):pinching_hand: [openelb](https://openelb.io/). 
 
 ## :clapper: Les Applications
 
@@ -200,6 +206,6 @@ standard (default)          openebs.io/provisioner-iscsi                        
 
 Chaque étudiant aura à installer son application dans la grappe
 
-- [ ]  Installer les applications avec LENS
+- [ ]  Installer les applications avec [LENS](https://k8slens.dev/)
 - [ ] Activer :rocket: le service en appliquant les annotations reliés à l'équilibreur de charge `LoadBalancer` Porter en fonction des examples de [Configuration](https://github.com/CollegeBoreal/Tutoriels/tree/main/2.MicroServices/3.Orchestration/1.Kubernetes/C.Cluster/0.Local/6.K8s/apps) d'applications suivantes
 - [ ] Attacher l'application à votre nom de domaine

@@ -94,56 +94,38 @@ saiph
 :star: Le fichier se présente comme ceci:
 
 ```yaml
-$ kubectl apply --namespace openebs --filename - <<EOF 
- apiVersion: openebs.io/v1alpha1
- kind: BlockDevice
- metadata:
-   name: blockdevice-18918f5d-e3d0-4e77-9126-febbfbf0366c
-   labels:
-     kubernetes.io/hostname: saiph
-     ndm.io/managed: "false"
-     ndm.io/blockdevice-type: blockdevice
- status:
-   claimState: Unclaimed
-   state: Active
- spec:
-   capacity:
-     logicalSectorSize: 512
-     storage: 107374182400
-   details:
-     deviceType: lvm
-   devlinks:
-   - kind: by-id
-     links:
-     - /dev/disk/by-id/dm-uuid-LVM-rezWQCWaDuFq4QzhcU4F3POBUQUJvJDMCYBBEPap5KcvpALZzh1BF1oXQ1QddcG1
-     - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
-   - kind: by-path
-     links:
-     - /dev/mapper/ubuntu--vg-iscsi--lv
-   nodeAttributes:
-     nodeName: saiph
-   path: /dev/dm-1
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name: blockdevice-18918f5d-e3d0-4e77-9126-febbfbf0366c
+  labels:
+    kubernetes.io/hostname: saiph
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: lvm
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/dm-uuid-LVM-rezWQCWaDuFq4QzhcU4F3POBUQUJvJDMCYBBEPap5KcvpALZzh1BF1oXQ1QddcG1
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg-iscsi--lv
+  nodeAttributes:
+    nodeName: saiph
+  path: /dev/dm-1
 ---
-EOF
 ```
 
-# :b: Créer le fichier `blockdevice`:
-
-:round_pushpin: Créer un fichier par noeud et le mettre dans le répertoire de la grappe en suivant le modèle ci-dessous:
-
-- [ ] Le nom du fichier devra être sous la forme `blockdevice-xxxx-xxxx-xxx-xxx.md`
-
-- [ ] Il sera de type `yaml` et commencera par la commande `kubectl` comme ceci:
-  >  kubectl apply --namespace openebs --filename - <<EOF 
-
-- [ ] Il se terminera avec le commentaire `yaml` `---` et le mot `EOF`:
-  > `---`
-  > 
-  > EOF
-
-:warning: Bien vérifier que le fichier aient les bonnes informations du périphérique `iscsi-lv`
-
-[:back:](../#roll_of_paper-le-périphérique-block-device)
+## [:back:](../#roll_of_paper-le-périphérique-block-device)
 
 
 # References

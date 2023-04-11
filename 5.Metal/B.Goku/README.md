@@ -8,18 +8,77 @@
 | data plane       |pasmibalayi@lotus.goku.cherkaoui.tech      | `10.13.237.17/24` | 64GB Ram,      16cpus |
 
 
-<img src=images/apt-key.png width='' height='' > </img>
 
 ```
+superzaf@son:~$ sudo kubeadm init   --pod-network-cidr=172.16.0.0/16   --control-plane-endpoint=son.goku.cherkaoui.tech
 ```
-![images](https://user-images.githubusercontent.com/94937145/229004420-0bf7eb6a-9924-47d2-b3f4-1f98699a5a97.jpeg)
-<img src=images/ERROR-KubeletVersion.png width='' height='' > </img>
+> Retourne :
+<pre>
+[init] Using Kubernetes version: v1.26.3
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR CRI]: container runtime is not running: output: time="2023-04-04T21:34:30Z" level=fatal msg="validate service connection: CRI v1 runtime API is not implemented for endpoint \"unix:///var/run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+, error: exit status 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+</pre>
+
+❎ TROUBLESHOOT ⏫
+
+1️⃣  Instruction for containerd fix 
+
 ```
-```
-![goku_a2](https://user-images.githubusercontent.com/94937145/229003932-4cd1f9a2-75f3-4908-bb21-c0af2dd1845c.png)
-<img src=images/connection-to-the-server-was-refused.png width='' 
-height='' > </img>
-```
+sudo rm /etc/containerd/config.toml
+sudo systemctl restart containerd
 ```
 
-![images (1)](https://user-images.githubusercontent.com/94937145/229004664-6bc2014d-f775-416a-bc8c-b71d07aab985.jpeg)
+2️⃣ Run Kubeadm init
+
+```
+sudo kubeadm init
+```
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/config.toml-fix.png'>
+
+3️⃣ Kubeadm reset 
+
+```
+sudo kubeadm reset 
+```
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/Kubeadm-reset.png'>
+
+✔️ VOILA ! :tada: Félicitations !
+
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/VOILA!.png'>
+
+
+ ## :b: get nodes/config get-contexts 
+ 
+ ```
+ k config get-contexts
+ ```
+ ```
+ k get nodes
+ ```
+ > Retourne :
+ <pre>
+ <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_get_podes:contexts.png'>
+ </pre>
+ 
+ # Cluster-info
+ ```
+ k cluster-info
+ ```
+ > Retourne :
+ <pre>
+ <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_cluster_info.png'>
+ </pre>
+ 
+ 
+## :x:  CNI Plugin Calico
+
+<pre>
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/Calico_ERROR.png'>
+
+<pre>
+<img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_apply_filename.png'>
+ 
