@@ -145,6 +145,7 @@ parameters:
 ```
 kubectl apply --filename csi-cstor-sc.yaml
 ```
+> storageclass.storage.k8s.io/standard created
 
 :round_pushpin: La classe par défaut de stockage `standard`
 
