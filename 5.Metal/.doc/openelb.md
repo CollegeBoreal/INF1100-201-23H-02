@@ -35,19 +35,19 @@ mutatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission crea
 validatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission created
 ```
 
-- [ ] Vérifier que porter est installé
+- [ ] Vérifier que `openelb` est installé
 
 ```
 kubectl get po -n openelb-system
 ```
 > Retourne :
-<pre> 
-NAME                             READY   STATUS      RESTARTS   AGE
-openelb-admission-create-2tdnp    0/1     Completed   0          8m7s
-openelb-admission-patch-vlnjg     0/1     Completed   2          8m7s
-openelb-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
-</pre>
-
+```yaml
+NAME                              READY   STATUS      RESTARTS   AGE
+openelb-admission-create-g6njd    0/1     Completed   0          41s
+openelb-admission-patch-67s8r     0/1     Completed   0          41s
+openelb-keepalive-vip-8mtzf       1/1     Running     0          27s
+openelb-manager-d6df4dfc4-24lml   1/1     Running     0          41s
+```
 
 ## :round_pushpin: Créer l'objet EIP (External IP) 
 
