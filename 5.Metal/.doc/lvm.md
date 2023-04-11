@@ -9,6 +9,7 @@
 ```
 sudo lvcreate --name iscsi-lv --size 100G  ubuntu-vg
 ```
+>   Logical volume "iscsi-lv" created.
 
 - [ ] Vérifier si il a été créé
 
