@@ -178,13 +178,13 @@ Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_han
 :bulb: Vérifier que la classe de stockage par **défaut** est bien **standard**
 
 ```
-$ kubectl get storageclasses        
-NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-openebs-device              openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-hostpath            openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-jiva-default        openebs.io/provisioner-iscsi                               Delete          Immediate              false                  20h
-openebs-snapshot-promoter   volumesnapshot.external-storage.k8s.io/snapshot-promoter   Delete          Immediate              false                  20h
-standard (default)          openebs.io/provisioner-iscsi                               Delete          Immediate              false                  48s
+kubectl get storageclasses        
+```
+```yaml
+NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   2m35s
 ```
 
 
