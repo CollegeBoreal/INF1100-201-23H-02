@@ -7,6 +7,7 @@
 ```
 sudo cat /etc/iscsi/initiatorname.iscsi
 ```
+> Retourne :
 ```yaml
 [sudo] password for ubuntu: 
 ## DO NOT EDIT OR REMOVE THIS FILE!
