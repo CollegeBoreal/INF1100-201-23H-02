@@ -9,6 +9,31 @@
 ```
 kubectl apply -f https://raw.githubusercontent.com/openelb/openelb/master/deploy/openelb.yaml
 ```
+> Retourne :
+```yaml
+namespace/openelb-system created
+customresourcedefinition.apiextensions.k8s.io/bgpconfs.network.kubesphere.io created
+customresourcedefinition.apiextensions.k8s.io/bgppeers.network.kubesphere.io created
+customresourcedefinition.apiextensions.k8s.io/eips.network.kubesphere.io created
+serviceaccount/kube-keepalived-vip created
+serviceaccount/openelb-admission created
+role.rbac.authorization.k8s.io/leader-election-role created
+role.rbac.authorization.k8s.io/openelb-admission created
+clusterrole.rbac.authorization.k8s.io/kube-keepalived-vip created
+clusterrole.rbac.authorization.k8s.io/openelb-admission created
+clusterrole.rbac.authorization.k8s.io/openelb-manager-role created
+rolebinding.rbac.authorization.k8s.io/leader-election-rolebinding created
+rolebinding.rbac.authorization.k8s.io/openelb-admission created
+clusterrolebinding.rbac.authorization.k8s.io/kube-keepalived-vip created
+clusterrolebinding.rbac.authorization.k8s.io/openelb-admission created
+clusterrolebinding.rbac.authorization.k8s.io/openelb-manager-rolebinding created
+service/openelb-admission created
+deployment.apps/openelb-manager created
+job.batch/openelb-admission-create created
+job.batch/openelb-admission-patch created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission created
+validatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission created
+```
 
 - [ ] Vérifier que porter est installé
 
