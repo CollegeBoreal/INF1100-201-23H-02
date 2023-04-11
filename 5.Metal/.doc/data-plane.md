@@ -145,7 +145,7 @@ $ kubectl drain <node-name> --ignore-daemonsets --delete-local-data
 $ kubectl delete node <node-name>
 ```
   
-#### :x: Réinitialiser le noeud
+#### :recycle: Réinitialiser le noeud
 
 - [ ] Pre-fligth `/etc/kubernetes/kubelet.conf already exists`
     
@@ -155,8 +155,8 @@ sudo kubeadm join ${CTL_PLANE}:6443 --token ${TOKEN} --discovery-token-ca-cert-h
 ```yaml
 [preflight] Running pre-flight checks
 error execution phase preflight: [preflight] Some fatal errors occurred:
-	[ERROR FileAvailable--etc-kubernetes-kubelet.conf]: /etc/kubernetes/kubelet.conf already exists
-	[ERROR FileAvailable--etc-kubernetes-pki-ca.crt]: /etc/kubernetes/pki/ca.crt already exists
+        [ERROR FileAvailable--etc-kubernetes-kubelet.conf]: /etc/kubernetes/kubelet.conf already exists
+        [ERROR FileAvailable--etc-kubernetes-pki-ca.crt]: /etc/kubernetes/pki/ca.crt already exists
 [preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
 To see the stack trace of this error execute with --v=5 or higher
 ```
