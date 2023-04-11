@@ -18,8 +18,10 @@ https://openebs.io/docs/#admin-operations
 - [ ] Executer le fichier (remplacer par le bon nom de fichier `blockdevice-xxxx-xxxx-xxx-xxx.yaml`)
 
 ```
-kubectl apply --namespace openebs --filename blockdevice-xxxx-xxxx-xxx-xxx.yaml
+$ kubectl apply --namespace openebs --filename blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7.yaml
 ```
+> blockdevice.openebs.io/blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7 created
+
 
 :warning: Bien vérifier que le fichier aient les bonnes informations du périphérique `iscsi-lv`
 
