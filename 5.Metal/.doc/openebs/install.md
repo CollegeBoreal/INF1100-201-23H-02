@@ -15,6 +15,13 @@ helm repo add openebs https://openebs.github.io/charts
 ```
 helm repo update
 ```
+> Retourne :
+```yaml
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "openebs" chart repository
+...Successfully got an update from the "bitnami" chart repository
+Update Complete. ⎈Happy Helming!⎈
+```
 
 - [ ] Installer `openebs` dans l'espace de noms `openebs` en activant `CSTOR`
 
