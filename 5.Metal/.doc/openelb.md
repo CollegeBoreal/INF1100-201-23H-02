@@ -108,7 +108,7 @@ kubectl apply --filename openelb.yaml
 
 - [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
 
-:warning Référence uniquement **ne pas éxécuter**
+:warning: Référence uniquement **ne pas éxécuter**
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
