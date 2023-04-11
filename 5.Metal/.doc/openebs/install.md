@@ -77,9 +77,9 @@ For more information,
 helm ls --namespace openebs
 ```
 > Retourne :
-<pre> 
+```yaml 
 NAME   	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART        	APP VERSION
-openebs	openebs  	1       	2021-04-04 11:25:42.579325 -0400 EDT	deployed	openebs-2.7.0	2.7.0   
-</pre>
+openebs	openebs  	1       	2023-04-10 21:46:59.765997 -0400 EDT	deployed	openebs-3.5.0	3.5.0      
+```
 
 [:back:](../#floppy_disk-le-stockage)
