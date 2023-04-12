@@ -75,6 +75,42 @@ bellatrix    Ready    <none>          43h   v1.26.3
 betelgeuse   Ready    control-plane   43h   v1.26.3
 ```
 
+k get ns
+NAME                              STATUS   AGE
+default                           Active   46h
+kube-node-lease                   Active   46h
+kube-public                       Active   46h
+kube-system                       Active   46h
+kubesphere-controls-system        Active   40h
+kubesphere-monitoring-federated   Active   40h
+kubesphere-monitoring-system      Active   40h
+kubesphere-system                 Active   40h
+openebs                           Active   41h
+openelb-system                    Active   41h
+
+:passport_control: Espace de travail (Namespaces)
+
+
+<img src=images/Lens_NS.png width='' height='' > </img>
+
+```
+k get ns
+```
+> Retourne :
+```yaml
+NAME                              STATUS   AGE
+default                           Active   46h
+kube-node-lease                   Active   46h
+kube-public                       Active   46h
+kube-system                       Active   46h
+kubesphere-controls-system        Active   40h
+kubesphere-monitoring-federated   Active   40h
+kubesphere-monitoring-system      Active   40h
+kubesphere-system                 Active   41h
+openebs                           Active   41h
+openelb-system                    Active   41h
+```
+
 :factory: Charge de travail (Workloads)
 
 
