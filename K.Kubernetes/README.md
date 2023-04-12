@@ -104,11 +104,39 @@ kubesphere-router-kubesphere-system-metrics   ClusterIP      10.106.234.252   <n
 
 <img src=images/Lens_SC.png width='' height='' > </img>
 
+```
+k get sc
+```
+> Retourne :
+```yaml
+NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  41h
+openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer   false                  41h
+standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   41h
+
+
 - [ ] Volume pour persistence Réclamé 
 
 <img src=images/Lens_PVC.png width='' height='' > </img>
+
+```
+k get pvc -n kubesphere-monitoring-system
+```
+> Retourne :
+```yaml
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+prometheus-k8s-db-prometheus-k8s-0   Bound    pvc-e8411c57-41ae-462c-bbeb-1ab05f8efc3e   20Gi       RWO            standard       40h
+```
 
 - [ ] Volume pour persistence
 
 <img src=images/Lens_PV.png width='' height='' > </img>
 
+```
+k get pv
+```
+> Retourne :
+```yaml
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                                             STORAGECLASS   REASON   AGE
+pvc-e8411c57-41ae-462c-bbeb-1ab05f8efc3e   20Gi       RWO            Delete           Bound    kubesphere-monitoring-system/prometheus-k8s-db-prometheus-k8s-0   standard                40h
+```
