@@ -3,7 +3,7 @@
 ![image](images/full-kubernetes-model-architecture.png)
 
 
-:gear: :cube: Kube Config - Configuration de grappes
+:gear: :ice_cube: Kube Config - Configuration de grappes
 
 <img src=images/Lens_Config.png width='' height='' > </img>
 
