@@ -32,7 +32,14 @@ sudo apt-get update && sudo apt-get install ca-certificates curl gnupg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-:bulb: if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+:bulb: check
+
+* if doesn't exist create `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+
+```
+file /etc/apt/keyrings/docker.gpg
+```
+> /etc/apt/keyrings/docker.gpg: OpenPGP Public Key Version 4, Created Wed Feb 22 18:36:26 2017, RSA (Encrypt or Sign, 4096 bits); User ID; Signature; OpenPGP Certificate
 
 
 - [ ] Create the docker debian repository file
@@ -101,7 +108,7 @@ sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING con
 systemctl status docker
 ```
 > Retourne :
-<pre>
+```yaml
 systemctl status docker
 ● docker.service - Docker Application Container Engine
      Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
@@ -125,10 +132,18 @@ Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.019319023Z">
 Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.174963248Z">
 Mar 31 23:23:53 bellatrix systemd[1]: Started Docker Application Container Engi>
 Mar 31 23:23:53 bellatrix dockerd[32812]: time="2023-03-31T23:23:53.183494828Z">
-</pre>
+```
 
 
-## :b: Bridges
+## :b: Ajouter votre utilisateur au groupe `docker`
+
+```
+sudo usermod -aG docker $USER
+```
+
+* Sortez de la session et revenez pour l'activer
+
+## :ab: Bridges
 
 Docker uses `iptables` and a kernel module called `br_netfilter` to manage inter-container networking. When the Docker daemon starts, it creates a variety of IPTables rules it required to operate.
 
@@ -174,9 +189,40 @@ docker.socket                          enabled         enabled
 ```
 
 
-[:back:](../#round_pushpin-installation-des-services)
+## [:back:](../#round_pushpin-installation-des-services)
 
 # References
 
 - [ ] [Container Runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
 - [ ] [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+- [ ] Default bridge (docker0) is assigned with an IP address 172.17.0.0/16.
+
+```
+systemctl status docker
+```
+```yaml
+
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-04-09 22:30:10 UTC; 1min 44s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1168503 (dockerd)
+      Tasks: 22
+     Memory: 24.6M
+        CPU: 423ms
+     CGroup: /system.slice/docker.service
+             └─1168503 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.536171132Z" level=info msg="[core] [Channel #4] Channel Connectivity change to READY" module=grpc
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.545919465Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Apr 09 22:30:09 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:09.548645469Z" level=info msg="Loading containers: start."
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.081820871Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.214736288Z" level=info msg="Loading containers: done."
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227044928Z" level=info msg="Docker daemon" commit=219f21b graphdriver=overlay2 version=23.0.2
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.227108594Z" level=info msg="Daemon has completed initialization"
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.244777223Z" level=info msg="[core] [Server #7] Server created" module=grpc
+Apr 09 22:30:10 betelgeuse systemd[1]: Started Docker Application Container Engine.
+Apr 09 22:30:10 betelgeuse dockerd[1168503]: time="2023-04-09T22:30:10.253118704Z" level=info msg="API listen on /run/docker.sock"
+```

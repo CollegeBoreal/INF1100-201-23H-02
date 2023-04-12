@@ -11,6 +11,21 @@ https://openebs.io/docs/#admin-operations
 
 > Éxécuter les commandes `kubectl` se reférant aux fichiers `blockdevice-****-****-****-****.md`
 
+* Créer un fichier par noeud et le mettre dans le répertoire de la grappe en suivant le modèle ci-dessous:
+
+- [ ] Le nom du fichier devra être sous la forme `blockdevice-xxxx-xxxx-xxx-xxx.yaml`
+
+- [ ] Executer le fichier (remplacer par le bon nom de fichier `blockdevice-xxxx-xxxx-xxx-xxx.yaml`)
+
+```
+$ kubectl apply --namespace openebs --filename blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7.yaml
+```
+> blockdevice.openebs.io/blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7 created
+
+
+:warning: Bien vérifier que le fichier aient les bonnes informations du périphérique `iscsi-lv`
+
+
 :bulb: Il devrait y avoir :three: fichiers à éxécuter
 
 
@@ -24,8 +39,8 @@ kubectl get blockdevices --namespace openebs
 > Retourne
 <pre>
 NAME                                               NODENAME    SIZE           CLAIMSTATE   STATUS   AGE
-blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03   bellatrix   107374182400   Unclaimed    Active   4m2s
-blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   3m41s
+blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7   bellatrix   107374182400   Unclaimed    Active   3m41s
+blockdevice-3fa7d473-d0f1-4532-bcd4-a402241eeff1   saiph       107374182400   Unclaimed    Active   4m2s
 blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5   rigel       107374182400   Unclaimed    Active   3m26s
 </pre>
 
@@ -60,7 +75,7 @@ spec:
        kubernetes.io/hostname: "bellatrix" # ME CHANGER VITE
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-23e1292d-32f5-4528-8f7f-3abaee070a03" # ME CHANGER VITE
+           - blockDeviceName: "blockdevice-385b4ca0-8647-4d15-aec8-6175e9a23cf7" # ME CHANGER VITE
      poolConfig:
        dataRaidGroupType: "stripe"
 
@@ -130,6 +145,7 @@ parameters:
 ```
 kubectl apply --filename csi-cstor-sc.yaml
 ```
+> storageclass.storage.k8s.io/standard created
 
 :round_pushpin: La classe par défaut de stockage `standard`
 
@@ -149,8 +165,10 @@ standard                    cstor.csi.openebs.io                                
 ```
 kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
+> storageclass.storage.k8s.io/standard patched
 
-[:back:](../../#floppy_disk-le-stockage)
+
+## [:back:](../../#floppy_disk-le-stockage)
 
 # References
 

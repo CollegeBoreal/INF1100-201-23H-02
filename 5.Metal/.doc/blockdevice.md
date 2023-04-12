@@ -125,21 +125,7 @@ spec:
 ---
 ```
 
-# :b: Créer le fichier `blockdevice`:
-
-:round_pushpin: Créer un fichier par noeud et le mettre dans le répertoire de la grappe en suivant le modèle ci-dessous:
-
-- [ ] Le nom du fichier devra être sous la forme `blockdevice-xxxx-xxxx-xxx-xxx.yaml`
-
-- [ ] Executer le fichier (remplacer par le bon nom de fichier `blockdevice-xxxx-xxxx-xxx-xxx.yaml`)
-
-```
-kubectl apply --namespace openebs --filename blockdevice-xxxx-xxxx-xxx-xxx.yaml
-```
-
-:warning: Bien vérifier que le fichier aient les bonnes informations du périphérique `iscsi-lv`
-
-[:back:](../#roll_of_paper-le-périphérique-block-device)
+## [:back:](../#roll_of_paper-le-périphérique-block-device)
 
 
 # References

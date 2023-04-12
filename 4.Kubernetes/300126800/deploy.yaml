@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  GNU nano 6.2                              deploy.yaml
+=======
+>>>>>>> a1337d2639283ab0d54218e731ffeac1f7507fb6
+>>>>>>> 9eb2bb89ce9037100af4c06b0b77ceca65fba70a
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,3 +29,10 @@ spec:
         name: nginx
         resources: {}
 status: {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a1337d2639283ab0d54218e731ffeac1f7507fb6
+>>>>>>> 9eb2bb89ce9037100af4c06b0b77ceca65fba70a
