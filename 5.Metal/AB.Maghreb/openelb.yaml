@@ -15,7 +15,7 @@ status:
     poolSize: 10
     used: 
       "10.13.237.28": "default/test-svc"
-    firstIP: 10.13.237.17
-    lastIP: 10.13.237.37
+    firstIP: 10.13.237.28
+    lastIP: 10.13.237.17
     ready: true
     v4: true
