@@ -64,6 +64,8 @@ KUBECONFIG=~/.kube/config~kind:~/.kube/config~orion \
 
 <img src=images/Lens_Nodes.png width='' height='' > </img>
 
+Les noeuds sont des serveurs, généralement sous linux, qui constituent l'infrastructure de la grappe :wheel_of_dharma: Kubernetes. Le noeud plan de contrôle (control plane) permet l'administration de la grappe, les noeuds plan de travail (worker node) constituant le plan de données (data plan) sont le chevaux de traits
+
 ```
  k get no
 ```
