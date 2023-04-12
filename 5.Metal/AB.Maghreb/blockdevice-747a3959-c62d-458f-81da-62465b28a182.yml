@@ -1,0 +1,29 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name:  blockdevice-747a3959-c62d-458f-81da-62465b28a182
+  labels:
+    kubernetes.io/hostname: rak
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: lvm
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/dm-uuid-LVM-7YBu5MuRfgkNexgBTlNvIaqrcDzfIkM1a1lK21A0XbmWyXbPnruHQ
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg-iscsi--lv
+  nodeAttributes:
+    nodeName: rak
+  path: /dev/dm-1
+---
