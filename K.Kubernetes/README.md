@@ -3,9 +3,11 @@
 ![image](images/full-kubernetes-model-architecture.png)
 
 
-:gear: Kube Config
+:gear: :cube: Kube Config - Configuration de grappes
 
 <img src=images/Lens_Config.png width='' height='' > </img>
+
+- [ ] Identifier les grappes
 
 ```
 k config get-clusters
@@ -16,14 +18,24 @@ kind-k8s
 kubernetes
 ```
 
+- [ ] Identifier les contextes (:star: signifie que la grappe `kubernetes` est sélectionée)
+
 ```
 k config get-contexts
 ```
 ```yaml
-CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
-*         kubernetes-admin@kubernetes   kubernetes   kubernetes-admin   
+CURRENT   NAME                          CLUSTER     AUTHINFO          NAMESPACE
+*         kubernetes-admin@kubernetes   kubernetes  kubernetes-admin   
 ```
 
+- [ ] regrouper plusieurs configurations dans un seul fichier `~/.kube/config`
+
+:bulb: La variable d'environnement `KUBECONFIG` permet de regrouper les grappes ensemble
+
+```
+KUBECONFIG=~/.kube/config~kind:/path/to/new/config~orion \
+    kubectl config view --flatten > ~/.kube/config
+```
 
 
 :knot: Noeuds
