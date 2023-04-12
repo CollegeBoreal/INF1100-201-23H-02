@@ -1,0 +1,30 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name:  blockdevice-80d5ffc7-d97d-4a2a-adbf-c15b73102aa5
+  labels:
+    kubernetes.io/hostname: Mississauga
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: lvm
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/dm-uuid-LVM-OSdHQV2ajb0ReuSdN61xclJ8KIUZtQlqdSoGel5HT57bH0zTl0jmEe5DDDLbQhXx
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg-iscsi--lv
+  nodeAttributes:
+    nodeName: Mississauga
+  path: /dev/dm-1
+---
+
