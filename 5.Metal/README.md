@@ -68,7 +68,12 @@ Votre grappe comprend 4 noeuds (serveurs) que vous devrez d'abord nommer
 
 - [ ] Installer le [CNI](https://kubernetes.io/docs/concepts/cluster-administration/networking/) (Container Network Interface) géré par le Service [:droplet: Kubelet](.doc/kubelet.md) :writing_hand:	 
 
-- [ ] Installer le [CRI](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) (Container Runtime Interface) géré par le Service [:whale: Docker](.doc/docker.md) :writing_hand:	 défini par l'[OCI](https://opencontainers.org) ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ )
+- [ ] Installer le [CRI](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) (Container Runtime Interface)  défini par l'[OCI](https://opencontainers.org) et géré par les Services:
+
+| Services  | Descriptions |
+|---|---------------------------------------------------------------------------|
+| [:whale: Docker](.doc/docker.md) :writing_hand:  | ( :bulb: __À installer uniquement si Docker n'est pas déjà sur le serveur__ ) |
+| [:whale2: Containerd](.doc/containerd.md) :writing_hand:	| ( :bangbang: __Installation Obligatoire__ ) |
 
 ## :ab: Les plans
 
@@ -173,13 +178,14 @@ Utiliser les [operations d'administration](.doc/openebs/adminop.md):pinching_han
 :bulb: Vérifier que la classe de stockage par **défaut** est bien **standard**
 
 ```
-$ kubectl get storageclasses        
-NAME                        PROVISIONER                                                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-openebs-device              openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-hostpath            openebs.io/local                                           Delete          WaitForFirstConsumer   false                  20h
-openebs-jiva-default        openebs.io/provisioner-iscsi                               Delete          Immediate              false                  20h
-openebs-snapshot-promoter   volumesnapshot.external-storage.k8s.io/snapshot-promoter   Delete          Immediate              false                  20h
-standard (default)          openebs.io/provisioner-iscsi                               Delete          Immediate              false                  48s
+kubectl get storageclasses        
+```
+> Retourne :
+```yaml
+NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer   false                  19m
+standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   2m35s
 ```
 
 

@@ -21,12 +21,33 @@ export KUBEVERSION=1.26.3
 ```
 sudo apt update && sudo apt -y install kubelet=${KUBEVERSION}-00
 ```
+> Retourne :
+```yaml
+Hit:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease                                  
+Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease                              
+Hit:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Hit:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]
+Fetched 8993 B in 4s (2014 B/s)                            
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+kubelet is already the newest version (1.26.3-00).
+kubelet set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+```
 
 :round_pushpin:  Prévenir l'altération (mise à jour) du service :droplet: kubelet
 
 ```
 sudo apt-mark hold kubelet
 ```
+> kubelet set on hold.
 
 
 ## :gear: Où est le fichier de service `kubelet` [drop-in file](https://stackoverflow.com/questions/59842743/what-is-a-drop-in-file-what-is-a-drop-in-directory-how-to-edit-systemd-service) (i.e. fichier systemd .conf)
@@ -54,10 +75,10 @@ ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELE
 :+1: Tester que le service `kubelet` est chargé **(loaded)**
 
 ```
-$ systemctl status kubelet
+systemctl status kubelet
 ```
 > Retourne
-<pre>
+```yaml
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
     Drop-In: /etc/systemd/system/kubelet.service.d
@@ -68,7 +89,7 @@ $ systemctl status kubelet
    Main PID: 12069 (code=exited, status=1/FAILURE)
         CPU: 138ms
 lines 1-9/9 (END)
-</pre>
+```
 
 :bulb: Appuyer sur `q` pour quitter
 
@@ -78,9 +99,9 @@ lines 1-9/9 (END)
 sudo systemctl enable kubelet && sudo systemctl start kubelet
 ```
 
-:warning: Le service `kubelet` ne sera disponible qu'après l'initialisation de la grappe `kubeadm init`
+#### :warning: Le service `kubelet` ne sera disponible qu'après l'initialisation de la grappe `kubeadm init`
 
-[:back:](../#round_pushpin-installation-des-services)
+## [:back:](../#round_pushpin-installation-des-services)
 
 # Références
 

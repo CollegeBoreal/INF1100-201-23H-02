@@ -9,6 +9,10 @@
 ```
 sudo lvcreate --name iscsi-lv --size 100G  ubuntu-vg
 ```
+> Retourne :
+<pre>
+Logical volume "iscsi-lv" created.
+</pre>
 
 - [ ] Vérifier si il a été créé
 
@@ -52,15 +56,15 @@ sudo lvcreate --name iscsi-lv --extents 100%FREE ubuntu-vg
 lsblk /dev/sda --output NAME,SIZE,TYPE,FSSIZE,FSTYPE,FSUSED,FSUSE%,MOUNTPOINT 
 ```
 > Retourne
-```
+```yaml
 NAME                        SIZE TYPE FSSIZE FSTYPE      FSUSED FSUSE% MOUNTPOINT
 sda                       273.4G disk                                  
 ├─sda1                        1M part                                  
-├─sda2                        1G part 975.9M ext4        293.4M    30% /boot
-└─sda3                    137.7G part        LVM2_member               
-  ├─ubuntu--vg-ubuntu--lv  67.9G lvm   67.9G ext4         12.4G     9% /
-  └─ubuntu--vg-iscsi--lv   67.9G lvm                                   
+├─sda2                      1.5G part   1.4G ext4          223M    15% /boot
+└─sda3                    271.9G part        LVM2_member               
+  ├─ubuntu--vg-ubuntu--lv   100G lvm   97.9G ext4           15G    15% /
+  └─ubuntu--vg-iscsi--lv    100G lvm                              
 ```
 
 
-[:back:](../#roll_of_paper-le-périphérique-block-device)
+## [:back:](../#roll_of_paper-le-périphérique-block-device)

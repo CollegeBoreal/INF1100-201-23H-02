@@ -1,0 +1,25 @@
+apiVersion: network.kubesphere.io/v1alpha2
+kind: Eip
+metadata:
+    name: openelb-layer2-eip
+    annotations:
+      eip.openelb.kubesphere.io/is-default-eip: "true"
+spec:
+<<<<<<< HEAD
+    address: 10.13.237.2-10.13.237.43  # CHANGEZ MOI VITE
+=======
+    address: 10.13.237.1-10.13.237.50  # CHANGEZ MOI VITE
+>>>>>>> bd5edd9da5376fd40f0ba6a2284896e90e07e575
+    protocol: layer2
+    interface: enp3s0f0.  # CHANGEZ MOI VITE
+    disable: false
+status:
+    occupied: false
+    usage: 1
+    poolSize: 10
+    used: 
+      "10.13.237.8": "default/test-svc" # CHANGEZ MOI VITE
+    firstIP: 10.13.237.2 # CHANGEZ MOI VITE
+    lastIP: 10.13.237.43 # CHANGEZ MOI VITE
+    ready: true
+    v4: true
