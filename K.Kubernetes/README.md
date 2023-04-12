@@ -82,22 +82,6 @@ betelgeuse   Ready    control-plane   43h   v1.26.3
 
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
 
-:chains: Réseaux
-
-:round_pushpin: Service
-
-<img src=images/Lens_Services.png width='' height='' > </img>
-
-```
-k get svc -n kubesphere-controls-system
-```
-> Retourne :
-```yaml
-NAME                                          TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                      AGE
-default-http-backend                          ClusterIP      10.100.28.11     <none>         80/TCP                       40h
-kubesphere-router-kubesphere-system           LoadBalancer   10.109.112.117   10.13.15.200   80:31004/TCP,443:31317/TCP   16h
-kubesphere-router-kubesphere-system-metrics   ClusterIP      10.106.234.252   <none>         10254/TCP                    16h
-```
 :roll_of_paper: Stockage
 
 - [ ] Classe de stockage (Standard)
@@ -139,4 +123,21 @@ k get pv
 ```yaml
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                                             STORAGECLASS   REASON   AGE
 pvc-e8411c57-41ae-462c-bbeb-1ab05f8efc3e   20Gi       RWO            Delete           Bound    kubesphere-monitoring-system/prometheus-k8s-db-prometheus-k8s-0   standard                40h
+```
+
+:chains: Réseaux
+
+:round_pushpin: Service
+
+<img src=images/Lens_Services.png width='' height='' > </img>
+
+```
+k get svc -n kubesphere-controls-system
+```
+> Retourne :
+```yaml
+NAME                                          TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                      AGE
+default-http-backend                          ClusterIP      10.100.28.11     <none>         80/TCP                       40h
+kubesphere-router-kubesphere-system           LoadBalancer   10.109.112.117   10.13.15.200   80:31004/TCP,443:31317/TCP   16h
+kubesphere-router-kubesphere-system-metrics   ClusterIP      10.106.234.252   <none>         10254/TCP                    16h
 ```
