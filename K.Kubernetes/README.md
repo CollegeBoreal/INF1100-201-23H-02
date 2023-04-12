@@ -2,6 +2,12 @@
 
 ![image](images/full-kubernetes-model-architecture.png)
 
+
+:gear: Kube Config
+
+<img src=images/Lens_Config.png width='' height='' > </img>
+
+
 :knot: Noeuds
 
 <img src=images/Lens_Nodes.png width='' height='' > </img>
