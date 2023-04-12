@@ -7,6 +7,9 @@ Google exécute des charges de travail conteneurisées (containerized workloads)
 
 ![image](images/full-kubernetes-model-architecture.png)
 
+Acteurs: 
+* Le `DevOps` s'occupe de gérer la grappe et mettre à disposition des utilisateurs les applications
+* Les `Utilisateurs` consomment des services à travers les différentes voix de procuration (__proxy__) pour accéder aux applications
 
 :gear: :ice_cube: Kube Config - Configuration de grappes
 
