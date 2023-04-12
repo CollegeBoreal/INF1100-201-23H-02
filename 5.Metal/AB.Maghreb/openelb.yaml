@@ -5,17 +5,17 @@ metadata:
     annotations:
       eip.openelb.kubesphere.io/is-default-eip: "true"
 spec:
-    address: 10.13.237.17-10.13.237.37  # CHANGEZ MOI VITE
+    address: 10.13.237.17-10.13.237.37
     protocol: layer2
-    interface: enp2s0f0.  # CHANGEZ MOI VITE
+    interface: enp2s0f0
     disable: false
 status:
     occupied: false
     usage: 1
     poolSize: 10
     used: 
-      "10.13.237.17": "default/test-svc" # CHANGEZ MOI VITE
-    firstIP: 10.13.237.17 # CHANGEZ MOI VITE
-    lastIP: 10.13.237.37 # CHANGEZ MOI VITE
+      "10.13.237.28": "default/test-svc"
+    firstIP: 10.13.237.17
+    lastIP: 10.13.237.37
     ready: true
     v4: true
