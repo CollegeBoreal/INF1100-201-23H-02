@@ -2,5 +2,4 @@
 
 ![image](images/full-kubernetes-model-architecture.png)
 
-
-![image](images/grappe.png.png)
+<img src=images/Lens_Nodes.png width='' height='' > </img>
