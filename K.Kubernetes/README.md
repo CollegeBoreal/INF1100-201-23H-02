@@ -12,6 +12,10 @@ Google exécute des charges de travail conteneurisées (containerized workloads)
 
 <img src=images/Lens_Config.png width='' height='' > </img>
 
+- [ ] Utilité du :ice_cube: `Kube Config`
+
+C'est le fichier qui comporte les certificats, clés publiques et privés permettant d'accèder à la grappe
+
 - [ ] Identifier les grappes
 
 ```
