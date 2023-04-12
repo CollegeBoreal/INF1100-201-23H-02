@@ -18,15 +18,25 @@ kind-k8s
 kubernetes
 ```
 
-- [ ] Identifier les contextes (:star: signifie que la grappe `kubernetes` est sélectionée)
+- [ ] Identifier les contextes (:star: signifie que la grappe `kind-k8s` est sélectionée)
 
 ```
 k config get-contexts
 ```
 ```yaml
-CURRENT   NAME                          CLUSTER     AUTHINFO          NAMESPACE
-*         kubernetes-admin@kubernetes   kubernetes  kubernetes-admin   
+CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
+*         kind-k8s                      kind-k8s     kind-k8s           
+          kubernetes-admin@kubernetes   kubernetes   kubernetes-admin   
 ```
+
+- [ ] Changer de contexte
+
+```
+k config use-context kubernetes-admin@kubernetes
+```
+> Switched to context "kubernetes-admin@kubernetes".
+
+
 
 - [ ] regrouper plusieurs configurations dans un seul fichier `~/.kube/config`
 
