@@ -70,7 +70,7 @@ $ ip addr | grep 10.13.237
 - [ ] modifiez les informations du réservoir d'IP dans le champ `{spec.address}` (i.e. `10.13.237.8-10.13.237.11`) séparé par un `-`
 > le réservoir d'IP représente le premier serveur, soit le plan de contrôle :control_knobs: aux derniers serveurs :1st_place_medal:, :2nd_place_medal:, :3rd_place_medal: noeuds de la grappe  
 - [ ] modifiez l'informations de l'interface "NIC" dans le champ `{spec.interface}` (i.e. `enp3s0f0`)
-- [ ] après avoir modifier les informations sauvegarder sous le nom `porterlb.md` dans le répertoire de votre grappe
+- [ ] après avoir modifier les informations sauvegarder sous le nom `openelb.yaml` dans le répertoire de votre grappe
 - [ ] Exécuter la commande `kubectl` à partir du fichier.
 
 
@@ -115,18 +115,18 @@ kubectl apply --filename openelb.yaml
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
-En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que toutes les cartes réseaux de la grappe Kubernetes cessent de répondre aux requêtes `ARP` des autres cartes réseaux et que Porter gère les requêtes `ARP` à leur place.
+En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que toutes les cartes réseaux de la grappe Kubernetes cessent de répondre aux requêtes `ARP` des autres cartes réseaux et que `OpenELB` gère les requêtes `ARP` à leur place.
 
 - [ ] Exécuter la commande suivante pour [éditer](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit) le `kube-proxy ConfigMap`:
 
 ```
-$ kubectl edit configmap kube-proxy --namespace kube-system
+kubectl edit configmap kube-proxy --namespace kube-system
 ```
 
 :bulb: Pour utiliser `nano` en tant qu'éditeur
 
 ```
-$ KUBE_EDITOR="nano" kubectl edit configmap kube-proxy --namespace kube-system
+KUBE_EDITOR="nano" kubectl edit configmap kube-proxy --namespace kube-system
 ```
 
 - [ ] Dans la configuration `kube-proxy ConfigMap YAML`, mettre `data.config.conf.ipvs.strictARP` à `true`.
@@ -139,21 +139,21 @@ ipvs:
 - [ ] Exécutez la commande suivante pour redémarrer `kube-proxy`:
 
 ```
-$ kubectl rollout restart daemonset kube-proxy --namespace kube-system
+kubectl rollout restart daemonset kube-proxy --namespace kube-system
 ```
 
 ## :round_pushpin: Spécifiez la carte réseau à utiliser pour Porter
 
-Si le nœud sur lequel Porter est installé a plusieurs «NIC», vous devez spécifier le «NIC» utilisé pour Porter en mode «Layer 2». Vous pouvez ignorer cette étape si le nœud n'a qu'un seul «NIC».
+Si le nœud sur lequel `OpenELB` est installé a plusieurs «NIC», vous devez spécifier le «NIC» utilisé pour `OpenELB` en mode «Layer 2». Vous pouvez ignorer cette étape si le nœud n'a qu'un seul «NIC».
 
 Exécuter la commande suivante sur :control_knobs: le plan de contrôle pour annoter le `NIC` à une adresse IP spécifique:
 
 - [ ] remplacer `betelgeuse` par le nom du serveur de votre plan de contrôle
-- [ ] remplacer l'adress IP `10.13.237.10` par l'adresse du serveur de votre plan de contrôle
+- [ ] remplacer l'adress IP `10.13.15.200` par l'adresse du serveur de votre plan de contrôle
 
 ```
-$ kubectl annotate nodes betelgeuse \
-          layer2.porter.kubesphere.io/v1alpha1="10.13.237.10"
+kubectl annotate nodes betelgeuse \
+        layer2.porter.kubesphere.io/v1alpha1="10.13.15.200"
 ```
 
 

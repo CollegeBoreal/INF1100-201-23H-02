@@ -1,0 +1,31 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name: blockdevice-fc54705b-d594-4056-9f05-8362f0296227
+  labels:
+    kubernetes.io/hostname: brampton
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: disk
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/dm-uuid-LVM-ogVwRjNzrXG7TncO7GdtPhZjB1rktjKqDkJNnbfbJKfItildMxtbPihIvbGZf6nG
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg/ubuntu-vg/iscsi-lv
+  nodeAttributes:
+    nodeName: brampton
+  path: /dev/dm-1
+---
+
+

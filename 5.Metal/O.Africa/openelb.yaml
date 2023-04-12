@@ -5,7 +5,11 @@ metadata:
     annotations:
       eip.openelb.kubesphere.io/is-default-eip: "true"
 spec:
+<<<<<<< HEAD
     address: 10.13.237.2-10.13.237.43  # CHANGEZ MOI VITE
+=======
+    address: 10.13.237.1-10.13.237.50  # CHANGEZ MOI VITE
+>>>>>>> bd5edd9da5376fd40f0ba6a2284896e90e07e575
     protocol: layer2
     interface: enp3s0f0.  # CHANGEZ MOI VITE
     disable: false
