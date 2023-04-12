@@ -38,7 +38,7 @@ statut_du_service() {
 #
 # --------------------------------------
 
-source ./.scripts/students.sh --source-only
+source ../.scripts/students.sh --source-only
    
 echo "# Participation au `date +"%d-%m-%Y %H:%M"`"
 echo ""
@@ -72,13 +72,10 @@ echo "| :green_heart:  | Active: active (running)          | En marche          
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id: | Interne | ssh | :whale: Docker | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |"
-echo "|------|-------------|---------|-----|----------------|-------------------|------------------|----------------|"
+echo "| Boréal :id: | Interne | ssh | :whale: Docker | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |"
+echo "|-------------|---------|-----|----------------|-------------------|------------------|----------------|"
 
 NOSSH=" :x: | :x: | :x: | :x: | :x: |"
-
-IFS=";" read -r -a numbers <<< "${NUMBERS[0]}"
-# echo $NUMBERS
 
 i=0
 OK=":white_check_mark:"
@@ -86,18 +83,8 @@ KO=":x:"
 
 for id in "${ETUDIANTS[@]}"
 do
-   LINES=${SERVERS[${i}]}
-   for y in {0..3}
-   do
-
-     IFS=";" read -r -a arr <<< "${LINES}"
-
-     SERVER="${arr[${y}]}"
+     SERVER=${SERVERS[${i}]}
      # echo "SERVER : ${SERVER}"
-     # echo
-
-     NUMBER="${numbers[${i}]}"
-     # echo "NUMBER : ${NUMBER}"
      # echo
 
      VERSION=`ssh -i ~/.ssh/b300098957@ramena.pk \
@@ -127,7 +114,7 @@ do
           -o ConnectTimeout=5 ${SERVER} sudo lvs ubuntu-vg/iscsi-lv --noheadings 2>/dev/null`
      # echo $LVG
 
-     VALUE="| ${NUMBER} | ${id} - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVER}\` |"
+     VALUE="| ${id} - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | \`ssh ${SERVER}\` |"
 
      if [[ $VERSION == *"Ubuntu"* ]]; then
 
@@ -154,7 +141,6 @@ do
          VALUE="${VALUE} ${KO} | ${NOSSH}"
      fi
      echo ${VALUE}
-   done
    let "i++"
 
 done

@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+  GNU nano 6.2                              deploy.yaml
+=======
+>>>>>>> a1337d2639283ab0d54218e731ffeac1f7507fb6
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
+<<<<<<< HEAD
+
+=======
+>>>>>>> a1337d2639283ab0d54218e731ffeac1f7507fb6

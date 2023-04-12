@@ -21,14 +21,52 @@ k create deploy apache --image=apache:2.4.54 --replicas=3
 
 - [ ] Vérifier le déploiement
 
+:x: Les conteneurs `READY(0/3)` ne sont pas créés
+
 ```
 k get deploy 
 ```
 > Outputs :
 <pre>
-NAME   READY UP-TO-DATE AVAILABLE AGE 
-apache 3/3   3          3         14s
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+apache   0/3     3            0           25s
 </pre>
+
+- [ ] Vérifier  les logs
+
+:x: image can't be pulled - L'image n'existe pas
+
+```
+k logs deploy/apache
+```
+> Retourne :
+<pre>
+Found 3 pods, using pod/apache-7bddcd464d-lgj5x
+Error from server (BadRequest): container "apache" in pod "apache-7bddcd464d-lgj5x" is waiting to start: image can't be pulled
+</pre>
+
+
+- [ ] Changer l'image d'origine
+
+* changer le nom de l'image à `httpd:alpine`
+
+```
+k set image deploy apache apache=httpd:alpine
+```
+
+* Vérifier le déploiement
+
+:heavy_check_mark: Les conteneurs `READY(3/3)` sont créés
+
+```
+k get deploy 
+```
+> Retourne :
+<pre> 
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+apache   3/3     3            3           4m4s
+</pre>
+
 
 - [ ] Augmenter les répliques
 
@@ -51,11 +89,6 @@ apache-74f79bcc68-x7bfw 1/1   Running 0        33s
 apache-74f79bcc68-xdx4b 1/1   Running 0        7s
 </pre>
 
-- [ ] Changer l'image d'origine
-
-```
-k set image deploy apache apache=httpd:alpine
-```
 
 :round_pushpin: En mode déclaratif
 

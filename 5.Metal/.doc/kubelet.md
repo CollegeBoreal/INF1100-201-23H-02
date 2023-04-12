@@ -13,7 +13,7 @@
 - [ ] Choisir une version spécifique de Kubernetes
 
 ```
-export KUBEVERSION=1.18.6
+export KUBEVERSION=1.26.3
 ``` 
 
 - [ ] Commencer l'installation
@@ -21,12 +21,33 @@ export KUBEVERSION=1.18.6
 ```
 sudo apt update && sudo apt -y install kubelet=${KUBEVERSION}-00
 ```
+> Retourne :
+```yaml
+Hit:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease                                  
+Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease                              
+Hit:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Hit:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]
+Fetched 8993 B in 4s (2014 B/s)                            
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+kubelet is already the newest version (1.26.3-00).
+kubelet set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+```
 
 :round_pushpin:  Prévenir l'altération (mise à jour) du service :droplet: kubelet
 
 ```
 sudo apt-mark hold kubelet
 ```
+> kubelet set on hold.
 
 
 ## :gear: Où est le fichier de service `kubelet` [drop-in file](https://stackoverflow.com/questions/59842743/what-is-a-drop-in-file-what-is-a-drop-in-directory-how-to-edit-systemd-service) (i.e. fichier systemd .conf)
@@ -34,22 +55,43 @@ sudo apt-mark hold kubelet
 ```
 sudo cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ```
+> Retourne
+<pre>
+# Note: This dropin only works with kubeadm and kubelet v1.11+
+[Service]
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"
+Environment="KUBELET_CONFIG_ARGS=--config=/var/lib/kubelet/config.yaml"
+# This is a file that "kubeadm init" and "kubeadm join" generates at runtime, populating the KUBELET_KUBEADM_ARGS variable dynamically
+EnvironmentFile=-/var/lib/kubelet/kubeadm-flags.env
+# This is a file that the user can use for overrides of the kubelet args as a last resort. Preferably, the user should use
+# the .NodeRegistration.KubeletExtraArgs object in the configuration files instead. KUBELET_EXTRA_ARGS should be sourced from this file.
+EnvironmentFile=-/etc/default/kubelet
+ExecStart=
+ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS
+</pre>
 
 ## :one: Tout de suite après l'installation du service
 
 :+1: Tester que le service `kubelet` est chargé **(loaded)**
 
 ```
-$ systemctl status kubelet
+systemctl status kubelet
+```
+> Retourne
+```yaml
 ● kubelet.service - kubelet: The Kubernetes Node Agent
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
     Drop-In: /etc/systemd/system/kubelet.service.d
              └─10-kubeadm.conf
-     Active: activating (auto-restart) (Result: exit-code) since Sun 2021-02-14 11:30:15 UTC; 2s ago
+     Active: activating (auto-restart) (Result: exit-code) since Fri 2023-03-31 20:46:50 UTC; 6s ago
        Docs: https://kubernetes.io/docs/home/
-    Process: 315103 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EX>
-   Main PID: 315103 (code=exited, status=255/EXCEPTION)
+    Process: 12069 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code=exited, >
+   Main PID: 12069 (code=exited, status=1/FAILURE)
+        CPU: 138ms
+lines 1-9/9 (END)
 ```
+
+:bulb: Appuyer sur `q` pour quitter
 
 ## :two: Démarrer le :droplet: service `kubelet`
 
@@ -57,9 +99,9 @@ $ systemctl status kubelet
 sudo systemctl enable kubelet && sudo systemctl start kubelet
 ```
 
-:warning: Le service `kubelet` ne sera disponible qu'après l'initialisation de la grappe `kubeadm init`
+#### :warning: Le service `kubelet` ne sera disponible qu'après l'initialisation de la grappe `kubeadm init`
 
-[:back:](../#round_pushpin-installation-des-services)
+## [:back:](../#round_pushpin-installation-des-services)
 
 # Références
 
@@ -82,7 +124,7 @@ Desired=Unknown/Install/Remove/Purge/Hold
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name           Version      Architecture Description
 +++-==============-============-============-=================================
-hi  kubelet        1.23.5-00    amd64        Kubernetes Node Agent
+ii  kubelet        1.26.3-00    amd64        Kubernetes Node Agent
 ```
 
 - [ ] Si ce n'est pas la bonne version, 
@@ -106,10 +148,10 @@ hi  kubelet        1.23.5-00    amd64        Kubernetes Node Agent
      - [ ] Choisir une version spécifique de Kubernetes
 
      ```
-     export KUBEVERSION=1.18.6
+     export KUBEVERSION=1.26.3
      ``` 
 
-     - [ ] reCommencer l'installation
+     - [ ] reCommencer l'installation (incluant kubeadm)
 
      ```
      sudo apt -y install kubelet=${KUBEVERSION}-00 && sudo apt -y install kubeadm=${KUBEVERSION}-00
