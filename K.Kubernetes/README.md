@@ -13,6 +13,7 @@ k config get-clusters
 ```yaml
 NAME
 kubernetes
+``
 
 ```
 k config get-contexts
