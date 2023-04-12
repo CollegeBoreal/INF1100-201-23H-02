@@ -18,7 +18,7 @@ spec:
   devlinks:
   - kind: by-id
     links:
-    - /dev/disk/by-id/dm-uuid-LVM-7YBu5MuRfgkNexgBTlNvIaqrcDzfIkM1a1lK21A0XbmWyXbPnruHQ
+    - /dev/disk/by-id/dm-uuid-LVM-7YBu5MuRfgkNexgBTlNvIaqrcDzfIkM1a1lK21A0XbmWyXbPnruHQPrIq1SZFPBb
     - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv
   - kind: by-path
     links:
