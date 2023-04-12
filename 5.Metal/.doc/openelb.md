@@ -120,13 +120,13 @@ En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que tout
 - [ ] Exécuter la commande suivante pour [éditer](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit) le `kube-proxy ConfigMap`:
 
 ```
-$ kubectl edit configmap kube-proxy --namespace kube-system
+kubectl edit configmap kube-proxy --namespace kube-system
 ```
 
 :bulb: Pour utiliser `nano` en tant qu'éditeur
 
 ```
-$ KUBE_EDITOR="nano" kubectl edit configmap kube-proxy --namespace kube-system
+KUBE_EDITOR="nano" kubectl edit configmap kube-proxy --namespace kube-system
 ```
 
 - [ ] Dans la configuration `kube-proxy ConfigMap YAML`, mettre `data.config.conf.ipvs.strictARP` à `true`.
@@ -144,16 +144,16 @@ kubectl rollout restart daemonset kube-proxy --namespace kube-system
 
 ## :round_pushpin: Spécifiez la carte réseau à utiliser pour Porter
 
-Si le nœud sur lequel Porter est installé a plusieurs «NIC», vous devez spécifier le «NIC» utilisé pour Porter en mode «Layer 2». Vous pouvez ignorer cette étape si le nœud n'a qu'un seul «NIC».
+Si le nœud sur lequel `OpenELB` est installé a plusieurs «NIC», vous devez spécifier le «NIC» utilisé pour `OpenELB` en mode «Layer 2». Vous pouvez ignorer cette étape si le nœud n'a qu'un seul «NIC».
 
 Exécuter la commande suivante sur :control_knobs: le plan de contrôle pour annoter le `NIC` à une adresse IP spécifique:
 
 - [ ] remplacer `betelgeuse` par le nom du serveur de votre plan de contrôle
-- [ ] remplacer l'adress IP `10.13.237.10` par l'adresse du serveur de votre plan de contrôle
+- [ ] remplacer l'adress IP `10.13.15.200` par l'adresse du serveur de votre plan de contrôle
 
 ```
 kubectl annotate nodes betelgeuse \
-        layer2.porter.kubesphere.io/v1alpha1="10.13.237.10"
+        layer2.porter.kubesphere.io/v1alpha1="10.13.15.200"
 ```
 
 
