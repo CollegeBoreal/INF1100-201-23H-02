@@ -33,7 +33,7 @@ CURRENT   NAME                          CLUSTER     AUTHINFO          NAMESPACE
 :bulb: La variable d'environnement `KUBECONFIG` permet de regrouper les grappes ensemble
 
 ```
-KUBECONFIG=~/.kube/config~kind:/path/to/new/config~orion \
+KUBECONFIG=~/.kube/config~kind:~/.kube/config~orion \
     kubectl config view --flatten > ~/.kube/config
 ```
 
