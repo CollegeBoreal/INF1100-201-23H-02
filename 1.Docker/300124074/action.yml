@@ -1,0 +1,17 @@
+name: "Welcome to action"
+description: "Good actions"
+author: "koinaag@github.com"
+
+inputs:
+  MY_NAME:
+    description: "Qui est la?"
+    required: true
+    default: "Monde"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "black"
