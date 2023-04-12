@@ -9,7 +9,7 @@ spec:
        kubernetes.io/hostname: "vegeta"
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-18918f5d-e3d0-4e77-9126-febbfbf0366c" # ME CHANGER VITE
+           - blockDeviceName: "blockdevice-18918f5d-e3d0-4e77-9126-febbfbf0366c" 
      poolConfig:
        dataRaidGroupType: "stripe"
 
