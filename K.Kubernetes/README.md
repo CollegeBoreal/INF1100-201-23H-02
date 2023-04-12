@@ -3,7 +3,7 @@
 
 [Borg: The Predecessor to Kubernetes](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes)
 
-Google exécute des charges de travail conteneurisées (containerized workloads) en production depuis plus d’une décennie.  Qu’il s’agisse d’emplois de service tels que les serveurs Web frontaux et les serveurs avec état (base de données), de systèmes d’infrastructure tels que `Bigtable` et `Spanner` ou de structures par lots telles que `MapReduce` et `Millwheel`, pratiquement tout chez Google fonctionne sous forme de __conteneur__. Aujourd’hui, nous avons dévoilé Borg, le système interne de gestion de cluster orienté conteneurs de Google, dont on parle depuis longtemps, en publiant des détails lors de la conférence académique sur les systèmes informatiques [Eurosys](http://eurosys2015.labri.fr/). Vous pouvez trouver le document [ici](https://research.google.com/pubs/pub43438.html).
+Google exécute des charges de travail conteneurisées (containerized workloads) en production depuis plus d’une décennie.  Qu’il s’agisse d’emplois de service tels que les serveurs Web frontaux et les serveurs avec état (base de données), de systèmes d’infrastructure tels que `Bigtable` et `Spanner` ou de structures par lots telles que `MapReduce` et `Millwheel`, pratiquement tout chez Google fonctionne sous forme de __conteneur__. Aujourd’hui, nous avons dévoilé Borg, le système interne de gestion de cluster orienté __conteneurs__ de Google, dont on parle depuis longtemps, en publiant des détails lors de la conférence académique sur les systèmes informatiques [Eurosys](http://eurosys2015.labri.fr/). Vous pouvez trouver le document [ici](https://research.google.com/pubs/pub43438.html).
 
 ![image](images/full-kubernetes-model-architecture.png)
 
