@@ -1,0 +1,23 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
+metadata:
+ name: cstor-storage
+ namespace: openebs
+spec:
+ pools:
+   - nodeSelector:
+       kubernetes.io/hostname: "vegeta"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-18918f5d-e3d0-4e77-9126-febbfbf0366c" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "lotus"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-440cdef9-a6b6-4bd8-92dc-ae8dbeb46a98"
+     poolConfig:
+       dataRaidGroupType: "stripe"
+---
