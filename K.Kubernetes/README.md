@@ -82,12 +82,22 @@ betelgeuse   Ready    control-plane   43h   v1.26.3
 
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
 
-:chaine: Réseaux
+:chains: Réseaux
 
 :round_pushpin: Service
 
 <img src=images/Lens_Services.png width='' height='' > </img>
 
+```
+k get svc -n kubesphere-controls-system
+```
+> Retourne :
+```yaml
+NAME                                          TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                      AGE
+default-http-backend                          ClusterIP      10.100.28.11     <none>         80/TCP                       40h
+kubesphere-router-kubesphere-system           LoadBalancer   10.109.112.117   10.13.15.200   80:31004/TCP,443:31317/TCP   16h
+kubesphere-router-kubesphere-system-metrics   ClusterIP      10.106.234.252   <none>         10254/TCP                    16h
+```
 :roll_of_paper: Stockage
 
 - [ ] Classe de stockage (Standard)
