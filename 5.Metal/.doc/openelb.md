@@ -9,20 +9,45 @@
 ```
 kubectl apply -f https://raw.githubusercontent.com/openelb/openelb/master/deploy/openelb.yaml
 ```
+> Retourne :
+```yaml
+namespace/openelb-system created
+customresourcedefinition.apiextensions.k8s.io/bgpconfs.network.kubesphere.io created
+customresourcedefinition.apiextensions.k8s.io/bgppeers.network.kubesphere.io created
+customresourcedefinition.apiextensions.k8s.io/eips.network.kubesphere.io created
+serviceaccount/kube-keepalived-vip created
+serviceaccount/openelb-admission created
+role.rbac.authorization.k8s.io/leader-election-role created
+role.rbac.authorization.k8s.io/openelb-admission created
+clusterrole.rbac.authorization.k8s.io/kube-keepalived-vip created
+clusterrole.rbac.authorization.k8s.io/openelb-admission created
+clusterrole.rbac.authorization.k8s.io/openelb-manager-role created
+rolebinding.rbac.authorization.k8s.io/leader-election-rolebinding created
+rolebinding.rbac.authorization.k8s.io/openelb-admission created
+clusterrolebinding.rbac.authorization.k8s.io/kube-keepalived-vip created
+clusterrolebinding.rbac.authorization.k8s.io/openelb-admission created
+clusterrolebinding.rbac.authorization.k8s.io/openelb-manager-rolebinding created
+service/openelb-admission created
+deployment.apps/openelb-manager created
+job.batch/openelb-admission-create created
+job.batch/openelb-admission-patch created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission created
+validatingwebhookconfiguration.admissionregistration.k8s.io/openelb-admission created
+```
 
-- [ ] Vérifier que porter est installé
+- [ ] Vérifier que `openelb` est installé
 
 ```
 kubectl get po -n openelb-system
 ```
 > Retourne :
-<pre> 
-NAME                             READY   STATUS      RESTARTS   AGE
-openelb-admission-create-2tdnp    0/1     Completed   0          8m7s
-openelb-admission-patch-vlnjg     0/1     Completed   2          8m7s
-openelb-manager-6d78f6fb7-kpl2k   1/1     Running     0          8m7s
-</pre>
-
+```yaml
+NAME                              READY   STATUS      RESTARTS   AGE
+openelb-admission-create-g6njd    0/1     Completed   0          41s
+openelb-admission-patch-67s8r     0/1     Completed   0          41s
+openelb-keepalive-vip-8mtzf       1/1     Running     0          27s
+openelb-manager-d6df4dfc4-24lml   1/1     Running     0          41s
+```
 
 ## :round_pushpin: Créer l'objet EIP (External IP) 
 
@@ -34,8 +59,11 @@ Exécutez la commande suivante pour créer un fichier YAML pour l '«objet Eip»
 
 ```
 $ ip addr | grep 10.13.237
-    inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
 ```
+> Retourne :
+<pre>
+    inet 10.13.237.14/24 brd 10.13.237.255 scope global enp3s0f0
+</pre>
 
 :round_pushpin: Sauveguarder le fichier `openelb.yaml`
 
@@ -75,14 +103,15 @@ status:
 ```
 kubectl apply --filename openelb.yaml
 ```
+> eip.network.kubesphere.io/openelb-layer2-eip created
 
-[:back:](../#rocket-les-services)
+## [:back:](../#rocket-les-services)
 
 # References
 
 - [ ] [Configure IP Address Pools Using Eip](https://openelb.io/docs/getting-started/configuration/configure-ip-address-pools-using-eip)
 
-:warning Référence uniquement **ne pas éxécuter**
+:warning: Référence uniquement **ne pas éxécuter**
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
