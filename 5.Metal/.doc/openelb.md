@@ -115,7 +115,7 @@ kubectl apply --filename openelb.yaml
 
 ## :round_pushpin: Permettre strictARP à kube-proxy
 
-En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que toutes les cartes réseaux de la grappe Kubernetes cessent de répondre aux requêtes `ARP` des autres cartes réseaux et que Porter gère les requêtes `ARP` à leur place.
+En mode Couche 2, vous devez activer `strictARP` pour `kube-proxy` afin que toutes les cartes réseaux de la grappe Kubernetes cessent de répondre aux requêtes `ARP` des autres cartes réseaux et que `OpenELB` gère les requêtes `ARP` à leur place.
 
 - [ ] Exécuter la commande suivante pour [éditer](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit) le `kube-proxy ConfigMap`:
 
