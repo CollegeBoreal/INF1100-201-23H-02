@@ -1,4 +1,4 @@
-# Participation au 11-04-2023 16:55
+# Participation au 12-04-2023 06:45
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -16,7 +16,7 @@
 
 |:hash:| Boréal :id:                | Interne            | Version | K8S         |
 |------|----------------------------|--------------------|---------|-------------|
-| 0 | 100027015 - <image src='https://avatars.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | `ssh steeve@10.13.237.42` | kind v0.17.0 go1.19.2 linux/amd64 | :bug: |
+| 0 | 100027015 - <image src='https://avatars.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | `ssh steeve@10.13.237.42` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 1 | 100028762 - <image src='https://avatars.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | `ssh madmax@10.13.237.29` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 2 | 300117811 - <image src='https://avatars.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh mahanc@10.13.237.21` | :x: | :x: |
 | 3 | 300119623 - <image src='https://avatars.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | `ssh mariodeg@10.13.237.13` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
@@ -36,7 +36,7 @@
 | 17 | 300126966 - <image src='https://avatars.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | `ssh bakmomo@10.13.237.31` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 18 | 300127065 - <image src='https://avatars.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | `ssh salimata1@10.13.237.10` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 19 | 300127290 - <image src='https://avatars.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | `ssh sara@10.13.237.35` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
-| 20 | 300128276 - <image src='https://avatars.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | `ssh ballo78@10.13.237.41` | kind v0.17.0 go1.19.2 linux/amd64 | :bug: |
+| 20 | 300128276 - <image src='https://avatars.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | `ssh ballo78@10.13.237.41` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 21 | 300128326 - <image src='https://avatars.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | `ssh mamadou@10.13.237.2` | kind v0.17.0 go1.19.2 linux/amd64 | :bug: |
 | 22 | 300128566 - <image src='https://avatars.githubusercontent.com/u/101542761?s=460&v=4' width=20 height=20></image> | `ssh diarra1@10.13.237.43` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 23 | 300128694 - <image src='https://avatars.githubusercontent.com/u/105947276?s=460&v=4' width=20 height=20></image> | `ssh walid@10.13.237.27` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
