@@ -139,7 +139,7 @@ ipvs:
 - [ ] Exécutez la commande suivante pour redémarrer `kube-proxy`:
 
 ```
-$ kubectl rollout restart daemonset kube-proxy --namespace kube-system
+kubectl rollout restart daemonset kube-proxy --namespace kube-system
 ```
 
 ## :round_pushpin: Spécifiez la carte réseau à utiliser pour Porter
@@ -152,8 +152,8 @@ Exécuter la commande suivante sur :control_knobs: le plan de contrôle pour ann
 - [ ] remplacer l'adress IP `10.13.237.10` par l'adresse du serveur de votre plan de contrôle
 
 ```
-$ kubectl annotate nodes betelgeuse \
-          layer2.porter.kubesphere.io/v1alpha1="10.13.237.10"
+kubectl annotate nodes betelgeuse \
+        layer2.porter.kubesphere.io/v1alpha1="10.13.237.10"
 ```
 
 
