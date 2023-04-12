@@ -7,6 +7,22 @@
 
 <img src=images/Lens_Config.png width='' height='' > </img>
 
+```
+k config get-clusters
+```
+```yaml
+NAME
+kubernetes
+
+```
+k config get-contexts
+```
+```yaml
+CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
+*         kubernetes-admin@kubernetes   kubernetes   kubernetes-admin   
+```
+
+
 
 :knot: Noeuds
 
