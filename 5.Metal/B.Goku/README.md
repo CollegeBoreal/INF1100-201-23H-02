@@ -60,19 +60,7 @@ src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Gok
 <img src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/VOILA!.png'>
 
 
- ## :b: get nodes/config get-contexts 
- 
- ```
- k config get-contexts
- ```
- ```
- k get nodes
- ```
- > Retourne :
- <pre>
- <img 
-src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_get_podes:contexts.png'>
- </pre>
+
  
  # Cluster-info
  ```
