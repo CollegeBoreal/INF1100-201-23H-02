@@ -41,6 +41,7 @@ Find your local number: https://collegeboreal.zoom.us/u/aXdYgZW8F
 | :two: |16-02-23| [2.Compose](2.Compose)       | â Noter :x: |
 | :three: |30-03-23| [3.kind](3.kind)       | â Noter :x: |
 | :four: |10-04-23| [4.Kubernetes](4.Kubernetes)       | â Noter :x: |
+| :five: |20-04-23| [5.Metal](5.Metal)       | â Noter :x: |
 
 
 ## Resultats d'Apprentissage du Cours
