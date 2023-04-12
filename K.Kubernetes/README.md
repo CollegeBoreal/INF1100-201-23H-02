@@ -87,3 +87,18 @@ betelgeuse   Ready    control-plane   43h   v1.26.3
 :round_pushpin: Service
 
 <img src=images/Lens_Services.png width='' height='' > </img>
+
+:roll_of_paper: Stockage
+
+- [ ] Classe de stockage (Standard)
+
+<img src=images/Lens_SC.png width='' height='' > </img>
+
+- [ ] Volume pour persistence Réclamé 
+
+<img src=images/Lens_PVC.png width='' height='' > </img>
+
+- [ ] Volume pour persistence
+
+<img src=images/Lens_PV.png width='' height='' > </img>
+
