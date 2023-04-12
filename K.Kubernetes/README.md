@@ -12,6 +12,7 @@ k config get-clusters
 ```
 ```yaml
 NAME
+kind-k8s
 kubernetes
 ```
 
