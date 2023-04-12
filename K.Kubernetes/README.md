@@ -72,3 +72,9 @@ betelgeuse   Ready    control-plane   43h   v1.26.3
 <img src=images/Lens_Workloads.png width='' height='' > </img>
 
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
+
+:chaine: Réseaux
+
+:round_pushpin: Service
+
+<img src=images/Lens_Services.png width='' height='' > </img>
