@@ -10,4 +10,4 @@
 | data plane       | sedric_g@fa.piano.klyddom.tech | `10.13.237.36/24` | 64GB Ram,      16cpus |
 
 Token pour joindre le control plane (pour les worker nodes): 
-kubeadm join do.piano.klyddom.tech:6443 --token 0d1dt4.lx5vm7x67ogf6j2e --discovery-token-ca-cert-hash sha256:83eef2dac5d014d563c236f632c2aecef61533bcd197c759ea28caea1eef5382
+kubeadm join do.piano.klyddom.tech:6443 --token 1eytpq.yj317xna5nl4a594 --discovery-token-ca-cert-hash sha256:83eef2dac5d014d563c236f632c2aecef61533bcd197c759ea28caea1eef5382
