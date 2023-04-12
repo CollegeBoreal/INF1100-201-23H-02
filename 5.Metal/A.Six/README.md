@@ -36,7 +36,24 @@ W: Failed to fetch https://apt.kubernetes.io/dists/kubernetes-xenial/InRelease  
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 
 ```
+```
+bakmomo@toronto:~$ sudo kubeadm init \
+  --pod-network-cidr=172.16.0.0/16 \
+  --control-plane-endpoint=toronto.six.mbtechno.tech
 
+```
 
+> Resultat
 
+```
+I0412 02:08:29.434173    2408 version.go:256] remote version is much newer: v1.27.0; falling back to: stable-1.26
+[init] Using Kubernetes version: v1.26.3
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+        [ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+        [ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+
+```
 
