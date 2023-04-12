@@ -71,3 +71,9 @@ src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Gok
  <img 
 src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/k_cluster_info.png'>
  </pre>
+
+
+:goat:
+
+<img 
+src='https://github.com/CollegeBoreal/INF1100-201-23H-02/blob/main/5.Metal/B.Goku/images/quitefar.png'>
