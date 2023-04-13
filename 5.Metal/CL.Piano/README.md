@@ -18,6 +18,7 @@ error execution phase preflight: couldn't validate the identity of the API Serve
 To see the stack trace of this error execute with --v=5 or higher
 
 <ins>QUOI FAIRE ? :</ins>
+```yaml
 This error message suggests that there was a problem validating the identity of the API Server when executing the preflight phase of a Kubernetes operation. 
 Specifically, it states that a JWS signature could not be found in the cluster-info ConfigMap for the token ID "0d1dt4".
 A JWS (JSON Web Signature) is a compact, URL-safe means of representing signed content using JSON data structures. In this context, 
@@ -28,3 +29,4 @@ Another potential solution is to check that the cluster-info ConfigMap is proper
 You can use the kubectl get cm cluster-info -n kube-public -o yaml command to view the contents of the cluster-info ConfigMap.
 If the problem persists, it may be helpful to seek assistance from the Kubernetes community or consult the Kubernetes documentation for more 
 information on troubleshooting JWS signature validation issues.
+```
