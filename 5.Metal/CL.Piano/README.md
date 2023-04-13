@@ -18,8 +18,10 @@ kubeadm join mi.piano.klyddom.tech:6443 --token 1eytpq.yj317xna5nl4a594 --discov
 ```
 
 <ins>ERREUR:</ins> 
+```yaml
 error execution phase preflight: couldn't validate the identity of the API Server: could not find a JWS signature in the cluster-info ConfigMap for token ID "0d1dt4"
 To see the stack trace of this error execute with --v=5 or higher
+```
 
 <ins>QUOI FAIRE ? :</ins>
 ```yaml
