@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubesphere-router-kubesphere-system
+  namespace: kubesphere-controls-system
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: kubesphere-router-kubesphere-system-ingress
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    eip.openelb.kubesphere.io/v1alpha2: openelb-layer2-eip
+    helm.sh/chart: ingress-nginx-4.0.13
+  annotations:
+    eip.openelb.kubesphere.io/v1alpha2: openelb-layer2-eip
+    layer2.openelb.kubesphere.io/v1alpha1: bellatrix
+    lb.kubesphere.io/v1alpha1: openelb
+    protocol.openelb.kubesphere.io/v1alpha1: layer2
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      appProtocol: http
+      port: 80
+      targetPort: http
+      nodePort: 31004
+    - name: https
+      protocol: TCP
+      appProtocol: https
+      port: 443
+      targetPort: https
+      nodePort: 31317
+  selector:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: kubesphere-router-kubesphere-system-ingress
+    app.kubernetes.io/name: ingress-nginx
+  type: LoadBalancer
+
