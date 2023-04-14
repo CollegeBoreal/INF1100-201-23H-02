@@ -9,4 +9,5 @@
 
 
 
-kubeadm join maroc.maghreb.hafsa.tech:6443 --token y4d2ox.miud5ay3xj5wsid3 --discovery-token-ca-cert-hash sha256:0a61dd16cad49b9439c7aaeeb63139e88aa9d0a78918158d9d73634e1585a723
+kubeadm join betelgeuse.orion.gasy.africa:6443 --token ks2wis.b6dcthm6zf7zp25w \
+    --discovery-token-ca-cert-hash sha256:0a61dd16cad49b9439c7aaeeb63139e88aa9d0a78918158d9d73634e1585a723
