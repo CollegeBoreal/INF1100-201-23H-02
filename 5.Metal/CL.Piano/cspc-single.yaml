@@ -21,4 +21,11 @@ spec:
      poolConfig:
        dataRaidGroupType: "stripe"
 
+   - nodeSelector:
+       kubernetes.io/hostname: "mi"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-e46954ae-7df8-4065-8f90-86a302d91dd7"
+     poolConfig:
+       dataRaidGroupType: "stripe"
 ---
