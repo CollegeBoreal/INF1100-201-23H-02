@@ -21,4 +21,4 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
-status: {}
+status: {} 
