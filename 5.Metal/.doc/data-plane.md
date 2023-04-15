@@ -67,7 +67,7 @@ openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt \
 - [ ] Le jeton :tickets: non expiré
 
 ```
-$ kubeadm token list
+kubeadm token list
 ```
 
 :abacus: Sur le plan de données
@@ -91,7 +91,7 @@ sudo kubeadm join ${CTL_PLANE}:6443 --token ${TOKEN} --discovery-token-ca-cert-h
 :control_knobs: sur le plan de controle
 
 ```
-$ kubeadm token create --print-join-command
+kubeadm token create --print-join-command
 
 ```
 > Retourne
