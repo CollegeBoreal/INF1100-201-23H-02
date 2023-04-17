@@ -1,0 +1,24 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
+metadata:
+ name: cstor-storage
+ namespace: openebs
+spec:
+ pools:
+   - nodeSelector:
+       kubernetes.io/hostname: "algeria" # ME CHANGER VITE
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-8d850eb6-3db9-471b-a887-ed3a529079b7" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "rak" # ME CHANGER VITE
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-747a3959-c62d-458f-81da-62465b28a182" # ME CHANGER VITE
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+---

@@ -1,4 +1,4 @@
-# Participation au 18-04-2022 21:17
+# Participation au 16-04-2023 17:22
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -22,21 +22,29 @@
 
 ## :a: Présence
 
-|:hash:| Boréal :id: | Interne | ssh | :whale: Docker | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |
-|------|-------------|---------|-----|----------------|-------------------|------------------|----------------|
-| :zero: | 300106677 - <image src='https://avatars0.githubusercontent.com/u/71027895?s=460&v=4' width=20 height=20></image> | `ssh leonaldolinux@port-au-prince.haiti.leonaldo.me` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :white_check_mark: |
-| :zero: | 300106677 - <image src='https://avatars0.githubusercontent.com/u/71027895?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@cayes-haiti.leonaldo.me` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :zero: | 300106677 - <image src='https://avatars0.githubusercontent.com/u/71027895?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@gonaive-haiti.leonaldo.me` | :x: | :x: | :x: | :x: | :x: | :x: |
-| :zero: | 300106677 - <image src='https://avatars0.githubusercontent.com/u/71027895?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@port-de-paix-haiti.leonaldo.me` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :one: | 300117811 - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh linuxserv@abidjan.ivorycoast.siomh.tech` | :x: | :x: | :x: | :x: | :x: | :x: |
-| :one: | 300117811 - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@yamoussoukro.ivorycoast.siomh.tech` | :x: | :x: | :x: | :x: | :x: | :x: |
-| :one: | 300117811 - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@gagnoa.ivorycoast.siomh.tech` | :x: | :x: | :x: | :x: | :x: | :x: |
-| :one: | 300117811 - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@blolekin.ivorycoast.siomh.tech` | :x: | :x: | :x: | :x: | :x: | :x: |
-| :two: | 300121460 - <image src='https://avatars0.githubusercontent.com/u/71027883?s=460&v=4' width=20 height=20></image> | `ssh dave25@niagara.ontario.hdavid21.live` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :two: | 300121460 - <image src='https://avatars0.githubusercontent.com/u/71027883?s=460&v=4' width=20 height=20></image> | `ssh dave22@sudbury.ontario.hdavid21.live` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :two: | 300121460 - <image src='https://avatars0.githubusercontent.com/u/71027883?s=460&v=4' width=20 height=20></image> | `ssh dave21@hamilton.ontario.hdavid21.live` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :white_check_mark: |
-| :two: | 300121460 - <image src='https://avatars0.githubusercontent.com/u/71027883?s=460&v=4' width=20 height=20></image> | `ssh dave24@toronto.ontario.hdavid21.live` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :three: | 300122014 - <image src='https://avatars0.githubusercontent.com/u/71392439?s=460&v=4' width=20 height=20></image> | `ssh sylvainmakak@tokyo.cameroun.sylvainbitja.software` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :white_check_mark: |
-| :three: | 300122014 - <image src='https://avatars0.githubusercontent.com/u/71392439?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@douala.cameroun.sylvainbitja.software` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :three: | 300122014 - <image src='https://avatars0.githubusercontent.com/u/71392439?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@yaounde.cameroun.sylvainbitja.software` | :white_check_mark: | :broken_heart: | :broken_heart: | :broken_heart: | :x: |
-| :three: | 300122014 - <image src='https://avatars0.githubusercontent.com/u/71392439?s=460&v=4' width=20 height=20></image> | `ssh ubuntu@garoua.cameroun.sylvainbitja.software` | :x: | :x: | :x: | :x: | :x: | :x: |
+| Boréal :id: | Interne | ssh | :whale: Docker | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |
+|-------------|---------|-----|----------------|-------------------|------------------|----------------|
+| 100027015 - <image src='https://avatars0.githubusercontent.com/u/97314874?s=460&v=4' width=20 height=20></image> | `ssh steeve@10.13.237.42` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 100028762 - <image src='https://avatars0.githubusercontent.com/u/96226008?s=460&v=4' width=20 height=20></image> | `ssh madmax@10.13.237.29` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300117811 - <image src='https://avatars0.githubusercontent.com/u/71027809?s=460&v=4' width=20 height=20></image> | `ssh mahanc@10.13.237.33` | :x: | :x: | :x: | :x: | :x: | :x: |
+| 300119623 - <image src='https://avatars0.githubusercontent.com/u/97314467?s=460&v=4' width=20 height=20></image> | `ssh mariodeg@10.13.237.13` | :white_check_mark: | :green_heart: | :orange_heart: | :green_heart: | :white_check_mark: |
+| 300120726 - <image src='https://avatars0.githubusercontent.com/u/105461057?s=460&v=4' width=20 height=20></image> | `ssh pasmibalayi@10.13.237.17` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300123679 - <image src='https://avatars0.githubusercontent.com/u/105458655?s=460&v=4' width=20 height=20></image> | `ssh hugopo1@10.13.237.30` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300124074 - <image src='https://avatars0.githubusercontent.com/u/97147101?s=460&v=4' width=20 height=20></image> | `ssh koinaag@10.13.237.32` | :white_check_mark: | :green_heart: | :broken_heart: | :broken_heart: | :x: |
+| 300124734 - <image src='https://avatars0.githubusercontent.com/u/94937145?s=460&v=4' width=20 height=20></image> | `ssh superzaf@10.13.237.45` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300124863 - <image src='https://avatars0.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | `ssh memedlebleu@10.13.237.26` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300124876 - <image src='https://avatars0.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | `ssh hafsa6@10.13.237.28` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300125847 - <image src='https://avatars0.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | `ssh chaks@10.13.237.37` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300126020 - <image src='https://avatars0.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | `ssh hakimdrai@10.13.237.33` | :x: | :x: | :x: | :x: | :x: | :x: |
+| 300126215 - <image src='https://avatars0.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | `ssh ziko@10.13.237.39` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300126268 - <image src='https://avatars0.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | `ssh sedric_g@10.13.237.36` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300126450 - <image src='https://avatars0.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | `ssh klyd@10.13.237.16` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :x: |
+| 300126634 - <image src='https://avatars0.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | `ssh frank_uranus@10.13.237.34` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300126800 - <image src='https://avatars0.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | `ssh rafik952@10.13.237.40` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300126966 - <image src='https://avatars0.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | `ssh bakmomo@10.13.237.31` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300127065 - <image src='https://avatars0.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | `ssh salimata1@10.13.237.10` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300127290 - <image src='https://avatars0.githubusercontent.com/u/105463700?s=460&v=4' width=20 height=20></image> | `ssh sara@10.13.237.35` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300128276 - <image src='https://avatars0.githubusercontent.com/u/113144317?s=460&v=4' width=20 height=20></image> | `ssh ballo78@10.13.237.41` | :white_check_mark: | :green_heart: | :broken_heart: | :broken_heart: | :x: |
+| 300128326 - <image src='https://avatars0.githubusercontent.com/u/105472970?s=460&v=4' width=20 height=20></image> | `ssh mamadou@10.13.237.2` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |
+| 300128566 - <image src='https://avatars0.githubusercontent.com/u/101542761?s=460&v=4' width=20 height=20></image> | `ssh diarra1@10.13.237.43` | :white_check_mark: | :green_heart: | :orange_heart: | :green_heart: | :x: |
+| 300128694 - <image src='https://avatars0.githubusercontent.com/u/105947276?s=460&v=4' width=20 height=20></image> | `ssh walid@10.13.237.27` | :white_check_mark: | :green_heart: | :green_heart: | :green_heart: | :white_check_mark: |

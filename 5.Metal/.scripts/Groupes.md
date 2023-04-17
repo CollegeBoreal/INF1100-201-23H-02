@@ -1,4 +1,4 @@
-# Participation du groupe au 18-04-2022 21:20
+# Participation du groupe au 16-04-2023 17:25
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -14,9 +14,11 @@
 
 ## :a: Présence
 
-|:hash:| Grappe :wheel_of_dharma: | :gear: Config | :abacus: Plan de données | :three: BlockDevices :roll_of_paper: | :potable_water: Reservoir | :floppy_disk: Stockage | :rocket: Service |
+|:hash:| Grappe :wheel_of_dharma: | :gear: Config | :knot: total de noeuds | :roll_of_paper: total de BlockDevices  | :potable_water: Reservoir | :floppy_disk: Stockage | :rocket: Service |
 |-|-|-|-|-|-|-|-|
-| :one: | [A.Ontario](../A.Ontario) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :two: | [AB.IvoryCoast](../AB.IvoryCoast) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :three: | [B.Haiti](../B.Haiti) | :x: | :zero: | :zero: | :x: | :x: | :x: |
-| :four: | [CL.Cameroun](../CL.Cameroun) | :x: | :zero: | :zero: | :x: | :x: | :x: |
+| :zero: | [A.Six](../A.Six) | [:white_check_mark:](../A.Six/.kube/config) | :three: | :two: | [:white_check_mark:](../A.Six/cspc-single.yaml) | [:white_check_mark:](../A.Six/csi-cstor-sc.yaml) | [:white_check_mark:](../A.Six/openelb.yaml) |
+| :one: | [AB.Maghreb](../AB.Maghreb) | [:white_check_mark:](../AB.Maghreb/.kube/config) | :three: | :two: | [:white_check_mark:](../AB.Maghreb/cspc-single.yaml) | [:white_check_mark:](../AB.Maghreb/csi-cstor-sc.yaml) | [:white_check_mark:](../AB.Maghreb/openelb.yaml) |
+| :two: | [B.Goku](../B.Goku) | [:white_check_mark:](../B.Goku/.kube/config) | :three: | :two: | [:white_check_mark:](../B.Goku/cspc-single.yaml) | [:white_check_mark:](../B.Goku/csi-cstor-sc.yaml) | [:white_check_mark:](../B.Goku/openelb.yaml) |
+| :three: | [CL.Piano](../CL.Piano) | [:white_check_mark:](../CL.Piano/.kube/config) | :four: | :three: | [:white_check_mark:](../CL.Piano/cspc-single.yaml) | [:white_check_mark:](../CL.Piano/csi-cstor-sc.yaml) | [:white_check_mark:](../CL.Piano/openelb.yaml) |
+| :four: | [O.Africa](../O.Africa) | [:white_check_mark:](../O.Africa/.kube/config) | :two: | :one: | [:white_check_mark:](../O.Africa/cspc-single.yaml) | [:white_check_mark:](../O.Africa/csi-cstor-sc.yaml) | [:white_check_mark:](../O.Africa/openelb.yaml) |
+| :five: | [O2.Planete](../O2.Planete) | [:white_check_mark:](../O2.Planete/.kube/config) | :two: | :zero: | :x: | :x: | :x: |
