@@ -128,6 +128,22 @@ k scale deploy apache --replicas=5
 
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
 
+
+- [ ] Vérifier la charge de travail
+
+```
+k get pods
+```
+> Retourne
+```yaml
+NAME                      READY   STATUS    RESTARTS   AGE
+apache-7bdf6d9ffd-4hllz   1/1     Running   0          32m
+apache-7bdf6d9ffd-hx5tg   1/1     Running   0          32m
+apache-7bdf6d9ffd-k8zk9   1/1     Running   0          32m
+apache-7bdf6d9ffd-qn725   1/1     Running   0          32m
+apache-7bdf6d9ffd-shb8q   1/1     Running   0          6d
+```
+
 :roll_of_paper: Stockage
 
 - [ ] Classe de stockage (Standard)
