@@ -12,7 +12,7 @@ Acteurs:
 * Le `DevOps` s'occupe de gérer la grappe et mettre à disposition des utilisateurs les applications
 * Les `Utilisateurs` consomment des services à travers les différentes voix de procuration (__proxy__) pour accéder aux applications
 
-:gear: :ice_cube: Kube Config - Configuration de grappes
+:gear: :ice_cube: [Kube Config](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) - Configuration de grappes
 
 <img src=images/Lens_Config.png width='' height='' > </img>
 
