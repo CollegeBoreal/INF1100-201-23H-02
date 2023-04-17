@@ -1,6 +1,6 @@
 # :wheel_of_dharma: Kubernetes
 
-:scroll: [CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+## :scroll: [CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 [Borg: The Predecessor to Kubernetes](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes)
 
@@ -12,7 +12,7 @@ Acteurs:
 * Le `DevOps` s'occupe de gérer la grappe et mettre à disposition des utilisateurs les applications
 * Les `Utilisateurs` consomment des services à travers les différentes voix de procuration (__proxy__) pour accéder aux applications
 
-:gear: :ice_cube: [Kube Config](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) - Configuration de grappes
+## :gear: :ice_cube: [Kube Config](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) - Configuration de grappes
 
 <img src=images/Lens_Config.png width='' height='' > </img>
 
@@ -61,14 +61,14 @@ KUBECONFIG=~/.kube/config~kind:~/.kube/config~orion \
 ```
 
 
-:knot: Noeuds
+## :knot: Noeuds
 
 <img src=images/Lens_Nodes.png width='' height='' > </img>
 
 Les noeuds sont des serveurs, généralement sous linux, qui constituent l'infrastructure de la grappe :wheel_of_dharma: Kubernetes. Le noeud plan de contrôle (control plane) permet l'administration de la grappe, les noeuds plan de travail (worker node) constituant le plan de données (data plan) sont les chevaux de traits qui font le travail d'éxécuter les conteneurs.
 
 ```
- k get no
+ k get nodes
 ```
 ```yaml
 NAME         STATUS   ROLES           AGE   VERSION
@@ -76,26 +76,12 @@ bellatrix    Ready    <none>          43h   v1.26.3
 betelgeuse   Ready    control-plane   43h   v1.26.3
 ```
 
-k get ns
-NAME                              STATUS   AGE
-default                           Active   46h
-kube-node-lease                   Active   46h
-kube-public                       Active   46h
-kube-system                       Active   46h
-kubesphere-controls-system        Active   40h
-kubesphere-monitoring-federated   Active   40h
-kubesphere-monitoring-system      Active   40h
-kubesphere-system                 Active   40h
-openebs                           Active   41h
-openelb-system                    Active   41h
-
-:passport_control: Espace de travail (Namespaces)
-
+## :passport_control: Espace de travail (Namespaces)
 
 <img src=images/Lens_NS.png width='' height='' > </img>
 
 ```
-k get ns
+k get namespace
 ```
 > Retourne :
 ```yaml
@@ -112,7 +98,7 @@ openebs                           Active   41h
 openelb-system                    Active   41h
 ```
 
-:factory: Charge de travail (Workloads)
+## :factory: Charge de travail (Workloads)
 
 - [ ] Créer un déploiement de site web apache
 
