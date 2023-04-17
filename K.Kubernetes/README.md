@@ -144,6 +144,8 @@ apache-7bdf6d9ffd-qn725   1/1     Running   0          32m
 apache-7bdf6d9ffd-shb8q   1/1     Running   0          6d
 ```
 
+<img src=images/Lens-deploy-scale.png width='' height='' > </img>
+
 :roll_of_paper: Stockage
 
 - [ ] Classe de stockage (Standard)
