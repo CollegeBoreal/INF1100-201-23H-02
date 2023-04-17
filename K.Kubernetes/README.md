@@ -117,6 +117,15 @@ openelb-system                    Active   41h
 
 <img src=images/Lens_Workloads.png width='' height='' > </img>
 
+```
+k get deploy
+```
+> Retourne
+```yaml
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+apache   1/1     1            1           5d23h
+```
+
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
 
 :roll_of_paper: Stockage
