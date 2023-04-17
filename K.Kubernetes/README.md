@@ -135,7 +135,7 @@ openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer
 standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   41h
 
 
-- [ ] Volume pour persistence Réclamé 
+- [ ] [Volumes](https://kubernetes.io/docs/concepts/storage/volumes) pour persistence Réclamé 
 
 <img src=images/Lens_PVC.png width='' height='' > </img>
 
