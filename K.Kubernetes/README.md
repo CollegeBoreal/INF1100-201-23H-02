@@ -119,6 +119,13 @@ NAME     READY   UP-TO-DATE   AVAILABLE   AGE
 apache   1/1     1            1           5d23h
 ```
 
+- [ ] Augmenter la charge de travail
+
+```
+k scale deploy apache --replicas=5
+```
+> deployment.apps/apache scaled
+
 <img src=images/Lens_Kubesphere_Workloads.png width='' height='' > </img>
 
 :roll_of_paper: Stockage
