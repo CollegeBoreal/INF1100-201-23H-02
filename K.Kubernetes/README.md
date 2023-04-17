@@ -133,7 +133,7 @@ NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   
 openebs-device       openebs.io/local       Delete          WaitForFirstConsumer   false                  41h
 openebs-hostpath     openebs.io/local       Delete          WaitForFirstConsumer   false                  41h
 standard (default)   cstor.csi.openebs.io   Delete          Immediate              true                   41h
-
+```
 
 - [ ] [Volumes](https://kubernetes.io/docs/concepts/storage/volumes) pour persistence Réclamé 
 
