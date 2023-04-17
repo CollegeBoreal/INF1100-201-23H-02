@@ -1,5 +1,6 @@
 # :wheel_of_dharma: Kubernetes
 
+:scroll: [CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 [Borg: The Predecessor to Kubernetes](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes)
 
