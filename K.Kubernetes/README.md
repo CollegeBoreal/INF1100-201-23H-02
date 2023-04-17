@@ -114,8 +114,15 @@ openelb-system                    Active   41h
 
 :factory: Charge de travail (Workloads)
 
+- [ ] Créer un déploiement de site web apache
+
+```
+k create deploy apache --image=httpd:alpine
+```
 
 <img src=images/Lens_Workloads.png width='' height='' > </img>
+
+- [ ] Vérifier le déploiement de site web apache
 
 ```
 k get deploy
