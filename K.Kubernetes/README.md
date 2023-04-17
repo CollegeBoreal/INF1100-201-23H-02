@@ -146,7 +146,15 @@ apache-7bdf6d9ffd-shb8q   1/1     Running   0          6d
 
 <img src=images/Lens-deploy-scale.png width='' height='' > </img>
 
-:roll_of_paper: Stockage
+- [ ] Entrer dans un pod pour acceder au `shell` :shell: des conteneurs
+
+
+```
+k exec --stdin --tty apache-7bdf6d9ffd-shb8q -- sh  
+```
+> /usr/local/apache2 # exit
+
+## :roll_of_paper: Stockage
 
 - [ ] Classe de stockage (Standard)
 
