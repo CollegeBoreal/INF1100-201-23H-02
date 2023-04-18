@@ -1,0 +1,23 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
+metadata:
+ name: cstor-storage
+ namespace: openebs
+spec:
+ pools:
+   - nodeSelector:
+       kubernetes.io/hostname: "venus"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-0690d4ed-8ca0-42d7-b278-d6609915356a"
+     poolConfig:
+       dataRaidGroupType: "stripe"
+
+   - nodeSelector:
+       kubernetes.io/hostname: "pluton"
+     dataRaidGroups:
+       - blockDevices:
+           - blockDeviceName: "blockdevice-e2645df9-3247-4ef5-8f52-d3b35a2af2bf"
+     poolConfig:
+       dataRaidGroupType: "stripe"
+---
