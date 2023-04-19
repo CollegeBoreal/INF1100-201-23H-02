@@ -1,0 +1,30 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  name: blockdevice-f5143130-d89c-40c8-a1b7-00079567ec3a
+
+  labels:
+    kubernetes.io/hostname: aurora
+    ndm.io/managed: "false"
+    ndm.io/blockdevice-type: blockdevice
+status:
+  claimState: Unclaimed
+  state: Active
+spec:
+  capacity:
+    logicalSectorSize: 512
+    storage: 107374182400
+  details:
+    deviceType: disk
+  devlinks:
+  - kind: by-id
+    links:
+    -  /dev/disk/by-id/dm-uuid-LVM-XilP3LAeFHtAHbcCcmQ4cCHUZCG1Ki8B84PQIykW27oV2J2rVIKpF483XbRSqqwx
+    - /dev/disk/by-id/dm-name-ubuntu--vg-iscsi--lv 
+  - kind: by-path
+    links:
+    - /dev/mapper/ubuntu--vg/ubuntu-vg/iscsi-lv
+  nodeAttributes:
+    nodeName: aurora
+  path: /dev/dm-1
+
