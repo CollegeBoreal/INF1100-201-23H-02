@@ -22,10 +22,10 @@ spec:
        dataRaidGroupType: "stripe"
 
    - nodeSelector:
-       kubernetes.io/hostname: "rigel" # ME CHANGER VITE
+       kubernetes.io/hostname: "aurora" 
      dataRaidGroups:
        - blockDevices:
-           - blockDeviceName: "blockdevice-7e848c90-cca2-4ef4-9fdc-90cff05d5bb5" # ME CHANGER VITE
+           - blockDeviceName: "blockdevice-f5143130-d89c-40c8-a1b7-00079567ec3a" 
      poolConfig:
        dataRaidGroupType: "stripe"
 ---
