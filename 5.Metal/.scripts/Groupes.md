@@ -1,4 +1,4 @@
-# Participation du groupe au 18-04-2023 07:55
+# Participation du groupe au 20-04-2023 19:17
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -20,5 +20,5 @@
 | :one: | [AB.Maghreb](../AB.Maghreb) | [:white_check_mark:](../AB.Maghreb/.kube/config) | :three: | :two: | [:white_check_mark:](../AB.Maghreb/cspc-single.yaml) | [:white_check_mark:](../AB.Maghreb/csi-cstor-sc.yaml) | [:white_check_mark:](../AB.Maghreb/openelb.yaml) |
 | :two: | [B.Goku](../B.Goku) | [:white_check_mark:](../B.Goku/.kube/config) | :three: | :two: | [:white_check_mark:](../B.Goku/cspc-single.yaml) | [:white_check_mark:](../B.Goku/csi-cstor-sc.yaml) | [:white_check_mark:](../B.Goku/openelb.yaml) |
 | :three: | [CL.Piano](../CL.Piano) | [:white_check_mark:](../CL.Piano/.kube/config) | :four: | :three: | [:white_check_mark:](../CL.Piano/cspc-single.yaml) | [:white_check_mark:](../CL.Piano/csi-cstor-sc.yaml) | [:white_check_mark:](../CL.Piano/openelb.yaml) |
-| :four: | [O.Africa](../O.Africa) | [:white_check_mark:](../O.Africa/.kube/config) | :two: | :one: | [:white_check_mark:](../O.Africa/cspc-single.yaml) | [:white_check_mark:](../O.Africa/csi-cstor-sc.yaml) | [:white_check_mark:](../O.Africa/openelb.yaml) |
+| :four: | [O.Africa](../O.Africa) | [:white_check_mark:](../O.Africa/.kube/config) | :four: | :one: | [:white_check_mark:](../O.Africa/cspc-single.yaml) | [:white_check_mark:](../O.Africa/csi-cstor-sc.yaml) | [:white_check_mark:](../O.Africa/openelb.yaml) |
 | :five: | [O2.Planete](../O2.Planete) | [:white_check_mark:](../O2.Planete/.kube/config) | :three: | :two: | [:white_check_mark:](../O2.Planete/cspc-single.yaml) | [:white_check_mark:](../O2.Planete/csi-cstor-sc.yaml) | [:white_check_mark:](../O2.Planete/openelb.yaml) |
