@@ -1,0 +1,103 @@
+## Initial - BITNAMI_IMAGE_VERSION=3.11.2-debian-10-r17
+## FROM DOCKER
+
+## @section Moodle&trade; parameters
+
+## Bitnami Moodle&trade; image version
+## ref: https://hub.docker.com/r/bitnami/moodle/tags/
+## @param image.registry Moodle image registry
+## @param image.repository Moodle image repository
+## @param image.tag Moodle image tag (immutable tags are recommended)
+##
+image:
+  registry: docker.io
+  repository: bitnami/moodle
+  tag: 3.11.11-debian-11-r16
+
+## @param moodleSiteName Site name
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/moodle#configuration
+##
+moodleSiteName: "moodle.gasy.africa"
+## @param moodleLang Site language
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/moodle#configuration
+##
+moodleLang: ""
+## @param moodleUsername User of the application
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/moodle#configuration
+##
+moodleUsername: admin
+## @param moodlePassword Application password
+## Defaults to a random 10-character alphanumeric string if not set
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/moodle#configuration
+##
+moodlePassword: "Ch4ng3zM01V1t3"
+## @param moodleEmail Admin email
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/moodle#configuration
+##
+moodleEmail: setrar@gasy.africa
+## @param updateStrategy.type Update strategy - only really applicable for deployments with RWO PVs attached
+## If replicas = 1, an update can get "stuck", as the previous pod remains attached to the
+## PV, and the "incoming" pod can never start. Changing the strategy to "Recreate" will
+## terminate the single previous pod, so that the new, incoming pod can attach to the PV
+##
+updateStrategy:
+  type: Recreate
+
+## Enable persistence using Persistent Volume Claims
+## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  ## @param persistence.size PVC Storage Request for Moodle
+  ##
+  size: 8Gi
+
+## Configure Pods Security Context
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+## @param podSecurityContext.enabled Enable Moodle&trade; pods' Security Context
+## @param podSecurityContext.fsGroup Moodle&trade; pods' group ID
+##
+#podSecurityContext:
+#  enabled: true
+#  fsGroup: 0
+
+## Configure Container Security Context (only main container)
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+## @param containerSecurityContext.enabled Enable Moodle&trade; containers' Security Context
+## @param containerSecurityContext.runAsUser Moodle&trade; containers' Security Context runAsUser
+## @param containerSecurityContext.runAsNonRoot Moodle&trade; containers' Security Context runAsNonRoot
+##
+#containerSecurityContext:
+#  enabled: true
+#  runAsUser: 0
+
+## @section Traffic Exposure Parameters
+
+## Kubernetes configuration
+## For minikube, set this to NodePort, for ingress ClusterIP, elsewhere use LoadBalancer
+##
+service:
+  ## @param service.type Service type
+  ##
+  type: ClusterIP
+
+## @section Database parameters
+
+## MariaDB chart configuration
+## https://github.com/bitnami/charts/blob/main/bitnami/mariadb/values.yaml
+##
+mariadb:
+  ## MariaDB Authentication parameters
+  ##
+  auth:
+    ## @param mariadb.auth.rootPassword Password for the MariaDB `root` user
+    ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mariadb#setting-the-root-password-on-first-run
+    ##
+    rootPassword: "M0tD3P4ss3D3R4c1n3-"
+  primary:
+    ## Enable persistence using Persistent Volume Claims
+    ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+    ##
+    persistence:
+      ## @param mariadb.primary.persistence.size Database Persistent Volume Size
+      ##
+      size: 4Gi

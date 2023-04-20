@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+spec:
+  containers:
+  - image: ubuntu:22.04
+    securityContext:
+      privileged: true
+    command:
+      - /usr/bin/sleep
+    args:
+      - infinity
+    name: test-container
+    volumeDevices:
+    - devicePath: /disks/ssd1
+      name: ssd1
+  volumes:
+  - name: ssd1
+    persistentVolumeClaim:
+      claimName: ssd1
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ssd1
+spec:
+#  storageClassName: ssd
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Block
+  resources:
+    requests:
+      storage: 1Gi
