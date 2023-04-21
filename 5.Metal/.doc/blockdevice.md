@@ -106,6 +106,7 @@ status:
   claimState: Unclaimed
   state: Active
 spec:
+  partitioned: "No"
   capacity:
     logicalSectorSize: 512
     storage: 107374182400
