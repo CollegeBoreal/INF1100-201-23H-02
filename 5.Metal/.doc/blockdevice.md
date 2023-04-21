@@ -151,6 +151,7 @@ https://openebs.io/blog/creating-manual-blockdevice/
    claimState: Unclaimed
    state: Active
  spec:
+   partitioned: "No"
    capacity:
      logicalSectorSize: 512
      storage: <total capacity in bytes> #like 53687091200
