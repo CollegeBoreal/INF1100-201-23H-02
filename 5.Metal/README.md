@@ -193,6 +193,7 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 [:bookmark: Service](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 
+<img src=images/services.png width='' height='' ></img>
 
 :busts_in_silhouette: activité en groupe
 
