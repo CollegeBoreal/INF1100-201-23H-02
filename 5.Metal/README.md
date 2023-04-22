@@ -191,7 +191,7 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 ## :rocket: Les Services
 
-Ce paragraphe décrit commen les services sont exposés au monde extérieur de la grappe.
+Ce paragraphe décrit comment les services sont exposés au monde extérieur de la grappe. Généralement, Ceci se traduit par un routage du traffic Internet externe à travers un équilibreur de charge `Load Balancer` et une passerelle `Gateway` pointant vers les services exposant les déploiements de `pod`s.
 
 [:bookmark: Service](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 
