@@ -195,7 +195,7 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 [:bookmark: Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0)
 
-<img src=images/services.png width='' height='' ></img>
+<img src=images/services.png width=812 height=609 ></img>
 
 :busts_in_silhouette: activité en groupe
 
