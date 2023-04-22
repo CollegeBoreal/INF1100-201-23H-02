@@ -201,7 +201,7 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 ##### :control_knobs: Le plan de contrôle (control plane)
 
-- [ ]  [Installer](.doc/openelb.md):pinching_hand: [openelb](https://openelb.io/). 
+- [ ]  [Installer](.doc/openelb.md):pinching_hand: l'équilibreur de charge (LoadBalancer) [openelb](https://openelb.io/). 
 
 ## :clapper: Les Applications
 
