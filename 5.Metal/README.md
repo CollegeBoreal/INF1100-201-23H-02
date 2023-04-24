@@ -191,6 +191,8 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 ## :rocket: Les Services
 
+Ce paragraphe décrit comment les services sont exposés au monde extérieur de la grappe. Généralement, Ceci se traduit par un routage du traffic Internet externe à travers un équilibreur de charge `Load Balancer` et une passerelle `Gateway` pointant vers les services exposant les déploiements de `pod`s.
+
 [:bookmark: Service](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 
 [:bookmark: Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0)
@@ -201,7 +203,8 @@ standard (default)   cstor.csi.openebs.io   Delete          Immediate           
 
 ##### :control_knobs: Le plan de contrôle (control plane)
 
-- [ ]  [Installer](.doc/openelb.md):pinching_hand: l'équilibreur de charge (LoadBalancer) [openelb](https://openelb.io/). 
+- [ ]  [Installer](.doc/openelb.md):pinching_hand: l'équilibreur de charge (LoadBalancer) [:twisted_rightwards_arrows: openelb](https://openelb.io/). 
+- [ ]  [Installer](.doc/service-mesh):pinching_hand: la passerelle (Gateway API) [:sailboat: istio](https://istio.io/). 
 
 ## :clapper: Les Applications
 
