@@ -72,10 +72,10 @@ echo "| :green_heart:  | Active: active (running)          | En marche          
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "| Boréal :id: | Interne | ssh | :whale: Docker | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |"
-echo "|-------------|---------|-----|----------------|-------------------|------------------|----------------|"
+echo "| Boréal :id: | Interne | ssh | :whale: Docker | :whale2: ContainerD | :droplet: Kubelet | :minidisc: iSCSI |:dvd: LV        |"
+echo "|-------------|---------|-----|----------------|---------------------|-------------------|------------------|----------------|"
 
-NOSSH=" :x: | :x: | :x: | :x: | :x: |"
+NOSSH=" :x: | :x: | :x: | :x: | :x: | :x: |"
 
 i=0
 OK=":white_check_mark:"
@@ -97,6 +97,11 @@ do
      statut_du_service
      DOCKER=$?
      #echo $DOCKER
+
+     SERVICE="containerd"
+     statut_du_service
+     CONTAINERD=$?
+     #echo $CONTAINERD
 
      SERVICE="kubelet"
      statut_du_service
@@ -123,6 +128,9 @@ do
 
          # --- DOCKER -------------
          VALUE="${VALUE} ${COULEURS[${DOCKER}]} |"
+
+         # --- CONTAINERD -------------
+         VALUE="${VALUE} ${COULEURS[${CONTAINERD}]} |"
 
          # --- KUBELET -------------
          VALUE="${VALUE} ${COULEURS[${KUBELET}]} |"
