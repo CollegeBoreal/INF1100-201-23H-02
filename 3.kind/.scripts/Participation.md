@@ -1,4 +1,4 @@
-# Participation au 12-04-2023 17:10
+# Participation au 23-04-2023 19:56
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -26,12 +26,12 @@
 | 7 | 300124734 - <image src='https://avatars.githubusercontent.com/u/94937145?s=460&v=4' width=20 height=20></image> | `ssh superzaf@10.13.237.45` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 8 | 300124863 - <image src='https://avatars.githubusercontent.com/u/97644305?s=460&v=4' width=20 height=20></image> | `ssh memedlebleu@10.13.237.26` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 9 | 300124876 - <image src='https://avatars.githubusercontent.com/u/98238582?s=460&v=4' width=20 height=20></image> | `ssh hafsa6@10.13.237.28` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
-| 10 | 300125847 - <image src='https://avatars.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | `ssh chaks@10.13.237.37` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
+| 10 | 300125847 - <image src='https://avatars.githubusercontent.com/u/97644650?s=460&v=4' width=20 height=20></image> | `ssh chaks@10.13.237.37` | kind v0.17.0 go1.19.2 linux/amd64 | :bug: |
 | 11 | 300126020 - <image src='https://avatars.githubusercontent.com/u/97989532?s=460&v=4' width=20 height=20></image> | `ssh hakimdrai@10.13.237.33` | :x: | :x: |
 | 12 | 300126215 - <image src='https://avatars.githubusercontent.com/u/118313035?s=460&v=4' width=20 height=20></image> | `ssh ziko@10.13.237.39` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 13 | 300126268 - <image src='https://avatars.githubusercontent.com/u/97314948?s=460&v=4' width=20 height=20></image> | `ssh sedric_g@10.13.237.36` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 14 | 300126450 - <image src='https://avatars.githubusercontent.com/u/94937535?s=460&v=4' width=20 height=20></image> | `ssh klyd@10.13.237.16` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
-| 15 | 300126634 - <image src='https://avatars.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | `ssh frank_uranus@10.13.237.34` | :x: | :x: |
+| 15 | 300126634 - <image src='https://avatars.githubusercontent.com/u/97324827?s=460&v=4' width=20 height=20></image> | `ssh frank_uranus@10.13.237.34` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 16 | 300126800 - <image src='https://avatars.githubusercontent.com/u/105135304?s=460&v=4' width=20 height=20></image> | `ssh rafik952@10.13.237.40` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 17 | 300126966 - <image src='https://avatars.githubusercontent.com/u/94937166?s=460&v=4' width=20 height=20></image> | `ssh bakmomo@10.13.237.31` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
 | 18 | 300127065 - <image src='https://avatars.githubusercontent.com/u/97314712?s=460&v=4' width=20 height=20></image> | `ssh salimata1@10.13.237.10` | kind v0.17.0 go1.19.2 linux/amd64 | :wheel_of_dharma: |
