@@ -2,6 +2,8 @@
 
 #### [:tada: Participation](.scripts/Participation.md)
 
+#### [:tada: Participation](../.github/.scripts/Participation.md) [CI/CD]
+
 ## :o: [Docker](../D.Docker)
 
 [:tada: Example MySQL](Example.md)
