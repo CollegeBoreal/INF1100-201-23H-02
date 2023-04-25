@@ -33,16 +33,22 @@ echo ""
 echo "|Boréal :id:                | CI/CD |"
 echo "|---------------------------|-------|"
 
+url="https://github.com/CollegeBoreal/INF1100-201-23H-02/actions"
 i=0
 
 for id in "${ETUDIANTS[@]}"
 do
     ACTION_YML=workflows/${id}.yml
     ACTION_YAML=workflows/${id}.yaml
-    OK_ACTION="| ${id}  - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |"
-    KO="| ${id}  - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: |"
+    OK_YAML_ACTION="| [${id}](${URL}/workflows/${id}.yaml)  - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |"
+    OK_YML_ACTION="| [${id}](${URL}/workflows/${id}.yml)  - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |"
+    KO="| [${id}](${URL})  - <image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image> | :x: |"
     if [[ -f "$ACTION_YML" || -f "$ACTION_YAML" ]]; then
-        echo ${OK_ACTION}
+        if [ -f "$ACTION_YAML"  ]; then
+            echo ${OK_YAML_ACTION}
+        else
+            echo ${OK_YML_ACTION}
+        fi
     else
         echo ${KO}
     fi
