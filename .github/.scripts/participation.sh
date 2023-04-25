@@ -33,7 +33,7 @@ echo ""
 echo "|Boréal :id:                | CI/CD |"
 echo "|---------------------------|-------|"
 
-url="https://github.com/CollegeBoreal/INF1100-201-23H-02/actions"
+URL="https://github.com/CollegeBoreal/INF1100-201-23H-02/actions"
 i=0
 
 for id in "${ETUDIANTS[@]}"
